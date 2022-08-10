@@ -44,8 +44,9 @@ RUN echo 'gem: --no-rdoc --no-ri' >> /.gemrc
 RUN /bin/bash -l -c "rbenv global 3.1.2; gem install jekyll bundler;"
 
 WORKDIR /root/project
-# COPY ./project/Gemfile /root/project/Gemfile
-# RUN /bin/bash -l -c "bundle install"
+COPY ./project/Gemfile /root/project/Gemfile
+COPY ./project/Gemfile.lock /root/project/Gemfile.lock
+RUN /bin/bash -l -c "bundle install"
 
 EXPOSE 8000
 
