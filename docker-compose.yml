@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  brainlab-web:
+    image: jekyll
+    build: 
+      context: .
+      dockerfile: .Dockerfile
+    ports:
+      - 8000:8000
+    # command: /bin/bash -l -c "bundle exec jekyll server -H 0.0.0.0 -P 8000 -l --force_polling"
+    volumes:
+      - ./project:/root/project
+      - ./docs:/root/project/_site
