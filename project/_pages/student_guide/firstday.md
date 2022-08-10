@@ -1,11 +1,13 @@
 ---
 title: Your First Day
 layout: single
-permalink: /firstday
+permalink: /student_guide/firstday
 toc: true
 toc_label: " Table of Contents"
 toc_sticky: true
 # classes: wide
+sidebar:
+  nav: student_guide
 ---
 
 Some welcome text

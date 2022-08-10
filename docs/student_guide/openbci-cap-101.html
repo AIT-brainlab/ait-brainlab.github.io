@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>About Us  | AIT Brainlab</title>
+<!-- begin _includes/seo.html --><title></title>
 <meta name="description" content="We are the brain-computer interface (BCI) lab from AIT. Our lab is under Computer Science &amp; Information Management (CSIM) program of Asian Institute of Technology (AIT)">
 
 
@@ -20,8 +20,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="">
-<meta property="og:title" content="About Us">
-<meta property="og:url" content="http://0.0.0.0:8000/aboutus">
+<meta property="og:title" content="">
+<meta property="og:url" content="http://0.0.0.0:8000/student_guide/openbci-cap-101">
 
 
   <meta property="og:description" content="We are the brain-computer interface (BCI) lab from AIT. Our lab is under Computer Science &amp; Information Management (CSIM) program of Asian Institute of Technology (AIT)">
@@ -41,7 +41,7 @@
   
 
 
-<link rel="canonical" href="http://0.0.0.0:8000/aboutus">
+<link rel="canonical" href="http://0.0.0.0:8000/student_guide/openbci-cap-101">
 
 
 
@@ -156,7 +156,17 @@
         <span class="sep">/</span>
       
       
-        <li class="current">About Us</li>
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/student_guide" itemprop="item"><span itemprop="name">Student_guide</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current"></li>
       
     
   </ol>
@@ -170,7 +180,7 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="About Us">
+    
     
     
     
@@ -178,10 +188,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://0.0.0.0:8000/aboutus" class="u-url" itemprop="url">About Us
-</a>
-          </h1>
+          
           
 
 
@@ -190,66 +197,103 @@
 
       <section class="page__content e-content" itemprop="text">
         
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i>  Table of Contents</h4></header>
-              <ul class="toc__menu"><li><a href="#origins-and-history">Origins and History</a></li><li><a href="#vision-mission">Vision, Mission</a><ul><li><a href="#vision">Vision</a></li><li><a href="#mission">Mission</a></li></ul></li></ul>
+        <p>Setup
+by Dr. Chaklam
+http://chaklam.com/node/75
+Basic Use 101
+by Rattaphong Laoharungpisit
+EEG Cap Setup
+CortechSplanations - Biosemi ActiveTwo - Setup, Recording EEG, and Cleanup
+A very detailed of how to set up the EEG Cab to get the best quality signals.</p>
 
-            </nav>
-          </aside>
-        
-        <h2 id="origins-and-history">Origins and History</h2>
+<p>EEG offset/ DC offset/ Drift/ slow cortical potentials (SCP)
+TLDR; Use a High-Pass filter at 1Hz to remove this DC offset. What if your interested EEG frequency range is in that 0-1 Hz? Well, good luck.
+DC-EEG in Psychophysiology Applications – A Technical and Clinical Overview | https://www.bmedreport.com/archives/3739
+Huge offset. Possible causes? | https://openbci.com/forum/index.php?p=/discussion/2595/huge-offset-possible-causes
+large millivolt data values / FbEEG (Full-Band EEG) | https://openbci.com/forum/index.php?p=/discussion/201/large-millivolt-data-values-fbeeg-full-band-eeg
+OpenBCI: Measuring Electrode Impedance
+TLDR; Common clinical and research guidance often says to use skin cleansing and skin abrasion to get the electrode-to-skin impedance down below 10 kOhm or even 5 kOhm.
+https://openbci.com/community/openbci-measuring-electrode-impedance/
+Troubleshooting
+Problem 1: Cannot access /dev/ttyUSB0 without sudo
+Solution: Add usergroup to dialout. (Choose 1 command below)
+$ sudo adduser user-name group-name
+$ sudo usermod -aG  group-name user-name
+$ sudo usermod -a -G dialout <username></username></p>
 
-<p>The idea of establishing a certain health and wellness initiative such as program or research centers was raised by DEAN SET, Prof. Dieter Trau during the SET Retreat on 15 December 2020 at Pinehurst Golf Club &amp; Hotel. The potential of such initiative are made based on three important observations:</p>
+<p>Problem 2: EEG not found - when run lsl-viewer.py
+Solution: Downgrade pylsl
+pip3 uninstall pylsl
+pip3 install -I pylsl==1.12.2</p>
 
-<ul>
-  <li><strong>Lack of combined research efforts</strong> or initiatives on health exists on AIT</li>
-  <li><strong>Strong existing set of faculties</strong> on health-related domains that can possibly collaborate together yielding impact on health research domains</li>
-  <li><strong>Relevance of the COVID pandemic</strong> raises the importance of health and wellness technologies</li>
-</ul>
+<p>Problem 3: Segmentation fault Core Dump - when run lsl-viewer.py
+Solution: Change matplotlib backend
+$ pip3 install pyqt5  
+$ sudo apt-get install python3-pyqt5  
+$ sudo apt-get install pyqt5-dev-tools
+$ sudo apt-get install qttools5-dev-tools
+$ sudo apt-get install libglib2.0-dev python3-dev
+Below is the script for benchmarking your matplotlib 
+https://stackoverflow.com/questions/5091993/list-of-all-available-matplotlib-backends
+from <strong>future</strong> import print_function, division, absolute_import
+from pylab import *
+import time</p>
 
-<p>Based on these observations, a workshop has been held among the team (see Section C: Research Centre Team) during the Retreat discussing the most feasible “first” step yielding some initial consensuses and decisions. These decisions are further discussed and solidified in a meeting held on 17 February 2021. The executive summaries of the meeting are as follows:</p>
+<p>import matplotlib.backends
+import matplotlib.pyplot as p
+import os.path</p>
 
-<ul>
-  <li>Agreed that starting the initiative as a <strong>research center</strong> is the most viable option</li>
-  <li>Agreed on the working title of the center as <strong>“Health and Wellness Technologies”</strong></li>
-  <li>Agreed on the need to draft a <strong>proposal</strong> discussing the general direction, activities of the center, revenue streams, etc. This present document is a response to the call.</li>
-  <li>Agreed on the need to draft an <strong>internal agreement</strong> stating the recognition of incoming revenues under the members’ department.  This present document contains such clauses in section F.2 and agreement in section G.</li>
-</ul>
+<p>def is_backend_module(fname):
+    “"”Identifies if a filename is a matplotlib backend module”"”return fname.startswith(‘backend_’) and fname.endswith(‘.py’)</p>
 
-<h2 id="vision-mission">Vision, Mission</h2>
+<p>def backend_fname_formatter(fname): 
+    “"”Removes the extension of the given filename, then takes away the leading ‘backend_’.”"”return os.path.splitext(fname)[0][8:]</p>
 
-<h3 id="vision">Vision</h3>
+<h1 id="get-the-directory-where-the-backends-live">get the directory where the backends live</h1>
+<p>backends_dir = os.path.dirname(matplotlib.backends.<strong>file</strong>)</p>
 
-<p>The Center for Health and Wellness Technologies (WellTech) at the Asian Institute of Technology will be a leading interdisciplinary academic organization in Thailand dedicated to advancing, applying and providing <em>real-world industry-relevant</em> health and wellness technologies solutions that are backed by strong research backgrounds, delivering social impact across local communities/regions and internal forums.</p>
+<h1 id="filter-all-files-in-that-directory-to-identify-all-files-which-provide-a-backend">filter all files in that directory to identify all files which provide a backend</h1>
+<p>backend_fnames = filter(is_backend_module, os.listdir(backends_dir))</p>
 
-<h3 id="mission">Mission</h3>
+<p>backends = [backend_fname_formatter(fname) for fname in backend_fnames]</p>
 
-<p>To create a culture of achievement, the Center promotes:</p>
+<p>print(“supported backends: \t” + str(backends))</p>
 
-<ul>
-  <li><em>Academic Excellence</em> via
-    <ul>
-      <li>Securing competitive research grants</li>
-      <li>Joining faculty efforts</li>
-      <li>Providing infrastructures and shared facilities</li>
-      <li>Attracting promising new faculty</li>
-      <li>Nurturing young talents</li>
-      <li>Publishing high-impact/cutting-edge researches</li>
-    </ul>
-  </li>
-  <li><em>Outreach Excellence</em> via
-    <ul>
-      <li>Partnering with academic bodies, enterprises, and public health sectors to identify new opportunities and to access potential financial, human, and data resources, enabling industry-relevant achievements and delivering social impact worthy of a mention</li>
-    </ul>
-  </li>
-  <li><em>Translational Excellence</em> via
-    <ul>
-      <li>Seeking opportunities for commercializations and startups</li>
-      <li>Working closely with EC during the entire phase of ideation, design, implementation and deployment</li>
-    </ul>
-  </li>
-</ul>
+<h1 id="validate-backends">validate backends</h1>
+<p>backends_valid = []
+for b in backends:
+    try:
+        p.switch_backend(b)
+        backends_valid += [b]
+    except:
+        continueprint(“valid backends: \t” + str(backends_valid))</p>
+
+<h1 id="try-backends-performancefor-b-in-backends_valid">try backends performancefor b in backends_valid:</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ion()
+try:
+    p.switch_backend(b)
+
+
+    clf()
+    tstart = time.time()               # for profiling
+    x = arange(0,2*pi,0.01)            # x-array
+    line, = plot(x,sin(x))
+    for i in arange(1,200):
+        line.set_ydata(sin(x+i/10.0))  # update the data
+        draw()                         # redraw the canvasprint(b + ' FPS: \t' , 200/(time.time()-tstart))
+    ioff()
+
+except:
+    print(b + " error :(")
+</code></pre></div></div>
+
+<p>Problem 4: If you see a similar message in the picture when trying to run “lsl-stream.py”, the issue might be no internet connection.</p>
+
+<p>https://mailman.ucsd.edu/pipermail/lsl-l/2017/000306.html
+https://github.com/sccn/liblsl/commit/4df71008570e2f4b01e3a19ee79aa529514d8d3d
+I know it is odd that the library requires an internet connection but it is. (T _ T)
+Solution: Connect to the internet</p>
 
         
       </section>

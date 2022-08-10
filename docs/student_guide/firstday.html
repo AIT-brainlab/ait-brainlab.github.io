@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title></title>
+<!-- begin _includes/seo.html --><title>Your First Day  | AIT Brainlab</title>
 <meta name="description" content="We are the brain-computer interface (BCI) lab from AIT. Our lab is under Computer Science &amp; Information Management (CSIM) program of Asian Institute of Technology (AIT)">
 
 
@@ -20,8 +20,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="">
-<meta property="og:title" content="">
-<meta property="og:url" content="http://0.0.0.0:8000/lab-resources/openbci-cap-101">
+<meta property="og:title" content="Your First Day">
+<meta property="og:url" content="http://0.0.0.0:8000/student_guide/firstday">
 
 
   <meta property="og:description" content="We are the brain-computer interface (BCI) lab from AIT. Our lab is under Computer Science &amp; Information Management (CSIM) program of Asian Institute of Technology (AIT)">
@@ -41,7 +41,7 @@
   
 
 
-<link rel="canonical" href="http://0.0.0.0:8000/lab-resources/openbci-cap-101">
+<link rel="canonical" href="http://0.0.0.0:8000/student_guide/firstday">
 
 
 
@@ -115,6 +115,8 @@
           <span class="site-subtitle"></span>
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/student_guide">Student Guide</a>
+            </li><li class="masthead__menu-item">
               <a href="/aboutus">About Us</a>
             </li></ul>
         
@@ -156,7 +158,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/lab-resources" itemprop="item"><span itemprop="name">Lab resources</span></a>
+          <a href="/student_guide" itemprop="item"><span itemprop="name">Student_guide</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -164,7 +166,7 @@
     
       
       
-        <li class="current"></li>
+        <li class="current">Your First Day</li>
       
     
   </ol>
@@ -175,10 +177,53 @@
 
 <div id="main" role="main">
   
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <a href="/student_guide"><span class="nav__sub-title">Student Guide</span></a>
+        
+
+        
+        <ul>
+          
+            <li><a href="/student_guide/firstday" class="active">Your First Day</a></li>
+          
+            <li><a href="/student_guide/thesis-reasearch">Thesis & Reasearch</a></li>
+          
+            <li><a href="/student_guide/printerSetup">Printer Set Up</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    
+    <meta itemprop="headline" content="Your First Day">
     
     
     
@@ -186,7 +231,10 @@
     <div class="page__inner-wrap">
       
         <header>
-          
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://0.0.0.0:8000/student_guide/firstday" class="u-url" itemprop="url">Your First Day
+</a>
+          </h1>
           
 
 
@@ -195,103 +243,38 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p>Setup
-by Dr. Chaklam
-http://chaklam.com/node/75
-Basic Use 101
-by Rattaphong Laoharungpisit
-EEG Cap Setup
-CortechSplanations - Biosemi ActiveTwo - Setup, Recording EEG, and Cleanup
-A very detailed of how to set up the EEG Cab to get the best quality signals.</p>
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i>  Table of Contents</h4></header>
+              <ul class="toc__menu"><li><a href="#1-joining-the-slack">1. Joining the Slack</a></li><li><a href="#2-joining-the-google-shared-drive">2. Joining the Google Shared Drive</a></li><li><a href="#3-take-a-look-at-this-site">3. Take a look at this site</a></li><li><a href="#4-read-the-your-ultimate-guide-to-success-by-ait-brain-lab">4. Read the Your Ultimate Guide to Success by AIT Brain Lab</a></li></ul>
 
-<p>EEG offset/ DC offset/ Drift/ slow cortical potentials (SCP)
-TLDR; Use a High-Pass filter at 1Hz to remove this DC offset. What if your interested EEG frequency range is in that 0-1 Hz? Well, good luck.
-DC-EEG in Psychophysiology Applications – A Technical and Clinical Overview | https://www.bmedreport.com/archives/3739
-Huge offset. Possible causes? | https://openbci.com/forum/index.php?p=/discussion/2595/huge-offset-possible-causes
-large millivolt data values / FbEEG (Full-Band EEG) | https://openbci.com/forum/index.php?p=/discussion/201/large-millivolt-data-values-fbeeg-full-band-eeg
-OpenBCI: Measuring Electrode Impedance
-TLDR; Common clinical and research guidance often says to use skin cleansing and skin abrasion to get the electrode-to-skin impedance down below 10 kOhm or even 5 kOhm.
-https://openbci.com/community/openbci-measuring-electrode-impedance/
-Troubleshooting
-Problem 1: Cannot access /dev/ttyUSB0 without sudo
-Solution: Add usergroup to dialout. (Choose 1 command below)
-$ sudo adduser user-name group-name
-$ sudo usermod -aG  group-name user-name
-$ sudo usermod -a -G dialout <username></username></p>
+            </nav>
+          </aside>
+        
+        <p>Some welcome text</p>
 
-<p>Problem 2: EEG not found - when run lsl-viewer.py
-Solution: Downgrade pylsl
-pip3 uninstall pylsl
-pip3 install -I pylsl==1.12.2</p>
+<p>If you are lost, here is the simple to-do list</p>
 
-<p>Problem 3: Segmentation fault Core Dump - when run lsl-viewer.py
-Solution: Change matplotlib backend
-$ pip3 install pyqt5  
-$ sudo apt-get install python3-pyqt5  
-$ sudo apt-get install pyqt5-dev-tools
-$ sudo apt-get install qttools5-dev-tools
-$ sudo apt-get install libglib2.0-dev python3-dev
-Below is the script for benchmarking your matplotlib 
-https://stackoverflow.com/questions/5091993/list-of-all-available-matplotlib-backends
-from <strong>future</strong> import print_function, division, absolute_import
-from pylab import *
-import time</p>
+<h2 id="1-joining-the-slack">1. Joining the Slack</h2>
 
-<p>import matplotlib.backends
-import matplotlib.pyplot as p
-import os.path</p>
+<p>Slack is our lab main communication channel. Lot of things are in there. Click the link below and join.</p>
 
-<p>def is_backend_module(fname):
-    “"”Identifies if a filename is a matplotlib backend module”"”return fname.startswith(‘backend_’) and fname.endswith(‘.py’)</p>
+<p><a href="https://aitbrainlab.slack.com/">https://aitbrainlab.slack.com/</a></p>
 
-<p>def backend_fname_formatter(fname): 
-    “"”Removes the extension of the given filename, then takes away the leading ‘backend_’.”"”return os.path.splitext(fname)[0][8:]</p>
+<h2 id="2-joining-the-google-shared-drive">2. Joining the Google Shared Drive</h2>
 
-<h1 id="get-the-directory-where-the-backends-live">get the directory where the backends live</h1>
-<p>backends_dir = os.path.dirname(matplotlib.backends.<strong>file</strong>)</p>
+<p>Lab resources can be found in the share drive.
+<a href="https://drive.google.com/drive/folders/0ALj35PXI_hjGUk9PVA">Link to Shared Drive</a></p>
 
-<h1 id="filter-all-files-in-that-directory-to-identify-all-files-which-provide-a-backend">filter all files in that directory to identify all files which provide a backend</h1>
-<p>backend_fnames = filter(is_backend_module, os.listdir(backends_dir))</p>
+<h2 id="3-take-a-look-at-this-site">3. Take a look at this site</h2>
 
-<p>backends = [backend_fname_formatter(fname) for fname in backend_fnames]</p>
+<p>The site contains resources useful for AIT student life</p>
 
-<p>print(“supported backends: \t” + str(backends))</p>
+<h2 id="4-read-the-your-ultimate-guide-to-success-by-ait-brain-lab">4. Read the <code class="language-plaintext highlighter-rouge">Your Ultimate Guide to Success by AIT Brain Lab</code></h2>
 
-<h1 id="validate-backends">validate backends</h1>
-<p>backends_valid = []
-for b in backends:
-    try:
-        p.switch_backend(b)
-        backends_valid += [b]
-    except:
-        continueprint(“valid backends: \t” + str(backends_valid))</p>
+<p>The slide is in the Google Shared Drive, so get an access first.</p>
 
-<h1 id="try-backends-performancefor-b-in-backends_valid">try backends performancefor b in backends_valid:</h1>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ion()
-try:
-    p.switch_backend(b)
-
-
-    clf()
-    tstart = time.time()               # for profiling
-    x = arange(0,2*pi,0.01)            # x-array
-    line, = plot(x,sin(x))
-    for i in arange(1,200):
-        line.set_ydata(sin(x+i/10.0))  # update the data
-        draw()                         # redraw the canvasprint(b + ' FPS: \t' , 200/(time.time()-tstart))
-    ioff()
-
-except:
-    print(b + " error :(")
-</code></pre></div></div>
-
-<p>Problem 4: If you see a similar message in the picture when trying to run “lsl-stream.py”, the issue might be no internet connection.</p>
-
-<p>https://mailman.ucsd.edu/pipermail/lsl-l/2017/000306.html
-https://github.com/sccn/liblsl/commit/4df71008570e2f4b01e3a19ee79aa529514d8d3d
-I know it is odd that the library requires an internet connection but it is. (T _ T)
-Solution: Connect to the internet</p>
+<p><a href="https://docs.google.com/presentation/d/1JWxeXem2pn0lTnQc9CWfIGTmisriYmeZbr99Ccb9h8A/edit?usp=sharing">Your Ultimate Guide to Success by AIT Brain Lab</a></p>
 
         
       </section>

@@ -1,12 +1,20 @@
 # main links
+# This will appear as a link on the top navigation bar
 main:
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: Student Guide
+    url: /student_guide
   - title: "About Us"
     url: /aboutus
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+
+student_guide:
+  - title: Student Guide
+    url: /student_guide
+    children:
+      - title: Your First Day
+        url: /student_guide/firstday
+      - title: Thesis & Reasearch
+        url: /student_guide/thesis-reasearch
+      - title: Printer Set Up
+        url: /student_guide/printerSetup

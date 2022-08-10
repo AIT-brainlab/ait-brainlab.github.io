@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /lab-resources/openbci-cap-101
+permalink: /student_guide/openbci-cap-101
 ---
 
 Setup

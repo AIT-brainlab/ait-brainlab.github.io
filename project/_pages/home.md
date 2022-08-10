@@ -9,8 +9,7 @@ header:
     overlay_filter: linear-gradient(rgba(130, 0, 200, 0.5), rgba(0, 255, 255, 0.5))
     actions:
         - label: Your First Day
-          url: "/firstday"
-
+          url: "/student_guide"
 ---
 
 # Meeting Links
