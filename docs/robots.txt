@@ -1,1 +1,1 @@
-Sitemap: https://ait-brainlab.github.io/sitemap.xml
+Sitemap: http://0.0.0.0:8000/sitemap.xml
