@@ -5,6 +5,8 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: Student Guide
     url: /student_guide
+  - title: Lab Resources
+    url: /lab_resources
   - title: "About Us"
     url: /aboutus
 
@@ -20,3 +22,16 @@ student_guide:
         url: /student_guide/finalSemester
       - title: Printer Set Up
         url: /student_guide/printerSetup
+
+lab_resources:
+  - title: Lab Resources
+    url: /lab_resources
+    children:
+      - title: OpenBCI 101
+        url: /lab_resources/openbci_101
+      - title: EEG Resources
+        url: /lab_resources/eeg_resources
+      - title: Servers
+        url: /lab_resources/servers
+      - title: Lab Dataset
+        url: /lab_resources/dataset
