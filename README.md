@@ -23,9 +23,15 @@ The container will exec `bundle exec jekyll server` right away. So you can start
 
 ## To Deploy
 
-1. Shell into the container
-2. run `bundle exec jekyll build`
-3. commit and push
+1. ~~Shell into the container~~
+2. ~~run `bundle exec jekyll build`~~
+3. ~~commit and push~~
+
+run this at your terminal/cmd
+
+```sh
+docker-compose exec brainlab-web /bin/bash -l -c "bundle exec jekyll build"
+```
 
 Well, I would to skip the `shell` step and just run `docker run` command, but I am too lazy to learn how to do that.
 

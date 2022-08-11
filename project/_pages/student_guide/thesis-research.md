@@ -14,19 +14,19 @@ sidebar:
 ### For `Thesis`
 
 **Semester 3**
-Step 0 (~1hr): Discuss the area of interest with Chaky and Ph.D. students -> Broad topic/title
-1st step (~ 2w): Paper reading and Related Work writing.
-2nd step (~2w): Topic confirmation with supervisor AND Ph.D. students -> Narrow and focus Topic/title
-3rd step (~4w): Writing Introduction, Related Work, Methodology
-4th step (~4w): Rewriting + Start coding proof of concept
-5th step (~2w): Proposal presentation
+- Step 0 (~1hr): Discuss the area of interest with Chaky and Ph.D. students -> Broad topic/title
+- 1st step (~ 2w): Paper reading and Related Work writing.
+- 2nd step (~2w): Topic confirmation with supervisor AND Ph.D. students -> Narrow and focus Topic/title
+- 3rd step (~4w): Writing Introduction, Related Work, Methodology
+- 4th step (~4w): Rewriting + Start coding proof of concept
+- 5th step (~2w): Proposal presentation
 
 **Semester 4**
-6th step (~4w): Implementation
-7th step (~2w): Writing the remaining section Result, Discussion, Conclusion
-8th step (~1w): Proposal Progress
-9th step (~4w): Publication + lots of rewriting
-10th step (~2w): Final Defense
+- 6th step (~4w): Implementation
+- 7th step (~2w): Writing the remaining section Result, Discussion, Conclusion
+- 8th step (~1w): Proposal Progress
+- 9th step (~4w): Publication + lots of rewriting
+- 10th step (~2w): Final Defense
 
 **Graduate Hooray~!!**
 

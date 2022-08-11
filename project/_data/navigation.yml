@@ -16,5 +16,7 @@ student_guide:
         url: /student_guide/firstday
       - title: Thesis & Reasearch
         url: /student_guide/thesis-reasearch
+      - title: Final Semester
+        url: /student_guide/finalSemester
       - title: Printer Set Up
         url: /student_guide/printerSetup
