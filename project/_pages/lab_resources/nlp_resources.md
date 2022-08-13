@@ -10,7 +10,7 @@ sidebar:
   nav: lab_resources
 ---
 
-## Overview of Transformer-based models
+## Overview of NLP models
 
 ### Summary of Transformer-based models
 Link: <https://huggingface.co/docs/transformers/model_summary>
@@ -21,7 +21,7 @@ Link: <https://huggingface.co/docs/transformers/model_summary>
 Link: <https://jalammar.github.io/illustrated-transformer/>
 
 ### The Narrated Transformer Language Model 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=-QH8fRhqFHM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-QH8fRhqFHM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Huggingface Course
 Link: <https://huggingface.co/course/chapter1/2?fw=pt>
