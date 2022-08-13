@@ -31,6 +31,8 @@ lab_resources:
         url: /lab_resources/openbci_101
       - title: EEG Resources
         url: /lab_resources/eeg_resources
+      - title: NLP Resources
+        url: /lab_resources/nlp_resources
       - title: Servers
         url: /lab_resources/servers
       - title: Lab Dataset
