@@ -276,11 +276,10 @@ compress_html:
   ignore:
     envs: development
 
-
-# collections:
-#   people:
-#     output: true
-#     permalink: /:collection/:path/
+collections:
+  people:
+    output: true
+    permalink: /:collection/:path/
 #   projects:
 #     output: true
 #     permalink: /:collection/:path/

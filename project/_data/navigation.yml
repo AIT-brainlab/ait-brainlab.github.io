@@ -3,6 +3,8 @@
 main:
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: People
+    url: /people
   - title: Student Guide
     url: /student_guide
   - title: Lab Resources
@@ -37,3 +39,16 @@ lab_resources:
         url: /lab_resources/servers
       - title: Lab Dataset
         url: /lab_resources/dataset
+
+people:
+  - title: People
+    url: /people
+    children:
+      - title: Lab Director
+        url: /people/lab_director
+      - title: Doctoral Students
+        url: /people/doctoral_student
+      - title: Master Students
+        url: /people/master_student
+      - title: Alumni
+        url: /people/alumni

@@ -7,3 +7,86 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+
+/* Create two equal columns that floats next to each other */
+.col-1 {
+    float: left;
+    width: 100/12%;
+}
+
+.col-2 {
+    float: left;
+    width: 200/12%;
+}
+
+.col-3 {
+    float: left;
+    width: 300/12%;
+}
+
+.col-4 {
+    float: left;
+    width: 400/12%;
+}
+
+.col-5 {
+    float: left;
+    width: 500/12%;
+}
+
+.col-6 {
+    float: left;
+    width: 600/12%;
+}
+
+.col-7 {
+    float: left;
+    width: 700/12%;
+}
+
+.col-8 {
+    float: left;
+    width: 800/12%;
+}
+
+.col-9 {
+    float: left;
+    width: 900/12%;
+}
+
+.col-10 {
+    float: left;
+    width: 1000/12%;
+}
+
+.col-11 {
+    float: left;
+    width: 1100/12%;
+}
+
+.col-12 {
+    float: left;
+    width: 1200/12%;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.people_image{
+    width: auto;
+    /* height: 250px; */
+}
+
+.people_body{
+    padding-left: 20px;
+}
+
+.people_body h3{
+    margin-top: 0px;
+}
