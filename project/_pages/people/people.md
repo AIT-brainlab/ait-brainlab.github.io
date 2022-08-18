@@ -19,16 +19,17 @@ classes: wide
 {% for person in people %}
 {% if person.position == "Lab Director" %}
 <div class="row">
-    <div class="col-3">
+    <div class="col-2">
         <div class="people_image">
             <img src="{{ site.baseurl }}{{ person.header.teaser }}" alt="placeholder image 1">
         </div>
     </div>
-    <div class="col-9">
+    <div class="col-10">
         <div class="people_body">
             <h3><a href="{{ site.baseurl }}{{ person.url }}" rel="permalink">{{ person.title }} {{ person.name }}</a></h3>
             <div class="">
-            {{ person.position }}
+                <b>Affiliation: </b><p>{{ person.affiliation }}</p>
+                <b>Position: </b><p>{{ person.position }}</p>
             </div>
             <div>
                 <h3>Contact</h3>
