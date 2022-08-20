@@ -1,7 +1,7 @@
 ---
-title: People
+title: Master Student
 layout: single
-permalink: /people
+permalink: /people/master_student
 sidebar:
     nav: people
 classes: wide
@@ -10,14 +10,12 @@ classes: wide
 
 </style>
 
-## Lab Director
-
 <!-- Assign and Sort collection of people -->
 {% assign people = site.people | sort: 'idx' %}
 
 <!-- Iterate orver the collection -->
 {% for person in people %}
-{% if person.position == "Lab Director" %}
+{% if person.position == "Master Student" %}
 <div class="row">
     <div class="col-2">
         <div class="people_image">
@@ -47,5 +45,6 @@ classes: wide
         </div>
     </div>
 </div>
+<hr>
 {% endif %}
 {% endfor %}

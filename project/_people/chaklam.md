@@ -1,6 +1,6 @@
 ---
 title: Dr. Chaklam Silpasuwanchai
-name_first: Chaklam 
+name_first: Chaklam
 name_last: Silpasuwanchai
 name_title: Dr.
 affiliation: Assistant Professor
@@ -30,7 +30,7 @@ sidebar:
         </a>
       </li>
       <li>
-        <a href='https://github.com/AIT-brainlab' target='_blank' style='color: inherit; text-decoration: none; font-weight: bold;'>
+        <a href='https://github.com/chaklam-silpasuwanchai/' target='_blank' style='color: inherit; text-decoration: none; font-weight: bold;'>
         <i class='fab fa-fw fa-github' aria-hidden='true'></i> GitHub
         </a>
       </li>

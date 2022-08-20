@@ -44,8 +44,6 @@ people:
   - title: People
     url: /people
     children:
-      - title: Lab Director
-        url: /people/lab_director
       - title: Doctoral Students
         url: /people/doctoral_student
       - title: Master Students
