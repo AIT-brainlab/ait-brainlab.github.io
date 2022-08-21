@@ -47,12 +47,20 @@ Use a server to run your code not developing your project and storing your data.
 
 If you have issue installing `pip`, try export `http_proxy` and `https_proxy` as `http://192.41.170.23:3128`
 
-```
+```sh
 export http_proxy=http://192.41.170.23:3128
 export https_proxy=http://192.41.170.23:3128
 ```
 
 To automatically has this environment variable every time you log in, you can put the export command in the `.bashrc` 
+
+Inside the JupytorLab environment, if you want to use terminal command to download stuff, you will need to export `http_proxy` and `https_proxy` inside the jupytor notebook too.
+
+```python
+import os
+os.environ['http_proxy'] = "http://192.41.170.23:3128" 
+os.environ['https_proxy'] = "http://192.41.170.23:3128" 
+```
 
 ## Way 2: Deploy your own Docker
 

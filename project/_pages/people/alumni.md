@@ -22,7 +22,8 @@ classes: wide
         <div class="people_body">
             <h3><a href="{{ site.baseurl }}{{ person.url }}" rel="permalink">{{ person.title }} {{ person.name }}</a></h3>
             <div class="">
-                <b>Current Workplace:</b><p>{{ person.workplace }}</p>
+                <b>Current Workplace:</b><p>{{ person.work_place }}</p>
+                <b>Position:</b><p>{{ person.work_job }}</p>
             </div>
             <div>
                 <b>Contact:</b>

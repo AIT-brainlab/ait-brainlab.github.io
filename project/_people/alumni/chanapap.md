@@ -3,7 +3,9 @@ title: Ms. Chanapa Pananookooln
 name_first: Chanapa
 name_last: Pananookooln
 name_title: Ms.
-workplace: SCG
+work_place: SCG
+work_job: Biometric Engineering
+graduated: 202207
 position: Alumni
 header:
   teaser: /assets/images/bci-logo.png

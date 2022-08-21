@@ -297,11 +297,18 @@ GPU:
 
 <p>If you have issue installing <code class="language-plaintext highlighter-rouge">pip</code>, try export <code class="language-plaintext highlighter-rouge">http_proxy</code> and <code class="language-plaintext highlighter-rouge">https_proxy</code> as <code class="language-plaintext highlighter-rouge">http://192.41.170.23:3128</code></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export http_proxy=http://192.41.170.23:3128
-export https_proxy=http://192.41.170.23:3128
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">http_proxy</span><span class="o">=</span>http://192.41.170.23:3128
+<span class="nb">export </span><span class="nv">https_proxy</span><span class="o">=</span>http://192.41.170.23:3128
 </code></pre></div></div>
 
 <p>To automatically has this environment variable every time you log in, you can put the export command in the <code class="language-plaintext highlighter-rouge">.bashrc</code></p>
+
+<p>Inside the JupytorLab environment, if you want to use terminal command to download stuff, you will need to export <code class="language-plaintext highlighter-rouge">http_proxy</code> and <code class="language-plaintext highlighter-rouge">https_proxy</code> inside the jupytor notebook too.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="s">'http_proxy'</span><span class="p">]</span> <span class="o">=</span> <span class="s">"http://192.41.170.23:3128"</span> 
+<span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="s">'https_proxy'</span><span class="p">]</span> <span class="o">=</span> <span class="s">"http://192.41.170.23:3128"</span> 
+</code></pre></div></div>
 
 <h2 id="way-2-deploy-your-own-docker">Way 2: Deploy your own Docker</h2>
 

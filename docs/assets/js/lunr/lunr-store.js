@@ -1,4 +1,10 @@
 var store = [{
+        "title": "Ms. Chanapa Pananookooln",
+        "excerpt":"Jane has worked on Jekyll for the past five years.   Chanapa Pananookooln st121395@ait.asia  ","categories": [],
+        "tags": [],
+        "url": "/people/alumni/chanapap/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
         "title": "Dr. Chaklam Silpasuwanchai",
         "excerpt":"Educational Background      Bachelor of Science in Software Engineering (First class honor) from Sirindhorn International Institute of Technology, Thammasat University, Thailand.   Master of Computer Science (First class honor) from Asian Institute of Technology, Thailand.   Doctoral of Engineering from Kochi University of Technology, Japan.  ","categories": [],
         "tags": [],
