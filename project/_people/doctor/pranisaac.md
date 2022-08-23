@@ -4,6 +4,7 @@ name_first: Pranisaa
 name_last: Charnparttaravanit
 name_title: Ms.
 position: Doctoral Student
+thesis_master: EVALUATING THE EFFECTIVENESS OF TRUNCATION AND EXTRACTIVE APPROACHES IN TEXT SUMMARIZATION
 header:
   teaser: /assets/images/bci-logo.png
 contacts:

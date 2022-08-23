@@ -1,8 +1,86 @@
 var store = [{
         "title": "Ms. Chanapa Pananookooln",
-        "excerpt":"Jane has worked on Jekyll for the past five years.   Chanapa Pananookooln st121395@ait.asia  ","categories": [],
+        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
         "tags": [],
         "url": "/people/alumni/chanapap/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Mr. Jakrapop Akaranee",
+        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "tags": [],
+        "url": "/people/alumni/jakrapopa/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Mr. Nattapat Dilokthammapan",
+        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "tags": [],
+        "url": "/people/alumni/nattapatd/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Mr. Nopphon Rattanamanee",
+        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "tags": [],
+        "url": "/people/alumni/nopphonr/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Mr. Nuttasit Pasukdee",
+        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "tags": [],
+        "url": "/people/alumni/nuttasitp/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Mrs. Ploypan Phrukampai",
+        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "tags": [],
+        "url": "/people/alumni/ploypanp/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Mr. Rattaphong Laoharungpisit",
+        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "tags": [],
+        "url": "/people/alumni/rattaphongl/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Ms. Ravula Greeshma",
+        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "tags": [],
+        "url": "/people/alumni/ravulag/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Mr. Romen Samuel Wabina",
+        "excerpt":"Jane has worked on Jekyll for the past five years.  Charnparttaravanit  ","categories": [],
+        "tags": [],
+        "url": "/people/alumni/romensw/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Mr. Somaraju Sri Harsha",
+        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "tags": [],
+        "url": "/people/alumni/somarajush/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Ms. Suprava Sahoo",
+        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "tags": [],
+        "url": "/people/alumni/supravas/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Mr. Tachapong Panpoonsup",
+        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "tags": [],
+        "url": "/people/alumni/tachapongp/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Mr. Wasakorn Yousub",
+        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "tags": [],
+        "url": "/people/alumni/wasakorny/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Ms. Widya Eka Sandri",
+        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "tags": [],
+        "url": "/people/alumni/widyaes/",
         "teaser": "/assets/images/bci-logo.png"
       },{
         "title": "Dr. Chaklam Silpasuwanchai",

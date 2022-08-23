@@ -5,7 +5,8 @@ name_last: Pananookooln
 name_title: Ms.
 work_place: SCG
 work_job: Biometric Engineering
-graduated: 202207
+graduated_date: 202207
+thesis_master: COMPARING SELECTIVE MASKING METHODS FOR DEPRESSION DETECTION IN SOCIAL MEDIA
 position: Alumni
 header:
   teaser: /assets/images/bci-logo.png
@@ -21,5 +22,3 @@ sidebar:
 idx: 2
 ---
 Jane has worked on Jekyll for the past *five years*.
-
-Chanapa Pananookooln <st121395@ait.asia>
