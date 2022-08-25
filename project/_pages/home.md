@@ -20,4 +20,4 @@ header:
 
 # On going Workshop
 
-- Weekly Thesis report workshop by Dr. Chaklam on 9:00 - 10:30 Wednesday at CS106 <a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=XzhvbzNnZTFuOHAzMzhiYTM4ZDEzYWI5azhoMTNpYjlwOG9xM2diOWw2cDE0MmU5ajhnb2s0ZGhoOGNfMjAyMjA4MzFUMDIwMDAwWiBzdDEyMTQxM0BhaXQuYXNpYQ&amp;tmsrc=st121413%40ait.asia&amp;scp=ALL"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a>
+- Weekly Thesis report workshop by Dr. Chaklam on 9:00 - 10:30 Wednesday at CS106 <a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&tmeid=XzhvbzNnZTFuOHAzMzhiYTM4ZDEzYWI5azhoMTNpYjlwOG9xM2diOWw2cDE0MmU5ajhnb2s0ZGhoOGNfMjAyMjA4MzFUMDIwMDAwWiBjaGFrbGFtQGFpdC5hc2lh&tmsrc=chaklam%40ait.asia&scp=ALL"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a>

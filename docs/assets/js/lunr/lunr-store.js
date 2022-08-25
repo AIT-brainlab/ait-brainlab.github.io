@@ -113,6 +113,12 @@ var store = [{
         "url": "/people/doctor/wanchanoks/",
         "teaser": "/assets/images/bci-logo.png"
       },{
+        "title": "Ms. Aiman Lameesa",
+        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "tags": [],
+        "url": "/people/eeg_signal/aimanl/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
         "title": "Mr. Kanawut Kaewnoparat",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
         "tags": [],
