@@ -30,7 +30,7 @@ The container will exec `bundle exec jekyll server` right away. So you can start
 run this at your terminal/cmd
 
 ```sh
-docker-compose exec brainlab-web /bin/bash -l -c "bundle exec jekyll build"
+docker-compose exec brainlab-web /bin/bash -l -c "bundle exec jekyll build --verbose"
 ```
 
 Well, I would to skip the `shell` step and just run `docker run` command, but I am too lazy to learn how to do that.

@@ -18,6 +18,8 @@ student_guide:
     children:
       - title: Your First Day
         url: /student_guide/firstday
+      - title: FAQ
+        url: /student_guide/faq
       - title: Thesis & Reasearch
         url: /student_guide/thesis-reasearch
       - title: Final Semester
