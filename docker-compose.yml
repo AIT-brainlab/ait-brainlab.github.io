@@ -7,7 +7,7 @@ services:
       dockerfile: .Dockerfile
     ports:
       - 8000:8000
-    command: /bin/bash -l -c "bundle exec jekyll server -H 0.0.0.0 -P 8000 -l --force_polling --incremental --verbose"
+    command: /bin/bash -l -c "bundle exec jekyll server -H 0.0.0.0 -P 8000 -l --force_polling --verbose"
     volumes:
       - ./project:/root/project
       - ./docs:/root/project/_site

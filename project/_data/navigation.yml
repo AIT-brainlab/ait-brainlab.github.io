@@ -20,6 +20,8 @@ student_guide:
         url: /student_guide/firstday
       - title: FAQ
         url: /student_guide/faq
+      - title: Paper Writing Course
+        url: /student_guide/paper_writing
       - title: Thesis & Reasearch
         url: /student_guide/thesis-reasearch
       - title: Final Semester
