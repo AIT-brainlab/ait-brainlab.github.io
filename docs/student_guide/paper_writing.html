@@ -256,7 +256,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i>  Table of Contents</h4></header>
-              <ul class="toc__menu"><li><a href="#1-abstract">1. Abstract</a><ul><li><a href="#steps">Steps</a></li></ul></li><li><a href="#2-literature-reviewrelated-work">2. Literature Review/Related Work</a><ul><li><a href="#steps-1">Steps</a></li><li><a href="#cite-style">Cite style</a><ul><li><a href="#command-example">Command example</a></li><li><a href="#subject-form">Subject form</a></li><li><a href="#indirect-form">Indirect form</a></li></ul></li></ul></li><li><a href="#a1-journal-impact-factor">A1. Journal Impact Factor</a></li><li><a href="#a2-conference-rank">A2. Conference Rank</a></li></ul>
+              <ul class="toc__menu"><li><a href="#1-abstract">1. Abstract</a><ul><li><a href="#steps">Steps</a></li></ul></li><li><a href="#2-literature-reviewrelated-work">2. Literature Review/Related Work</a><ul><li><a href="#steps-1">Steps</a></li><li><a href="#cite-style">Cite style</a><ul><li><a href="#command-example">Command example</a></li><li><a href="#subject-form">Subject form</a></li><li><a href="#indirect-form">Indirect form</a></li></ul></li></ul></li><li><a href="#3-methodology">3. Methodology</a><ul><li><a href="#the-purpose">The purpose</a></li><li><a href="#step">Step</a><ul><li><a href="#for-deep-learning-research">For Deep Learning research</a></li><li><a href="#for-hci-research">For HCI research</a></li></ul></li></ul></li><li><a href="#a1-journal-impact-factor">A1. Journal Impact Factor</a></li><li><a href="#a2-conference-rank">A2. Conference Rank</a></li><li><a href="#a3-what-kind-of-work-can-i-do">A3. What kind of work can I do?</a><ul><li><a href="#a31-deep-learning">A3.1 Deep Learning</a><ul><li><a href="#a-propose-new-model">A. Propose new model</a></li><li><a href="#b-compare-different-models">B. Compare different models</a></li></ul></li><li><a href="#a32-hci">A3.2 HCI</a><ul><li><a href="#a-propose-new-systemtechnique">A. Propose new system/technique</a></li><li><a href="#b-perform-some-user-experiments-no-system--technique">B. Perform some user experiments (no system / technique)</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -382,6 +382,180 @@
   </li>
 </ul>
 
+<h2 id="3-methodology">3. Methodology</h2>
+
+<p>You have to finish the <code class="language-plaintext highlighter-rouge">Literature Review/Related Work</code> by mid-September. Here the <code class="language-plaintext highlighter-rouge">Methodology</code> should be done by end-September. <code class="language-plaintext highlighter-rouge">Finished</code> here means <code class="language-plaintext highlighter-rouge">First-Draft</code> is ok.</p>
+
+<h3 id="the-purpose">The purpose</h3>
+
+<ul>
+  <li>Make people believe you do everything <code class="language-plaintext highlighter-rouge">validly</code> (according to the principle of science)
+    <ul>
+      <li>read a lot of papers</li>
+    </ul>
+  </li>
+  <li>Other people should be able to replicate what you do 100%, not curse you later.
+    <ul>
+      <li>You should be very detailed.</li>
+      <li>Please draw a figure. One good figured that explain everything from preprocessing till the end.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="step">Step</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Methodology</code> is the easiest chapter/section to write. <strong>Just follow this format</strong>.</p>
+
+<h4 id="for-deep-learning-research">For <code class="language-plaintext highlighter-rouge">Deep Learning</code> research</h4>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\section</span><span class="p">{</span>Methodology<span class="p">}</span>
+</code></pre></div></div>
+<p>You need to give a big picture. Here, you need to mention the whole experiment. What is the rationale, what is the different steps,  anything as a reader should know. This is the place where you mention the figure (the one good figure).</p>
+
+<p>THIS IS THE IMPORTANT PART.</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\subsection</span><span class="p">{</span>Dataset/Data Collection<span class="p">}</span>
+</code></pre></div></div>
+<p>Describe the dataset you used, or described how you collect the data.</p>
+<ul>
+  <li>Purpose:
+    <ul>
+      <li>Why you use this dataset? Why this source</li>
+      <li>They believe your data is valid</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Collect data by yourself or use benchmark dataset?</p>
+<ol>
+  <li>Benchmark dataset
+    <ul>
+      <li>Reason: If you purposing a new technique or comparing technique</li>
+      <li>Challenge: You have many smart people to beat.</li>
+      <li>Pros: There is code/example out there</li>
+      <li>Another way: Look at different perspective that less people do, 
+ so you do not have to go in the “crowded” space where people are 
+ fighting</li>
+    </ul>
+  </li>
+  <li>Collect data yourself
+    <ul>
+      <li>Reason: 1) No data 2) You want to create some unique applications</li>
+      <li>Challenge: 1) Many things can go wrong. 2) No one to compare with. 
+   3) Usually very little people cite</li>
+      <li>Pros: You are new from the begining.</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\subsection</span><span class="p">{</span>Proprocessing<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Purpoose
+    <ul>
+      <li>People can believe you really preprocess your data well</li>
+      <li>You are knowledeable in the domain</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\subsection</span><span class="p">{</span>Model<span class="p">}</span>
+</code></pre></div></div>
+<ul>
+  <li>Purpose
+    <ul>
+      <li>if you <strong>compare</strong>, people can know <code class="language-plaintext highlighter-rouge">WHY</code> compare these models?</li>
+      <li>if you <strong>propose</strong>, people wants to believe that it is really amazing
+        <ul>
+          <li>so you have to be very detailed such that reaser can replicate</li>
+        </ul>
+      </li>
+      <li>if you use typical software, <code class="language-plaintext highlighter-rouge">pytorch</code>, <code class="language-plaintext highlighter-rouge">sklearn</code>, <code class="language-plaintext highlighter-rouge">mne</code>, <code class="language-plaintext highlighter-rouge">nilearn</code>
+  then you do not need to mention</li>
+      <li>Always mention the parameters of your model</li>
+      <li>if you did not create the model, no need to descrie the model in detail,
+  just the parameters you use</li>
+      <li>if you are the one who create the model, please describe them in deep detail,
+  so other people can copy
+        <ul>
+          <li>Please put your code into <code class="language-plaintext highlighter-rouge">GitHub</code>. Every publication of our lab must have a 
+  <code class="language-plaintext highlighter-rouge">GitHub</code> link.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\subsection</span><span class="p">{</span>Training and Validation<span class="p">}</span>
+</code></pre></div></div>
+<ul>
+  <li>Purpose:
+    <ul>
+      <li>People can believe that you did not cause any data leakage</li>
+      <li><code class="language-plaintext highlighter-rouge">Data leakage</code> means some statistics of training set goes to the testing set.
+        <ul>
+          <li>Split First before preprocessing</li>
+          <li>Ise statistics of the training set, and apply to the testing set</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">ML</code>: Use Nested/Double cross validation</li>
+      <li><code class="language-plaintext highlighter-rouge">DL</code>: Make sure you report the testing only, and <strong>save the model based on the
+  best validation loss</strong>; NEVER TOUCH THE TESTING SET until the very end.
+        <ul>
+          <li>If you use the testing set, you are violating the <strong>unseen data</strong> law.</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Imbalance class</code> - fix it if possible
+        <ul>
+          <li>class_0: 900 and class_1: 10 ==&gt; Your model will just predict 0 and gets 99%</li>
+          <li>Unless the real world cases is imbalance by nature, use f1-score?
+            <ul>
+              <li>Depressed 100 vs non-depressed 900:
+                <ul>
+                  <li>Take 100 non-depressed samples</li>
+                  <li>Do CV on 200 samples, get the score</li>
+                  <li>Redo but maybe 200 non-depressed, 300 non-depressed, …</li>
+                  <li>Show the robustness of your model</li>
+                  <li>Report accuary and f1-score</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Anomaly</code> in your data
+        <ul>
+          <li>Do not just jump tp modeling very quickly</li>
+          <li>Look at your data long enough - be patient</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Time series/EEG</code>: Do not shuffle the data when you do cross-validation.
+  Do <strong>forward block corss validation</strong></li>
+      <li><code class="language-plaintext highlighter-rouge">NLP</code>: Save you tokenizer</li>
+      <li><code class="language-plaintext highlighter-rouge">EEG</code>: Non-overlap segmentation, half-overlap segmentation. 
+  One sample overlap is wrong</li>
+      <li>When you compare models
+        <ul>
+          <li>Cross Validation, you have many score -&gt; use ANOVA</li>
+          <li>for DL, if your dataset is small enough -&gt; use ANOVA</li>
+          <li>If dataset is hughe (200k samples) -&gt; fine</li>
+          <li>If DL wants to do ANOVA -&gt; emulate Cross Validation with different seeds</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\subsection</span><span class="p">{</span>Evaluation<span class="p">}</span>
+- This explains what is the metric you use
+- if you use very typical metric, just mention the equation, and finish....no need to say a lot....
+</code></pre></div></div>
+
+<h4 id="for-hci-research">For <code class="language-plaintext highlighter-rouge">HCI</code> research</h4>
+
+<p>Will be done soon</p>
+
 <h2 id="a1-journal-impact-factor">A1. Journal Impact Factor</h2>
 
 <p>Impact Factor:</p>
@@ -402,6 +576,39 @@
   <li>For <code class="language-plaintext highlighter-rouge">Neuro</code>: <a href="https://scholar.google.com/citations?view_op=top_venues&amp;hl=en&amp;vq=med_neurology">google-scholar</a></li>
   <li>For <code class="language-plaintext highlighter-rouge">NLP</code>: <a href="https://scholar.google.co.th/citations?view_op=top_venues&amp;hl=en&amp;vq=eng_computationallinguistics">google-scholar</a></li>
 </ul>
+
+<h2 id="a3-what-kind-of-work-can-i-do">A3. What kind of work can I do?</h2>
+
+<h3 id="a31-deep-learning">A3.1 Deep Learning</h3>
+<h4 id="a-propose-new-model">A. Propose new model</h4>
+
+<p>Propose new model usually better because the contribution is VERY clear. By propose, we do not mean “Attention is all you need” level. We mean <code class="language-plaintext highlighter-rouge">change</code> some component in the existing model, and try to do some ablation study to see that component is really important. However, it is risky because your idea might be totally wrong.</p>
+
+<p>Propose new model Approach:</p>
+<ul>
+  <li>Copy some 2022 code from GitHub</li>
+  <li>Look at it for one month</li>
+  <li>Do not do anything</li>
+  <li>Try to change one component</li>
+  <li>If it improves, DONE</li>
+</ul>
+
+<p>Automatically, you have to compare too but not very rigorously</p>
+
+<h4 id="b-compare-different-models">B. Compare different models</h4>
+
+<p>Now, if you only compare, you need to do it very rigorously. By rigorously, look at least two IVs and two DVs. And, you need to do systematically.</p>
+
+<p>Comparing is very hectic, boring, not easy to convince Matt and Mongkol that you do a good job. However, it is very safe.</p>
+
+<h3 id="a32-hci">A3.2 HCI</h3>
+<h4 id="a-propose-new-systemtechnique">A. Propose new system/technique</h4>
+
+<p>Similar to <code class="language-plaintext highlighter-rouge">Deep Learning - Propose</code>, if you can propose a new thing, usually you are good. Therefore, many attributes are shared. Risky. However, if you are creative and able to propose new technique/system then you should be OK.</p>
+
+<h4 id="b-perform-some-user-experiments-no-system--technique">B. Perform some user experiments (no system / technique)</h4>
+
+<p>Similar to <code class="language-plaintext highlighter-rouge">Deep Learning - Compare</code>, you have to think of an “interesting” experiment. Time-consuming and you have to do it rigorously. However, it is safe.</p>
 
         
       </section>
