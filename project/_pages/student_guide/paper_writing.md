@@ -198,7 +198,90 @@ Collect data by yourself or use benchmark dataset?
 
 #### For `HCI` research
 
-Will be done soon
+```latex
+\section{Methodology}
+```
+
+Experimental design - IV, DV, hypothesis, what is the goal.
+
+```latex
+\subsection{System}
+```
+
+Optional - if you develop something...
+
+Here people should be
+- able to replicate what you made.
+- able to understand why.
+- feel you "make" something very challenging.
+
+```latex 
+\subsection{Participants}
+```
+
+- You have enough participants
+
+```latex
+\subsection{Task and Procedure}
+```
+
+- Super detailed so that people can follow you
+- order effects
+- sequence of events....so that people know that your work is valid
+
+```latex
+\subsection{Evaluation}
+```
+
+- what is your DV
+
+
+## 4. Introduction
+
+Introduction is nothing but `abstract` but write in a paragraph. Some paper has a nice figure explaining the problem here.
+
+### 1. Background
+- Very specific background; hint the problem.
+- Summary of `related work` section.
+- No WHO statistics, no general knowledge, just go straight to executive summary of `related work`.
+- Hint what is the problem.
+- How many citations? If your related work has 25 citations, here should be at least half but in super summarized form.
+
+### 2. Problem/Problem Statement
+- Very very measurable problem; start with a signal word like "However", "Anyhow", or "Despite".
+- Body is basically why this problem is worth solving? Why this is difficult?
+
+### 3. Solution/Objective
+- Use verb wisely; explore/investigate/develop/compare.
+- Summary of `methodology`
+- Choose "action verb" wisely.
+
+### Scope
+
+Talks about what you did not do to lower the expectation.
+
+### Organization of the studies
+
+It is always the same. Chapter 1 do this. Chapter 2 do that ...
+
+### 4. Key finding (2 - 3 sentences)
+- Summarize ONLY the key findings - it means interesting findings.
+- Summary of `Result` section.
+- Try to only talk about "surprising" findings.
+
+### 5. Contributions
+- Why this is important to be solved; what impact it can bring.
+- Remind readers again, what did you do.
+- Why your work is important.
+- Release a dataset, code.
+
+
+
+
+
+
+
+
 
 
 
@@ -256,3 +339,57 @@ Similar to `Deep Learning - Propose`, if you can propose a new thing, usually yo
 #### B. Perform some user experiments (no system / technique)
 
 Similar to `Deep Learning - Compare`, you have to think of an "interesting" experiment. Time-consuming and you have to do it rigorously. However, it is safe.
+
+### A4. How do Chaky thing about picking research topic
+
+> Chaky, 14/09/2022
+> 
+> I would like to help people. 
+> 
+> What do people want?
+> 
+> People want to be happy
+> 
+> How?
+> 1. Knowledge
+> 2. Well-being
+>   - Blood, Fat, Sugar, Brain
+> 3. Financial Freedom
+> 
+> What I do in this lab?
+> 1. NLP.
+>   - **Chatbot**: That can answer technical question (Intent, Q&A, Knowledge graph).
+>   - **Writing assistant**: Help people to communicate better (Grammar, paraphrase, summarization).
+>   - **Trading bot**: understand news, fundamental. The bot helps people to make a decision.
+> 2. HCI.
+>   - **EEG**: API for emotion, SSVEP, Motor Imagery, P300.
+>   - **Virtual reality/AP**: to train people mind, to train skills.
+>   - **spectroscopic sensor**: for blood, fat, glucose.
+> 3. Brain.
+>   - **Brain analyzer**: fMRI image
+> 
+> What I want is product, but publication is the way to get funded and feedback.
+
+### A5. Recommended reading
+
+#### Element of style, The
+
+In one paragraph
+
+- First sentence: Opening sentence, frame what you want to say.
+- Support sentences: evidence (citation), arguments (logical reasoning)
+- Last sentence: concluding sentence, conclude what you want to say.
+
+Writing things you have to learn
+
+- Use signal for your first sentence.
+- Use "unambiguous verbs/adjective".
+  - "My model is good" => what is "good" means?
+  - Avoid using "always, never, very, so, true" => include emotion
+- Try to write passively.
+  - We performed the experiment with three participants. => not so good
+  - Experiments were conducted with three participants. => better
+- Avoid too long sentence.
+- Definition of each work should be clear.
+  - Emotion, Attention, Mindfulness, Well-being, Exam scores => Is it the same meaning?
+  - Use consistent keyword. 
