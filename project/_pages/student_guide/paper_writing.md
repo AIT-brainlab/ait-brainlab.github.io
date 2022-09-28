@@ -14,6 +14,12 @@ This guide is written following the `Thesis report workshop` of Dr. Chaklam duri
 
 Here is the link to workshop `Overleaf` [link](https://www.overleaf.com/project/630430e80aea50797a5b4fbe).
 
+## 0. Title
+
+Choose your verb wisely.
+
+> investigate/explore/compare/develop ; what methods
+
 ## 1. Abstract
 
 - You have to write it NOW!
@@ -278,14 +284,110 @@ It is always the same. Chapter 1 do this. Chapter 2 do that ...
 
 
 
+## 5. Results
+
+The number of subsection you have should match the number of your research question. Let's say here are your research question in the introduction
+
+- RQ1: Encoder vs Non-Encoder
+- RQ2: Shuffled vs Non-Shuffled Dataset
+- RQ3: Metrics Evaluation
+
+Then here is what your `Results` looks like.
+
+```tex
+\chapter{Results}
+```
+
+- Many table and graph
+- table is useful to summarize a lot of statistics together
+  - put * for p < 0.05
+  - put ** for p < 0.001
+  - put *** for p < 0.0001
+  - ANOVA should be done in all cases when possible
+    - unless you have really huge data and, each time you run, it takes 1 week.
+  - Pair t-tests
+    - use Bonferroni
+  - A, B,. C, D, E
+    - A vs. B
+    - A vs. C
+    - A vs. D
+    - A vs  E
+    - B vs. C etc.
+    - p-value = 0.0001
+    - this is not ok because you have many pairs - Bonferonni correction
+- Graph is better in highlighting certain trend
+  - Box-plot: `y` is categorical and `x` is categorical or continuous
+    - median, quartile, std, outliers
+  - Scatter-plot: `y` is continuous and `x` is continuous
+    - is nice... 3D - size can be the third features
+- **NO opinion**
+  - You DON'T need to talk about what your table tells already...
+  - Write something that you want the readers to **see**
+
+
+```tex
+\section{Encoder vs Non-Encoder}
+```
+
+```tex
+\section{Shuffled vs Non-Shuffled Dataset}
+```
+
+```tex
+\section{Metrics Evaluation}
+```
 
 
 
 
+## 6. Discussion
+
+- This is one of the most important part of your work.
+- This is the part you talk about **insights**.
+- Whether you are smart or not, readers will know, from this part.
+- When you do not have anything to discuss, it means you have not thought about this enough.
+- This should be one of the longest section.
+  
+```tex
+\section{Did you find what you expect? Anysuprising findings - Hypothesis?}
+```
+
+2 paragraphs
+
+```tex
+\section{How do you compoare with the past work? Betterm conflicing results, same resuls? Consistent with them?}
+```
+
+2 paragraphs
+
+```tex
+\section{Did something goes wrong? Especially the experiments/methodology}
+```
+
+Talk about the issues in experimental design and possible interpretations.
+
+```tex
+\section{Recommendations, implications, guidelines}
+```
+
+People like to read "actionable" guidelines. Here is usually in a numerical and contextual. 
+
+```tex
+\section{Limitations and future work}
+```
+
+- What you did not do very well, or you should do
+  - please ensure the readers that it does not damage the validity of your work
+- Point to the future work (not obvious one...)
 
 
+## 7. Conclusion
 
+I still do not know how to write. How is this different from `Abstract`?
 
+Maybe something about intention, achieve, yay. No more drama, introduction, happy ending.
+
+> At first, I want to do chatbot for everyone, then we do this much, we achieve this. Yay~! Ending.
 
 
 
@@ -393,3 +495,27 @@ Writing things you have to learn
 - Definition of each work should be clear.
   - Emotion, Attention, Mindfulness, Well-being, Exam scores => Is it the same meaning?
   - Use consistent keyword. 
+
+### A6. How to choose a good topic?
+
+[chaklam.com](http://chaklam.com/node/7)
+
+![image](http://chaklam.com/sites/default/files/inline-images/hedge.jpg)
+
+- What are you deeply passionate about?
+  - Can do repeatedly without getting bored
+- What can you be the best in the world at?
+  - Resource that help you become better
+  - Improve what you are already good at
+- What drives your economic engine?
+  - What research problem that **people are doing** not the one you think it is important
+- Is the topic will be relevant in the next 10 years?
+
+![image](http://chaklam.com/sites/default/files/inline-images/feas.jpg)
+
+- For new student, do the easy-small gain research. 
+  - Improve an existing work. Mainly because there should be code available out there. Once you copy the code, you are there. Then, you need to do a little more
+
+![image](http://chaklam.com/sites/default/files/inline-images/knowledge.png)
+- Focus on depth
+- High-level copying
