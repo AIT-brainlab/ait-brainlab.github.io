@@ -13,7 +13,7 @@ header:
 contacts:
   - title: Linkedin
     url: https://id.linkedin.com/in/widyaekasandri
-    icon: fa fa-linkedin-square
+    icon: fab fa-linkedin
 sidebar:
   - title: "Position"
     image: /assets/images/bci-logo.png
