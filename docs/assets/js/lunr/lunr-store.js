@@ -96,10 +96,10 @@ var store = [{
         "teaser": "/assets/images/bci-logo.png"
       },{
         "title": "Mr. Mehul Parmar",
-        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "excerpt":"        Mehul is a professional software engineer specializing in mobile solutions.            His research interests include HCI, Augmented Reality, Information Visualization and multi-modal interactions, Explainable AI.       Favourite Quote:     When life gives you lemons, squeeze them until you get publishable results.       Publications:            Overview of IoT in the Agroecosystem          ","categories": [],
         "tags": [],
         "url": "/people/doctor/mehulp/",
-        "teaser": "/assets/images/bci-logo.png"
+        "teaser": "/assets/images/people/mehul.jpg"
       },{
         "title": "Ms. Pranisaa Charnparttaravanit",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
