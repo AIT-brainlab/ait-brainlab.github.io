@@ -28,4 +28,4 @@ Favourite Quote:
 > When life gives you lemons, squeeze them until you get publishable results.
 
 * Publications:
-  * [Overview of IoT in the Agroecosystem](10.1108/S1877-636120220000027008)
+  * [Overview of IoT in the Agroecosystem](https://www.emerald.com/insight/content/doi/10.1108/S1877-636120220000027008/full/html)
