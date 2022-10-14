@@ -1,6 +1,6 @@
 var store = [{
         "title": "Ms. Chanapa Pananookooln",
-        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "excerpt":"        Associate Technology Evangelist @ Human Computer Interface Lab, SCG Digital Office.            Data Scientist with Medical Science background. Specialized in NLP.            Interested in Deep Learning, HCI, BCI, Natural Language Processing.      ","categories": [],
         "tags": [],
         "url": "/people/alumni/chanapap/",
         "teaser": "/assets/images/bci-logo.png"
@@ -102,7 +102,7 @@ var store = [{
         "teaser": "/assets/images/people/mehul.jpg"
       },{
         "title": "Ms. Pranisaa Charnparttaravanit",
-        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "excerpt":"        Beau is a data scientist specializing in NLP with mechanical engineering background            Her research interests include deep learning, natural language processing, text summarization, chatbot.       Favourite Quote:     If you can’t convince them, confuse them.    ","categories": [],
         "tags": [],
         "url": "/people/doctor/pranisaac/",
         "teaser": "/assets/images/bci-logo.png"
@@ -116,54 +116,90 @@ var store = [{
         "title": "Ms. Aiman Lameesa",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
         "tags": [],
-        "url": "/people/eeg_signal/aimanl/",
+        "url": "/people/masters/aimanl/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Mr. Amanda Raj Shrestha",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/people/masters/amandarajs/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Mr. Arnajak Tungchoksongchai",
+        "excerpt":"   Areas of Interest: Investment , Data science, Game , Sport , Book reading.  ","categories": [],
+        "tags": [],
+        "url": "/people/masters/arnajakt/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Mrs. Fathima Shafana",
+        "excerpt":"        Interested in HCI, BCI, ML.            Lecturer, South Eastern University of Sri Lanka.      ","categories": [],
+        "tags": [],
+        "url": "/people/masters/fathimas/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Mr. Jirasak Buranathawornsom",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/people/masters/jirasakb/",
         "teaser": "/assets/images/bci-logo.png"
       },{
         "title": "Mr. Kanawut Kaewnoparat",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
         "tags": [],
-        "url": "/people/eeg_signal/kanawutk/",
+        "url": "/people/masters/kanawutk/",
         "teaser": "/assets/images/bci-logo.png"
       },{
         "title": "Mr. Krittin Janjaochay",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
         "tags": [],
-        "url": "/people/eeg_signal/krittinj/",
+        "url": "/people/masters/krittinj/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Ms. Nopphawan Nurnuansuwan",
+        "excerpt":"        Mechanical engineering and Mechatronic engineering background.            Interested in DL, NLP, Summarization, Knowledge graph, Graph bases.      ","categories": [],
+        "tags": [],
+        "url": "/people/masters/nopphawann/",
         "teaser": "/assets/images/bci-logo.png"
       },{
         "title": "Mr. Nutapol Thungpao",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
         "tags": [],
-        "url": "/people/eeg_signal/nutapolt/",
+        "url": "/people/masters/nutapolt/",
         "teaser": "/assets/images/bci-logo.png"
       },{
         "title": "Mr. Nuttun Kwangkeow",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
         "tags": [],
-        "url": "/people/eeg_signal/nuttunk/",
+        "url": "/people/masters/nuttunk/",
         "teaser": "/assets/images/bci-logo.png"
       },{
         "title": "Mr. Paramik Dasgupta",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
         "tags": [],
-        "url": "/people/eeg_signal/paramikd/",
+        "url": "/people/masters/paramikd/",
         "teaser": "/assets/images/bci-logo.png"
       },{
         "title": "Mr. Shashank Palle",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
         "tags": [],
-        "url": "/people/eeg_signal/shashankp/",
+        "url": "/people/masters/shashankp/",
         "teaser": "/assets/images/bci-logo.png"
       },{
-        "title": "Mrs. Fathima Shafana",
-        "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
+        "title": "Mr. Sitiporn Sae Lim",
+        "excerpt":"        Sit is a data scientist specializing in NLP with mechtronics engineering background.            Interested in Interpretabilty, Causal and Counterfactual inference, Contrastive learning  or any natural langugage understanding.       Favourite Quote:     The future has already arrived. It’s just not evenly distributed yet.   ","categories": [],
         "tags": [],
-        "url": "/people/hci/fathimas/",
+        "url": "/people/masters/sitiporns/",
+        "teaser": "/assets/images/bci-logo.png"
+      },{
+        "title": "Ms. Sunsun Kasajoo",
+        "excerpt":"   Interested in Web Development, Software Architecture Design, BCI.  ","categories": [],
+        "tags": [],
+        "url": "/people/masters/sunsunk/",
         "teaser": "/assets/images/bci-logo.png"
       },{
         "title": "Mr. Worachot Nakduk",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
         "tags": [],
-        "url": "/people/nlp/worachotn/",
+        "url": "/people/masters/worachotn/",
         "teaser": "/assets/images/bci-logo.png"
       },]
