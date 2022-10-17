@@ -9,7 +9,7 @@ var store = [{
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
         "tags": [],
         "url": "/people/alumni/jakrapopa/",
-        "teaser": "/assets/images/bci-logo.png"
+        "teaser": "/assets/images/people/jakrapopa.jpg"
       },{
         "title": "Mr. Nattapat Dilokthammapan",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
