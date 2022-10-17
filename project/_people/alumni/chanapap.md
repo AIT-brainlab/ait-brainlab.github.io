@@ -11,6 +11,9 @@ position: Alumni
 header:
   teaser: /assets/images/bci-logo.png
 contacts:
+  - title: Linkedin
+    url: https://www.linkedin.com/in/chanapa-p/
+    icon: fab fa-linkedin  
   - title: GitHub
     url: https://github.com/chanapapan
     icon: fab fa-fw fa-github
@@ -21,4 +24,8 @@ sidebar:
     text: Alumni
 idx: 2
 ---
-Jane has worked on Jekyll for the past *five years*.
+* Associate Technology Evangelist @ Human Computer Interface Lab, SCG Digital Office.
+
+* Data Scientist with Medical Science background. Specialized in NLP.
+
+* Interested in Deep Learning, HCI, BCI, Natural Language Processing.
