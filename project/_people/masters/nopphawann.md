@@ -5,7 +5,7 @@ name_last: Nurnuansuwan
 name_title: Ms.
 position: Master Student
 header:
-  teaser: /assets/images/bci-logo.png
+  teaser: /assets/images/people/nopphawann.png
 contacts:
   - title: Linkedin
     url: https://www.linkedin.com/in/nopphawan-n/
@@ -15,7 +15,7 @@ contacts:
     icon: fab fa-fw fa-github
 sidebar:
   - title: "Position"
-    image: /assets/images/bci-logo.png
+    image: /assets/images/people/nopphawann.png
     image_alt: "logo"
     text: Master Student
 idx: 2

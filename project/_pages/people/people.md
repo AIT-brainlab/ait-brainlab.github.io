@@ -10,14 +10,14 @@ classes: wide
 
 </style>
 
-## Lab Director
+## Lab Supervisor
 
 <!-- Assign and Sort collection of people -->
 {% assign people = site.people | sort: 'idx' %}
 
 <!-- Iterate orver the collection -->
 {% for person in people %}
-{% if person.position == "Lab Director" %}
+{% if person.position == "Lab Supervisor" %}
 <div class="row">
     <div class="col-2">
         <div class="people_image">
