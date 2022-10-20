@@ -1,10 +1,10 @@
 ---
-title: Dr. Chaklam Silpasuwanchai
+title: Chaklam Silpasuwanchai
 name_first: Chaklam
 name_last: Silpasuwanchai
 name_title: Dr.
 affiliation: Assistant Professor
-position: Lab Director
+position: Lab Supervisor
 header:
   teaser: /assets/images/people/chaklam.jpg
 contacts:
@@ -19,7 +19,7 @@ sidebar:
   - title: "Position"
     image: /assets/images/people/chaklam.jpg
     image_alt: "logo"
-    text: Lab Director
+    text: Lab Supervisor
   - title: "Affiliation"
     text: "Assistant Professor"
   - title: "Links"

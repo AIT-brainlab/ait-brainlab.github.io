@@ -83,7 +83,7 @@ var store = [{
         "url": "/people/alumni/widyaes/",
         "teaser": "/assets/images/bci-logo.png"
       },{
-        "title": "Dr. Chaklam Silpasuwanchai",
+        "title": "Chaklam Silpasuwanchai",
         "excerpt":"Educational Background      Bachelor of Science in Software Engineering (First class honor) from Sirindhorn International Institute of Technology, Thammasat University, Thailand.   Master of Computer Science (First class honor) from Asian Institute of Technology, Thailand.   Doctoral of Engineering from Kochi University of Technology, Japan.  ","categories": [],
         "tags": [],
         "url": "/people/chaklam/",
@@ -105,7 +105,7 @@ var store = [{
         "excerpt":"        Beau is a data scientist specializing in NLP with mechanical engineering background            Her research interests include deep learning, natural language processing, text summarization, chatbot.       Favourite Quote:     If you can’t convince them, confuse them.    ","categories": [],
         "tags": [],
         "url": "/people/doctor/pranisaac/",
-        "teaser": "/assets/images/bci-logo.png"
+        "teaser": "/assets/images/people/pranisaac.jpg"
       },{
         "title": "Ms. Wanchanok Sunthorn",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
@@ -135,7 +135,7 @@ var store = [{
         "excerpt":"        Interested in HCI, BCI, ML.            Lecturer, South Eastern University of Sri Lanka.      ","categories": [],
         "tags": [],
         "url": "/people/masters/fathimas/",
-        "teaser": "/assets/images/bci-logo.png"
+        "teaser": "/assets/images/people/fathimas.png"
       },{
         "title": "Mr. Jirasak Buranathawornsom",
         "excerpt":" ","categories": [],
@@ -159,7 +159,7 @@ var store = [{
         "excerpt":"        Mechanical engineering and Mechatronic engineering background.            Interested in DL, NLP, Summarization, Knowledge graph, Graph bases.      ","categories": [],
         "tags": [],
         "url": "/people/masters/nopphawann/",
-        "teaser": "/assets/images/bci-logo.png"
+        "teaser": "/assets/images/people/nopphawann.png"
       },{
         "title": "Mr. Nutapol Thungpao",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
@@ -171,7 +171,7 @@ var store = [{
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
         "tags": [],
         "url": "/people/masters/nuttunk/",
-        "teaser": "/assets/images/bci-logo.png"
+        "teaser": "/assets/images/people/nuttunk.png"
       },{
         "title": "Mr. Paramik Dasgupta",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],
@@ -195,7 +195,7 @@ var store = [{
         "excerpt":"   Interested in Web Development, Software Architecture Design, BCI.  ","categories": [],
         "tags": [],
         "url": "/people/masters/sunsunk/",
-        "teaser": "/assets/images/bci-logo.png"
+        "teaser": "/assets/images/people/sunsunk.jpg"
       },{
         "title": "Mr. Worachot Nakduk",
         "excerpt":"Jane has worked on Jekyll for the past five years.  ","categories": [],

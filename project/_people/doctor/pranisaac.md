@@ -6,7 +6,7 @@ name_title: Ms.
 position: Doctoral Student
 thesis_master: EVALUATING THE EFFECTIVENESS OF TRUNCATION AND EXTRACTIVE APPROACHES IN TEXT SUMMARIZATION
 header:
-  teaser: /assets/images/bci-logo.png
+  teaser: /assets/images/people/pranisaac.jpg
 contacts:
   - title: Linkedin
     url: https://www.linkedin.com/in/pranisaa-c/
@@ -16,7 +16,7 @@ contacts:
     icon: fab fa-fw fa-github
 sidebar:
   - title: "Position"
-    image: /assets/images/bci-logo.png
+    image: /assets/images/people/pranisaac.jpg
     image_alt: "logo"
     text: Doctoral Student
 idx: 2
