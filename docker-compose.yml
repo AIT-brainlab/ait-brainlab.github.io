@@ -1,14 +1,14 @@
 version: '3.9'
 services:
-  vuepress_node:
+  hugo:
     image: akraradets/ait-brainlab.github.io:2.0.0
     build: 
       context: .
       dockerfile: .Dockerfile
     ports:
-      - 8080:8080
-    # command: /bin/bash -l -c "bundle exec jekyll server -H 0.0.0.0 -P 8000 -l --force_polling --verbose"
+      - 8000:1313
     volumes:
-      - ./project:/home/project
-      - ./docs:/home/docs
-      # - /home/project/docs/node_modules
+      - ./:/home/project
+    # environment:
+    #   - CHOKIDAR_USEPOLLING=true
+    #   - NODE_OPTIONS=--openssl-legacy-provider
