@@ -1,7 +1,11 @@
 baseURL = "https://ait-brainlab.github.io/"
 languageCode = "en-us"
-title = "AIT Brain Lab"
-theme = "ananke"
+theme = "chaklam"
 publishDir = "docs"
+
+title = "AIT Brain Lab"
+
+[params]
+    logo = "img/logo.png"
 
 # https://gohugo.io/getting-started/configuration/
