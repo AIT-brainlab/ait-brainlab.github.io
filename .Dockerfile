@@ -34,7 +34,7 @@ RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
 ENV GOBIN $GOPATH/bin
 
 # Install HUGO
-RUN go install github.com/gohugoio/hugo@v0.111.3
+RUN go install github.com/gohugoio/hugo@stable
 WORKDIR /home/project
 
 

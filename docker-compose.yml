@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  hugo:
+  dev:
     image: akraradets/ait-brainlab.github.io:2.0.0
     build: 
       context: .

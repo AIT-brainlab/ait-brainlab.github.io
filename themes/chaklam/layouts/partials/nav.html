@@ -1,0 +1,33 @@
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <h1 class="logo">
+      <a href="/"><img style="padding-right: 20px;" src="{{ .Site.Params.logo }}" width=80>{{ .Site.Title }}</a>
+    </h1>
+    <nav id="navbar" class="navbar">
+      <ul>
+        {{/* <li><a class="nav-link scrollto active" href="/#hero">Home</a></li>
+        <li><a href="/member"><span>Members</span></a>
+        <li><a href="/demo"><span>Demo</span></a>
+        <li><a class="nav-link scrollto" href="/#contact">Contact</a></li> */}}
+        {{ $current := . }}
+        {{- range site.Menus.main }}
+          {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
+          {{ $active = or $active (eq .Name $current.Title) }}
+          {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
+          {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
+          <li><a 
+            class="{{ if $active }}active{{ end }}"
+            href="{{ .URL }} {{- with .Params.section }}{{ . }}{{- end }}">
+              {{ .Name }}
+          </a></li>
+        {{- end }}
+      </ul>
+
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+  </div>
+</header>
+<!-- End Header -->

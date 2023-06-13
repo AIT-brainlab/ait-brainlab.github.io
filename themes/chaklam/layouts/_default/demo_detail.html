@@ -1,0 +1,51 @@
+{{ define "main" }}
+<main id="main">
+  <!-- ======= Breadcrumbs ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
+      <h2>{{ .Title }}</h2>
+    </div>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            
+            {{ .Content }}
+
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Authors</strong>: {{ .Params.authors }}</li>
+                <li><strong>Published on</strong>: {{ .Params.pubcliation_date }}</li>
+                <li><strong>Paper URL</strong>: <a href="{{ .Params.paper }}" target="_blank">{{ .Params.paper }}</a></li>
+                <li><strong>Github URL</strong>: <a href="{{ .Params.github }}" target="_blank">{{ .Params.github }}</a></li>
+                <li><strong>Demo URL</strong>: <a href="#">www.example.com</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Abstract</h2>
+              <p>
+                {{ .Params.abstract }}
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+
+
+</main>
+{{ end }}
