@@ -28,4 +28,7 @@ title = "AIT Brain Lab"
   weight = 40
   params = { section='#contact' }
 
+[taxonomies]
+  role = 'roles'
+
 # https://gohugo.io/getting-started/configuration/
