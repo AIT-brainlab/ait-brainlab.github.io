@@ -1,31 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on AIT Brain Lab</title>
-    <link>https://ait-brainlab.github.io/</link>
-    <description>Recent content in Home on AIT Brain Lab</description>
+    <title>Members on AIT Brain Lab</title>
+    <link>https://ait-brainlab.github.io/members/</link>
+    <description>Recent content in Members on AIT Brain Lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Mar 2023 00:36:21 +0700</lastBuildDate><atom:link href="https://ait-brainlab.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>CT Scan Segmentation</title>
-      <link>https://ait-brainlab.github.io/demo/ctscansegmentation/</link>
-      <pubDate>Wed, 14 Jun 2023 04:43:30 +0700</pubDate>
-      
-      <guid>https://ait-brainlab.github.io/demo/ctscansegmentation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Depression Classification</title>
-      <link>https://ait-brainlab.github.io/demo/depressionclassification/</link>
-      <pubDate>Wed, 14 Jun 2023 04:36:35 +0700</pubDate>
-      
-      <guid>https://ait-brainlab.github.io/demo/depressionclassification/</guid>
-      <description>Put your demo here
-Please follow bootstrap 4 guidelines and styles.</description>
-    </item>
-    
+    <lastBuildDate>Thu, 30 Mar 2023 02:17:51 +0700</lastBuildDate><atom:link href="https://ait-brainlab.github.io/members/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sunsun</title>
       <link>https://ait-brainlab.github.io/members/master/sunsun/</link>

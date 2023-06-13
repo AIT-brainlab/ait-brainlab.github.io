@@ -2,14 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ait-brainlab.github.io/member/</loc>
+    <loc>https://ait-brainlab.github.io/demo/ctscansegmentation/</loc>
+    <lastmod>2023-06-14T04:43:30+07:00</lastmod>
+  </url><url>
+    <loc>https://ait-brainlab.github.io/demo/depressionclassification/</loc>
+    <lastmod>2023-06-14T04:36:35+07:00</lastmod>
+  </url><url>
+    <loc>https://ait-brainlab.github.io/roles/master/</loc>
+    <lastmod>2023-06-14T04:27:06+07:00</lastmod>
+  </url><url>
+    <loc>https://ait-brainlab.github.io/roles/</loc>
+    <lastmod>2023-06-14T04:27:06+07:00</lastmod>
+  </url><url>
+    <loc>https://ait-brainlab.github.io/members/master/sunsun/</loc>
+    <lastmod>2023-06-14T04:27:06+07:00</lastmod>
+  </url><url>
+    <loc>https://ait-brainlab.github.io/roles/phd/</loc>
+    <lastmod>2023-06-14T04:15:48+07:00</lastmod>
+  </url><url>
+    <loc>https://ait-brainlab.github.io/members/phd/pranisaac/</loc>
+    <lastmod>2023-06-14T04:15:48+07:00</lastmod>
+  </url><url>
+    <loc>https://ait-brainlab.github.io/members/phd/akraradets/</loc>
+    <lastmod>2023-06-14T04:02:03+07:00</lastmod>
+  </url><url>
+    <loc>https://ait-brainlab.github.io/members/chaklams/</loc>
+    <lastmod>2023-06-14T04:01:57+07:00</lastmod>
+  </url><url>
+    <loc>https://ait-brainlab.github.io/roles/supervisor/</loc>
+    <lastmod>2023-06-14T04:01:57+07:00</lastmod>
+  </url><url>
+    <loc>https://ait-brainlab.github.io/demo/</loc>
+    <lastmod>2023-06-14T02:33:00+07:00</lastmod>
+  </url><url>
+    <loc>https://ait-brainlab.github.io/members/</loc>
     <lastmod>2023-03-30T02:17:51+07:00</lastmod>
   </url><url>
     <loc>https://ait-brainlab.github.io/</loc>
     <lastmod>2023-03-30T00:36:21+07:00</lastmod>
-  </url><url>
-    <loc>https://ait-brainlab.github.io/categories/</loc>
-  </url><url>
-    <loc>https://ait-brainlab.github.io/tags/</loc>
   </url>
 </urlset>
