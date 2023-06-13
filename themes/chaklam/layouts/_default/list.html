@@ -1,16 +1,28 @@
 {{ define "main" }}
-<main>
+<main id="main">
+  <!-- ======= Breadcrumbs ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
+      <h2>{{ .Title }}</h2>
+    </div>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+  <!-- ======= Members Section ======= -->
+  <div style="margin-top: 20px; " class="container">
+
   <article>
     <header>
-      <h1>{{ .Title }}</h1>
+      <h1></h1>
     </header>
     {{ .Content }}
   </article>
   <ul>
     {{ range .Pages }}
-      <li>
-        <a href="{{ .Permalink }}">{{ .Date.Format "2006-01-02" }} | {{ .Title }}</a>
-      </li>
+    <li>
+      <a href="{{ .Permalink }}">{{ .Date.Format "2006-01-02" }} | {{ .Title }}</a>
+    </li>
     {{ end }}
   </ul>
 </main>

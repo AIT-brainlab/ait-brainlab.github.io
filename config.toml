@@ -8,4 +8,24 @@ title = "AIT Brain Lab"
 [params]
     logo = "/img/logo.png"
 
+[menu]
+[[menu.main]]
+  name = 'Home'
+  pageRef = '/'
+  weight = 10
+  params = { section='#hero' }
+[[menu.main]]
+  name = 'Members'
+  pageRef = '/members'
+  weight = 20
+[[menu.main]]
+  name = 'Demo'
+  pageRef = '/demo'
+  weight = 30
+[[menu.main]]
+  name = 'Contact'
+  pageRef = '/'
+  weight = 40
+  params = { section='#contact' }
+
 # https://gohugo.io/getting-started/configuration/
