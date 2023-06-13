@@ -9,55 +9,6 @@
     </div>
   </section><!-- End Breadcrumbs -->
 
-  <!-- ======= Members Section ======= -->
-  <div style="margin-top: 20px; " class="container">
-    <div class="row">
-      <p class="lead">Supervisor</p>
-      {{ with ($.Site.GetPage "Supervisor") }}
-        {{ range .Pages }}
-          <div class="col-sm-3">
-            <div class="card flex-row">
-              <img src="{{ .Params.image }}" height="80">
-              <div class="card-body">
-                <div class="card-text">{{ .Title }}</div>
-                <div class="text-muted">{{ .Params.Project }}</div>
-              </div>
-            </div>
-          </div>
-        {{ end }}
-      {{ end }}
-    </div>
-    <div class="row">
-      <p class="lead">Ph.D. students</p>
-      {{ with (.Site.GetPage "phd") }}
-        {{ range .Pages }}
-          <div class="col-sm-3">
-            <div class="card flex-row">
-              <img src="{{ .Params.image }}" height="80">
-              <div class="card-body">
-                <div class="card-text">{{ .Title }}</div>
-                <div class="text-muted">{{ .Params.Project }}</div>
-              </div>
-            </div>
-          </div>
-        {{ end }}
-      {{ end }}
-    </div>
-    <div class="row">
-      <p class="lead">Master</p>
-      {{ with ($.Site.GetPage "master") }}
-        {{ range .Pages }}
-          <div class="col-sm-3">
-            <div class="card flex-row">
-              <img src="{{ .Params.image }}" height="80">
-              <div class="card-body">
-                <div class="card-text">{{ .Title }}</div>
-                <div class="text-muted">{{ .Params.Project }}</div>
-              </div>
-            </div>
-          </div>
-        {{ end }}
-      {{ end }}
-    </div>
+
 </main>
 {{ end }}
