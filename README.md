@@ -1,7 +1,7 @@
 # About this repository
 
 This repository is used for hosting the GitHub page of the AIT Brainlab website.
-This branch is version 1 of the site using `HUGO` https://gohugo.io
+This branch is version 2 of the site using `HUGO` https://gohugo.io
 
 # For development
 
