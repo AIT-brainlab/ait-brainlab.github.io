@@ -6,6 +6,6 @@ publishDir = "docs"
 title = "AIT Brain Lab"
 
 [params]
-    logo = "img/logo.png"
+    logo = "/img/logo.png"
 
 # https://gohugo.io/getting-started/configuration/
