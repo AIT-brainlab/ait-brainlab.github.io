@@ -27,9 +27,9 @@
               </p>
               <p>
               <div class="mb-1 text-muted">
-                <a href="{{ .Params.paper }}">Paper</a> | 
-                <a href="{{ .Params.github }}">Github</a> | 
-                <a href="{{ .Permalink  }}">Demo</a></div>
+                {{- with .Params.paper }} <a href="{{ . }}" target="_blank">Paper</a>&nbsp;|&nbsp;{{- end }}
+                {{- with .Params.github }}<a href="{{ . }}" target="_blank">Github</a>&nbsp;|&nbsp;{{- end }}
+                <a href="{{ .Permalink  }}" >Demo</a></div>
               </p>
             </div>
             <div class="col-auto d-none d-lg-block">
