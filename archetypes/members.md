@@ -3,7 +3,7 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 roles: Members
 image: /img/logo.png
-projects: Members
+project: Members
 draft: false
 ---
 

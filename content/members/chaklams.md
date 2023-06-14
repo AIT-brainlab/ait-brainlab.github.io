@@ -1,5 +1,5 @@
 ---
-title: Chaklams
+title: Chaklam Silpasuwanchai
 roles: Supervisor
 image: /img/members/chaky.jpg
 project: Raman Spectroscopy

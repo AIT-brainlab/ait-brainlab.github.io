@@ -11,11 +11,11 @@
 
   <!-- ======= Members Section ======= -->
   <div style="margin-top: 20px; " class="container">
+    <p class="lead">Supervisor</p>
     <div class="row">
-      <p class="lead">Supervisor</p>
       {{ with ($.Site.GetPage "Supervisor") }}
         {{ range .Pages }}
-          <div class="col-sm-3">
+          <div class="col-lg-3">
             <div class="card flex-row">
               <img src="{{ .Params.image }}" height="80">
               <div class="card-body">
@@ -27,11 +27,11 @@
         {{ end }}
       {{ end }}
     </div>
+    <p style="margin-top: 20px;" class="lead">Ph.D.</p>
     <div class="row">
-      <p class="lead">Ph.D. students</p>
       {{ with (.Site.GetPage "phd") }}
         {{ range .Pages }}
-          <div class="col-sm-3">
+          <div class="col-lg-3">
             <div class="card flex-row">
               <img src="{{ .Params.image }}" height="80">
               <div class="card-body">
@@ -43,11 +43,11 @@
         {{ end }}
       {{ end }}
     </div>
+    <p style="margin-top: 20px;" class="lead">Master</p>
     <div class="row">
-      <p class="lead">Master</p>
       {{ with ($.Site.GetPage "master") }}
         {{ range .Pages }}
-          <div class="col-sm-3">
+          <div class="col-lg-3">
             <div class="card flex-row">
               <img src="{{ .Params.image }}" height="80">
               <div class="card-body">
