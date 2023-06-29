@@ -8,24 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 30 Mar 2023 00:36:21 +0700</lastBuildDate><atom:link href="https://ait-brainlab.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mehul Parmar</title>
-      <link>https://ait-brainlab.github.io/members/phd/mehulp/</link>
-      <pubDate>Thu, 15 Jun 2023 02:02:32 +0700</pubDate>
-      
-      <guid>https://ait-brainlab.github.io/members/phd/mehulp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Wanchanok Sunthorn</title>
-      <link>https://ait-brainlab.github.io/members/phd/wanchanoks/</link>
-      <pubDate>Thu, 15 Jun 2023 02:00:33 +0700</pubDate>
-      
-      <guid>https://ait-brainlab.github.io/members/phd/wanchanoks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>CT Scan Segmentation</title>
       <link>https://ait-brainlab.github.io/demo/ctscansegmentation/</link>
       <pubDate>Wed, 14 Jun 2023 04:43:30 +0700</pubDate>
@@ -180,15 +162,6 @@ Please follow bootstrap 4 guidelines and styles.</description>
     </item>
     
     <item>
-      <title>Pranisaa Charnparttaravanit</title>
-      <link>https://ait-brainlab.github.io/members/phd/pranisaac/</link>
-      <pubDate>Wed, 14 Jun 2023 04:15:48 +0700</pubDate>
-      
-      <guid>https://ait-brainlab.github.io/members/phd/pranisaac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Pyae Sone Kyaw</title>
       <link>https://ait-brainlab.github.io/members/master/pyae/</link>
       <pubDate>Wed, 14 Jun 2023 04:15:48 +0700</pubDate>
@@ -257,6 +230,33 @@ Please follow bootstrap 4 guidelines and styles.</description>
       <pubDate>Wed, 14 Jun 2023 04:02:03 +0700</pubDate>
       
       <guid>https://ait-brainlab.github.io/members/phd/akraradets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mehul Parmar</title>
+      <link>https://ait-brainlab.github.io/members/phd/mehulp/</link>
+      <pubDate>Wed, 14 Jun 2023 04:02:03 +0700</pubDate>
+      
+      <guid>https://ait-brainlab.github.io/members/phd/mehulp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pranisaa Charnparttaravanit</title>
+      <link>https://ait-brainlab.github.io/members/phd/pranisaac/</link>
+      <pubDate>Wed, 14 Jun 2023 04:02:03 +0700</pubDate>
+      
+      <guid>https://ait-brainlab.github.io/members/phd/pranisaac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wanchanok Sunthorn</title>
+      <link>https://ait-brainlab.github.io/members/phd/wanchanoks/</link>
+      <pubDate>Wed, 14 Jun 2023 04:02:03 +0700</pubDate>
+      
+      <guid>https://ait-brainlab.github.io/members/phd/wanchanoks/</guid>
       <description></description>
     </item>
     
