@@ -10,7 +10,7 @@
   </section><!-- End Breadcrumbs -->
 
   <!-- ======= Members Section ======= -->
-  <div style="margin-top: 20px; " class="container">
+  <div style="margin-top: 20px; margin-bottom: 20px " class="container">
     <p class="lead">Supervisor</p>
     <div class="row">
       {{ with ($.Site.GetPage "Supervisor") }}
@@ -19,7 +19,7 @@
             <div class="card flex-row">
               <img src="{{ .Params.image }}" height="80">
               <div class="card-body">
-                <div style="font-size: 14px;" class="card-text">{{ .Title }}</div>
+                <a href="http://chaklam.com" target="_blank"><div style="font-size: 14px;" class="card-text">{{ .Title }}</div></a>
                 <div style="font-size: 12px;" class="text-muted">{{ .Params.Project }}</div>
               </div>
             </div>
