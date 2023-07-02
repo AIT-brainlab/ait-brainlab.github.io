@@ -10,4 +10,5 @@ github: https://github.com/chanapapan/Depression-Detection
 date: 2023-07-01T04:36:35+07:00
 draft: false
 image: "/img/demo/depression.png"
+# api: /js/demo/DepressionClassification.js
 ---
