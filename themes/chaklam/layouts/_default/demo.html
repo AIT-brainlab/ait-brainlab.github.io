@@ -25,18 +25,13 @@
                 <div class="mb-1 text-muted" style="font-size: 0.8em">
                   {{- with .Params.paper }} <a href="{{ . }}" target="_blank">Paper</a>&nbsp;|&nbsp;{{- end }}
                   {{- with .Params.github }}<a href="{{ . }}" target="_blank">Github</a>&nbsp;|&nbsp;{{- end }}
-                  <a href="{{ .Permalink  }}" >Demo</a>
+                  <a href="{{ .Permalink  }}" >Demo / Youtube</a>
                 </div>
               </p>
               <p class="mb-1">{{ .Params.description }}</p>
             </div>
             <div class="col-auto d-none d-lg-block">
-              <svg class="bd-placeholder-img" width="300" height="260" xmlns="http://www.w3.org/2000/svg" role="img"
-                aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                  dy=".3em">Thumbnail</text>
-              </svg>
+              <img src="{{ .Params.image }}" height="250">
             </div>
           </div>
         </div>

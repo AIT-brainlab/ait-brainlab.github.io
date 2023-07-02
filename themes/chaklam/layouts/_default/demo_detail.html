@@ -17,26 +17,20 @@
 
           <div class="col-lg-8">
             
-            {{ .Content }}
-
+            {{ .Params.Content }}
+            <iframe src="{{ .Params.iframe }}" width="100%" height="100%" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
 
           <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Project information</h3>
               <ul>
+                <li><strong>Description</strong>: {{ .Params.description }}</li>
                 <li><strong>Authors</strong>: {{ .Params.authors }}</li>
-                <li><strong>Published on</strong>: {{ .Params.pubcliation_date }}</li>
+                <li><strong>Published on</strong>: {{ .Params.publication_date }}</li>
                 <li><strong>Paper URL</strong>: <a href="{{ .Params.paper }}" target="_blank">{{ .Params.paper }}</a></li>
                 <li><strong>Github URL</strong>: <a href="{{ .Params.github }}" target="_blank">{{ .Params.github }}</a></li>
-                <li><strong>Demo URL</strong>: <a href="#">www.example.com</a></li>
               </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>Abstract</h2>
-              <p>
-                {{ .Params.abstract }}
-              </p>
             </div>
           </div>
 
