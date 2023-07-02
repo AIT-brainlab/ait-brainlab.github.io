@@ -21,12 +21,15 @@ docker compose exec dev hugo server --bind 0.0.0.0 --poll 700ms --noHTTPCache
 
 # To deploy
 
-Once you are ready to publish your content, stop the dev server then build the site
+With a new GitHub Action, the compile process is now done in GitHub.
+It no longer requires the user to manually build the site themselves.
+With this new action, all you have to do is commit a new change to the `main` branch.
+
+
+However, you can still run the compiling command for debugging purposes.
 
 ```shell
 docker compose exec dev hugo
 ```
 
-The new site will be rendered in `/docs` which will also be used to render the GitHub page.
-
-Then, all you need is to `commit` and `push` to GitHub.
+The compiled `/docs` folder is ignored anyway.
