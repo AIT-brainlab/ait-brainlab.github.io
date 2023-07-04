@@ -7,7 +7,7 @@ description: Develop a EEG motor imagery application using Event-Related Desynch
 paper: 
 publication_date: 
 featured: true
-github: 
+github: "https://github.com/newzaungo3/EEG-Motor-Imagery-Classification"
 date: 2023-07-01T04:36:35+07:00
 draft: false
 image: "/img/demo/mi.png"
