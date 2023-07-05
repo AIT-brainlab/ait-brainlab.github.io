@@ -10,6 +10,6 @@ featured: true
 github: "https://github.com/sunsun101/hybrid-ssvep-p300-speller"
 draft: false
 image: "/img/demo/hybrid.png"
-iframe: "https://www.youtube.com/embed/9fSvmBAKZWQ"
+iframe: "https://www.youtube.com/embed/fMaOqt8tdsg"
 # api: /js/demo/api.js
 ---
