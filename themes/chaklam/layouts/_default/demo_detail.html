@@ -26,13 +26,18 @@
             {{ end }}
             <!-- Show App -->
             {{ if isset .Params "api" }}
-              <form style="margin-top: 10px;">
-                <div class="mb-3">
+            <div class="mb-3">
+              <form id="fb-render" enctype="multipart/form-data" style="margin-top: 10px;"></form>
+            </div>
+              <script src="/vendor/jquery/jquery.js"></script>
+              <script src="/vendor/jquery/jquery-ui.min.js"></script>
+              <script src="https://formbuilder.online/assets/js/form-render.min.js"></script>
+              <script src="{{ .Params.api }}"></script>
+              {{/*  <form style="margin-top: 10px;">
                   <label for="input" class="form-label">Input Text</label>
                   <input type="input" class="form-control" id="input">
-                </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+              </form>  */}}
             {{ end }}
           </div>
 
@@ -54,5 +59,4 @@
       </div>
     </section><!-- End Portfolio Details Section -->
 </main>
-<script src="{{ .Params.api }}"></script>
 {{ end }}

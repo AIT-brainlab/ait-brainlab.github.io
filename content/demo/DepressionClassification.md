@@ -10,5 +10,5 @@ featured: false
 github: https://github.com/chanapapan/Depression-Detection
 draft: false
 image: "/img/demo/depression.png"
-# api: /js/demo/DepressionClassification.js
+api: /js/demo/DepressionClassification.js
 ---
