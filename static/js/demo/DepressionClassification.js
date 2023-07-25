@@ -43,7 +43,7 @@ jQuery(function ($) {
             var input_file = document.querySelectorAll('input[type=file]')[0].files[0];
             formData.append("file", input_file, input_file.name);
             console.log(formData)
-            const response = await fetch('http://api-fastapi.tokyo.cs.ait.ac.th/predict/', {
+            const response = await fetch('https://api-fastapi.tokyo.cs.ait.ac.th:2000/predict/', {
                 method: 'POST',
                 body: formData
             })
