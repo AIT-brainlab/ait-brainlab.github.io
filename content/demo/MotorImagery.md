@@ -1,7 +1,7 @@
 ---
 title: "Motor Imagery"
 layout: demo_detail
-field: NLP
+field: EEG
 authors: Pongkorn Settasompop, Chaklam Silpasuwanchai
 description: Develop a EEG motor imagery application using Event-Related Desynchronization and Transfer Learning
 paper: 
