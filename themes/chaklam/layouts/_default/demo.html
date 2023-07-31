@@ -24,8 +24,10 @@
                 <div class="mb-1 text-muted" style="font-size: 0.8em">Authors: {{ .Params.authors }} ({{ .Params.publication_date }})</div>
                 <div class="mb-1 text-muted" style="font-size: 0.8em">
                   {{- with .Params.paper }} <a href="{{ . }}" target="_blank">Paper</a>&nbsp;|&nbsp;{{- end }}
-                  {{- with .Params.github }}<a href="{{ . }}" target="_blank">Github</a>&nbsp;|&nbsp;{{- end }}
-                  <a href="{{ .Permalink  }}" >Demo / Youtube</a>
+                  {{- with .Params.github }}<a href="{{ . }}" target="_blank">Github</a>&nbsp;&nbsp;| {{- end }}
+                  {{/*  <a href="{{ .Permalink  }}" >Demo / Youtube</a>  */}}
+                  {{- with .Params.demo_url }} <a target="_blank" href="{{ . }}" >Demo</a>{{- end }}
+                  {{- with .Params.video_url }} <a target="_blank" href="{{ . }}" >Video</a>{{- end }}
                 </div>
               </p>
               <p class="mb-1">{{ .Params.description }}</p>

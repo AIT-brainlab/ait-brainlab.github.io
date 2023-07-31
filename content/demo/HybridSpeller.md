@@ -1,6 +1,6 @@
 ---
 title: "Hybrid P300-SSVEP Speller"
-layout: demo_detail
+# layout: demo_detail
 field: EEG
 authors: Sun Sun, Akraradet Sinsamersuk, Chaklam Silpasuwanchai
 description: We develop BCI Speller using Hybrid P300-SSVEP paradigm along side the Task Related Component Analysis (TRCA) decoding algorithm.
@@ -10,6 +10,7 @@ featured: true
 github: "https://github.com/sunsun101/hybrid-ssvep-p300-speller"
 draft: false
 image: "/img/demo/hybrid.png"
-iframe: "https://www.youtube.com/embed/fMaOqt8tdsg"
+video_url: https://www.youtube.com/watch?v=fMaOqt8tdsg
+# iframe: "https://www.youtube.com/embed/fMaOqt8tdsg"
 # api: /js/demo/api.js
 ---
