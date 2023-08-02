@@ -1,5 +1,6 @@
 ---
 title: "Motor Imagery"
+version: 0.1
 # layout: demo_detail
 field: EEG
 authors: Pongkorn Settasompop, Chaklam Silpasuwanchai

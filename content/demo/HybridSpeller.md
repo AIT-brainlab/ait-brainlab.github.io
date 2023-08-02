@@ -1,5 +1,6 @@
 ---
 title: "Hybrid P300-SSVEP Speller"
+version: 0.1
 # layout: demo_detail
 field: EEG
 authors: Sun Sun, Akraradet Sinsamersuk, Chaklam Silpasuwanchai

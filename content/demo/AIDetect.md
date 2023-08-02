@@ -1,5 +1,6 @@
 ---
 title: "AI-generated text detector"
+version: 0.1
 # layout: demo_detail
 field: NLP
 authors: Sandhya Lamichhane, Chaklam Silpasuwanchai

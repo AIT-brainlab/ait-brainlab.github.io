@@ -1,5 +1,6 @@
 ---
 title: "Thai Government Paraphraser"
+version: 0.1
 # layout: demo_detail
 field: NLP
 authors: Arnajak Tungchoksongchai, Chaklam Silpasuwanchai

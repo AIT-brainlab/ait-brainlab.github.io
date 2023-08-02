@@ -1,5 +1,6 @@
 ---
 title: "AIT GPT"
+version: 0.1
 # layout: demo_detail
 field: NLP
 authors: Kanawut Kaewnoparat, Chaklam Silpasuwanchai

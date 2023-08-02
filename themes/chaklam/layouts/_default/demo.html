@@ -20,17 +20,19 @@
             <div class="col p-4 d-flex flex-column position-static">
               <strong class="d-inline-block mb-2 text-primary">{{ .Params.field }}</strong>
               <h3 class="mb-0">{{ .Title }}</h3>
+              <div class="mb-1 text-muted" style="margin-top: 10px; font-size: 0.9em">
+                {{- with .Params.paper }} <a href="{{ . }}" target="_blank"><span class="badge bg-light text-dark rounded-pill">Paper</span></a>&nbsp;|&nbsp;{{- end }}
+                {{- with .Params.github }}<a href="{{ . }}" target="_blank"><span class="badge bg-primary rounded-pill">Github</span></a>&nbsp;&nbsp;| {{- end }}
+                {{/*  <a href="{{ .Permalink  }}" >Demo / Youtube</a>  */}}
+                {{- with .Params.demo_url }} <a target="_blank" href="{{ . }}" ><span class="badge bg-success rounded-pill">Demo</span></a>{{- end }}
+                {{- with .Params.video_url }} <a target="_blank" href="{{ . }}" ><span class="badge bg-info rounded-pill">Video</span></a>{{- end }}
+              </div>
               <p>
                 <div class="mb-1 text-muted" style="font-size: 0.8em">Authors: {{ .Params.authors }} ({{ .Params.publication_date }})</div>
-                <div class="mb-1 text-muted" style="font-size: 0.8em">
-                  {{- with .Params.paper }} <a href="{{ . }}" target="_blank">Paper</a>&nbsp;|&nbsp;{{- end }}
-                  {{- with .Params.github }}<a href="{{ . }}" target="_blank">Github</a>&nbsp;&nbsp;| {{- end }}
-                  {{/*  <a href="{{ .Permalink  }}" >Demo / Youtube</a>  */}}
-                  {{- with .Params.demo_url }} <a target="_blank" href="{{ . }}" >Demo</a>{{- end }}
-                  {{- with .Params.video_url }} <a target="_blank" href="{{ . }}" >Video</a>{{- end }}
-                </div>
+                <div class="mb-1 text-muted" style="font-size: 0.8em">Version: {{ .Params.version }} </div>
+                
+                <p class="mb-1">{{ .Params.description }}</p>
               </p>
-              <p class="mb-1">{{ .Params.description }}</p>
             </div>
             <div class="col-auto d-none d-lg-block">
               <img src="{{ .Params.image }}" height="250">
