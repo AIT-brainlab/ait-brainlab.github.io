@@ -8,7 +8,7 @@ description: We develop a chatGPT-like bot for Asian Institute of Technology.  I
 paper:  
 publication_date: July 2023
 featured: true
-github: 
+github: https://huggingface.co/spaces/Carlosito16/aitGPT/tree/main
 draft: false
 demo_url: https://web-aitgpt.tokyo.cs.ait.ac.th:2000
 image: /img/demo/aitgpt.png
