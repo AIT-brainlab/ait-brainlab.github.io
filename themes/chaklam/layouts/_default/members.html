@@ -59,5 +59,21 @@
         {{ end }}
       {{ end }}
     </div>
+    <p style="margin-top: 20px;" class="lead">Alumni</p>
+    <div class="row">
+      {{ with ($.Site.GetPage "alumni") }}
+        {{ range .Pages }}
+          <div class="col-lg-3">
+            <div class="card flex-row" style="margin-top:10px;">
+              <img src="{{ .Params.image }}" height="80">
+              <div class="card-body">
+                <div style="font-size: 14px;" class="card-text">{{ .Title }}</div>
+                <div style="font-size: 12px;" class="text-muted">{{ .Params.Project }}</div>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
 </main>
 {{ end }}
