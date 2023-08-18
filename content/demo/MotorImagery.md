@@ -3,8 +3,8 @@ title: "Motor Imagery"
 version: 0.1
 # layout: demo_detail
 field: EEG
-authors: Pongkorn Settasompop, Chaklam Silpasuwanchai
-description: Develop a EEG motor imagery application using Event-Related Desynchronization and Transfer Learning
+authors: Pongkorn Settasompop
+description: An EEG motor imagery application using Event-Related Desynchronization and Transfer Learning
 paper: 
 publication_date: December 2022
 featured: true
