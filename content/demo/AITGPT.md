@@ -10,7 +10,7 @@ publication_date: July 2023
 featured: true
 github: https://huggingface.co/spaces/Carlosito16/aitGPT/tree/main
 draft: false
-demo_url: https://web-aitgpt.tokyo.cs.ait.ac.th:2000
+demo_url: https://aitgpt.brain.cs.ait.ac.th/
 image: /img/demo/aitgpt.png
 # demo_img: /img/demo/aitgpt-screenshot.png
 # iframe:
