@@ -12,35 +12,41 @@
   <!-- ======= Portfolio Details Section ======= -->
   <section id="portfolio-details" class="portfolio-details">
     <div class="container">
-      {{ range .Pages }}
       <div class="row">
-        <div class="col-md-12">
+        {{ range .Pages }}
+        <div class="col-md-3">
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
             data-aos="zoom-in">
             <div class="col p-4 d-flex flex-column position-static">
               <strong class="d-inline-block mb-2 text-primary">{{ .Params.field }}</strong>
               <h3 class="mb-0">{{ .Title }}</h3>
               <div class="mb-1 text-muted" style="margin-top: 10px; font-size: 0.9em">
-                {{- with .Params.paper }} <a href="{{ . }}" target="_blank"><span class="badge bg-light text-dark rounded-pill">Paper</span></a>&nbsp;|&nbsp;{{- end }}
-                {{- with .Params.github }}<a href="{{ . }}" target="_blank"><span class="badge bg-primary rounded-pill">Github</span></a>&nbsp;&nbsp;| {{- end }}
-                {{/*  <a href="{{ .Permalink  }}" >Demo / Youtube</a>  */}}
-                {{- with .Params.demo_url }} <a target="_blank" href="{{ . }}" ><span class="badge bg-success rounded-pill">Demo</span></a>{{- end }}
-                {{- with .Params.video_url }} <a target="_blank" href="{{ . }}" ><span class="badge bg-info rounded-pill">Video</span></a>{{- end }}
+                {{- with .Params.paper }} <a href="{{ . }}" target="_blank"><span
+                    class="badge bg-light text-dark rounded-pill">Paper</span></a>&nbsp;|&nbsp;{{- end }}
+                {{- with .Params.github }}<a href="{{ . }}" target="_blank"><span
+                    class="badge bg-primary rounded-pill">Github</span></a>&nbsp;&nbsp;| {{- end }}
+                {{/* <a href="{{ .Permalink  }}">Demo / Youtube</a> */}}
+                {{- with .Params.demo_url }} <a target="_blank" href="{{ . }}"><span
+                    class="badge bg-success rounded-pill">Demo</span></a>{{- end }}
+                {{- with .Params.video_url }} <a target="_blank" href="{{ . }}"><span
+                    class="badge bg-info rounded-pill">Video</span></a>{{- end }}
               </div>
               <p>
-                <div class="mb-1 text-muted" style="font-size: 0.8em">Authors: {{ .Params.authors }} ({{ .Params.publication_date }})</div>
-                <div class="mb-1 text-muted" style="font-size: 0.8em">Version: {{ .Params.version }} </div>
-                
-                <p class="mb-1">{{ .Params.description }}</p>
+              <div class="mb-1 text-muted" style="font-size: 0.8em">Authors: {{ .Params.authors }} ({{
+                .Params.publication_date }})</div>
+              {{/*  <div class="mb-1 text-muted" style="font-size: 0.8em">Version: {{ .Params.version }} </div>  */}}
+
+              <p class="mb-1">{{ .Params.description }}</p>
               </p>
             </div>
             <div class="col-auto d-none d-lg-block">
-              <img src="{{ .Params.image }}" height="250">
+              {{/* <img src="{{ .Params.image }}" height="250"> */}}
             </div>
           </div>
         </div>
+        {{ end }}
       </div>
-      {{ end }}
+      
     </div>
   </section>
 
