@@ -27,13 +27,17 @@ title = "AIT Brain Lab"
   pageRef = '/researchguide'
   weight = 40
 [[menu.main]]
+  name = 'Publications'
+  pageRef = '/publications'
+  weight = 50
+[[menu.main]]
   name = 'Archives'
   pageRef = '/archives'
-  weight = 50
+  weight = 60
 [[menu.main]]
   name = 'Contact'
   pageRef = '/'
-  weight = 60
+  weight = 70
   params = { section='#contact' }
 
 [taxonomies]
