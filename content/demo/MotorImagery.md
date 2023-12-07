@@ -6,7 +6,7 @@ field: EEG
 authors: Pongkorn Settasompop
 description: An EEG motor imagery application using Event-Related Desynchronization and Transfer Learning
 paper: 
-publication_date: December 2022
+publication_date: Dec '22
 featured: true
 github: "https://github.com/newzaungo3/EEG-Motor-Imagery-Classification"
 draft: false

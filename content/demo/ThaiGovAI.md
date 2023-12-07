@@ -6,10 +6,10 @@ field: NLP
 authors: Arnajak Tungchoksongchai
 description: A text paraphrasing bot that can turn informal Thai text to government style text.  
 paper:  
-publication_date: Aug 2023
+publication_date: Aug '23
 featured: true
 github: https://github.com/arnajak/ThaiGovAI
 draft: false
-demo_url: https://web-thaigovai.tokyo.cs.ait.ac.th:2000/
+# demo_url: https://web-thaigovai.tokyo.cs.ait.ac.th:2000/
 image: /img/demo/formal.png
 ---

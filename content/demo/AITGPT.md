@@ -6,7 +6,7 @@ field: NLP
 authors: Kanawut Kaewnoparat
 description: A chatGPT-like bot for Asian Institute of Technology.  It aims to help propsective students and stakeholders to know more about AIT.
 paper:  
-publication_date: July 2023
+publication_date: July '23
 featured: true
 github: https://huggingface.co/spaces/Carlosito16/aitGPT/tree/main
 draft: false

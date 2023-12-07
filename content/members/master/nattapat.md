@@ -5,6 +5,7 @@ roles: Alumni
 image: /img/members/nattapat.jpg
 work: Now @ Bank of Thailand
 project: EEG Transfer Learning
+work: Now @ Bank of Thailand
 draft: false
 ---
 
