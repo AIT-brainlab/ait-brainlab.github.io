@@ -59,23 +59,26 @@
       <p style="line-height:1.38; margin-top:16px; margin-bottom:16px"><strong>Theory</strong></p>
 
       <ol>
-        <li><strong>Foundational models for Thai language</strong>: develop embedding, instruct,
-          speech-text, image-text, style transfer, and emotion-speech models for Thai language, using pruning,
-          distillation, grafting, quantization, prefix-tuning for efficient models.</li>
-        <li><strong>Summarization + knowledge transfer</strong>: apply knowledge transfer such as
-          shared prefix tuning, multi-task training, self-distillation to summarization tasks.</li>
-        <li><strong>Summarization</strong> + <strong>masking</strong>: apply selective masking
-          techniques for better summarization.</li>
-        <li><strong>Summarization + progressive pruning and distillation</strong> - apply progressive pruning and
-          distillation for better summarization models.</li>
-        <li><strong>Summarization + contrastive learning</strong> - apply contrastive
-          learning for better summarization models.</li>
-        <li><strong>Summarization + reinforcement learning</strong>: apply RL for better summarization models.</li>
-        <li><strong>Summarization + mixture of experts</strong>: apply mixture of experts for better summarization
-          models.</li>
+        <li><strong>Foundational models for Thai language</strong>: develop embedding, instruct, speech-text,
+          image-text, style transfer, and emotion-speech models. Our aim is to different efficient models using
+          techniques such as pruning, distillation, grafting, quantization, prefix-tuning for efficient models. </li>
         <li><strong>Medical Visual QA</strong>: design models for better medical visual QA.</li>
+        <li><strong>Summarization</strong>: summarization is our lab's favorite case study due to its complexity and
+          unique challenges. We learned NLP through the lens of summarization by applying different techniques and
+          investigates their effectiveness:</li>
+        <ul>
+          <li><strong>Knowledge transfer</strong>: apply knowledge transfer such as
+            shared prefix tuning, multi-task training, self-distillation.</li>
+          <li><strong>Masking</strong>: apply selective masking or salient span techniques.</li>
+          <li><strong>Progressive pruning and distillation</strong> - apply progressive pruning and distillation.</li>
+          <li><strong>Contrastive learning</strong> - apply contrastive
+            learning to distinguish between positive and negative topics.</li>
+          <li><strong>Reinforcement learning</strong>: apply RL to enforce models to learn through non-differentiable
+            metric.</li>
+          <li><strong>Mixture of experts</strong>: apply mixture of experts.</li>
+        </ul>
       </ol>
-
+      
       <p><strong>Application</strong></p>
 
       <ol>
@@ -86,7 +89,8 @@
         <li><strong>Scholarly</strong>: contributes to the development of product we called "Scholarly" which help
           researchers to write papers using style transfer and generative models. Style paraphrasing, grammar checkers,
           co-writers are among the key modules. Support English and Thai language.</li>
-        <li><strong>AI-based Report Generation</strong>: contributes to the development of AI-powered report generation system,
+        <li><strong>AI-based Report Generation</strong>: contributes to the development of AI-powered report generation
+          system,
           saving time and enhancing consistency.
         </li>
         <li><strong>Medical AI</strong>: contributes to the development of automatic annotation,
@@ -96,7 +100,8 @@
           ChatData that can be the core platform to create other products such as legalGPT, medicalGPT, insuranceGPT,
           financeGPT, etc. There will many components: (1) instruction (parameter efficient) tuning with dialogue
           datasets, (2) reinforcement learning, (3) retrieval augmentation, (4) quantization for efficiency, (5) support
-          images using OCR and image-text models, (6) support speech-text models for voice-based chats like call centers, (7) support English and Thai, (7) agents - using tools of
+          images using OCR and image-text models, (6) support speech-text models for voice-based chats like call
+          centers, (7) support English and Thai, (7) agents - using tools of
           the internet.</li>
       </ol>
       <p></p>
