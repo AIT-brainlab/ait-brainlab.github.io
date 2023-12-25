@@ -10,6 +10,6 @@ publication_date: Jul '23
 featured: true
 github: https://github.com/amanda11233/ResearchAssistant_brainLab
 draft: false
-# demo_url: https://brainlabworkshop-production.up.railway.app/paraphrase
+video_url: https://www.youtube.com/watch?v=DXnu3WY3znc
 image: /img/demo/writing.jpg
 ---

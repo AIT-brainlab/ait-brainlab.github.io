@@ -10,6 +10,6 @@ publication_date: Aug '23
 featured: true
 github: https://github.com/arnajak/ThaiGovAI
 draft: false
-# demo_url: https://web-thaigovai.tokyo.cs.ait.ac.th:2000/
+video_url: https://www.youtube.com/watch?v=eK-lxMjvbVU
 image: /img/demo/formal.png
 ---
