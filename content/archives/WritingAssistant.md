@@ -11,5 +11,5 @@ featured: true
 github: https://github.com/amanda11233/ResearchAssistant_brainLab
 draft: false
 video_url: https://www.youtube.com/watch?v=DXnu3WY3znc
-image: /img/demo/writing.jpg
+image: /img/demo/writing.png
 ---

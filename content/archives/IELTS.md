@@ -11,5 +11,5 @@ featured: true
 # github:
 draft: false
 video_url: https://youtu.be/oCRsLrveNh8
-image: /img/demo/formal.png
+image: /img/demo/ielts.jpeg
 ---
