@@ -3,7 +3,7 @@ languageCode = "en-us"
 theme = "chaklam"
 publishDir = "docs"
 
-title = "AIT Brain Lab"
+title = "The Future Lab"
 
 [params]
     logo = "/img/logo.png"

@@ -30,7 +30,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "HK Grotesk", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -144,7 +144,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  /* max-height: 40px; */
 }
 
 @media (max-width: 992px) {
@@ -394,7 +394,7 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   position: relative;
   background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
@@ -421,7 +421,7 @@ h6 {
   font-weight: 700;
   line-height: 72px;
   color: #124265;
-  font-family: "Poppins", sans-serif;
+  font-family: 'HK Grotesk', sans-serif;
 }
 
 #hero h2 {
@@ -449,7 +449,7 @@ h6 {
 }
 
 #hero .icon-boxes {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 #hero .icon-box {
@@ -1701,8 +1701,9 @@ section {
 }
 
 .breadcrumbs h2 {
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 20px;
 }
 
 .breadcrumbs ol {

@@ -1,60 +1,117 @@
 {{ define "main" }}
 
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center">
+<section id="hero" class="d-flex">
   <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-    <h1 class="text-center mb-5">AIT Brain Lab</h1>
-    <div class="row">
-      <div class="col-lg-6">
-        <img class="rounded" style="float: left; margin-right: 50px" src="/img/aitbrainlab.jpg" height="440">
+    <div class="row justify-content-center">
+      <div class="col-xl-7 col-lg-9 text-center">
+        <h1>The Future Lab</h1>
+        <p style="margin-top: 10px;" class="lead">The <a href="https://ait.ac.th">Asian Institute of Technology (AIT)</a> and <a href="https://www.bupt.edu.cn/#">Beijing University of Posts and Telecommunications (BUPT)</a> are joining forces to establish a  joint-research lab, aptly named <b>The Future Lab, AIT x BUPT.</b></p>
+        <p class="lead text-muted">This initiative marks a significant milestone in the pursuit of cutting-edge research and development to solve world problems.  Key domains include Artificial Intelligence (AI), Digital Transformation, Accessibility, Sustainability, and beyond.</p>
+        {{/* <p class="lead text-muted">{{ .Params.hero3 }}</p> */}}
       </div>
-      <div class="col-lg-6">
-        <p class="lead text-muted">Welcome to AIT Brain Lab!</p>
-        <p style="margin-top: 10px;" class="lead text-muted">Established in 2019 by <a href="http://chaklam.com"
-            target="_blank">Dr. Chaklam</a>, we are a bunch of <a href="/members">software engineers and AI
-            scientists</a> at <a href="http://ait.ac.th" target="_blank">Asian Institute
-            of Technology, Thailand</a>, working in the area of NLP, CV, medical AI and brain computer interfaces.</p>
-        <p style="margin-top: 10px;" class="lead text-muted">We welcome students from all disciplines but those with a
-          huge passion for publishing in top-tier journals/conferences or making startup-related products.</p>
-        <p style="margin-top: 10px;" class="lead text-muted">Topics range from fundamental research such as developing new techniques to applied research such as develop applications with close collaboration with industry.</p>
-        <div>
-          <a style="background-color: #f38733" href="/members" class="btn-get-started scrollto">Members</a>
-          <a style="background-color: #05220a" href="/projects" class="btn-get-started scrollto">Check out our
-            projects!</a>
-        </div>
-        
-      </div>
-      
-
     </div>
-    <div style="margin-top: -20px;"></div>
-    <div class="row icon-boxes">
-      <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-        <div class="icon-box">
-          <h4 class="title"><a href="">Text / Speech </a></h4>
-          <p class="description">Research on LLMs, efficient models, summarization, and NLP applications using large
-            language models.</p>
+    <div class="text-center">
+      <a style="background-color: #f38733" href="/members" class="btn-get-started scrollto">Members</a>
+      <a style="background-color: #05220a" href="/projects" class="btn-get-started scrollto">Check out our
+        projects!</a>
+    </div>
+    <div id="features">
+      <div class="row icon-boxes">
+        <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box">
+            <h4 class="title"><a href="">Data Science and Artificial Intelligence</a></h4>
+            <p class="description">Research and development on data analytics and text, speech, computer vision based models and applications.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
-        <div class="icon-box">
-          <h4 class="title"><a href="">Computer Vision</a></h4>
-          <p class="description">Research and develop CV applications using deep learning vision and multimodal models.</p>
+        <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box">
+            <h4 class="title"><a href="">Digital Transformation</a></h4>
+            <p class="description">Research and development on contemporary topics on digital transformation including digital transformation in tourisms, banking, insurance, agriculture, etc.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
-        <div class="icon-box">
-          <h4 class="title"><a href="">Medical AI</a></h4>
-          <p class="description">Leveraging EEG and medical images as data and deep learning as approaches, we aim to develop tools to facilitate advanced medical diagnosis.</p>
+        <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+          <div class="icon-box">
+            <h4 class="title"><a href="">Assessibility and Healthcare</a></h4>
+            <p class="description">Research and development on accessibility that explores methods and tools to enhance inclusion and well-being for individuals with diverse needs including elderly, deaf people, visually-impaired people, locked-in patients, etc.</p>
+          </div>
         </div>
+
+      </div>
+      <div class="row icon-boxes">
+        <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box">
+            <h4 class="title"><a href="">Sustainability</a></h4>
+            <p class="description"> Research and development on Advancing Sustainable Development Goals (SDGs) is essential for addressing global challenges and fostering a more sustainable future.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box">
+            <h4 class="title"><a href="">Education</a></h4>
+            <p class="description">Research and development in Human Capacity Building is crucial for fostering a knowledgeable, skilled, inclusive and empowered global population.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+          <div class="icon-box">
+            <h4 class="title"><a href="">Smart Governance, Cities, Services</a></h4>
+            <p class="description">Research and Development in Smart Governance, Cities, and Services is vital for creating efficient, inclusive, and resilient urban environments. This research focuses on leveraging technology and data-driven approaches to enhance governance effectiveness, optimize urban infrastructure, and improve service delivery.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </section><!-- End Hero -->
 
 <main id="main">
+
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>About Us</h2>
+        <p>AIT x BUPT</p>
+      </div>
+
+      <div class="row content">
+        <div class="col-lg-6 pt-4 pt-lg-0">
+          <h4>Vision</h4>
+          <p>
+            The Future Lab envisions global progress by prioritizing the resolution of pressing world issues and advancing sustainability and economical initiatives. Through collaborative efforts between partner institutions, we aim to drive transformative innovations that not only address complex challenges but also foster sustainable solutions, paving the way for a prosperous and equitable future for all.
+          </p>
+          <h5>Key Missions</h5>
+          <ul>
+            <li><i class="ri-check-double-line"></i> Transdisciplinary Research</li>
+            <li><i class="ri-check-double-line"></i> Digital Transformation</li>
+            <li><i class="ri-check-double-line"></i> Co-Research and Talent Exchange</li>
+            <li><i class="ri-check-double-line"></i> Human Capacity Building</li>
+            <li><i class="ri-check-double-line"></i> Entrepreneurship</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <h4>Thematic Areas</h4>
+          <p>
+            The Future Lab adopt a multidisciplinary approach, bringing together experts from diverse fields such as computer science, engineering, business, social sciences, and environmental studies. Through collaborative research projects, workshops, seminars, and industry partnerships, the lab will foster knowledge exchange, cross-pollination of ideas, and practical applications of research findings.
+          </p>
+          <ul>
+            <li><i class="ri-check-double-line"></i>Data Science and AI</li>
+            <li><i class="ri-check-double-line"></i>Digital Transformation</li>
+            <li><i class="ri-check-double-line"></i>Assessibility and Healthcare</li>
+            <li><i class="ri-check-double-line"></i>Sustainability</li>
+            <li><i class="ri-check-double-line"></i>Education</li>
+            <li><i class="ri-check-double-line"></i>Smart Governance, Cities, Services</li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+
+  </section><!-- End About Section -->
 
   <!-- ======= Partners Section ======= -->
   <!-- <section id="clients" class="clients">
@@ -153,8 +210,9 @@
       </div>
       <div class="row">
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
-          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-            <a target="_blank" href="https://www.youtube.com/watch?v=zPFTY6n3r0Q">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card video-box align-self-baseline">
+            <a target="_blank" href="https://www.youtube.com/watch?v=zPFTY6n3r0Q" data-vbtype="video"
+            data-autoplay="true">
               <div class="portfolio-wrap">
                 <img src="/img/portfolio/liveness.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
