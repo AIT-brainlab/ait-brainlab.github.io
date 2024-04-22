@@ -13,13 +13,13 @@
   <div style="margin-top: 20px; margin-bottom: 20px " class="container">
     <p class="lead">Advisory Boards</p>
     <div class="row">
-      {{ with ($.Site.GetPage "Advisory") }}
+      {{ with (.Site.GetPage "advisory") }}
         {{ range .Pages }}
           <div class="col-lg-3">
-            <div class="card flex-row">
+            <div class="card flex-row" style="margin-top:10px;">
               <img src="{{ .Params.image }}" height="80">
               <div class="card-body">
-                <a href="http://chaklam.com" target="_blank"><div style="font-size: 14px;" class="card-text">{{ .Title }}</div></a>
+                <div style="font-size: 14px;" class="card-text">{{ .Title }}</div>
                 <div style="font-size: 12px;" class="text-muted">{{ .Params.Project }}</div>
               </div>
             </div>
@@ -35,7 +35,7 @@
             <div class="card flex-row">
               <img src="{{ .Params.image }}" height="80">
               <div class="card-body">
-                <a href="http://chaklam.com" target="_blank"><div style="font-size: 14px;" class="card-text">{{ .Title }}</div></a>
+                <div style="font-size: 14px;" class="card-text">{{ .Title }}</div>
                 <div style="font-size: 12px;" class="text-muted">{{ .Params.Project }}</div>
               </div>
             </div>
@@ -51,7 +51,7 @@
             <div class="card flex-row">
               <img src="{{ .Params.image }}" height="80">
               <div class="card-body">
-                <a href="http://chaklam.com" target="_blank"><div style="font-size: 14px;" class="card-text">{{ .Title }}</div></a>
+                <div style="font-size: 14px;" class="card-text">{{ .Title }}</div>
                 <div style="font-size: 12px;" class="text-muted">{{ .Params.Project }}</div>
               </div>
             </div>
