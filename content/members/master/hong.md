@@ -1,9 +1,10 @@
 ---
 title: Hong Zhao
 date: 2023-06-14T04:15:48+07:00
-roles: Master
+roles: Alumni
 image: /img/members/hong.jpg
 project: University chatbot
+work: Now @ Baoding University
 draft: false
 ---
 
