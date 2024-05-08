@@ -11,7 +11,7 @@
 
   <!-- ======= Members Section ======= -->
   <div style="margin-top: 20px; margin-bottom: 20px " class="container">
-    <p class="lead">Advisory Boards</p>
+    {{/*  <p class="lead">Advisory Boards</p>
     <div class="row">
       {{ with (.Site.GetPage "advisory") }}
         {{ range .Pages }}
@@ -26,10 +26,11 @@
           </div>
         {{ end }}
       {{ end }}
-    </div>
-    <p style="margin-top: 20px;" class="lead">Management</p>
+    </div>  */}}
+    
+    <p style="margin-top: 20px;" class="lead">Faculty</p>
     <div class="row">
-      {{ with ($.Site.GetPage "Management") }}
+      {{ with ($.Site.GetPage "Faculty") }}
         {{ range .Pages }}
           <div class="col-lg-3">
             <div class="card flex-row">
@@ -43,9 +44,9 @@
         {{ end }}
       {{ end }}
     </div>
-    <p style="margin-top: 20px;" class="lead">Faculty</p>
+    <p style="margin-top: 20px;" class="lead">Management</p>
     <div class="row">
-      {{ with ($.Site.GetPage "Faculty") }}
+      {{ with ($.Site.GetPage "Management") }}
         {{ range .Pages }}
           <div class="col-lg-3">
             <div class="card flex-row">
