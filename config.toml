@@ -31,10 +31,6 @@ title = "The Future Lab"
   pageRef = '/publications'
   weight = 50
 [[menu.main]]
-  name = 'Archives'
-  pageRef = '/archives'
-  weight = 60
-[[menu.main]]
   name = 'Contact'
   pageRef = '/'
   weight = 70
