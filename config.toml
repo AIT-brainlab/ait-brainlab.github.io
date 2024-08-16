@@ -7,7 +7,7 @@ title = "The Future Lab"
 
 [params]
     logo = "/img/logo.png"
-    fav = "/img/fav.png"
+    fav = "/img/logo.png"
 
 [menu]
 [[menu.main]]
