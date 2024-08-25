@@ -7,7 +7,7 @@ title = "AIT Brain Lab"
 
 [params]
     logo = "/img/logo.png"
-    fav = "/img/logo.png"
+    fav  = "/img/logo.png"
 
 [menu]
 [[menu.main]]
