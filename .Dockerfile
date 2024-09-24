@@ -24,8 +24,8 @@ ENV LANGUAGE en_US:en
 # Installing GoLang
 RUN apt install -y wget
 
-RUN wget https://go.dev/dl/go1.20.2.linux-amd64.tar.gz
-RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.2.linux-amd64.tar.gz
+RUN wget https://go.dev/dl/go1.23.1.linux-amd64.tar.gz
+RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.1.linux-amd64.tar.gz
 
 ENV PATH /usr/local/go/bin:$PATH
 ENV GOPATH /go
