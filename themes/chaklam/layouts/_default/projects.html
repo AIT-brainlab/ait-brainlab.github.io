@@ -39,45 +39,42 @@
 
       <p>We welcomed students from all disciplines but those with a huge passion for research.</p>
 
-      <h3>Current Projects</h3>
+      <h3>Problems we are interested</h3>
+
+      <p>We are mostly interested in problems related to modeling human behaviors and emotions using computational models or algorithms and improving human well-being and health.   Based on our natural instincts in technical stuffs,  we are also interested in computer vision and voice problems.</p>
 
       {{/*  <p style="line-height:1.38; margin-top:16px; margin-bottom:16px"><strong>Fundamental Research (suitable for Ph.D. students or Master students who want to go Ph.D.)</strong></p>  */}}
-      <p>Understanding humans</p>
+      <p>Modeling humans</p>
       <ol>
-        {{/*  <li><strong>Understanding humans through EEG</strong>: How does EEG profile looks like when humans are stressed?  engaged?  mindful? etc.  Then can we create an intervention system to improve these properties?</li>  */}}
-        <li><strong>Understanding humans through language</strong>: How can we model beliefs, emotion, cognition, behaviors, cultural/emotional/cognitive biases, etc. in language? </li>
+        <li><strong>Modeling humans through EEG</strong>: How does EEG profile looks like when humans are stressed?  engaged?  mindful? etc.  Then can we create an intervention system to improve these properties?</li>
+        <li><strong>Modeling humans through language</strong>: How can we model beliefs, emotion, cognition, behaviors, culture, and biases, etc. in language? </li>
         <li><strong>Understanding humans through voice and face</strong>: Can we detect depression, confidence, humours, or risk profiles from a person's voice?  What should we ask him/her to speak to detect that?  How long should that voice be?  Does it work for only certain languages? Does it get better results if we combine with facial features?</li>
-        {{/*  <li><strong>Understanding humans through video games + AI</strong>: Can we better understand human through human-game AI interaction to understand their cognitions, emotions, behaviors, social mechanisms? </li>  */}}
       </ol>
 
-      <p>Improving humans' well-being and health</p>
+      <p>Well-being and health</p>
       <ol>
-        <li><strong>AI for Brain (CT / MRI)</strong>: How to develop an AI system for stroke diagnosis or  hemorrhage?  What are some brain analysis tasks that doctors cannot do very well but AI can?  How to incorporate AI to the current workflow? How to build explaninability and trust? How reasoning can be done and used to improve decision makings?  Can we incorporate VQA?  How does traditional computer vision techniques compared with modern techniques like semi-supervised or self-supervised learning?  Can we use diffusion or generative AI to create infinite medical images?</li>
+        <li><strong>Brain and Medical Imaging</strong>: What are some imaging tasks that doctors cannot do very well but AI can?  How to incorporate AI to the current workflow? How to build explaninability and trust? How reasoning can be done?  Can we incorporate VQA?  How does traditional computer vision techniques compared with modern techniques like semi-supervised or self-supervised learning?  How to deal with millions of unlabeled data?  Can we use diffusion or generative AI to create infinite medical images?</li>
         <li><strong>Raman Spectroscopy</strong>: How to measure blood glucose non-invasively using Raman spectroscopy?  Can we put them into a portable low-cost machine and deploy them into households?</li>
         <li><strong>EEG BCI Speller</strong>: How to develop an effective and user-friendly BCI speller for locked-in patients using EEG?</li>
-        <li><strong>EEG for Meditation</strong>:  It's obvious that meditation has many health benefits. How to integrate EEG to help measure the progress of meditation, as well as a means to help enhance the quality of meditation, e.g., through neurofeedback?</li>
         <li><strong>Chatbot for emotional support</strong>: Can we incorporate CBT/DBT/ACT to chatbot to provide emotional support to people suffering from stress or depression?</li>
-        <li><strong>Digital twins for water and air management</strong>:  Thailand has a lot of flood, while the region has a lot of problem about water sanitation and air pollution.  How to utilize the concept of Digital Twins for better flood and water sanitation and air pollution management?</li>
+        <li><strong>Medical literatures summarization</strong>:   How to help doctors summarize thousands of documents?  How to deal with long context windows?  How to summarize for different domains which have different requirements?  How do we integrate with clinical trials or evidence or some sort of knowledge base?  How to handle ambiguity and conflict information?  How to enable interactive summarization?  How to validate these summaries?  How to combine with clinical workflows?</li>
+        Here are additional questions for Medical VQA in the same format:
+        <li><strong>Medical Visual Question Answering (VQA)</strong>: How to answer complex, image-based questions for medical diagnosis and treatment? How to ensure accuracy and clinical relevance in VQA responses? How to handle variability in image quality and modality across different medical fields? How to interpret multi-modal data (e.g., combining text and images) effectively for comprehensive responses? How to address ambiguity or uncertainty in medical images and communicate this effectively to users?</li>
+        <li><strong>GIS applications for water and air data management</strong>:  Thailand has a lot of flood, while the region has a lot of problem about water sanitation and air pollution.  Can we create a comprehensive GIS application for monitoring and analytics?</li>
       </ol>
 
       <p>Computer Vision</p>
       <ol>
         <li><strong>Car damage prediction system</strong>: How to design and develop a system that could accurately and reliably predict car damage?</li>
         <li><strong>House damage prediction system</strong>: How to design and develop a system that could accurately and reliably predict house damage, after flood, which is very common in Thailand?</li>
+        <li><strong>VQA</strong>:  Can we create VQA that understand images in various dimensions:  semantic,  spatial (where is what), numerical (how many), role (who are they), and emotion (what is happening)?  But maybe the first question is how to streamline the generation of a high quality dataset?</li>
+
       </ol>
 
-      <p>Thai</p>
+      <p>Voice</p>
       <ol>
         <li><strong>Speech2Text / Text2Speech </strong>: Most Thai Speech2Text / Text2Speech still does not work quite well.  We need a better dataset, engineering, and training approaches.</li>
         <li><strong>Voice cloning</strong>: Thailand does not yet have a model for voice cloning.  Voice cloning would be useful for the purpose of education and tourism.</li>
-        <li><strong>Voice analysis</strong>: Can we use something like wav2vec idea to analyze Thai voices, to extract human qualities like excitements, confidence, stress, burnout, etc.?</li>
-        <li><strong>Face analysis</strong>: Can we analyze Asian / Asean faces, to extract emotions, gender, stress, confidence, liveness, etc., for the purpose of AI applications?</li>
-        <li><strong>Emotional LLM</strong>: How to train a Thai LLM that knows how to properly write Thai text, with the AI being emotionally intelligence, culturally aware, and eloquent?</li>
-        <li><strong>OCR</strong>:  Most Thai OCR still has problems with robustness in different conditions.   We need more dataset to train a versatile OCR model.</li>
-        <li><strong>Chatbot for doctors</strong>: Since doctors are human who have limited capacity in reviewing papers or past cases, can chatbot provide doctors with relevant past diagnosis or research papers which AI is good at doing, similar to what Google AMIE?</li>
-        <li><strong>Chatbot for lawyers</strong>: Can chatbot help lawyers retrieval relevant legal precedents, case laws, or regulations?  Can chatbot help draft legal documents or analyze and highlight critical issues, inconsistencies, or compliance risks?  </li>
-        <li><strong>Personal Tutor</strong>: How to develop a user-friendly personalized AI tutor to support tutoring for the poor and to reskill?</li>
-        <li><strong>Thai VQA</strong>:  Can we create Thai VQA that understand images in various dimensions:  semantic,  spatial (where is what), numerical (how many), role (who are they), and emotion (what is happening)?  But the first question is how to streamline the generation of a high quality dataset for Thai?</li>
       </ol>
 
     </div>
