@@ -1,32 +1,25 @@
 name: Deploy Hugo site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: 
       - main
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# Default to bash
 defaults:
   run:
     shell: bash
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     env:
@@ -36,6 +29,11 @@ jobs:
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+          
+      - name: Verify Hugo Installation
+        run: |
+          hugo version
+          echo "Hugo binary location: $(which hugo)"
 
       - name: Install Dart Sass Embedded
         run: sudo snap install dart-sass-embedded
@@ -44,6 +42,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+          fetch-depth: 0
+          
+      - name: List repository contents
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Repository contents:"
+          ls -la
+          echo "Git status:"
+          git status
           
       - name: Setup Pages
         id: pages
@@ -54,20 +61,51 @@ jobs:
         
       - name: Build with Hugo
         env:
-          # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
+          echo "Starting Hugo build..."
+          echo "Base URL: ${{ steps.pages.outputs.base_url }}"
+          
+          # Create docs directory if it doesn't exist
+          mkdir -p docs
+          
+          # Build the site
           hugo \
           --minify \
-          --baseURL "${{ steps.pages.outputs.base_url }}/"
+          --destinationDir docs \
+          --baseURL "${{ steps.pages.outputs.base_url }}/" \
+          --verbose \
+          --debug
+          
+          echo "Hugo build completed"
+          echo "Checking docs directory contents:"
+          ls -la docs/
+          
+      - name: Verify artifact contents
+        run: |
+          if [ ! -d "docs" ]; then
+            echo "Error: docs directory not found"
+            exit 1
+          fi
+          if [ -z "$(ls -A docs)" ]; then
+            echo "Error: docs directory is empty"
+            exit 1
+          fi
+          echo "docs directory contents:"
+          ls -la docs/
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs
+          path: docs
+          name: github-pages
+          
+      - name: List artifacts
+        run: |
+          echo "Looking for artifacts in runner workspace:"
+          find ${{ runner.temp }} -name "github-pages*" -type f
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
