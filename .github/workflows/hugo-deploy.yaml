@@ -25,35 +25,37 @@ jobs:
     env:
       HUGO_VERSION: 0.115.0
     steps:
-      - name: Install Hugo CLI
-        run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-          
-      - name: Verify Hugo Installation
-        run: hugo version
-
-      - name: Install Dart Sass Embedded
-        run: sudo snap install dart-sass-embedded
-        
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
-          
-      - name: List repository contents
+
+      - name: Verify repository content
         run: |
-          echo "Current directory: $(pwd)"
-          echo "Repository contents:"
-          ls -la
+          echo "Current directory structure:"
+          tree -L 2 || ls -R
+          echo "Looking for Hugo config file:"
+          find . -name "config.*" -type f
+          echo "Looking for content directory:"
+          find . -name "content" -type d
+
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+          hugo version
+
+      - name: Install Dart Sass Embedded
+        run: sudo snap install dart-sass-embedded
           
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
         
       - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+        if: hashFiles('package-lock.json', 'npm-shrinkwrap.json') != ''
+        run: npm ci
         
       - name: Build with Hugo
         env:
@@ -61,27 +63,48 @@ jobs:
           HUGO_ENV: production
         run: |
           echo "Starting Hugo build..."
-          echo "Base URL: ${{ steps.pages.outputs.base_url }}"
+          # First run hugo with --logLevel info to see what's happening
+          hugo --logLevel info
           
-          # Create docs directory if it doesn't exist
-          mkdir -p docs
-          
-          # Build the site using correct -d flag
+          # If the first command succeeds, build to docs directory
           hugo \
           --minify \
           -d docs \
           --baseURL "${{ steps.pages.outputs.base_url }}/" \
           --verbose
           
-          echo "Hugo build completed"
-          echo "Checking docs directory contents:"
-          ls -la docs/
+          # Verify the build output
+          if [ -d "docs" ]; then
+            echo "docs directory exists and contains:"
+            ls -la docs/
+            if [ -f "docs/index.html" ]; then
+              echo "✓ index.html found"
+            else
+              echo "⨯ index.html not found"
+              exit 1
+            fi
+          else
+            echo "⨯ docs directory not found"
+            exit 1
+          fi
+          
+      - name: Fix permissions
+        run: |
+          chmod -R a+r docs
+          find docs -type d -exec chmod a+x {} \;
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: ./docs
           
+      - name: Verify artifact upload
+        run: |
+          echo "Checking artifact path..."
+          ls -la ./docs || echo "docs directory not found after upload"
+          echo "Checking runner artifacts directory..."
+          find "${{ runner.temp }}" -name "github-pages*" -type f || echo "No artifacts found in runner temp directory"
+
   deploy:
     environment:
       name: github-pages
