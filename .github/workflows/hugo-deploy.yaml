@@ -31,9 +31,7 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
           
       - name: Verify Hugo Installation
-        run: |
-          hugo version
-          echo "Hugo binary location: $(which hugo)"
+        run: hugo version
 
       - name: Install Dart Sass Embedded
         run: sudo snap install dart-sass-embedded
@@ -49,8 +47,6 @@ jobs:
           echo "Current directory: $(pwd)"
           echo "Repository contents:"
           ls -la
-          echo "Git status:"
-          git status
           
       - name: Setup Pages
         id: pages
@@ -70,42 +66,22 @@ jobs:
           # Create docs directory if it doesn't exist
           mkdir -p docs
           
-          # Build the site
+          # Build the site using correct -d flag
           hugo \
           --minify \
-          --destinationDir docs \
+          -d docs \
           --baseURL "${{ steps.pages.outputs.base_url }}/" \
-          --verbose \
-          --debug
+          --verbose
           
           echo "Hugo build completed"
           echo "Checking docs directory contents:"
-          ls -la docs/
-          
-      - name: Verify artifact contents
-        run: |
-          if [ ! -d "docs" ]; then
-            echo "Error: docs directory not found"
-            exit 1
-          fi
-          if [ -z "$(ls -A docs)" ]; then
-            echo "Error: docs directory is empty"
-            exit 1
-          fi
-          echo "docs directory contents:"
           ls -la docs/
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
-          name: github-pages
           
-      - name: List artifacts
-        run: |
-          echo "Looking for artifacts in runner workspace:"
-          find ${{ runner.temp }} -name "github-pages*" -type f
-
   deploy:
     environment:
       name: github-pages
