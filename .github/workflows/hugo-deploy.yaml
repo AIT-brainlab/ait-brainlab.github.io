@@ -6,6 +6,7 @@ on:
       - main
   workflow_dispatch:
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -15,11 +16,8 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-defaults:
-  run:
-    shell: bash
-
 jobs:
+  # Build job
   build:
     runs-on: ubuntu-latest
     env:
@@ -29,89 +27,50 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-          fetch-depth: 0
-
-      - name: Verify repository content
-        run: |
-          echo "Current directory structure:"
-          tree -L 2 || ls -R
-          echo "Looking for Hugo config file:"
-          find . -name "config.*" -type f
-          echo "Looking for content directory:"
-          find . -name "content" -type d
 
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-          hugo version
 
       - name: Install Dart Sass Embedded
         run: sudo snap install dart-sass-embedded
-          
+        
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-        
-      - name: Install Node.js dependencies
-        if: hashFiles('package-lock.json', 'npm-shrinkwrap.json') != ''
-        run: npm ci
         
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          echo "Starting Hugo build..."
-          # First run hugo with --logLevel info to see what's happening
-          hugo --logLevel info
-          
-          # If the first command succeeds, build to docs directory
           hugo \
           --minify \
-          -d docs \
-          --baseURL "${{ steps.pages.outputs.base_url }}/" \
-          --verbose
+          -d ./public \
+          --baseURL "${{ steps.pages.outputs.base_url }}/"
           
-          # Verify the build output
-          if [ -d "docs" ]; then
-            echo "docs directory exists and contains:"
-            ls -la docs/
-            if [ -f "docs/index.html" ]; then
-              echo "✓ index.html found"
-            else
-              echo "⨯ index.html not found"
-              exit 1
-            fi
-          else
-            echo "⨯ docs directory not found"
-            exit 1
-          fi
-          
-      - name: Fix permissions
-        run: |
-          chmod -R a+r docs
-          find docs -type d -exec chmod a+x {} \;
-          
-      - name: Upload artifact
+      - name: Upload pages artifact
+        if: success()
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs
-          
-      - name: Verify artifact upload
-        run: |
-          echo "Checking artifact path..."
-          ls -la ./docs || echo "docs directory not found after upload"
-          echo "Checking runner artifacts directory..."
-          find "${{ runner.temp }}" -name "github-pages*" -type f || echo "No artifacts found in runner temp directory"
+          path: ./public
+          retention-days: 1
 
+  # Deployment job
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
+      
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
+        with:
+          token: ${{ github.token }}
+          artifact_name: github-pages
