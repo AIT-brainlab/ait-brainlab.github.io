@@ -6,71 +6,104 @@
     <div class="container">
       <h2>{{ .Title }}</h2>
     </div>
-
-    </div>
   </section><!-- End Breadcrumbs -->
 
   <!-- ======= Portfolio Details Section ======= -->
   <section id="portfolio-details" class="portfolio-details">
     <div class="container">
-      {{/*  <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen="" data-align="left" frameborder="0" height="315"
-          src="https://www.youtube.com/embed/fMaOqt8tdsg?si=RIPSwUZCM2pqOYw6" style="margin-right:30px;"
-          title="YouTube video player" width="500"></iframe>
-          <iframe width="500" height="315" src="https://www.youtube.com/embed/2e37nmzC6Ig?si=DOcD4HXIalorkoNK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <iframe width="500" height="315" src="https://www.youtube.com/embed/DXnu3WY3znc?si=HWOKOSnhvaP1jAiZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="500" height="315" src="https://www.youtube.com/embed/eK-lxMjvbVU?si=jjQM4k9uuF6kY1Wz" title="YouTube video player" frameborder="0" style="margin-left:30px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </p>
-      <!-- <h3><img alt="fun" data-align="left" data-entity-type="file" data-entity-uuid="2205d992-6a3c-48cc-8185-be3c417db181" height="311" src="/sites/default/files/inline-images/IMG20200917192032.jpg" style="margin-right: 20px;" width="500" /></h3> -->  */}}
-
       <h3>Culture</h3>
 
-      <p>We strive to build an interdisciplinary team working in the areas of <strong>natural language processing</strong> and <strong>human-computer interaction</strong>.  Our core values are:</p>
+      <p>We strive to build an interdisciplinary team working in the areas of <strong>natural language processing</strong> and <strong>human-computer interaction</strong>. Our core values are:</p>
 
       <ul>
-        <li><strong>Experimental</strong>: We value scientific rigor, focusing on researching under strong scientific grounds and conducting sound experiments that provide definitive and repeatable findings.
-        </li>
+        <li><strong>Experimental</strong>: We value scientific rigor, focusing on researching under strong scientific grounds and conducting sound experiments that provide definitive and repeatable findings.</li>
         <li><strong>Computational</strong>: Our scientific nature is to use algorithms, mathematical models, strong theoretical background, and strong coding skills.</li>
       </ul>
 
       <h3>Lab Entry</h3>
-
       <p>We welcomed students from all disciplines but those with a huge passion for research.</p>
 
       <h3>Problems we are interested</h3>
 
       <p>Natural language processing</p>
-      <ol>
-        <li><strong>Small Language Models</strong>: SLM has the potential to reduce costs and improve ease for edge deployment.  This project aims to develop datasets, tools, and techniques to enable us to successfully develop small language models.</li>
-        <li><strong>Avatar | Voice Cloning | Text2Speech </strong>:  Voice cloning or avatar generation or text2speech are extremely useful in the domain of education and tourism.  This project aims to develop datasets and techniques to enable us to engineer cost-effective solutions.</li>
-        <li><strong>Human-Centered LLM</strong>:  How can we model beliefs, emotion, cognition, behaviors, culture, and biases, etc. through language, agents, and games?</li>
-        <li><strong>Multimodal LLM</strong>: Can we detect depression, confidence, humours, or risk profiles from a person's voice, face, and responses?</li>
+      <ol class="project-list">
+        <li class="project-item">
+          <img src="/img/demo2/slm.jpg" alt="Small Language Models" class="project-img">
+          <div class="project-text">
+            <strong>Small Language Models</strong>: SLM has the potential to reduce costs and improve ease for edge deployment. This project aims to develop datasets, tools, and techniques to enable us to successfully develop small language models.
+          </div>
+        </li>
+        <li class="project-item">
+          <img src="/img/demo2/avatar.jpg" alt="Avatar & Voice Cloning" class="project-img">
+          <div class="project-text">
+            <strong>Avatar | Voice Cloning | Text2Speech</strong>: Voice cloning or avatar generation or text2speech are extremely useful in the domain of education and tourism. This project aims to develop datasets and techniques to enable us to engineer effective solutions.
+          </div>
+        </li>
+        <li class="project-item">
+          <img src="/img/demo2/human.jpg" alt="LLM Human Understanding" class="project-img">
+          <div class="project-text">
+            <strong>LLM that truly understands humans</strong>: How can we develop LLM that is emotionally intelligent, and that can serve human beings by understanding their beliefs, cognition, behaviors, culture, and biases, etc.?
+          </div>
+        </li>
+        <li class="project-item">
+          <img src="/img/demo2/multimodal.jpg" alt="Multimodal LLM" class="project-img">
+          <div class="project-text">
+            <strong>Multimodal LLM</strong>: Related to above, can we improve the capabilities of LLM by combining other modalities such as voice and face, for example, to detect depression, confidence, humours, or risk profiles?
+          </div>
+        </li>
+        <li class="project-item">
+          <img src="/img/demo2/vqa.jpg" alt="Medical VQA" class="project-img">
+          <div class="project-text">
+            <strong>Medical VQA</strong>: Can we create an intelligent system that, given input of medical images, provide explainable responses to complex inquiries? Such system can potentially train radiologist trainees as well as provide second opinions to general radiologists.
+          </div>
+        </li>
       </ol>
 
       <p>Health and wellness</p>
-      <ol>
-        <li><strong>Medical VQA</strong>: How to incorporate AI to the current workflow? What data interoperability challenges we need to concern? How to build explaninability and trust? How reasoning can be done?  Can we incorporate VQA?  How does traditional computer vision techniques compared with modern techniques like semi-supervised or self-supervised learning?  How to deal with millions of unlabeled data?  Can we use diffusion or generative AI to create infinite medical images?</li>
-        <li><strong>Home-based stroke rehabilitation</strong>: How to develop an effective home-based rehabilitation device to use at home for post-stroke patients?</li>
-        <li><strong>Raman Spectroscopy</strong>: How to measure blood glucose non-invasively using Raman spectroscopy?  Can we put them into a portable low-cost machine and deploy them into households?</li>
-        <li><strong>EEG BCI Speller</strong>: How to develop an effective and user-friendly BCI speller for locked-in patients using EEG?</li>
-        <li><strong>Chatbot for emotional support</strong>: Can we incorporate CBT/DBT/ACT to chatbot to provide emotional support or assessments to people suffering from stress or depression?</li>      
+      <ol class="project-list">
+        <li class="project-item">
+          <img src="/img/demo2/raman.jpg" alt="Raman Spectroscopy" class="project-img">
+          <div class="project-text">
+            <strong>Raman Spectroscopy</strong>: How to measure blood glucose non-invasively using Raman spectroscopy? Can we put them into a portable low-cost machine and deploy them into households?
+          </div>
+        </li>
+        <li class="project-item">
+          <img src="/img/demo2/eeg.jpg" alt="EEG BCI Speller" class="project-img">
+          <div class="project-text">
+            <strong>EEG BCI Speller</strong>: How to develop an effective and user-friendly BCI speller for locked-in patients using EEG?
+          </div>
+        </li>
+        <li class="project-item">
+          <img src="/img/demo2/chatbot.jpg" alt="Chatbot for emotional support" class="project-img">
+          <div class="project-text">
+            <strong>Chatbot for emotional support</strong>: Can we incorporate CBT/DBT/ACT to chatbot to provide emotional support or assessments to people suffering from stress or depression?
+          </div>
+        </li>
       </ol>
-
-
-      {{/*
-      <p>Internships / Applications</p>
-      <ol>
-        <li><strong>Voice chatbots for emergency </strong>:  Thailand has plan to develop voice chatbot during emergency where it will spams millions of citizens, asking for their well-being. </li>
-        <li><strong>Public Policy + AI</strong>:   Using AI to help do research, compare policies, and suggest strategies.</li>
-        <li><strong>Digital Twins + Truck</strong>: Combining AR/VR, Digital Twin, and AI technologies for trucks enables real-time monitoring, predictive maintenance, and immersive training by creating a virtual replica of the vehicle enhanced with intelligent insights.</li>
-        <li><strong>One Report Generation</strong>:  Using agentic AI to generate whole One report.</li>
-        <li><strong>OCR</strong>:  Develop advanced OCR solution that accomodates dynamic forms and handwritings.</li>
-        <li><strong>AI Tutor</strong>:  Using avatar technology + agentic AI to reimagine how a AI tutor should look like.</li>
-        <li><strong>AI Interviewer</strong>:  Using voice + face + LLM + resume analysis to evaluate and screen candidates.</li>
-      </ol>
-        {{/*  <li><strong>Template Matching</strong>:  Develop computer vision suite of models to support manufacturing companies.</li>  */}}
-     
     </div>
   </section><!-- End Portfolio Details Section -->
 </main>
+
+<style>
+  .project-list {
+    list-style: none;
+    padding: 0;
+  }
+  .project-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .project-img {
+    width: 120px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  .project-text {
+    flex: 1;
+  }
+</style>
+
 {{ end }}
