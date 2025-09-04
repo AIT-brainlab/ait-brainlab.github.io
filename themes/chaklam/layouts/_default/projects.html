@@ -11,71 +11,57 @@
   <!-- ======= Portfolio Details Section ======= -->
   <section id="portfolio-details" class="portfolio-details">
     <div class="container">
-      <h3>Culture</h3>
-
-      <p>We strive to build an interdisciplinary team working in the areas of <strong>natural language processing</strong> and <strong>human-computer interaction</strong>. Our core values are:</p>
-
+      <h3>Culture & Research Philosophy</h3>
+      <p>Our interdisciplinary team operates at the intersection of <strong>natural language processing</strong> and <strong>human-computer interaction</strong>. We emphasize:</p>
       <ul>
-        <li><strong>Experimental</strong>: We value scientific rigor, focusing on researching under strong scientific grounds and conducting sound experiments that provide definitive and repeatable findings.</li>
-        <li><strong>Computational</strong>: Our scientific nature is to use algorithms, mathematical models, strong theoretical background, and strong coding skills.</li>
+        <li><strong>Experimental</strong>: Conduct rigorous, reproducible experiments to advance scientific knowledge.</li>
+        <li><strong>Computational</strong>: Apply algorithms, mathematical models, and coding expertise to solve challenging problems.</li>
       </ul>
 
       <h3>Lab Entry</h3>
-      <p>We welcomed students from all disciplines but those with a huge passion for research.</p>
+      <p>We welcome students from all disciplines, particularly those with strong curiosity and a passion for research and innovation.</p>
 
-      <h3>Problems we are interested</h3>
+      <h3>Research Tracks</h3>
+      <p>Our lab focuses on frontier problems in AI and HCI, aiming for high-impact publications and novel contributions.</p>
 
       <ol class="project-list">
+
+        <!-- Track 1: Small Language Models -->
         <li class="project-item">
           <img src="/img/demo2/slm.jpg" alt="Small Language Models" class="project-img">
           <div class="project-text">
-            <strong>Small Language Models</strong>: SLM has the potential to reduce costs and improve ease for edge deployment. This project aims to develop datasets, tools, and techniques to enable us to successfully develop small language models.
+            <strong>Track 1: Small Language Models (SLM)</strong>
+            <p>Exploring compression, efficient tokenization, low-resource adaptation, and robustness evaluation to make LLMs more efficient and generalizable.</p>
           </div>
         </li>
+
+        <!-- Track 2: Multilingual Speech Recognition -->
         <li class="project-item">
-          <img src="/img/demo2/avatar.jpg" alt="Avatar & Voice Cloning" class="project-img">
+          <img src="/img/demo2/avatar.jpg" alt="Multilingual Speech Recognition" class="project-img">
           <div class="project-text">
-            <strong>Avatar | Voice Cloning | Text2Speech</strong>: Voice cloning or avatar generation or text2speech are extremely useful in the domain of education and tourism. This project aims to develop datasets and techniques to enable us to engineer effective solutions.
+            <strong>Track 2: Multilingual & Mixed-Language Speech Recognition</strong>
+            <p>Studying cross-lingual transfer, code-switching, low-resource languages, speaker diarization, and noise-robust models for more natural human-machine speech interaction.</p>
           </div>
         </li>
+
+        <!-- Track 3: Voice Cloning & Talking Avatars -->
+        <li class="project-item">
+          <img src="/img/demo2/multimodal.jpg" alt="Voice Cloning & Avatars" class="project-img">
+          <div class="project-text">
+            <strong>Track 3: Voice Cloning & Talking Avatars</strong>
+            <p>Investigating few-shot voice synthesis, neural vocoders, lip-sync for talking avatars, and perceptual evaluation of realism and speaker identity.</p>
+          </div>
+        </li>
+
+        <!-- Track 4: Human-Centered LLMs -->
         <li class="project-item">
           <img src="/img/demo2/human.jpg" alt="LLM Human Understanding" class="project-img">
           <div class="project-text">
-            <strong>LLM that truly understands humans</strong>: How can we develop LLM that is emotionally intelligent, and that can serve human beings by understanding their beliefs, cognition, behaviors, culture, and biases, etc.?
+            <strong>Track 4: LLMs that Truly Understand Humans</strong>
+            <p>Developing emotionally intelligent, culturally aware, and bias-sensitive LLMs capable of understanding beliefs, behaviors, and human cognition.</p>
           </div>
         </li>
-        <li class="project-item">
-          <img src="/img/demo2/multimodal.jpg" alt="Multimodal LLM" class="project-img">
-          <div class="project-text">
-            <strong>Multimodal LLM</strong>: Related to above, can we improve the capabilities of LLM by combining other modalities such as voice and face, for example, to detect depression, confidence, humours, or risk profiles?
-          </div>
-        </li>
-        <li class="project-item">
-          <img src="/img/demo2/vqa.jpg" alt="Medical VQA" class="project-img">
-          <div class="project-text">
-            <strong>Medical VQA</strong>: Can we create an intelligent system that, given input of medical images, provide explainable responses to complex inquiries? Such system can potentially train radiologist trainees as well as provide second opinions to general radiologists.
-          </div>
-        </li>
-      </ol>
-      <ol class="project-list">
-        <li class="project-item">
-          <img src="/img/demo2/raman.jpg" alt="Raman Spectroscopy" class="project-img">
-          <div class="project-text">
-            <strong>Raman Spectroscopy</strong>: How to measure blood glucose non-invasively using Raman spectroscopy? Can we put them into a portable low-cost machine and deploy them into households?
-          </div>
-        </li>
-        <li class="project-item">
-          <img src="/img/demo2/eeg.jpg" alt="EEG BCI Speller" class="project-img">
-          <div class="project-text">
-            <strong>EEG BCI Speller</strong>: How to develop an effective and user-friendly BCI speller for locked-in patients using EEG?
-          </div>
-        </li>
-        <li class="project-item">
-          <img src="/img/demo2/chatbot.jpg" alt="Chatbot for emotional support" class="project-img">
-          <div class="project-text">
-            <strong>Chatbot for emotional support</strong>: Can we incorporate CBT/DBT/ACT to chatbot to provide emotional support or assessments to people suffering from stress or depression?
-          </div>
-        </li>
+
       </ol>
     </div>
   </section><!-- End Portfolio Details Section -->
@@ -89,17 +75,28 @@
   .project-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .project-img {
-    width: 120px;
+    width: 140px;
     height: auto;
-    margin-right: 15px;
+    margin-right: 20px;
     border-radius: 8px;
     object-fit: cover;
   }
   .project-text {
     flex: 1;
+  }
+  @media (max-width: 768px) {
+    .project-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .project-img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
   }
 </style>
 
