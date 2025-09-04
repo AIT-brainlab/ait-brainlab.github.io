@@ -12,53 +12,69 @@
   <section id="portfolio-details" class="portfolio-details">
     <div class="container">
       <h3>Culture & Research Philosophy</h3>
-      <p>Our interdisciplinary team operates at the intersection of <strong>natural language processing</strong> and <strong>human-computer interaction</strong>. We emphasize:</p>
+      <p>Our interdisciplinary team works at the frontier of <strong>natural language processing</strong> and <strong>human-computer interaction</strong>, guided by curiosity and scientific rigor:</p>
       <ul>
-        <li><strong>Experimental</strong>: Conduct rigorous, reproducible experiments to advance scientific knowledge.</li>
-        <li><strong>Computational</strong>: Apply algorithms, mathematical models, and coding expertise to solve challenging problems.</li>
+        <li><strong>Experimental</strong>: Conduct reproducible experiments that advance fundamental understanding.</li>
+        <li><strong>Computational</strong>: Leverage algorithms, models, and coding expertise to tackle challenging questions.</li>
       </ul>
 
       <h3>Lab Entry</h3>
-      <p>We welcome students from all disciplines, particularly those with strong curiosity and a passion for research and innovation.</p>
+      <p>We welcome students from all disciplines with strong curiosity and a passion for rigorous, original research.</p>
 
-      <h3>Research Tracks</h3>
-      <p>Our lab focuses on frontier problems in AI and HCI, aiming for high-impact publications and novel contributions.</p>
+      <h3>Research Topics</h3>
+      <p>We focus on thought-provoking, high-impact questions in AI and HCI.</p>
 
       <ol class="project-list">
 
-        <!-- Track 1: Small Language Models -->
+        <!-- Topic 1: Small Language Models -->
         <li class="project-item">
           <img src="/img/demo2/slm.jpg" alt="Small Language Models" class="project-img">
           <div class="project-text">
-            <strong>Track 1: Small Language Models (SLM)</strong>
-            <p>Exploring compression, efficient tokenization, low-resource adaptation, and robustness evaluation to make LLMs more efficient and generalizable.</p>
+            <strong>Topic 1: Small Language Models (SLM)</strong>
+            <ul>
+              <li>How small can a language model get before its reasoning and generative capabilities collapse?</li>
+              <li>Can we distill complex knowledge into compact models without losing robustness or generalization?</li>
+              <li>How can SLMs adapt to new domains or languages with minimal data?</li>
+            </ul>
           </div>
         </li>
 
-        <!-- Track 2: Multilingual Speech Recognition -->
+        <!-- Topic 2: Multilingual & Mixed-Language Speech Recognition -->
         <li class="project-item">
           <img src="/img/demo2/avatar.jpg" alt="Multilingual Speech Recognition" class="project-img">
           <div class="project-text">
-            <strong>Track 2: Multilingual & Mixed-Language Speech Recognition</strong>
-            <p>Studying cross-lingual transfer, code-switching, low-resource languages, speaker diarization, and noise-robust models for more natural human-machine speech interaction.</p>
+            <strong>Topic 2: Multilingual & Mixed-Language Speech Recognition</strong>
+            <ul>
+              <li>How do humans switch effortlessly between languages, and can machines emulate this ability?</li>
+              <li>Can we create robust recognition systems for low-resource languages and mixed-language conversations?</li>
+              <li>What are the limits of speaker diarization in noisy, real-world environments?</li>
+            </ul>
           </div>
         </li>
 
-        <!-- Track 3: Voice Cloning & Talking Avatars -->
+        <!-- Topic 3: Voice Cloning & Talking Avatars -->
         <li class="project-item">
           <img src="/img/demo2/multimodal.jpg" alt="Voice Cloning & Avatars" class="project-img">
           <div class="project-text">
-            <strong>Track 3: Voice Cloning & Talking Avatars</strong>
-            <p>Investigating few-shot voice synthesis, neural vocoders, lip-sync for talking avatars, and perceptual evaluation of realism and speaker identity.</p>
+            <strong>Topic 3: Voice Cloning & Talking Avatars</strong>
+            <ul>
+              <li>Is it possible to replicate a person’s voice with only seconds of audio without artifacts?</li>
+              <li>How do we make talking avatars convey emotion and personality convincingly?</li>
+              <li>What are the ethical boundaries in creating hyper-realistic synthetic voices and avatars?</li>
+            </ul>
           </div>
         </li>
 
-        <!-- Track 4: Human-Centered LLMs -->
+        <!-- Topic 4: Human-Centered LLMs -->
         <li class="project-item">
           <img src="/img/demo2/human.jpg" alt="LLM Human Understanding" class="project-img">
           <div class="project-text">
-            <strong>Track 4: LLMs that Truly Understand Humans</strong>
-            <p>Developing emotionally intelligent, culturally aware, and bias-sensitive LLMs capable of understanding beliefs, behaviors, and human cognition.</p>
+            <strong>Topic 4: LLMs that Truly Understand Humans</strong>
+            <ul>
+              <li>Can a machine model human beliefs, values, and biases without replicating harmful stereotypes?</li>
+              <li>How can LLMs reason about human emotion and culture in context-sensitive ways?</li>
+              <li>Is it possible to quantify and evaluate “understanding” in a machine?</li>
+            </ul>
           </div>
         </li>
 
@@ -86,6 +102,9 @@
   }
   .project-text {
     flex: 1;
+  }
+  .project-text ul {
+    padding-left: 20px;
   }
   @media (max-width: 768px) {
     .project-item {
