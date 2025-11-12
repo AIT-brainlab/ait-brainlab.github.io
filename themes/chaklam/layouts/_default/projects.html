@@ -25,52 +25,64 @@
 
       <ol class="project-list">
 
-        <ul>
+        <h3>Digital Public Infrastructure</h3>
+<ul>
   <li>
     <strong>Liveness Detection:</strong> 
-    This is the critical gatekeeper for digital identity, but it's vulnerable to attacks. Key research problems include defending against sophisticated fraud (deepfakes, 3D masks, morphing attacks), creating robust datasets, reducing demographic bias, and designing lightweight models for on-device use.
+    This is the critical gatekeeper for digital identity, but it's vulnerable to attacks. Key research problems include defending against sophisticated fraud (deepfakes, 3D masks, morphing attacks), reducing demographic bias, and designing lightweight models for on-device use. A major student project is creating robust attack datasets, which involves studying the trade-offs between <strong>manual</strong>, <strong>crowdsourced</strong>, and <strong>synthetically generated</strong> data to cover all possible attack vectors.
   </li>
-  
   <li>
     <strong>Facial Recognition:</strong> 
-    This technology carries significant technical and societal risks. Key problems for a thesis are ensuring fairness, eliminating demographic bias, and establishing ethical best practices. This research involves creating balanced and diverse datasets—moving beyond simple crowdsourcing to use synthetic data generation—to train models that are robust against both demographic bias and adversarial attacks.
+    This technology carries significant technical and societal risks. Key problems for a thesis are ensuring fairness, eliminating demographic bias, and establishing ethical best practices. This research involves creating balanced and diverse datasets—moving beyond simple crowdsourcing to use <strong>synthetic data generation</strong>—to train models that are robust against both demographic bias and adversarial attacks.
   </li>
-  
   <li>
     <strong>OCR (Optical Character Recognition):</strong> 
-    This is the core technology for digitizing the physical world, but it struggles with complex, real-world text. Key research problems are accurately reading complex layouts (tables, forms), deciphering handwriting, and handling low-quality images. Student projects often focus on creating specialized datasets (e.g., historical documents, receipts) and exploring how synthetic data can be used to train models to handle rare fonts or extreme distortions.
+    This is the core technology for digitizing the physical world, but it struggles with complex, real-world text. Key research problems are accurately reading complex layouts (tables, forms), deciphering handwriting, and handling low-quality images. Student projects often focus on creating specialized datasets (e.g., historical documents, receipts) and exploring how <strong>synthetic data</strong> can be used to train models to handle rare fonts or extreme distortions.
   </li>
-  
+</ul>
+
+<h3>LLM</h3>
+<ul>
   <li>
     <strong>LLM Reasoning and Hallucinations:</strong> 
-    Large Language Models serve as the engine for complex applications like the <strong>AI tutor, mental health chatbot, AI knowledge portal, AI interviewer, and AI market research</strong>, but they frequently suffer from logical failures and hallucinations. Key research problems for a thesis include developing frameworks to improve reasoning (e.g., Chain-of-Thought), and methods to detect and reduce hallucinations. Students will work on creating rigorous evaluation datasets—balancing <strong>expert manual curation</strong> for ground truth with <strong>adversarial synthetic data</strong>—to benchmark and ensure the reliability of these high-stakes systems.
+    Large Language Models serve as the engine for complex applications like the <strong>AI tutor, mental health chatbot, AI knowledge portal, AI interviewer, and AI market research</strong>, but they frequently suffer from logical failures and hallucinations. Key research problems for a thesis include developing frameworks to improve reasoning (e.g., Chain-of-Thought) and methods to detect and reduce hallucinations. Students will work on creating rigorous evaluation datasets—balancing <strong>expert manual curation</strong> for ground truth with <strong>adversarial synthetic data</strong>—to benchmark and ensure the reliability of these high-stakes systems.
   </li>
-  
+  <li>
+    <strong>Small Language Models (SLMs):</strong>
+    While LLMs are powerful, they are too large for many real-world applications. This research focuses on training compact models (e.g., <7B parameters) that retain high reasoning capabilities for targeted domains. Key thesis problems involve knowledge distillation, quantization, and efficient training frameworks. Students will explore how <strong>synthetic textbooks</strong> and curated datasets can be used to train small models that outperform larger ones on specific tasks.
+  </li>
+  <li>
+    <strong>Synthetic Datasets:</strong>
+    High-quality data is the primary bottleneck for modern AI. This topic focuses on using LLMs to generate training data for other models, solving issues of scarcity and privacy. Key research problems include ensuring diversity and preventing "model collapse" (where models degrade when trained on synthetic data). A student project involves developing pipelines to generate <strong>synthetic instruction-tuning data</strong> and benchmarking its quality against <strong>human-authored</strong> datasets.
+  </li>
   <li>
     <strong>Synthetic Personas:</strong> 
-    This topic explores using generative AI to create realistic, AI-driven user profiles as a new method for market research, complementing Agentic AI. The core research challenge for a Master's or PhD project is validation: how do we prove that the insights from these synthetic personas accurately reflect real human behavior and avoid AI-generated "echo chambers"?
+    This topic explores using generative AI to create realistic, AI-driven user profiles as a new method for market research. The core research challenge for a Master's or PhD project is validation: how do we prove that the insights from these synthetic personas accurately reflect real human behavior and avoid AI-generated "echo chambers"?
   </li>
-  
-  <li>
-    <strong>Medical VQA (Visual Question Answering):</strong> 
-    This technology can act as a "co-pilot" for doctors, helping them interpret medical scans by answering natural language questions. Key problems are the extreme need for accuracy in a high-stakes environment and the lack of large-scale annotated datasets. A core PhD challenge is creating these datasets, which requires expert manual annotation from doctors and exploring synthetic data (e.g., GANs) to augment rare-disease examples.
-  </li>
-  
   <li>
     <strong>Human-AI Interaction:</strong> 
     This is foundational research for ensuring AI makes us *better*, not just replaces us. It focuses on designing collaborative systems that augment human cognition, creativity, and learning. Key research questions for a student project include: How do we design AI that is truly collaborative and understandable? How do we measure its real impact on human learning? And how do we ensure it supports human well-being?
   </li>
-  
+</ul>
+
+<h3>Multimodal Learning</h3>
+<ul>
+  <li>
+    <strong>Medical VQA (Visual Question Answering):</strong> 
+    This technology can act as a "co-pilot" for doctors, helping them interpret medical scans by answering natural language questions. Key problems are the extreme need for accuracy in a high-stakes environment and the lack of large-scale annotated datasets. A core PhD challenge is creating these datasets, which requires expert <strong>manual annotation</strong> from doctors and exploring <strong>synthetic data</strong> (e.g., GANs) to augment rare-disease examples.
+  </li>
   <li>
     <strong>Speech2Text and Voice Cloning:</strong> 
-    This technology breaks down communication barriers and creates new possibilities for personalized media. Key problems are achieving accuracy in noisy environments with diverse accents and addressing the ethical risks of deepfake audio. A major project area is creating large-scale, diverse speech datasets, which involves balancing expensive manual transcription,crowdsourced and synthetically-generated audio to cover many languages and accents.
+    This technology breaks down communication barriers and creates new possibilities for personalized media. Key problems are achieving accuracy in noisy environments with diverse accents and addressing the ethical risks of deepfake audio. A major project area is creating large-scale, diverse speech datasets, which involves balancing expensive <strong>manual transcription</strong> with <strong>crowdsourced</strong> and <strong>synthetically-generated</strong> audio to cover many languages and accents.
   </li>
-  
+</ul>
+
+<h3>Medical Devices</h3>
+<ul>
   <li>
     <strong>EEG (Brain-Computer Interfaces):</strong> 
     BCI offers a life-changing communication channel for people with severe motor disabilities. Key research problems for a Master's or PhD project involve improving the low speed and signal-to-noise ratio of non-invasive EEG, reducing user fatigue, and engineering robust hybrid BCI systems (like those combining SSVEP and P300 signals) that are fast and reliable enough for daily use.
   </li>
-  
   <li>
     <strong>Raman Spectroscopy:</strong> 
     This research could lead to a new class of non-invasive medical diagnostics, like a "no-prick" portable glucose monitor. Key problems for a student project involve applying advanced signal processing and machine learning to extract a clear, reliable signal (e.g., glucose) from the highly complex and "noisy" spectroscopic data of human tissue, and then engineering an accurate, portable, and affordable device.
