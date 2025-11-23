@@ -6,149 +6,82 @@
     <div class="container">
       <h2>{{ .Title }}</h2>
     </div>
-  </section><!-- End Breadcrumbs -->
+  </section>
+  <!-- End Breadcrumbs -->
 
   <!-- ======= Portfolio Details Section ======= -->
   <section id="portfolio-details" class="portfolio-details">
     <div class="container">
       <h3>Culture & Research Philosophy</h3>
-      <p>Our interdisciplinary team works at the frontier of <strong>computer vision</strong>, <strong>natural language processing</strong> and <strong>human-computer interaction</strong> and its intersection, guided by curiosity and scientific rigor:</p>
+      <p>
+        Our interdisciplinary team works at the foundational models of
+        <strong>computer vision</strong>,
+        <strong>natural language processing</strong>, and <strong>multimodal learning</strong>:
+      </p>
       <ul>
-        <li><strong>Experimental</strong>: Conduct reproducible experiments that advance fundamental understanding.</li>
-        <li><strong>Computational</strong>: Leverage algorithms, models, and coding expertise to tackle challenging questions.</li>
+        <li>
+          <strong>Experimental</strong>: Conduct reproducible experiments that
+          advance fundamental understanding.
+        </li>
+        <li>
+          <strong>Computational</strong>: Leverage algorithms, models, and
+          coding expertise to tackle challenging questions.
+        </li>
       </ul>
 
       <h3>Lab Entry</h3>
-      <p>We welcome students from all disciplines with strong curiosity and a passion for rigorous, original research. We commonly submit our work to conferences including ACL, NIPS, CVPR and ACM CHI.</p>
+      <p>
+        We welcome students from all disciplines with strong curiosity and a
+        passion for rigorous, original research. We commonly submit our work to
+        conferences including ACL, NIPS, CVPR and ACM CHI.
+      </p>
 
       <ol class="project-list">
-
-        <h3>Digital Public Infrastructure</h3>
-<ul>
-  <li>
-    <strong>Facial Recognition:</strong>
-    Facial recognition carries significant technical and societal risks. Key thesis problems include ensuring fairness and eliminating demographic bias, developing robust liveness detection and presentation-attack detection (PAD) to defend against deepfakes, 3D masks, photo/video replay and morphing attacks, and establishing ethical deployment practices and privacy-preserving pipelines.
-  </li>
-  <li>
-    <strong>OCR (Optical Character Recognition):</strong> 
-    This is the core technology for digitizing the physical world, but it struggles with complex, real-world text. Key research problems are accurately reading complex layouts (tables, forms), deciphering handwriting, and handling low-quality images.
-  </li>
-</ul>
-
-<h3>LLM</h3>
-<ul>
-  <li>
-    <strong>LLM Reasoning and Hallucinations:</strong> 
-    Large Language Models serve as the engine for complex applications like the AI tutor, mental health chatbot, AI knowledge portal, AI interviewer, and AI market research, but they frequently suffer from logical failures and hallucinations. Key research problems for a thesis include developing frameworks to improve reasoning (e.g., Chain-of-Thought) and methods to detect and reduce hallucinations. 
-  </li>
-  <li>
-    <strong>Small Language Models (SLMs):</strong>
-    While LLMs are powerful, they are too large for many real-world applications. This research focuses on training compact models (e.g., <7B parameters) that retain high reasoning capabilities for targeted domains. Key thesis problems involve knowledge distillation, quantization, and efficient training frameworks.
-  </li>
-  <li>
-    <strong>Synthetic Datasets:</strong>
-    High-quality data is the primary bottleneck for modern AI. This topic focuses on using LLMs to generate training data for other models, solving issues of scarcity and privacy. Key research problems include ensuring diversity and preventing "model collapse" (where models degrade when trained on synthetic data).
-  </li>
-  <li>
-    <strong>Synthetic Personas:</strong> 
-    This topic explores using generative AI to create realistic, AI-driven user profiles as a new method for market research. The core research challenge for a Master's or PhD project is validation: how do we prove that the insights from these synthetic personas accurately reflect real human behavior and avoid AI-generated "echo chambers"?
-  </li>
-  <li>
-    <strong>Human-AI Interaction:</strong> 
-    This is foundational research for ensuring AI makes us *better*, not just replaces us. It focuses on designing collaborative systems that augment human cognition, creativity, and learning. Key research questions for a student project include: How do we design AI that is truly collaborative and understandable? How do we measure its real impact on human learning? And how do we ensure it supports human well-being?
-  </li>
-</ul>
-
-<h3>Multimodal Learning</h3>
-<ul>
-  <li>
-    <strong>Medical VQA (Visual Question Answering):</strong> 
-    This technology can act as a "co-pilot" for doctors, helping them interpret medical scans by answering natural language questions. Key problems are the extreme need for accuracy in a high-stakes environment and the lack of large-scale annotated datasets. A core PhD challenge is creating these datasets, which requires expert <strong>manual annotation</strong> from doctors and exploring <strong>synthetic data</strong> to augment rare-disease examples.
-  </li>
-  <li>
-    <strong>Speech2Text and Voice Cloning:</strong> 
-    This technology breaks down communication barriers and creates new possibilities for personalized media. Key problems are achieving accuracy in noisy environments with diverse accents and addressing the ethical risks of deepfake audio. A major project area is creating large-scale, diverse speech datasets, which involves balancing expensive <strong>manual transcription</strong> with <strong>crowdsourced</strong> and <strong>synthetically-generated</strong> audio to cover many languages and accents.
-  </li>
-</ul>
-
-<h3>Medical Devices</h3>
-<ul>
-  <li>
-    <strong>EEG (Brain-Computer Interfaces):</strong> 
-    BCI offers a life-changing communication channel for people with severe motor disabilities. Key research problems for a Master's or PhD project involve improving the low speed and signal-to-noise ratio of non-invasive EEG, reducing user fatigue, and engineering robust hybrid BCI systems (like those combining SSVEP and P300 signals) that are fast and reliable enough for daily use.
-  </li>
-  <li>
-    <strong>Raman Spectroscopy:</strong> 
-    This research could lead to a new class of non-invasive medical diagnostics, like a "no-prick" portable glucose monitor. Key problems for a student project involve applying advanced signal processing and machine learning to extract a clear, reliable signal (e.g., glucose) from the highly complex and "noisy" spectroscopic data of human tissue, and then engineering an accurate, portable, and affordable device.
-  </li>
-</ul>
-</ol>
-
-      {{/*  <ol class="project-list">
-
-        <!-- Topic 1: Human–AI Interaction -->
-        <li class="project-item">
-          <img src="/img/demo2/human.jpg" alt="Human–AI Interaction" class="project-img">
-          <div class="project-text">
-            <strong>Topic 1: Human–AI Interaction</strong>
-            <p>
-              We study how AI can be designed to augment rather than replace human abilities. 
-              Our focus is on enhancing cognition, creativity, and decision-making while 
-              supporting well-being and fairness. We also explore the design of AI-enabled 
-              applications such as tutors, interviewers, and mental health companions, with 
-              attention to human growth and well-being.
-            </p>
-            <ul>
-              <li>How can AI enhance <b>human cognition</b>, creativity, decision-making, and well-being while reducing biases?</li>
-              <li>What AI-enabled <b>applications</b> (e.g., AI tutors, AI interviewers, mental health chatbots, medical VQA) best support human growth and well-being?</li>
-              <li>What design <b>principles</b> and psychological theories ensure these systems are effective?</li>
-            </ul>
-          </div>
-        </li>
-
-        <!-- Topic 2: Natural Language Processing -->
-        <li class="project-item">
-          <img src="/img/demo2/slm.jpg" alt="Natural Language Processing" class="project-img">
-          <div class="project-text">
-            <strong>Topic 2: Natural Language Processing</strong>
-            <p>
-              Our NLP research explores how to make language and speech technologies more 
-              efficient, accessible, and powerful. We investigate training frameworks for 
-              compact small language models that retain much of the capability of large 
-              models, while also advancing speech recognition, diarization, and mixed-language 
-              processing to perform robustly in real-world environments.   We are also interested to combine 
-              computer science techniques like ontology or first-order logic to improve reasoning capabilities of small language models.
-            </p>
-            <ul>
-              <li>How can we create a framework for training <b>small language models</b> that achieve LLM-like power in targeted domains?</li>
-              <li>What methods enable compact models to generalize across tasks with limited data?</li>
-              <li>Can we combine <b>ontology</b> or first-order logic to improve the reasoning capabilities of small language models?</li>
-              <li>How do we advance <b>speech recognition</b>, diarization, voice cloning and mixed-language processing for real-world environments?</li>
-            </ul>
-          </div>
-        </li>
-
-        <!-- Topic 3: Neural Architectures & Multimodal Models -->
-        <li class="project-item">
-          <img src="/img/demo2/model.png" alt="Multimodal Models" class="project-img">
-          <div class="project-text">
-            <strong>Topic 3: Neural Architectures & Multimodal Models</strong>
-            <p>
-              Beyond applications, we focus on the foundations of building better models. This includes analyzing neural architectures, adding novel components for improved reasoning, and developing multimodal systems that integrate vision, language, and domain knowledge. We are especially interested in high-impact areas such as medical visual question answering (VQA).
-            </p>
-            <ul>
-              <li>What <b>architectural innovations</b> improve reasoning and generalization in neural networks?</li>
-              <li>How can we design <b>multimodal models</b> that effectively combine text, speech, and vision?</li>
-              <li>How can we combine <b>graph</b>, <b>attention</b>, or <b>sequential</b> components for better performance?</li>
-            </ul>
-          </div>
-        </li>
-
-      </ol>  */}}
-
-
+        <ul>
+          <li>
+            <strong>Facial Recognition:</strong>
+            Developing accurate and fair facial recognition systems remains a
+            significant challenge. Key thesis problems include addressing bias
+            in training data, improving recognition accuracy under varying
+            lighting and occlusion conditions, and enhancing privacy-preserving
+            techniques.
+          </li>
+          <li>
+            <strong>OCR (Optical Character Recognition):</strong>
+            Extracting text from images and documents is essential for
+            digitization and information retrieval. Key thesis problems include
+            improving accuracy on complex layouts and fonts, handling
+            multi-language documents, and developing efficient algorithms for
+            real-time applications.
+          </li>
+          <li>
+            <strong>Small Language Models (SLMs):</strong>
+            While large language models (LLMs) have garnered significant
+            attention, SLMs are crucial for resource-constrained environments.
+            Key thesis problems include optimizing model architectures for
+            efficiency, developing effective training techniques with limited
+            data, and ensuring robust performance across diverse tasks and
+            domains.
+          </li>
+          <li>
+            <strong>Speech2Text:</strong>
+            Converting spoken language into text is crucial for accessibility
+            and human-computer interaction. Key thesis problems include
+            improving accuracy in noisy environments, handling diverse accents
+            and dialects, and developing real-time transcription systems. 
+          </li>
+          <li>
+            <strong>Text2Speech and Voice Cloning:</strong>
+            Generating natural-sounding speech from text has many applications,
+            but challenges remain in prosody, emotion, and voice diversity. Key
+            thesis problems include improving the naturalness and expressiveness
+            of generated speech, developing robust voice cloning techniques,
+            and addressing ethical concerns around consent and misuse.
+          </li>
+        </ul>
+      </ol>
     </div>
-  </section><!-- End Portfolio Details Section -->
+  </section>
 </main>
 
 <style>
