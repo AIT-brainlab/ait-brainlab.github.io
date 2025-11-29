@@ -1,103 +1,92 @@
 {{ define "main" }}
 
 <main id="main">
-  <!-- ======= Breadcrumbs ======= -->
   <section class="breadcrumbs">
     <div class="container">
       <h2>{{ .Title }}</h2>
     </div>
   </section>
-  <!-- End Breadcrumbs -->
-
-  <!-- ======= Portfolio Details Section ======= -->
   <section id="portfolio-details" class="portfolio-details">
     <div class="container">
       <h3>Culture & Research Philosophy</h3>
       <p>
-        Our interdisciplinary team works at the foundational models of
-        <strong>computer vision</strong>,
-        <strong>natural language processing</strong>, and <strong>multimodal learning</strong>:
+        We are an interdisciplinary team working on the fundamental models of
+        <strong>Computer Vision</strong>,
+        <strong>Natural Language Processing (NLP)</strong>, and <strong>Multimodal Learning</strong>.
+        Our philosophy is simple:
       </p>
       <ul>
         <li>
-          <strong>Experimental</strong>: Conduct reproducible experiments that
-          advance fundamental understanding.
+          <strong>Rigorous & Reproducible</strong>: We don't just chase state-of-the-art numbers. We conduct experiments that explain <em>why</em> models behave the way they do.
         </li>
         <li>
-          <strong>Computational</strong>: Leverage algorithms, models, and
-          coding expertise to tackle challenging questions.
+          <strong>Efficient & Scalable</strong>: We focus on algorithms that are computationally efficient, making high-level AI accessible on standard hardware.
         </li>
       </ul>
 
       <h3>Lab Entry</h3>
       <p>
-        We welcome students from all disciplines with strong curiosity and a
-        passion for rigorous, original research. We commonly submit our work to
-        conferences including ACL, NIPS, CVPR and ACM CHI.
+        We welcome students who are curious and ready for hard work. We target top-tier conferences 
+        such as <strong>NeurIPS, ICLR, CVPR, ACL, and ACM CHI</strong>.
       </p>
 
-      <ol class="project-list">
-        <ul>
-          <li>
-            <strong>Facial Recognition:</strong>
-            Developing accurate and fair facial recognition systems remains a
-            significant challenge. Key thesis problems include addressing bias
-            in training data, liveness detection, mitigating presentation attacks, 
-            improving recognition accuracy under varying
-            lighting and occlusion conditions, and enhancing privacy-preserving
-            techniques.
+      <ul class="project-list">
+          <li class="project-item-text">
+            <strong>Robust & Fair Biometrics (Vision):</strong>
+            We move beyond standard facial recognition to solve fundamental issues in robustness. 
+            Key thesis topics include <em>Adversarial Defense</em> (protecting against physical attacks), 
+            <em>Liveness Detection</em>, and <em>Fairness</em> (ensuring models work equally well across all demographics and lighting conditions).
           </li>
-          <li>
-            <strong>OCR (Optical Character Recognition):</strong>
-            Extracting text from images and documents is essential for
-            digitization and information retrieval. Key thesis problems include
-            improving accuracy on complex layouts and fonts, handling
-            multi-language documents, and developing efficient algorithms for
-            real-time applications.
+          
+          <li class="project-item-text">
+            <strong>Document Intelligence (Vision + Language):</strong>
+            Standard OCR is solved, but understanding complex documents is not. 
+            We research <em>Multimodal Layout Understanding</em>—teaching models to read charts, tables, 
+            and unstructured layouts by combining visual features with textual semantics.
           </li>
-          <li>
-            <strong>Small Language Models (SLMs):</strong>
-            While large language models (LLMs) have garnered significant
-            attention, SLMs are crucial for resource-constrained environments.
-            Key thesis problems include optimizing model architectures for
-            efficiency, developing effective training techniques with limited
-            data, and ensuring robust performance across diverse tasks and
-            domains.
+          
+          <li class="project-item-text">
+            <strong>Efficient Machine Learning (SLMs):</strong>
+            While the world focuses on massive models, we focus on efficiency. 
+            We research <em>Small Language Models (SLMs)</em>, quantization, and knowledge distillation. 
+            The goal is to retain the reasoning capabilities of LLMs while drastically reducing compute costs for edge devices.
           </li>
-          <li>
-            <strong>Speech2Text:</strong>
-            Converting spoken language into text is crucial for accessibility
-            and human-computer interaction. Key thesis problems include
-            improving accuracy in noisy environments, handling diverse accents
-            and dialects, and developing real-time transcription systems. 
+          
+          <li class="project-item-text">
+            <strong>Speech Representation Learning (Audio):</strong>
+            We aim to improve speech understanding without relying on massive labeled datasets. 
+            Research focus includes <em>Self-Supervised Learning</em> to handle diverse accents, 
+            code-switching (mixing languages), and noisy environments.
           </li>
-          <li>
-            <strong>Text2Speech and Voice Cloning:</strong>
-            Generating natural-sounding speech from text has many applications,
-            but challenges remain in prosody, emotion, and voice diversity. Key
-            thesis problems include improving the naturalness and expressiveness
-            of generated speech, developing robust voice cloning techniques,
-            and addressing ethical concerns around consent and misuse.
+          
+          <li class="project-item-text">
+            <strong>Generative Audio & Safety (Audio):</strong>
+            We work on <em>Controllable Synthesis</em>—generating speech with specific emotions and prosody. 
+            Parallel to this, we research <em>AI Safety</em>, specifically developing methods to detect deepfakes 
+            and synthesized voice attacks.
           </li>
-          <li>
-            <strong>Voice Sentiment:</strong>
-            Analyzing sentiment from voice data is important for customer
-            service and mental health applications. Key thesis problems include
-            improving accuracy across different languages and cultures,
-            handling background noise, and developing real-time sentiment
-            analysis systems.
+          
+          <li class="project-item-text">
+            <strong>Multimodal Affective Computing (HCI):</strong>
+            We research how to model human internal states by combining voice and text. 
+            Instead of simple sentiment analysis, we look at <em>Context-Aware Emotion Recognition</em> 
+            to better understand stress, cognitive load, and mental health indicators.
           </li>
-        </ul>
-      </ol>
+      </ul>
     </div>
   </section>
 </main>
 
 <style>
   .project-list {
-    list-style: none;
-    padding: 0;
+    list-style: disc; /* Changed to disc for cleaner look since it's not a numbered process */
+    padding-left: 20px;
   }
+  .project-item-text {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  /* Kept your original styles below just in case you add images later */
   .project-item {
     display: flex;
     align-items: flex-start;
@@ -109,12 +98,6 @@
     margin-right: 20px;
     border-radius: 8px;
     object-fit: cover;
-  }
-  .project-text {
-    flex: 1;
-  }
-  .project-text ul {
-    padding-left: 20px;
   }
   @media (max-width: 768px) {
     .project-item {
