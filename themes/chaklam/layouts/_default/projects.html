@@ -1,15 +1,11 @@
 {{ define "main" }}
 
 <main id="main">
-  <!-- ======= Breadcrumbs ======= -->
   <section class="breadcrumbs">
     <div class="container">
       <h2>{{ .Title }}</h2>
     </div>
   </section>
-  <!-- End Breadcrumbs -->
-
-  <!-- ======= Portfolio Details Section ======= -->
   <section id="portfolio-details" class="portfolio-details">
     <div class="container">
       <h3>Culture & Research Philosophy</h3>
@@ -73,36 +69,23 @@
 
 <style>
   .project-list {
-    list-style: none;
-    padding: 0;
+    /* CHANGED: set to decimal to show numbers 1., 2., 3. */
+    list-style: decimal; 
+    /* CHANGED: Added padding so the numbers aren't hidden off-screen */
+    padding-left: 20px; 
+    margin-left: 20px;
   }
-  .project-item {
-    display: flex;
-    align-items: flex-start;
+  .project-item-text {
     margin-bottom: 30px;
+    padding-left: 10px; /* Adds a little space between the number and the text */
   }
-  .project-img {
-    width: 140px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-  .project-text {
-    flex: 1;
-  }
-  .project-text ul {
-    padding-left: 20px;
-  }
+  
+  /* Retaining your original styles for responsiveness just in case */
   @media (max-width: 768px) {
     .project-item {
       flex-direction: column;
       align-items: center;
       text-align: center;
-    }
-    .project-img {
-      margin-right: 0;
-      margin-bottom: 10px;
     }
   }
 </style>
