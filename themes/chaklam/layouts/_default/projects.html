@@ -1,76 +1,70 @@
 {{ define "main" }}
 
 <main id="main">
+  <!-- ======= Breadcrumbs ======= -->
   <section class="breadcrumbs">
     <div class="container">
       <h2>{{ .Title }}</h2>
     </div>
   </section>
+  <!-- End Breadcrumbs -->
+
+  <!-- ======= Portfolio Details Section ======= -->
   <section id="portfolio-details" class="portfolio-details">
     <div class="container">
       <h3>Culture & Research Philosophy</h3>
       <p>
-        We are an interdisciplinary team working on the fundamental models of
-        <strong>Computer Vision</strong>,
-        <strong>Natural Language Processing (NLP)</strong>, and <strong>Multimodal Learning</strong>.
-        Our philosophy is simple:
+        Our interdisciplinary team works at the foundational models of
+        <strong>computer vision</strong>,
+        <strong>natural language processing</strong>, and <strong>multimodal learning</strong>:
       </p>
       <ul>
         <li>
-          <strong>Rigorous & Reproducible</strong>: We don't just chase state-of-the-art numbers. We conduct experiments that explain <em>why</em> models behave the way they do.
+          <strong>Experimental</strong>: Conduct reproducible experiments that
+          advance fundamental understanding.
         </li>
         <li>
-          <strong>Efficient & Scalable</strong>: We focus on algorithms that are computationally efficient, making high-level AI accessible on standard hardware.
+          <strong>Computational</strong>: Leverage algorithms, models, and
+          coding expertise to tackle challenging questions.
         </li>
       </ul>
 
       <h3>Lab Entry</h3>
       <p>
-        We welcome students who are curious and ready for hard work. We target top-tier conferences 
-        such as <strong>NeurIPS, ICLR, CVPR, ACL, and ACM CHI</strong>.
+        We welcome students from all disciplines with strong curiosity and a
+        passion for rigorous, original research. We commonly submit our work to
+        conferences including ACL, NIPS, CVPR and ACM CHI.
       </p>
 
       <ul class="project-list">
           <li class="project-item-text">
-            <strong>Robust & Fair Biometrics (Vision):</strong>
-            We move beyond standard facial recognition to solve fundamental issues in robustness. 
-            Key thesis topics include <em>Adversarial Defense</em> (protecting against physical attacks), 
-            <em>Liveness Detection</em>, and <em>Fairness</em> (ensuring models work equally well across all demographics and lighting conditions).
+            <strong>Robust & Fair Biometrics (Vision)</strong><br>
+            Standard face recognition works well in perfect conditions, but it often fails when demographics, lighting, or camera angles change. We research how to create "invariant" representations—models that ignore noise and focus on identity. We also work heavily on security, specifically <strong>Liveness Detection</strong> and <strong>Anti-Spoofing</strong>, trying to mathematically distinguish between a real face and a digital attack or mask.
           </li>
           
           <li class="project-item-text">
-            <strong>Document Intelligence (Vision + Language):</strong>
-            Standard OCR is solved, but understanding complex documents is not. 
-            We research <em>Multimodal Layout Understanding</em>—teaching models to read charts, tables, 
-            and unstructured layouts by combining visual features with textual semantics.
+            <strong>Document Intelligence (Vision + Language)</strong><br>
+            OCR is no longer just about reading text; it is about understanding the structure of a page. A human understands a document by looking at the layout, charts, and text together. We are building <strong>Multimodal models</strong> that can parse complex, unstructured documents (like invoices or scientific papers) end-to-end. We are especially interested in low-resource languages where training data is scarce.
           </li>
           
           <li class="project-item-text">
-            <strong>Efficient Machine Learning (SLMs):</strong>
-            While the world focuses on massive models, we focus on efficiency. 
-            We research <em>Small Language Models (SLMs)</em>, quantization, and knowledge distillation. 
-            The goal is to retain the reasoning capabilities of LLMs while drastically reducing compute costs for edge devices.
+            <strong>Efficient Machine Learning (SLMs)</strong><br>
+            Everyone is competing to build bigger models, but we are going the other direction. We focus on <strong>Small Language Models (SLMs)</strong> and <strong>Knowledge Distillation</strong>. The core research question here is: <em>How much reasoning capability can we retain if we reduce the model size by 10x or 100x?</em> We investigate quantization and parameter-efficient fine-tuning to bring LLM-level intelligence to edge devices.
           </li>
           
           <li class="project-item-text">
-            <strong>Speech Representation Learning (Audio):</strong>
-            We aim to improve speech understanding without relying on massive labeled datasets. 
-            Research focus includes <em>Self-Supervised Learning</em> to handle diverse accents, 
-            code-switching (mixing languages), and noisy environments.
+            <strong>Speech Representation Learning (Audio)</strong><br>
+            Labelling audio data is expensive and slow. We focus on <strong>Self-Supervised Learning (SSL)</strong>, where models learn the structure of speech just by listening to massive amounts of unlabelled audio. We apply this to difficult problems like "Code-Switching" (when speakers mix languages in one sentence) and speech recognition in highly noisy environments where standard models collapse.
           </li>
           
           <li class="project-item-text">
-            <strong>Generative Audio & Safety (Audio):</strong>
-            We work on <em>Controllable Synthesis</em>—generating speech with specific emotions and prosody. 
-            Parallel to this, we research <em>AI Safety</em>, specifically developing methods to detect deepfakes 
-            and synthesized voice attacks.
+            <strong>Generative Audio & AI Safety</strong><br>
+            We work on the dual edges of generative audio. On the creative side, we are building <strong>Controllable TTS</strong> systems that allow fine-grained control over emotion, speed, and prosody without needing hours of studio recording. On the safety side, we are developing forensic tools to detect Deepfakes. We want to find the subtle statistical artifacts that generative models leave behind, so we can distinguish AI voices from human ones.
           </li>
           
           <li class="project-item-text">
-            <strong>Multimodal Affective Computing (HCI):</strong>
-            We research how to model human internal states by combining voice and text. 
-            Instead of simple sentiment analysis, we look at <em>Context-Aware Emotion Recognition</em> 
-            to better understand stress, cognitive load, and mental health indicators.
+            <strong>Multimodal Affective Computing (HCI)</strong><br>
+            Human communication is more than just words; it’s tone, pause, and context. We are researching <strong>Context-Aware Emotion Recognition</strong>. Instead of basic "happy/sad" classification, we try to model complex internal states like cognitive load or stress by fusing audio and text data. We are particularly interested in how these models generalize across different cultures and languages.
           </li>
       </ul>
     </div>
@@ -79,14 +73,9 @@
 
 <style>
   .project-list {
-    list-style: disc; /* Changed to disc for cleaner look since it's not a numbered process */
-    padding-left: 20px;
+    list-style: none;
+    padding: 0;
   }
-  .project-item-text {
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-  /* Kept your original styles below just in case you add images later */
   .project-item {
     display: flex;
     align-items: flex-start;
@@ -98,6 +87,12 @@
     margin-right: 20px;
     border-radius: 8px;
     object-fit: cover;
+  }
+  .project-text {
+    flex: 1;
+  }
+  .project-text ul {
+    padding-left: 20px;
   }
   @media (max-width: 768px) {
     .project-item {
