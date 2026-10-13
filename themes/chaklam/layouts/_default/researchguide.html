@@ -10,7 +10,53 @@
 <!-- ======= Portfolio Details Section ======= -->
 <section class="portfolio-details" id="portfolio-details">
 <div class="container research-handbook">
-<style>None</style>
+<style>
+.research-handbook{--ink:#172b46;--accent:#16718b;--soft:#edf5f8;color:var(--ink);font-size:16px;line-height:1.65}
+.research-handbook *{box-sizing:border-box}
+.research-handbook .deck{max-width:1050px;margin:1rem auto 2rem;background:#f7fafc;border:1px solid #dce7ee;border-radius:20px;overflow:hidden;box-shadow:0 12px 36px #17334b12}
+.research-handbook .deck-top{padding:1rem 1.4rem;background:#102d47;color:#fff;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.research-handbook .deck-top small{opacity:.8}
+.research-handbook .progress{height:5px;background:#dbe7ed}
+.research-handbook .progress span{display:block;height:100%;width:0;background:#43c6b7;transition:width .2s}
+.research-handbook .slides{padding:clamp(1.2rem,4vw,3rem);min-height:510px}
+.research-handbook .slide{display:none;animation:fadein .18s ease}
+.research-handbook .slide.active{display:block}
+.research-handbook .eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--accent)}
+.research-handbook .slide h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.12;margin:.35rem 0 1rem;color:var(--ink);font-weight:850}
+.research-handbook .slide h3{font-size:1.18rem;margin:1.3rem 0 .45rem;padding:0}
+.research-handbook .lead{font-size:1.15rem;max-width:820px;color:#3f566d}
+.research-handbook .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:1.4rem 0}
+.research-handbook .tile{background:#fff;border:1px solid #d8e5ec;border-radius:14px;padding:1.05rem}
+.research-handbook .tile h3{margin:.1rem 0 .45rem;font-size:1.05rem}
+.research-handbook .tag{display:inline-block;padding:.15rem .55rem;border-radius:99px;font-size:.78rem;font-weight:800;margin-bottom:.4rem}
+.research-handbook .good{background:#d8f3e8;color:#17634b}.research-handbook .bad{background:#ffe4df;color:#8e342b}.research-handbook .review{background:#ffefc9;color:#795400}
+.research-handbook .callout{padding:1rem 1.2rem;background:#e9f4f8;border-left:4px solid var(--accent);border-radius:0 12px 12px 0;margin:1.2rem 0}
+.research-handbook .dark-callout{padding:1.1rem 1.3rem;background:#102d47;color:white;border-radius:14px;margin:1.2rem 0}
+.research-handbook .deck-controls{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.4rem;border-top:1px solid #dce7ee;background:#fff}
+.research-handbook .deck-controls button{border:0;border-radius:10px;padding:.75rem 1.1rem;font-weight:750;cursor:pointer;background:#16718b;color:#fff}
+.research-handbook .deck-controls .reveal-all{background:#e8f2f5;color:#16435b}
+.research-handbook .reveal-slide .tile,.research-handbook .reveal-slide .mini-flow span{transition:opacity .25s ease,transform .25s ease}
+.research-handbook .reveal-slide .hidden-step{display:none}
+.research-handbook .title-slide{padding:3rem 0}.research-handbook .title-slide h2{font-size:clamp(2.5rem,6vw,4.4rem)}.research-handbook .title-slide .author{font-size:1.4rem;font-weight:700;color:#16718b}
+@media(prefers-reduced-motion:reduce){.research-handbook .slide,.research-handbook .reveal-slide .tile{animation:none;transition:none}}
+.research-handbook .deck-controls button:disabled{opacity:.35;cursor:not-allowed}
+.research-handbook .dots{display:flex;gap:5px;justify-content:center;flex-wrap:wrap}
+.research-handbook .dots button{width:9px;height:9px;padding:0;border-radius:50%;background:#c8d7e0;min-width:0}
+.research-handbook .dots button[aria-current=true]{background:#16718b;transform:scale(1.25)}
+.research-handbook .slide table{width:100%;border-collapse:collapse;margin:1rem 0;background:white}
+.research-handbook .slide th,.research-handbook .slide td{border:1px solid #d9e5eb;padding:.7rem;text-align:left;vertical-align:top}
+.research-handbook .slide th{background:#e7f2f7}
+.research-handbook .mini-flow{display:flex;gap:8px;flex-wrap:wrap;align-items:stretch;margin:1.2rem 0}
+.research-handbook .mini-flow span{flex:1;min-width:130px;background:#e5f2f6;border-radius:10px;padding:.8rem;text-align:center;font-weight:750}
+.research-handbook .mini-flow b{align-self:center;color:#5c7b8d}
+.research-handbook .deck a{color:#08749a;text-decoration:underline}
+.research-handbook .deck-top a{color:#fff}
+@keyframes fadein{from{opacity:.45;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){.research-handbook .slides{min-height:0}.research-handbook .deck-top{align-items:flex-start;flex-direction:column}.research-handbook .deck-controls{padding:.8rem;flex-wrap:wrap}.research-handbook .deck-controls button{padding:.65rem .8rem}}
+
+.research-handbook .slide{animation:none!important}.research-handbook .bloom{display:flex;flex-direction:column;align-items:center;gap:5px;margin:1.5rem auto;max-width:760px}.research-handbook .bloom-row{padding:.6rem 1rem;text-align:center;border:1px solid #b8d4df;border-radius:8px;background:#eaf3f7;display:flex;flex-direction:column;line-height:1.35}.research-handbook .bloom-row small{font-size:.8rem}.research-handbook .bloom-row:nth-child(1){width:42%}.research-handbook .bloom-row:nth-child(2){width:53%}.research-handbook .bloom-row:nth-child(3){width:64%}.research-handbook .bloom-row:nth-child(4){width:76%}.research-handbook .bloom-row:nth-child(5){width:88%}.research-handbook .bloom-row:nth-child(6){width:100%}.research-handbook .bloom-row.wisdom{background:#d7eee8}.research-handbook .bloom-row.knowledge{background:#deebf5}.research-handbook .bloom-row.information{background:#f1f3f5}@media(max-width:600px){.research-handbook .bloom-row{width:100%!important}.research-handbook .slide table{display:block;overflow-x:auto}}
+.research-handbook .slide,.research-handbook .slide *{animation:none!important;transition:none!important}.research-handbook .table-scroll{overflow-x:auto}.research-handbook .table-scroll table{min-width:580px}
+</style>
 <div class="deck" id="research-deck">
 <div class="deck-top">
 <div><strong>From Research Idea to Top-Tier Publication</strong><br/><small>A practical, self-paced guide for CHI · ACL · NeurIPS</small></div>
