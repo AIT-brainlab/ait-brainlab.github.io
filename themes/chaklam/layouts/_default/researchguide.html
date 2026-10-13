@@ -12,200 +12,251 @@
   <section id="portfolio-details" class="portfolio-details">
     <div class="container research-handbook">
 <style>
-.research-handbook{--ink:#19304b;--accent:#176d91;--soft:#eef6fa;color:var(--ink);font-size:16px;line-height:1.75}.research-handbook h3{margin-top:2.8rem;padding-top:.5rem;font-weight:750}.research-handbook h4{margin-top:1.6rem;font-weight:700}.research-handbook .guide-hero{background:linear-gradient(120deg,#0d344d,#166e88);color:white;padding:2.5rem;border-radius:18px;margin:1rem 0 2rem}.research-handbook .guide-hero h2{color:white;font-weight:800}.research-handbook .guide-hero p{max-width:780px}.research-handbook .guide-note{background:var(--soft);border-left:4px solid var(--accent);padding:1rem 1.3rem;border-radius:0 10px 10px 0;margin:1.2rem 0}.research-handbook .guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin:1.4rem 0}.research-handbook .guide-card{background:white;border:1px solid #dce7ee;border-radius:12px;padding:1.2rem;box-shadow:0 3px 12px #1234 0}.research-handbook .guide-card h4{margin-top:0}.research-handbook .guide-figure{background:#f4f9fc;border:1px solid #e2edf3;border-radius:15px;padding:1.3rem;margin:1.5rem 0;text-align:center}.research-handbook .guide-figure svg{width:100%;max-width:920px;height:auto}.research-handbook .guide-figure figcaption{font-size:.88rem;color:#557087;margin-top:.6rem}.research-handbook .guide-table{width:100%;border-collapse:collapse;margin:1.3rem 0}.research-handbook .guide-table th,.research-handbook .guide-table td{border:1px solid #dce7ee;padding:.8rem;vertical-align:top}.research-handbook .guide-table th{background:#e9f4f9}.research-handbook .guide-toc a{display:inline-block;margin:.25rem .8rem .25rem 0}.research-handbook .guide-quote{font-size:1.25rem;font-weight:650;color:#155b7a;margin:1.5rem 0}.research-handbook details{border-bottom:1px solid #dbe6ec;padding:.8rem 0}.research-handbook summary{cursor:pointer;font-weight:700}
+.research-handbook{--ink:#172b46;--accent:#16718b;--soft:#edf5f8;color:var(--ink);font-size:16px;line-height:1.65}
+.research-handbook *{box-sizing:border-box}
+.research-handbook .deck{max-width:1050px;margin:1rem auto 2rem;background:#f7fafc;border:1px solid #dce7ee;border-radius:20px;overflow:hidden;box-shadow:0 12px 36px #17334b12}
+.research-handbook .deck-top{padding:1rem 1.4rem;background:#102d47;color:#fff;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.research-handbook .deck-top small{opacity:.8}
+.research-handbook .progress{height:5px;background:#dbe7ed}
+.research-handbook .progress span{display:block;height:100%;width:0;background:#43c6b7;transition:width .2s}
+.research-handbook .slides{padding:clamp(1.2rem,4vw,3rem);min-height:510px}
+.research-handbook .slide{display:none;animation:fadein .18s ease}
+.research-handbook .slide.active{display:block}
+.research-handbook .eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--accent)}
+.research-handbook .slide h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.12;margin:.35rem 0 1rem;color:var(--ink);font-weight:850}
+.research-handbook .slide h3{font-size:1.18rem;margin:1.3rem 0 .45rem;padding:0}
+.research-handbook .lead{font-size:1.15rem;max-width:820px;color:#3f566d}
+.research-handbook .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:1.4rem 0}
+.research-handbook .tile{background:#fff;border:1px solid #d8e5ec;border-radius:14px;padding:1.05rem}
+.research-handbook .tile h3{margin:.1rem 0 .45rem;font-size:1.05rem}
+.research-handbook .tag{display:inline-block;padding:.15rem .55rem;border-radius:99px;font-size:.78rem;font-weight:800;margin-bottom:.4rem}
+.research-handbook .good{background:#d8f3e8;color:#17634b}.research-handbook .bad{background:#ffe4df;color:#8e342b}.research-handbook .review{background:#ffefc9;color:#795400}
+.research-handbook .callout{padding:1rem 1.2rem;background:#e9f4f8;border-left:4px solid var(--accent);border-radius:0 12px 12px 0;margin:1.2rem 0}
+.research-handbook .dark-callout{padding:1.1rem 1.3rem;background:#102d47;color:white;border-radius:14px;margin:1.2rem 0}
+.research-handbook .deck-controls{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.4rem;border-top:1px solid #dce7ee;background:#fff}
+.research-handbook .deck-controls button{border:0;border-radius:10px;padding:.75rem 1.1rem;font-weight:750;cursor:pointer;background:#16718b;color:#fff}
+.research-handbook .deck-controls button:disabled{opacity:.35;cursor:not-allowed}
+.research-handbook .dots{display:flex;gap:5px;justify-content:center;flex-wrap:wrap}
+.research-handbook .dots button{width:9px;height:9px;padding:0;border-radius:50%;background:#c8d7e0;min-width:0}
+.research-handbook .dots button[aria-current=true]{background:#16718b;transform:scale(1.25)}
+.research-handbook .slide table{width:100%;border-collapse:collapse;margin:1rem 0;background:white}
+.research-handbook .slide th,.research-handbook .slide td{border:1px solid #d9e5eb;padding:.7rem;text-align:left;vertical-align:top}
+.research-handbook .slide th{background:#e7f2f7}
+.research-handbook .mini-flow{display:flex;gap:8px;flex-wrap:wrap;align-items:stretch;margin:1.2rem 0}
+.research-handbook .mini-flow span{flex:1;min-width:130px;background:#e5f2f6;border-radius:10px;padding:.8rem;text-align:center;font-weight:750}
+.research-handbook .mini-flow b{align-self:center;color:#5c7b8d}
+.research-handbook .deck a{color:#08749a;text-decoration:underline}
+.research-handbook .deck-top a{color:#fff}
+@keyframes fadein{from{opacity:.45;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){.research-handbook .slides{min-height:0}.research-handbook .deck-top{align-items:flex-start;flex-direction:column}.research-handbook .deck-controls{padding:.8rem;flex-wrap:wrap}.research-handbook .deck-controls button{padding:.65rem .8rem}}
 </style>
-<div class="guide-hero"><h2>From Research Idea to Top-Tier Publication</h2><p>A practical research handbook for AIT Brain Lab: ask better questions, find genuine novelty, design credible evidence, and communicate contributions that matter.</p><p><b>Our ambition:</b> CHI · ACL · NeurIPS · CVPR</p></div>
-<div class="guide-toc"><b>Jump to:</b> <a href="#guide-ideas">Ideation</a><a href="#guide-literature">Related work</a><a href="#guide-methods">Methodology</a><a href="#guide-experiments">Experiments</a><a href="#guide-analysis">Analysis</a><a href="#guide-contributions">Contributions</a><a href="#guide-rejection">Rejection</a><a href="#guide-students">Student challenges</a><a href="#guide-writing">Writing &amp; submission</a></div>
-<h3>Why top-tier research?</h3>
-      <p>Before you read anything, please read my <a target="_blank" href="https://drive.google.com/file/d/1GCgiVj9gAyUU9cooKYJBFeJgW8T-qx72/view?usp=sharing">PDF talking about top-tier research.</a> and our <a target="_blank" href="https://canva.link/a4joa5er9g59lhz">orientation slides (Canva)</a></p>
+<div class="deck" id="research-deck">
+  <div class="deck-top">
+    <div><strong>From Research Idea to Top-Tier Publication</strong><br><small>A practical, self-paced guide for CHI · ACL · NeurIPS</small></div>
+    <div id="slide-count" aria-live="polite">Slide 1 of 12</div>
+  </div>
+  <div class="progress"><span id="slide-progress"></span></div>
+  <div class="slides">
+    <section class="slide active" aria-label="Slide 1">
+      <div class="eyebrow">01 · Start here</div><h2>Research is not just building something.</h2>
+      <p class="lead">A research paper should help other people understand something they did not understand before.</p>
+      <div class="mini-flow"><span>Important problem</span><b>→</b><span>Clear question</span><b>→</b><span>Convincing evidence</span><b>→</b><span>New knowledge</span></div>
+      <div class="tiles">
+        <div class="tile"><h3>Build</h3><p>Make a chatbot, model, tool, or interface.</p></div>
+        <div class="tile"><h3>Research</h3><p>Find out what it teaches us, why it works, when it fails, or how it changes people’s experience.</p></div>
+      </div>
+      <div class="callout"><b>The test:</b> If the application disappeared tomorrow, what would the paper still teach the research community?</div>
+      <p>Read the <a href="https://drive.google.com/file/d/1GCgiVj9gAyUU9cooKYJBFeJgW8T-qx72/view?usp=sharing" target="_blank" rel="noopener">PDF on top-tier research</a>. This guide replaces the old orientation link.</p>
+    </section>
 
-      <p>Our goal is not simply to build AI applications. We aim to produce rigorous, original research that advances what the community knows about people, language, learning, and intelligent systems. A strong paper identifies an important question, establishes what is missing from prior work, offers a meaningful contribution, and supports its claims with convincing evidence.</p>
+    <section class="slide" aria-label="Slide 2">
+      <div class="eyebrow">02 · Ideation</div><h2>Good ideas can come from several places.</h2>
+      <p class="lead">You do not need to wait for a flash of genius. Start with something you notice, then turn it into a question.</p>
+      <div class="tiles">
+        <div class="tile"><h3>1. Notice a surprising failure</h3><p>Example: an AI tutor gives correct answers, but students still misunderstand the concept.</p><p><b>Question:</b> Which explanations create a lasting misunderstanding?</p></div>
+        <div class="tile"><h3>2. Find a contradiction</h3><p>One study says AI feedback builds confidence; another says it makes people overconfident.</p><p><b>Question:</b> What conditions explain the difference?</p></div>
+        <div class="tile"><h3>3. Find a blind spot</h3><p>A language model works well on standard English but fails on code-switching.</p><p><b>Question:</b> Which language patterns trigger errors?</p></div>
+        <div class="tile"><h3>4. Challenge an assumption</h3><p>People assume more explanations always help.</p><p><b>Question:</b> When does extra explanation overwhelm users?</p></div>
+        <div class="tile"><h3>5. Borrow a lens from another field</h3><p>Use a theory of cognitive load to understand AI-assisted decision-making.</p><p><b>Question:</b> Does the theory explain which interface choices help?</p></div>
+        <div class="tile"><h3>6. Revisit a strong paper</h3><p>Reproduce its key result, then test an important limitation or untested condition.</p><p><b>Question:</b> Does the finding still hold outside the original setup?</p></div>
+      </div>
+      <div class="callout"><b>Easy starting routine:</b> Pick one interesting paper → explain its main finding → identify one limitation → propose one test that could change what we know.</div>
+    </section>
 
-      <h3>1. Choosing topics</h3>
+    <section class="slide" aria-label="Slide 3">
+      <div class="eyebrow">03 · Ideation examples</div><h2>Good idea vs. weak idea</h2>
+      <div class="tiles">
+        <div class="tile"><span class="tag bad">Weak</span><h3>“I will build an AI mental-health chatbot.”</h3><p>Why weak: a broad application, unclear research question, no identified gap, and no claim about what we will learn.</p></div>
+        <div class="tile"><span class="tag good">Stronger</span><h3>“When does reflective AI feedback help users reconsider negative self-talk, and when does it make them defend it?”</h3><p>Why stronger: a focused phenomenon, a contrast that can be tested, and potential insights into interaction design.</p></div>
+        <div class="tile"><span class="tag bad">Weak</span><h3>“Use GPT with a knowledge graph to improve answers.”</h3><p>Why weak: combining two technologies is not, by itself, a research contribution.</p></div>
+        <div class="tile"><span class="tag good">Stronger</span><h3>“Which kinds of knowledge-graph constraints prevent unsupported answers, and what errors remain?”</h3><p>Why stronger: it names a mechanism, measurable outcomes, and an opportunity for error analysis.</p></div>
+      </div>
+      <div class="dark-callout"><b>Remember:</b> A good idea is not necessarily complicated. It is important, specific, feasible, testable, and likely to teach us something non-obvious.</div>
+    </section>
 
-      <p>Start by exploring our <a href="/projects">Projects</a> to identify a problem you genuinely want to solve. Then read recent papers from your target conference and ask: What is already known? What is still missing? Why does that gap matter? What could we learn that would generalize beyond one application?</p>
-      <p>Before implementation, prepare a one-page research pitch with the <b>problem, research gap, research question, proposed contribution, closest related work, and evaluation plan</b>. A useful starting question is: <em>If my system works, what new knowledge will the research community gain?</em></p>
+    <section class="slide" aria-label="Slide 4">
+      <div class="eyebrow">04 · Novelty</div><h2>How do I know whether my idea is novel?</h2>
+      <p class="lead">Novelty is a comparison with the closest existing work—not a feeling, and not simply the absence of a search result.</p>
+      <div class="mini-flow"><span>Find 3–5 closest papers</span><b>→</b><span>Compare claims and evidence</span><b>→</b><span>State the exact difference</span><b>→</b><span>Explain why it matters</span></div>
+      <div class="tiles">
+        <div class="tile"><span class="tag bad">Bad novelty claim</span><h3>“No one has used GPT-5 for this task.”</h3><p>Why weak: a model swap may not change the research question or knowledge gained. Search terms may also miss equivalent work.</p></div>
+        <div class="tile"><span class="tag good">Better novelty claim</span><h3>“Prior systems measure answer accuracy; we test whether specific linguistic error types cause users to trust incorrect advice.”</h3><p>Why stronger: it distinguishes the research question, the evidence, and the insight—if the closest papers really do leave that gap open.</p></div>
+        <div class="tile"><span class="tag bad">Bad novelty claim</span><h3>“Our interface has a new color scheme.”</h3><p>Why weak: visual difference alone rarely creates a meaningful HCI contribution.</p></div>
+        <div class="tile"><span class="tag good">Better novelty claim</span><h3>“We compare two feedback designs and discover when users notice, challenge, or accept AI mistakes.”</h3><p>Why stronger: it can yield transferable evidence about human–AI interaction, not just a new screen.</p></div>
+      </div>
+      <div class="callout"><b>Write this sentence:</b> “Unlike the closest work A and B, we investigate X; this matters because Y.” Then verify every part against the papers.</div>
+    </section>
 
-      <h3>2. Graduation criteria</h3>
+    <section class="slide" aria-label="Slide 5">
+      <div class="eyebrow">05 · Related work</div><h2>Find papers—and read them with a purpose.</h2>
+      <div class="tiles">
+        <div class="tile"><h3>Find the right papers</h3><ul><li>Start with recent accepted papers at your target venue.</li><li>Search <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>, <a href="https://aclanthology.org/" target="_blank" rel="noopener">ACL Anthology</a>, <a href="https://dl.acm.org/" target="_blank" rel="noopener">ACM Digital Library</a>, and <a href="https://openreview.net/" target="_blank" rel="noopener">OpenReview</a>.</li><li>Follow references backward and citations forward.</li></ul></div>
+        <div class="tile"><h3>Read in three passes</h3><ol><li>Title, abstract, figures, conclusion.</li><li>Question, contribution, methods, results.</li><li>Deep-read the closest papers, including appendices and code when available.</li></ol></div>
+        <div class="tile"><h3>Make a comparison table</h3><p>For each closest paper, record: question, contribution, method, evidence, limitations, and how your idea differs.</p></div>
+      </div>
+      <div class="callout"><b>Avoid this:</b> listing papers one by one. <b>Do this:</b> synthesize what is known, where findings disagree, what remains unresolved, and exactly where your work fits.</div>
+      <p>More guidance: <a href="https://chaklam.com/articles/how-to-find-related-work-efficiently/" target="_blank" rel="noopener">How to find related work efficiently</a> · <a href="https://chaklam.com/blog.html" target="_blank" rel="noopener">All research tips on Chaklam.com</a></p>
+    </section>
 
-      <p>Our current AIT Brain Lab expectations are:</p>
-        <ul>
-          <li><b>Research Study</b>:  Develop a product or model justifying 6 months effort</li>
-          <li><b>Master Thesis</b>:   Submit 1 publication or participate on research grant that justify 1 year effort</li>
-          <li><b>Ph.D. Thesis</b>:  Submit 3 top-tier publications</li>
-        </ul>
+    <section class="slide" aria-label="Slide 6">
+      <div class="eyebrow">06 · Methodology</div><h2>Bad methodology: what does it look like?</h2>
+      <div class="tiles">
+        <div class="tile"><span class="tag bad">Bad</span><h3>Question and metric do not match</h3><p>Claim: “The tool improves trust.” Measure: task completion time only.</p><p><b>Problem:</b> speed does not establish trust.</p></div>
+        <div class="tile"><span class="tag bad">Bad</span><h3>Weak or unfair baseline</h3><p>Compare a tuned new method with an outdated baseline using different data or resources.</p><p><b>Problem:</b> the gain may come from the comparison setup.</p></div>
+        <div class="tile"><span class="tag bad">Bad</span><h3>Confounds and leakage</h3><p>Test examples leak into training, or one study condition gets easier tasks.</p><p><b>Problem:</b> you cannot tell what caused the result.</p></div>
+        <div class="tile"><span class="tag bad">Bad</span><h3>Unclear or tiny sample</h3><p>Recruit whoever is available, then generalize to all users without justification.</p><p><b>Problem:</b> uncertainty and selection bias are ignored.</p></div>
+        <div class="tile"><span class="tag bad">Bad</span><h3>Vague procedure</h3><p>“We asked an LLM to evaluate the outputs” with no prompt, rubric, validation, or reliability check.</p><p><b>Problem:</b> readers cannot judge validity or reproduce the work.</p></div>
+        <div class="tile"><span class="tag bad">Bad</span><h3>Claiming causation from correlation</h3><p>Users who like a tool perform better, so the paper claims liking caused better performance.</p><p><b>Problem:</b> other explanations may account for the association.</p></div>
+      </div>
+      <div class="callout"><b>Before implementation, specify:</b> research question, unit of analysis, data/participants, sampling, conditions, measures, baselines, analysis plan, ethics, and threats to validity.</div>
+    </section>
 
-      <h3>3. Publication venue</h3>
+    <section class="slide" aria-label="Slide 7">
+      <div class="eyebrow">07 · Methodology by venue</div><h2>Choose methods that fit the claim.</h2>
+      <table><thead><tr><th>Venue</th><th>Core question</th><th>Methodological priorities</th></tr></thead><tbody>
+      <tr><td><b>CHI</b></td><td>What do we learn about people and interaction?</td><td>Relevant HCI literature/theory, justified participants, credible study protocol, careful qualitative and/or quantitative analysis, design implications.</td></tr>
+      <tr><td><b>ACL</b></td><td>What language capability or limitation is revealed?</td><td>Clear task and corpora, valid data splits, annotation quality, competitive baselines, linguistic phenomena, reproducible model/prompt settings.</td></tr>
+      <tr><td><b>NeurIPS</b></td><td>What method or general ML insight is advanced?</td><td>Strong baselines, fair compute, ablations, uncertainty, multiple seeds where appropriate, robustness and reproducibility.</td></tr>
+      </tbody></table>
+      <div class="callout"><b>One rule:</b> Design the experiment around the claim you want to make. Do not choose a convenient metric first and invent a claim afterward.</div>
+    </section>
 
-      <p>Everyone in the lab should aim to publish. First read my <a target="_blank" href="http://www.chaklam.com/node/13">blog on publication venues</a>. We encourage submissions to strong conferences including <b>ACM CHI</b> (human-computer interaction), <b>ACL</b> (natural language processing), <b>NeurIPS</b> (machine learning), and <b>CVPR</b> (computer vision). Journals, including Neurocomputing, may also be appropriate depending on the work.</p>
-      <ul>
-        <li><b>CHI:</b> Make a contribution to how people interact with technology. Ground the work in HCI literature and use appropriate user studies, design inquiry, or empirical evidence. A polished interface alone is not enough.</li>
-        <li><b>ACL:</b> Advance understanding of language technologies through a clear NLP research question, meaningful comparisons, careful error analysis, and evaluation suited to the claim. Using an LLM API alone is not enough.</li>
-        <li><b>NeurIPS:</b> Contribute a substantive machine-learning method, insight, theory, or empirical finding. Test against strong baselines, investigate why it works, and examine limitations and robustness. A small improvement without insight is rarely compelling.</li>
-        <li><b>CVPR:</b> For vision-focused research, demonstrate a clear computer-vision contribution and evaluate on suitable benchmarks and real-world conditions.</li>
+    <section class="slide" aria-label="Slide 8">
+      <div class="eyebrow">08 · Experiments</div><h2>Each experiment should answer a question.</h2>
+      <div class="tiles">
+        <div class="tile"><h3>1. Main comparison</h3><p><b>Question:</b> Does it work better than strong alternatives?</p><p>Use fair datasets, splits, settings, metrics, and competitive baselines.</p></div>
+        <div class="tile"><h3>2. Ablation / mechanism</h3><p><b>Question:</b> Which component matters, and why?</p><p>Remove or vary components to test their role.</p></div>
+        <div class="tile"><h3>3. Robustness / generalization</h3><p><b>Question:</b> Does it still work under realistic changes?</p><p>Test different domains, languages, users, prompts, data conditions, or distribution shifts.</p></div>
+        <div class="tile"><h3>4. Human / expert validation</h3><p><b>Question:</b> Does the result matter in practice?</p><p>Use a justified study design, suitable measures, and a transparent analysis.</p></div>
+        <div class="tile"><h3>5. Failure analysis</h3><p><b>Question:</b> Where does it fail, and what pattern explains the failure?</p><p>Inspect representative and systematic failures, not only success examples.</p></div>
+        <div class="tile"><h3>6. Efficiency and trade-offs</h3><p><b>Question:</b> What do we pay for the improvement?</p><p>Report cost, latency, compute, usability, fairness, or other relevant trade-offs.</p></div>
+      </div>
+      <div class="callout">There is no magic number of experiments. Include the evidence needed to support every major claim—and avoid experiments that add tables but no new understanding.</div>
+    </section>
+
+    <section class="slide" aria-label="Slide 9">
+      <div class="eyebrow">09 · Analysis</div><h2>What reviewers look for beyond the headline score.</h2>
+      <p class="lead">A strong paper explains not only <i>whether</i> a result happened, but also <i>why, when, for whom, and at what cost</i>.</p>
+      <div class="tiles">
+        <div class="tile"><h3>Error analysis</h3><p>Group failures into meaningful categories. Which errors dominate? Which are new? What causes them? Show representative examples and counts.</p></div>
+        <div class="tile"><h3>Linguistic analysis</h3><p>For language work: examine negation, ambiguity, coreference, long-distance dependencies, pragmatics, morphology, code-switching, or other phenomena relevant to the claim.</p></div>
+        <div class="tile"><h3>Robustness analysis</h3><p>Vary domains, languages, prompts, noise, populations, or assumptions. Identify which changes break the result and which do not.</p></div>
+        <div class="tile"><h3>Ablation and sensitivity</h3><p>Remove components or vary key settings. Determine whether the proposed mechanism actually explains the gain.</p></div>
+        <div class="tile"><h3>Subgroups and individual differences</h3><p>For CHI: how do experience, goals, ability, context, or interaction style change outcomes? Avoid unsupported subgroup claims.</p></div>
+        <div class="tile"><h3>Qualitative and behavioral insight</h3><p>Use interviews, interaction traces, think-aloud data, or expert review to explain patterns that a score cannot reveal.</p></div>
+        <div class="tile"><h3>Uncertainty and significance</h3><p>Report variability and uncertainty. Distinguish statistical significance from practical importance; do not treat “not significant” as proof of no effect.</p></div>
+        <div class="tile"><h3>Trade-offs, bias, and limitations</h3><p>Who benefits or loses? What resources are required? Where is performance uneven? What alternative explanation remains?</p></div>
+      </div>
+      <div class="dark-callout"><b>Write every analysis as:</b> Observation (what happened) → Interpretation (why it may have happened) → Implication (what researchers should learn or do next).</div>
+    </section>
+
+    <section class="slide" aria-label="Slide 10">
+      <div class="eyebrow">10 · Contributions</div><h2>What kind of contribution are you making?</h2>
+      <div class="tiles">
+        <div class="tile"><h3>Method or model</h3><p>A new algorithm, architecture, objective, or training procedure that shows demonstrated value.</p></div>
+        <div class="tile"><h3>Empirical knowledge</h3><p>A robust, non-obvious finding about people, language, or models.</p></div>
+        <div class="tile"><h3>Theory or framework</h3><p>An explanation or predictive account that clarifies a phenomenon.</p></div>
+        <div class="tile"><h3>Design or system</h3><p>An interaction technique that produces transferable design knowledge—not just a demo.</p></div>
+        <div class="tile"><h3>Dataset or benchmark</h3><p>A resource that enables meaningful new research or exposes a neglected capability.</p></div>
+        <div class="tile"><h3>Evaluation method</h3><p>A more valid, reliable, or useful way to measure something important.</p></div>
+        <div class="tile"><h3>Application insight</h3><p>A demanding real-world setting that reveals a broader principle or limitation.</p></div>
+        <div class="tile"><h3>Replication or reassessment</h3><p>A careful test that confirms, qualifies, or challenges an important claim.</p></div>
+      </div>
+      <div class="callout"><b>Focus:</b> One clear central contribution is usually stronger than a long list of loosely connected claims. Technical difficulty is not the same as research value.</div>
+    </section>
+
+    <section class="slide" aria-label="Slide 11">
+      <div class="eyebrow">11 · Rejection and student pitfalls</div><h2>Common reasons papers are rejected</h2>
+      <div class="tiles">
+        <div class="tile"><h3>Unclear novelty or significance</h3><p>Reviewers cannot see what is new, why it matters, or how it differs from the closest work.</p></div>
+        <div class="tile"><h3>Wrong venue fit</h3><p>An application demo is presented as an HCI insight, or an API integration as a new ML method.</p></div>
+        <div class="tile"><h3>Weak evidence</h3><p>Unfair baselines, unsuitable metrics, missing controls, leakage, or insufficient analysis.</p></div>
+        <div class="tile"><h3>Missing insight</h3><p>Only headline scores are reported; no error analysis, robustness checks, or explanation of why results happen.</p></div>
+        <div class="tile"><h3>Overclaiming</h3><p>Conclusions go beyond the evidence or ignore uncertainty and limitations.</p></div>
+        <div class="tile"><h3>Unclear reporting</h3><p>Readers cannot understand or reproduce the procedure, or ethics and data provenance are unclear.</p></div>
+      </div>
+      <h3>Common student traps</h3><ul>
+        <li><b>Reading forever:</b> define a question, build a comparison matrix, then run a small pilot.</li>
+        <li><b>Building without a claim:</b> state what the app lets you investigate and what others will learn.</li>
+        <li><b>Only a tiny score gain:</b> check variance, baselines, cost, robustness, and mechanism—never invent a story around noise.</li>
+        <li><b>Getting stuck quietly:</b> report what you tried, the evidence, the exact blocker, and the options you considered.</li>
+        <li><b>Scope too big:</b> choose one research question, one central contribution, and one decisive experiment.</li>
       </ul>
-      <p><b>Choose the venue early.</b> Read recent accepted papers and the current call for papers. Different venues value different questions and kinds of evidence; no checklist guarantees acceptance.</p>
+    </section>
 
-      <h3>4. From an idea to a publishable paper</h3>
+    <section class="slide" aria-label="Slide 12">
+      <div class="eyebrow">12 · Your next step</div><h2>Prepare a one-page research pitch.</h2>
+      <p class="lead">Bring a concrete argument to your supervisor—not just a topic or a list of ideas.</p>
       <ol>
-        <li><b>Find the gap:</b> Compare closely related papers and identify a specific unanswered question or limitation, not merely an unexplored combination of tools.</li>
-        <li><b>State the contribution:</b> Explain in one or two sentences what is new and why it matters. This might be a design insight, empirical finding, dataset, method, benchmark, or theoretical contribution.</li>
-        <li><b>Design the evidence:</b> Select baselines, measures, datasets, participants, and analyses that directly test your claims. Plan ablations for technical methods and appropriate controls for human studies.</li>
-        <li><b>Run a pilot early:</b> Test feasibility and revise weak assumptions before investing months in a full system.</li>
-        <li><b>Analyze beyond headline scores:</b> Examine failure cases, uncertainty, trade-offs, biases, generalizability, and alternative explanations.</li>
-        <li><b>Write throughout:</b> Keep your related-work matrix, methods, figures, and research narrative updated. Ask what a skeptical reviewer would challenge.</li>
+        <li><b>Problem:</b> What important situation or challenge are you studying?</li>
+        <li><b>Closest work:</b> What are the three most relevant papers, and what did they establish?</li>
+        <li><b>Gap:</b> What remains unanswered, and why does it matter?</li>
+        <li><b>Research question:</b> What exactly will you investigate?</li>
+        <li><b>Contribution:</b> What new knowledge or capability could result?</li>
+        <li><b>Evidence:</b> What baseline, measure, dataset/participants, and analysis would convince a skeptical reviewer?</li>
+        <li><b>Risk:</b> What is the biggest uncertainty, and what cheap pilot can test it?</li>
       </ol>
-      <p><b>Publication readiness check:</b> Can you explain the gap, novelty, evidence, strongest baseline, main limitations, and the takeaway for other researchers? If not, refine the research before focusing on paper formatting.</p>
-
-
-<h3 id="guide-ideas">5. Ideation: where do good research ideas come from?</h3>
-<p>Start with a <b>problem, surprising observation, disagreement in the literature, or limitation of an existing method</b>—not with a tool you want to use. In our orientation, we recommend reading 10–20 relevant top-tier papers and discussing a mentor's initial topic until you can sharpen your own research question.</p>
-<div class="guide-grid"><div class="guide-card"><h4>1. Find a contradiction</h4><p>Two papers reach different conclusions. Which conditions, populations, or assumptions explain the difference?</p></div><div class="guide-card"><h4>2. Find a blind spot</h4><p>What important behavior, failure case, language, user group, or deployment condition was excluded?</p></div><div class="guide-card"><h4>3. Challenge an assumption</h4><p>What does the field take for granted? Test whether it still holds for modern LLMs or human–AI interaction.</p></div><div class="guide-card"><h4>4. Transfer carefully</h4><p>Can a theory or method from another field explain a problem better? A new combination alone is not enough.</p></div></div>
-<figure class="guide-figure"><svg viewBox="0 0 900 145" role="img" aria-label="Research idea pipeline from observation to research question to novelty check to evidence"><defs><marker id="arrowa" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#397e99" stroke-width="2"/></marker></defs><g font-family="Arial" font-size="17" font-weight="bold" text-anchor="middle"><rect x="10" y="28" width="190" height="78" rx="14" fill="#d9edf5"/><text x="105" y="61">Observation</text><text x="105" y="84" font-size="13" font-weight="normal">Something surprising</text><rect x="240" y="28" width="190" height="78" rx="14" fill="#cce9e5"/><text x="335" y="61">Research question</text><text x="335" y="84" font-size="13" font-weight="normal">Specific and testable</text><rect x="470" y="28" width="190" height="78" rx="14" fill="#f8e6c9"/><text x="565" y="61">Novelty check</text><text x="565" y="84" font-size="13" font-weight="normal">Closest prior work</text><rect x="700" y="28" width="190" height="78" rx="14" fill="#d9edf5"/><text x="795" y="61">Evidence plan</text><text x="795" y="84" font-size="13" font-weight="normal">How to test the claim</text></g><g stroke="#397e99" stroke-width="3" marker-end="url(#arrowa)"><path d="M202 67 H232"/><path d="M432 67 H462"/><path d="M662 67 H692"/></g></svg><figcaption>Good ideas become research only when novelty and evidence can be articulated.</figcaption></figure>
-<h4>How do I know my idea is novel?</h4><p>Novelty is a <b>comparative claim</b>, not a feeling. Search for the three to five closest papers, identify exactly what each contributes, and write: “Unlike A and B, we investigate / introduce / demonstrate X, which matters because Y.” Check both conceptual novelty and whether the contribution is meaningful. Finding no exact keyword match does not prove novelty.</p>
-<div class="guide-note"><b>Idea checkpoint:</b> Write one sentence each for the problem, gap, research question, proposed contribution, and strongest evidence. If the gap is only “no one has used GPT-X for this application,” keep thinking.</div>
-<h3 id="guide-literature">6. Related work: how to find and read papers</h3>
-<p><b>Search deliberately.</b> Begin with recent accepted papers from CHI, ACL/NAACL/EMNLP, NeurIPS/ICLR, or CVPR/ICCV/ECCV as relevant. Use <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>, <a href="https://aclanthology.org/" target="_blank" rel="noopener">ACL Anthology</a>, <a href="https://dl.acm.org/" target="_blank" rel="noopener">ACM Digital Library</a>, and <a href="https://openreview.net/" target="_blank" rel="noopener">OpenReview</a>. Follow references backward and citations forward. Preprints are useful discovery sources, but verify whether findings were peer reviewed and compare them critically.</p>
-<p><b>Read in three passes:</b> first title, abstract, figures, and conclusion; then research question, contribution, methods, and results; finally deep-read the closest papers, inspect their appendices/code, and reproduce key details if possible. Use <b>directed learning</b>: read with a question in mind rather than collecting PDFs indefinitely.</p>
-<table class="guide-table"><tr><th>Paper</th><th>Question &amp; contribution</th><th>Method / evidence</th><th>Limitations</th><th>How my idea differs</th></tr><tr><td>Closest paper A</td><td>What did it establish?</td><td>Dataset, participants, baselines</td><td>Missing condition</td><td>Specific extension</td></tr><tr><td>Closest paper B</td><td>What did it establish?</td><td>Design / experiment</td><td>Unresolved issue</td><td>New test or insight</td></tr></table>
-<p>Write related work as an <b>argument</b>: synthesize what is known, contrast methods and findings, reveal what remains unresolved, and position your study. Avoid a paragraph that simply lists one paper after another.</p>
-<h3 id="guide-methods">7. Methodology: design the study before building</h3>
-<p>Choose methods based on the claim you want to make. Specify the research question (RQ), hypotheses where appropriate, units of analysis, population or datasets, sampling, variables, comparison conditions, measures, analysis plan, and threats to validity.</p>
-<div class="guide-grid"><div class="guide-card"><h4>Construct validity</h4><p>Does your metric or questionnaire actually measure what you claim—trust, empathy, reasoning, robustness, or quality?</p></div><div class="guide-card"><h4>Internal validity</h4><p>Could a confound, data leakage, ordering effect, or uncontrolled prompt explain the result?</p></div><div class="guide-card"><h4>External validity</h4><p>Will findings transfer to other users, datasets, languages, tasks, or contexts?</p></div><div class="guide-card"><h4>Ethics &amp; reproducibility</h4><p>Plan consent, privacy, risk mitigation, data permissions, code/data release constraints, and documentation.</p></div></div>
-<p><b>For CHI:</b> articulate an HCI question, relevant theory, participant rationale, study protocol, and qualitative/quantitative methods. <b>For ACL:</b> specify tasks, corpora, splits, annotation quality, model/prompt settings, and linguistic phenomena. <b>For NeurIPS:</b> specify learning assumptions, algorithms, compute, strong baselines, robustness, and reproducibility. Use theory only when it genuinely helps explain or predict an outcome.</p>
-<h3 id="guide-experiments">8. Experiments: what makes an evaluation convincing?</h3>
-<p>Every experiment should answer a <b>different research question</b>, not merely produce another table. A useful portfolio may include a main comparison, mechanism/ablation, generalization or robustness, and human-centered or qualitative validation—but the number is driven by the claims, not a mandatory quota.</p>
-<figure class="guide-figure"><svg viewBox="0 0 900 220" role="img" aria-label="Four complementary experiments: main effect, ablation, robustness, human validation"><g font-family="Arial" text-anchor="middle"><g fill="#d9edf5"><rect x="12" y="18" width="205" height="150" rx="15"/><rect x="235" y="18" width="205" height="150" rx="15" fill="#d6eee8"/><rect x="458" y="18" width="205" height="150" rx="15" fill="#f7e6ca"/><rect x="681" y="18" width="205" height="150" rx="15" fill="#e6e1f6"/></g><g font-weight="bold" font-size="19" fill="#19304b"><text x="114" y="55">Main comparison</text><text x="337" y="55">Ablation</text><text x="560" y="55">Robustness</text><text x="784" y="55">Human evaluation</text></g><g font-size="15" fill="#35556c"><text x="114" y="92">Does it work?</text><text x="337" y="92">Why does it work?</text><text x="560" y="92">When does it fail?</text><text x="784" y="92">Does it matter?</text><text x="114" y="121">Strong baselines</text><text x="337" y="121">Remove components</text><text x="560" y="121">Shift conditions</text><text x="784" y="121">Users &amp; experts</text></g></g></svg><figcaption>Design complementary evidence that supports the full research claim.</figcaption></figure>
-<ul><li><b>Fair comparisons:</b> same datasets/splits, equivalent access to information, justified compute budgets, and tuned competitive baselines.</li><li><b>Reliable measurements:</b> preregistration when appropriate, sample-size or power rationale where applicable, confidence intervals, multiple seeds, and uncertainty estimates.</li><li><b>Human studies:</b> randomization/counterbalancing where suitable, task design, recruitment, ethical review, manipulation checks, and participant safety.</li><li><b>Qualitative work:</b> transparent sampling, coding or analysis approach, reflexivity, illustrative evidence, and a defensible connection from observations to claims.</li></ul>
-<h3 id="guide-analysis">9. Analysis: go beyond the main result</h3>
-<table class="guide-table"><tr><th>Venue</th><th>Typical analyses worth considering</th><th>What reviewers want to understand</th></tr><tr><td><b>CHI</b></td><td>Task outcomes; behavior patterns; thematic analysis of interviews; individual differences; design trade-offs; failures; mixed-method triangulation</td><td>What did we learn about people interacting with technology, and what follows for HCI theory or design?</td></tr><tr><td><b>ACL</b></td><td>Per-task and per-category errors; linguistic phenomena; cross-domain/language tests; annotation agreement; prompt sensitivity; calibration; qualitative examples</td><td>What language capability or limitation did we uncover, and how does the proposed method address it?</td></tr><tr><td><b>NeurIPS</b></td><td>Ablations; learning curves; sensitivity; statistical variation; compute/efficiency trade-offs; OOD robustness; failure modes; theoretical or mechanistic analysis</td><td>Why does the method work, under which assumptions, and when does it stop working?</td></tr></table>
-<p>Separate <b>observation</b> (what happened), <b>interpretation</b> (why it may have happened), and <b>implication</b> (what others should learn). A non-significant result is not proof of no effect; inspect uncertainty and study power. Do not hide negative findings or cherry-pick metrics.</p>
-<h3 id="guide-contributions">10. What counts as a research contribution?</h3>
-<p>Our original orientation highlights four routes: a novel model, a novel application, new knowledge, and a novel methodology. Here is a broader taxonomy to help you articulate a paper's central claim.</p>
-<div class="guide-grid"><div class="guide-card"><h4>1. New method / model</h4><p>An algorithm, architecture, objective, or training procedure with demonstrated value.</p></div><div class="guide-card"><h4>2. New empirical knowledge</h4><p>A surprising or generalizable finding about models, language, or human behavior.</p></div><div class="guide-card"><h4>3. New theory / framework</h4><p>A conceptual explanation or predictive model that clarifies a phenomenon.</p></div><div class="guide-card"><h4>4. New design / system</h4><p>An interaction technique or system that generates transferable design knowledge, not merely a demo.</p></div><div class="guide-card"><h4>5. New dataset / benchmark</h4><p>A well-justified resource or evaluation protocol that unlocks meaningful new research.</p></div><div class="guide-card"><h4>6. New evaluation method</h4><p>A more valid, reliable, or useful way to measure a research construct.</p></div><div class="guide-card"><h4>7. New application insight</h4><p>A challenging application that reveals a broader method, limitation, or principle.</p></div><div class="guide-card"><h4>8. Replication / critical reassessment</h4><p>A rigorous replication or challenge to a consequential established claim.</p></div></div>
-<div class="guide-note"><b>Remember:</b> Technical difficulty is not the same as novelty. A contribution can be simple but insightful. You do not need all eight types—one strong central contribution, supported by evidence, is better than many weak claims.</div>
-<h3 id="guide-rejection">11. Common reasons papers are rejected</h3>
-<ol><li><b>Unclear novelty:</b> reviewers cannot distinguish the work from its closest predecessors.</li><li><b>Weak significance:</b> the problem or contribution is too narrow to matter beyond the case study.</li><li><b>Mismatch with venue:</b> a system demo is presented as an HCI insight, or an application is presented as a new ML method.</li><li><b>Weak baselines / unfair comparisons:</b> results do not isolate the claimed advance.</li><li><b>Methodological flaws:</b> confounds, leakage, insufficient data, unsuitable metrics, weak qualitative rigor, or unsupported causal claims.</li><li><b>Missing analyses:</b> no ablations, error analysis, robustness tests, or interpretation of limitations.</li><li><b>Overclaiming:</b> conclusions exceed the evidence or ignore uncertainty.</li><li><b>Weak writing and positioning:</b> the reader cannot follow the problem → gap → approach → evidence → contribution story.</li><li><b>Ethical or reproducibility gaps:</b> unclear data provenance, participant protections, code details, or computational reporting.</li></ol>
-<p>Before submission, ask a colleague to play the <b>skeptical reviewer</b>: What is new? Why care? Is the evaluation fair? What alternative explanation remains? What evidence would change your conclusion?</p>
-<h3 id="guide-students">12. Common student problems—and how to think differently</h3>
-<details open><summary>“I cannot find a novel idea.”</summary><p>Stop brainstorming in isolation. Compare the closest papers, reproduce a key result, inspect their limitations, and identify a contradiction or missing condition. Bring two candidate gaps to your mentor, not ten vague topics.</p></details>
-<details><summary>“I keep reading and never start.”</summary><p>Switch from exploratory to directed learning. Set a specific research question, read only papers that resolve it, and create a one-page comparison matrix. Run a small pilot this week.</p></details>
-<details><summary>“I have built the app. Is that enough?”</summary><p>No. Ask what claim the app allows you to test and what knowledge remains useful even if the app is never deployed. A demo is apparatus; a paper requires an insight and evidence.</p></details>
-<details><summary>“My model improves accuracy only slightly.”</summary><p>Check variance, leakage, strong baselines, compute costs, and whether the gain is meaningful. Look for a mechanism, robustness advantage, or new failure-mode insight. Do not manufacture a story around noise.</p></details>
-<details><summary>“My experiment did not support the hypothesis.”</summary><p>Investigate measurement quality, power, assumptions, and alternative explanations. A well-designed negative result can still teach something, but a failed implementation is not automatically a publishable finding.</p></details>
-<details><summary>“My topic is too big, and I am overwhelmed.”</summary><p>Pick one RQ, one central contribution, one decisive experiment, and a short milestone. Separate essential evidence from optional features. Review scope with your mentor.</p></details>
-<details><summary>“I am stuck and do not want to bother my mentor.”</summary><p>Send a concise update: what you tried, evidence collected, exact blocker, options considered, and the decision you need. Bring proposals, not only problems. Consistent progress beats disappearing for weeks.</p></details>
-<details><summary>“My mentor gave me a topic. Should I follow it exactly?”</summary><p>Use the topic as a starting point, not a substitute for thinking. Read the literature, question assumptions, propose alternatives, and discuss evidence respectfully. Independence is not ignoring advice.</p></details>
-<details><summary>“I just want to graduate.”</summary><p>Graduation and publication are related but distinct goals. Our lab encourages ambitious publication-focused work; align the project scope and timeline with the official AIT requirements and your mentor.</p></details>
-<h3 id="guide-writing">13. Writing, feedback, and submission</h3>
-<p>Write from the beginning, not after the experiments. A clear paper usually tells this story: <b>background → important gap → research question → approach → evidence → contribution → limitations</b>. Start with figures and tables that explain your main claim. Ensure every conclusion maps to a result.</p>
-<ul><li><b>Introduction:</b> motivate the problem, identify the precise gap, state the approach, and summarize contributions without exaggeration.</li><li><b>Related work:</b> synthesize, contrast, and position; do not merely enumerate citations.</li><li><b>Methods:</b> provide enough detail to evaluate validity and support replication.</li><li><b>Results and discussion:</b> report what happened, interpret it cautiously, explain implications and limitations.</li><li><b>Before submission:</b> check the current venue's formatting, anonymization, ethics, reproducibility, and AI-use policies; arrange internal reviews early.</li><li><b>After reviews:</b> sort comments into validity, novelty, clarity, and scope. Respond with evidence and precise revisions; distinguish misunderstandings from real flaws.</li></ul>
-<h4>Orientation exercise: the one-page research pitch</h4><div class="guide-note">Bring to your first research discussion: <b>(1)</b> a one-sentence problem, <b>(2)</b> three closest papers, <b>(3)</b> the gap, <b>(4)</b> two or three RQs, <b>(5)</b> one contribution claim, <b>(6)</b> a feasible pilot, <b>(7)</b> an evaluation plan, and <b>(8)</b> your biggest uncertainty. Our orientation suggests beginning with 10–20 strong papers and refining the pitch through mentor discussions.</div>
-<h4>Lab working habits</h4><p>Use the weekly meeting to show evidence, not only activity. Keep code and experiments reproducible, share progress proactively, learn from senior researchers, and prepare proposal materials in advance. Useful lab resources include our <a href="https://github.com/AIT-brainlab/python-project-starter" target="_blank" rel="noopener">Python project starter</a> and <a href="https://github.com/orgs/AIT-brainlab/projects/3" target="_blank" rel="noopener">GitHub project board</a>. Confirm current lab logistics and equipment access with your mentor because these change over time.</p>
-
-      <h3>14. Proposal and defense</h3>
-
-      <p>To propose or defend, prepare:</p>
-        <ul>
-          <li><b>Report</b>:  following AIT format</li>
-          <li><b>PPT</b>:   following my format provided below</li>
-        </ul>
-
-      <p>Join our weekly meeting to update your progress. Use the thesis PPT template to communicate your research question, latest evidence, obstacles, and next experiments—not only implementation progress.</p>
-
-      <ul>
-        
-        <li>Presentation template (<a target="_blank"
-            href="https://docs.google.com/presentation/d/1SXN2LABIBYnTblk1nbCE1KA83xmR4tt-vUE26Lnl0-E/edit?usp=sharing">Download</a>),
-          Thesis latex template (<a target="_blank" href="https://www.overleaf.com/read/zptzbhxkbvbn#3d83d4">Download</a>), Official Language Center Template (<a target="_blank" href="https://languages.ait.ac.th/thesis-format-template/">Download</a>) </li>
-        <li>Example of special study (Master - <a target="_blank" 
-            href="https://drive.google.com/file/d/1RHcmHshJDh_9PQnEUcUoEGM-mENOsIF0/view?usp=sharing">Download</a>)(PhD - <a target="_blank" 
-            href="https://drive.google.com/file/d/1Rcbs5qKUJ9CR3W_1Dwgh_u9-NQCOy6z4/view?usp=sharing">Download</a>)</li>
-        <li>Example of thesis proposal (Master - <a target="_blank" 
-            href="https://drive.google.com/file/d/1wTPXliTlkLRDIGVBgnxrgg4UUXvyyoCf/view?usp=sharing">PPT</a>, <a target="_blank" 
-            href="https://drive.google.com/file/d/19J4Zs12gfBOiCo-Bsn7vS4qhDoxubS1s/view?usp=sharing">Report</a>)(PhD - <a target="_blank" 
-            href="https://drive.google.com/file/d/1yrMHck1oMszKw_3QfqqtwqvZ8RC05n9P/view?usp=sharing">PPT</a>, <a target="_blank" 
-            href="https://drive.google.com/file/d/1Zqek9XC2Xeooz788K_mwIFxaGqZxdMec/view?usp=sharing">Report</a>)</li>
-        <li>Example of final thesis or research study (<a target="_blank" 
-            href="https://drive.google.com/file/d/1VSD0-DZHAhDnvD1PSEtpyTjyZynaJqiY/view?usp=sharing">PPT</a>, <a target="_blank" 
-            href="https://drive.google.com/file/d/1Vt5qVQEqEhEn1IoVgXw2QOLnii6Rb9yU/view?usp=sharing">Report</a>)</li>
-         <li>Example of final internship (<a target="_blank" 
-            href="https://drive.google.com/file/d/1QV0olPsGYPoYN7EyqoCU6WqFdGhzzWJS/view?usp=sharing">Report</a>)</li>
-          <li>Repo of all theses (<a target="_blank" 
-            href="https://drive.google.com/drive/folders/10XQngfTQx8fJdnhVwRpTy8s-Rxov3JWa?usp=sharing">Google Drive</a>)</li>
-      </ul>
-
-      {{/*  <p><img class="img-fluid rounded border border-dark" alt="protocol" src="/img/protocol1.png" width="500" />
-
-      <img class="img-fluid rounded border border-dark" alt="protocol" src="/img/protocol2.png" width="500" /></p>  */}}
-
-      {{/*  <p><img class="img-fluid rounded border border-dark" alt="protocol" src="/img/protocol3.png" width="750" /></p>  */}}
-
-      <h3>15. Research Tips</h3>
-
-      <p>Research can be difficult. These blogs offer practical guidance:</p>
-      <ul>
-        <li><a href="http://www.chaklam.com/node/6">Research Process</a></li>
-        <li><a href="http://www.chaklam.com/node/7">How to choose good topic</a></li>
-        <li><a href="http://www.chaklam.com/node/8">How to find related work efficiently</a></li>
-        <li><a href="http://www.chaklam.com/node/12">How to write paper</a></li>
-        <li><a href="http://www.chaklam.com/node/30">Common mistakes</a></li>
-      </ul>
-
-{{/*  
-      <h3>6. Timeline</h3>
-
-      <p>Here is a simple figure explaining your one-year thesis journey. You have one year to complete your
-        thesis; most students extend to one or two more semesters.  (For Ph.D., your journey will be much longer):</p>
-
-      <p><img class="img-fluid rounded border border-dark" alt="timeline" src="/img/timeline.png" width="750" /></p>  */}}
-
-      {{/*  <h3>2. Writing</h3>
-
-      <p>Writing is a good way to organize your ideas. Try use this template to communicate your ideas effectively.</p>
-
-      <ul>
-        <li><span><span><span><span><span><span><strong>BACKGROUND</strong>: The ability to differentiate person
-                      in dialogue summarization is important. Past work mostly focuses on ________ (talk about
-                      what people mostly do…)</span></span></span></span></span></span><br />
-        </li>
-        <li><span><span><span><span><span><span><strong>PROBLEM</strong>: However, the key limitation is
-                      ___________________________(major gap in past
-                      work)</span></span></span></span></span></span><br />
-        </li>
-        <li><span><span><span><span><span><span><strong>SOLUTION</strong>: This paper proposes
-                      _____________________ (solution that directly fix the
-                      gap)</span></span></span></span></span></span><br />
-        </li>
-        <li><span><span><span><span><span><span><strong>RESULTS</strong>: We found that ___________________
-                      (results that confirm we fix the gap…)</span></span></span></span></span></span><br />
-        </li>
-        <li><span><span><span><span><span><span><strong>CONTRIBUTION</strong>: The results implied that
-                      _________________ (generalizability of your work…)</span></span></span></span></span></span></li>
-      </ul>  */}}
-
-      {{/*  <h3>3. Do your research!</h3>
-
-      <p>Doing your research is a daunting task. I have provided a very short snippets of success you may want to try for both fundamental research and applied research.</p>
-
-      <p><img class="img-fluid rounded border border-dark" alt="how to do research" src="/img/researchway.png" width="500" />
-
-      <img class="img-fluid rounded border border-dark" alt="how to do research" src="/img/applicationway.png" width="500" /></p>  */}}
-
-
-      <h3>7. Deliverables</h3>
-
-      <p>Your main research deliverables are:</p>
-
-      <ol>
-        <li>upload your code to AIT Brain Lab Github repo,</li>
-        <li>final report,</li>
-        <li>final presentation slide</li>
-        <li>video demo,</li>
-        <li>final publication (if you are thesis)</li>
-      </ol>
-
-
+      <div class="dark-callout"><b>Final reviewer test</b><br>What is new? Why should anyone care? Is the comparison fair? What did you learn from failures? Why do the results happen? When might the claim stop holding?</div>
+      <p>Helpful reading: <a href="https://chaklam.com/articles/which-venues-should-i-submit/" target="_blank" rel="noopener">Which venues should I submit?</a> · <a href="https://chaklam.com/articles/how-to-choose-a-good-topic/" target="_blank" rel="noopener">How to choose a good topic</a> · <a href="https://chaklam.com/articles/how-to-write-paper/" target="_blank" rel="noopener">How to write paper</a> · <a href="https://chaklam.com/blog.html" target="_blank" rel="noopener">More research tips</a></p>
+    </section>
+  </div>
+  <div class="deck-controls">
+    <button type="button" id="prev-slide" disabled>← Previous</button>
+    <div class="dots" id="slide-dots" aria-label="Choose a slide"></div>
+    <button type="button" id="next-slide">Next →</button>
+  </div>
+</div>
+<script>
+(function(){
+  const deck=document.getElementById('research-deck');
+  if(!deck) return;
+  const slides=Array.from(deck.querySelectorAll('.slide'));
+  const prev=deck.querySelector('#prev-slide'), next=deck.querySelector('#next-slide');
+  const count=deck.querySelector('#slide-count'), progress=deck.querySelector('#slide-progress'), dots=deck.querySelector('#slide-dots');
+  let current=0;
+  slides.forEach((slide,i)=>{
+    const dot=document.createElement('button');
+    dot.type='button'; dot.setAttribute('aria-label','Go to slide '+(i+1));
+    dot.addEventListener('click',()=>show(i)); dots.appendChild(dot);
+  });
+  function show(i){
+    current=Math.max(0,Math.min(slides.length-1,i));
+    slides.forEach((s,j)=>{s.classList.toggle('active',j===current);s.setAttribute('aria-hidden',j===current?'false':'true');});
+    Array.from(dots.children).forEach((d,j)=>d.setAttribute('aria-current',j===current?'true':'false'));
+    prev.disabled=current===0; next.disabled=current===slides.length-1;
+    count.textContent='Slide '+(current+1)+' of '+slides.length;
+    progress.style.width=((current+1)/slides.length*100)+'%';
+  }
+  prev.addEventListener('click',()=>show(current-1));
+  next.addEventListener('click',()=>show(current+1));
+  document.addEventListener('keydown',e=>{
+    if(!deck.contains(document.activeElement)) return;
+    if(e.key==='ArrowRight') show(current+1);
+    if(e.key==='ArrowLeft') show(current-1);
+  });
+  show(0);
+})();
+</script>
     </div>
   </section><!-- End Portfolio Details Section -->
 </main>
