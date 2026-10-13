@@ -53,7 +53,7 @@
 <div class="deck" id="research-deck">
   <div class="deck-top">
     <div><strong>From Research Idea to Top-Tier Publication</strong><br><small>A practical, self-paced guide for CHI · ACL · NeurIPS</small></div>
-    <div id="slide-count" aria-live="polite">Slide 1 of 12</div>
+    <div id="slide-count" aria-live="polite">Slide 1 of 16</div>
   </div>
   <div class="progress"><span id="slide-progress"></span></div>
   <div class="slides">
@@ -70,107 +70,47 @@
     </section>
 
     <section class="slide" aria-label="Slide 2">
-      <div class="eyebrow">02 · Ideation</div><h2>Good ideas can come from several places.</h2>
-      <p class="lead">You do not need to wait for a flash of genius. Start with something you notice, then turn it into a question.</p>
-      <div class="tiles">
-        <div class="tile"><h3>1. Notice a surprising failure</h3><p>Example: an AI tutor gives correct answers, but students still misunderstand the concept.</p><p><b>Question:</b> Which explanations create a lasting misunderstanding?</p></div>
-        <div class="tile"><h3>2. Find a contradiction</h3><p>One study says AI feedback builds confidence; another says it makes people overconfident.</p><p><b>Question:</b> What conditions explain the difference?</p></div>
-        <div class="tile"><h3>3. Find a blind spot</h3><p>A language model works well on standard English but fails on code-switching.</p><p><b>Question:</b> Which language patterns trigger errors?</p></div>
-        <div class="tile"><h3>4. Challenge an assumption</h3><p>People assume more explanations always help.</p><p><b>Question:</b> When does extra explanation overwhelm users?</p></div>
-        <div class="tile"><h3>5. Borrow a lens from another field</h3><p>Use a theory of cognitive load to understand AI-assisted decision-making.</p><p><b>Question:</b> Does the theory explain which interface choices help?</p></div>
-        <div class="tile"><h3>6. Revisit a strong paper</h3><p>Reproduce its key result, then test an important limitation or untested condition.</p><p><b>Question:</b> Does the finding still hold outside the original setup?</p></div>
-      </div>
-      <div class="callout"><b>Easy starting routine:</b> Pick one interesting paper → explain its main finding → identify one limitation → propose one test that could change what we know.</div>
-    </section>
+<div class="eyebrow">02 · Idea generation</div><h2>Where do good ideas come from?</h2>
+<p class="lead">Research ideas often begin with curiosity, not technology. Here are nine useful starting points.</p>
+<div class="tiles">
+<div class="tile"><h3>1. A real problem</h3><p>Doctors struggle to verify evidence behind a medical VQA answer. What evidence display helps?</p></div>
+<div class="tile"><h3>2. A surprising failure</h3><p>A small model is accurate overall but fails on negation. Why?</p></div>
+<div class="tile"><h3>3. Two conflicting findings</h3><p>AI advice helps some people but causes over-reliance in others. What explains this?</p></div>
+<div class="tile"><h3>4. An overlooked group or context</h3><p>What happens when a human–AI interface is used by novice rather than expert users?</p></div>
+<div class="tile"><h3>5. A questionable assumption</h3><p>Does showing more explanations always improve trust calibration?</p></div>
+<div class="tile"><h3>6. A theory from another field</h3><p>Can cognitive-load theory predict when an AI interface becomes overwhelming?</p></div>
+<div class="tile"><h3>7. A new technical capability</h3><p>Can smaller models support a previously impractical on-device workflow? What new trade-off appears?</p></div>
+<div class="tile"><h3>8. A missing measurement</h3><p>Accuracy hides unsafe medical reasoning. What evaluation captures clinically consequential errors?</p></div>
+<div class="tile"><h3>9. Reproduce and challenge</h3><p>Does a published simulated-human finding hold for different personas, tasks, or real participants?</p></div>
+</div><div class="callout"><b>Turn an observation into research:</b> I noticed ___ → I wonder why ___ → Existing studies do not explain ___ → I could test ___.</div>
+</section>
 
     <section class="slide" aria-label="Slide 3">
-      <div class="eyebrow">03 · Ideation examples</div><h2>Good idea vs. weak idea</h2>
-      <div class="tiles">
-        <div class="tile"><span class="tag bad">Weak</span><h3>“I will build an AI mental-health chatbot.”</h3><p>Why weak: a broad application, unclear research question, no identified gap, and no claim about what we will learn.</p></div>
-        <div class="tile"><span class="tag good">Stronger</span><h3>“When does reflective AI feedback help users reconsider negative self-talk, and when does it make them defend it?”</h3><p>Why stronger: a focused phenomenon, a contrast that can be tested, and potential insights into interaction design.</p></div>
-        <div class="tile"><span class="tag bad">Weak</span><h3>“Use GPT with a knowledge graph to improve answers.”</h3><p>Why weak: combining two technologies is not, by itself, a research contribution.</p></div>
-        <div class="tile"><span class="tag good">Stronger</span><h3>“Which kinds of knowledge-graph constraints prevent unsupported answers, and what errors remain?”</h3><p>Why stronger: it names a mechanism, measurable outcomes, and an opportunity for error analysis.</p></div>
-      </div>
-      <div class="dark-callout"><b>Remember:</b> A good idea is not necessarily complicated. It is important, specific, feasible, testable, and likely to teach us something non-obvious.</div>
-    </section>
+<div class="eyebrow">03 · Examples across domains</div><h2>Weak ideas become stronger when they ask something specific.</h2>
+<table><tr><th>Domain</th><th>Weak idea</th><th>Stronger research idea</th><th>Why stronger?</th></tr>
+<tr><td>Medical VQA</td><td>Build a medical chatbot.</td><td>Which image–question mismatches cause clinically dangerous answers, and can evidence grounding reduce them?</td><td>Targets a failure mechanism and safety-relevant evaluation.</td></tr>
+<tr><td>Small language models</td><td>Fine-tune a small LLM.</td><td>When does distillation preserve reasoning but lose sensitivity to negation and uncertainty?</td><td>Identifies a measurable trade-off and phenomenon.</td></tr>
+<tr><td>HCI design</td><td>Make a nicer dashboard.</td><td>How does editable versus fixed AI feedback change users’ ability to correct mistaken recommendations?</td><td>Compares interaction designs and human behavior.</td></tr>
+<tr><td>Simulated humans</td><td>Generate 1,000 AI personas.</td><td>Which human behavioral patterns do simulated participants reproduce, and which do they systematically miss?</td><td>Tests validity rather than volume.</td></tr>
+<tr><td>Human–AI interaction</td><td>Add explanations to an AI assistant.</td><td>When do explanations improve calibrated reliance versus encourage blind acceptance?</td><td>Tests conditions and mechanisms.</td></tr>
+<tr><td>NLP</td><td>Combine RAG with a graph.</td><td>Which relation types reduce unsupported answers, and what errors remain?</td><td>Isolates an explanatory mechanism.</td></tr>
+</table><div class="callout">These are <b>candidate questions</b>, not verified novel contributions. You must still inspect the closest papers.</div>
+</section>
 
     <section class="slide" aria-label="Slide 4">
-      <div class="eyebrow">04 · Novelty</div><h2>How do I know whether my idea is novel?</h2>
-      <p class="lead">Novelty is a comparison with the closest existing work—not a feeling, and not simply the absence of a search result.</p>
-      <div class="mini-flow"><span>Find 3–5 closest papers</span><b>→</b><span>Compare claims and evidence</span><b>→</b><span>State the exact difference</span><b>→</b><span>Explain why it matters</span></div>
-      <div class="tiles">
-        <div class="tile"><span class="tag bad">Bad novelty claim</span><h3>“No one has used GPT-5 for this task.”</h3><p>Why weak: a model swap may not change the research question or knowledge gained. Search terms may also miss equivalent work.</p></div>
-        <div class="tile"><span class="tag good">Better novelty claim</span><h3>“Prior systems measure answer accuracy; we test whether specific linguistic error types cause users to trust incorrect advice.”</h3><p>Why stronger: it distinguishes the research question, the evidence, and the insight—if the closest papers really do leave that gap open.</p></div>
-        <div class="tile"><span class="tag bad">Bad novelty claim</span><h3>“Our interface has a new color scheme.”</h3><p>Why weak: visual difference alone rarely creates a meaningful HCI contribution.</p></div>
-        <div class="tile"><span class="tag good">Better novelty claim</span><h3>“We compare two feedback designs and discover when users notice, challenge, or accept AI mistakes.”</h3><p>Why stronger: it can yield transferable evidence about human–AI interaction, not just a new screen.</p></div>
-      </div>
-      <div class="callout"><b>Write this sentence:</b> “Unlike the closest work A and B, we investigate X; this matters because Y.” Then verify every part against the papers.</div>
-    </section>
+<div class="eyebrow">04 · Novelty check</div><h2>“New to me” is not the same as novel research.</h2>
+<p class="lead">Compare your question and contribution—not just your model name, dataset, or interface.</p>
+<table><tr><th>Weak novelty argument</th><th>Stronger possibility</th><th>Why?</th></tr>
+<tr><td>First medical VQA app in our hospital</td><td>Discover a previously unmeasured class of clinically consequential visual grounding failures</td><td>Potential generalizable insight, not just location.</td></tr>
+<tr><td>Use a newer small LLM</td><td>Explain a reproducible accuracy–latency–calibration trade-off across model sizes</td><td>Identifies conditions and mechanisms.</td></tr>
+<tr><td>New colors in an HCI interface</td><td>Demonstrate how editable feedback changes correction behavior</td><td>Produces interaction knowledge.</td></tr>
+<tr><td>More synthetic participants</td><td>Develop and validate a method to detect when simulations diverge from human behavior</td><td>Addresses construct validity.</td></tr>
+<tr><td>LLM with another prompt</td><td>Identify when prompt wording changes reliance and why</td><td>Tests a meaningful phenomenon.</td></tr>
+</table><div class="mini-flow"><span>Find 3–5 closest papers</span><b>→</b><span>Compare their questions</span><b>→</b><span>Identify missing evidence</span><b>→</b><span>Explain the significance</span></div>
+<div class="callout"><b>Novelty sentence:</b> “Prior work establishes ___. It remains unclear ___. We test ___, which matters because ___.” If prior work already answers it, refine your question.</div>
+</section>
 
     <section class="slide" aria-label="Slide 5">
-      <div class="eyebrow">05 · Related work</div><h2>Find papers—and read them with a purpose.</h2>
-      <div class="tiles">
-        <div class="tile"><h3>Find the right papers</h3><ul><li>Start with recent accepted papers at your target venue.</li><li>Search <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>, <a href="https://aclanthology.org/" target="_blank" rel="noopener">ACL Anthology</a>, <a href="https://dl.acm.org/" target="_blank" rel="noopener">ACM Digital Library</a>, and <a href="https://openreview.net/" target="_blank" rel="noopener">OpenReview</a>.</li><li>Follow references backward and citations forward.</li></ul></div>
-        <div class="tile"><h3>Read in three passes</h3><ol><li>Title, abstract, figures, conclusion.</li><li>Question, contribution, methods, results.</li><li>Deep-read the closest papers, including appendices and code when available.</li></ol></div>
-        <div class="tile"><h3>Make a comparison table</h3><p>For each closest paper, record: question, contribution, method, evidence, limitations, and how your idea differs.</p></div>
-      </div>
-      <div class="callout"><b>Avoid this:</b> listing papers one by one. <b>Do this:</b> synthesize what is known, where findings disagree, what remains unresolved, and exactly where your work fits.</div>
-      <p>More guidance: <a href="https://chaklam.com/articles/how-to-find-related-work-efficiently/" target="_blank" rel="noopener">How to find related work efficiently</a> · <a href="https://chaklam.com/blog.html" target="_blank" rel="noopener">All research tips on Chaklam.com</a></p>
-    </section>
-
-    <section class="slide" aria-label="Slide 6">
-      <div class="eyebrow">06 · Methodology</div><h2>Bad methodology: what does it look like?</h2>
-      <div class="tiles">
-        <div class="tile"><span class="tag bad">Bad</span><h3>Question and metric do not match</h3><p>Claim: “The tool improves trust.” Measure: task completion time only.</p><p><b>Problem:</b> speed does not establish trust.</p></div>
-        <div class="tile"><span class="tag bad">Bad</span><h3>Weak or unfair baseline</h3><p>Compare a tuned new method with an outdated baseline using different data or resources.</p><p><b>Problem:</b> the gain may come from the comparison setup.</p></div>
-        <div class="tile"><span class="tag bad">Bad</span><h3>Confounds and leakage</h3><p>Test examples leak into training, or one study condition gets easier tasks.</p><p><b>Problem:</b> you cannot tell what caused the result.</p></div>
-        <div class="tile"><span class="tag bad">Bad</span><h3>Unclear or tiny sample</h3><p>Recruit whoever is available, then generalize to all users without justification.</p><p><b>Problem:</b> uncertainty and selection bias are ignored.</p></div>
-        <div class="tile"><span class="tag bad">Bad</span><h3>Vague procedure</h3><p>“We asked an LLM to evaluate the outputs” with no prompt, rubric, validation, or reliability check.</p><p><b>Problem:</b> readers cannot judge validity or reproduce the work.</p></div>
-        <div class="tile"><span class="tag bad">Bad</span><h3>Claiming causation from correlation</h3><p>Users who like a tool perform better, so the paper claims liking caused better performance.</p><p><b>Problem:</b> other explanations may account for the association.</p></div>
-      </div>
-      <div class="callout"><b>Before implementation, specify:</b> research question, unit of analysis, data/participants, sampling, conditions, measures, baselines, analysis plan, ethics, and threats to validity.</div>
-    </section>
-
-    <section class="slide" aria-label="Slide 7">
-      <div class="eyebrow">07 · Methodology by venue</div><h2>Choose methods that fit the claim.</h2>
-      <table><thead><tr><th>Venue</th><th>Core question</th><th>Methodological priorities</th></tr></thead><tbody>
-      <tr><td><b>CHI</b></td><td>What do we learn about people and interaction?</td><td>Relevant HCI literature/theory, justified participants, credible study protocol, careful qualitative and/or quantitative analysis, design implications.</td></tr>
-      <tr><td><b>ACL</b></td><td>What language capability or limitation is revealed?</td><td>Clear task and corpora, valid data splits, annotation quality, competitive baselines, linguistic phenomena, reproducible model/prompt settings.</td></tr>
-      <tr><td><b>NeurIPS</b></td><td>What method or general ML insight is advanced?</td><td>Strong baselines, fair compute, ablations, uncertainty, multiple seeds where appropriate, robustness and reproducibility.</td></tr>
-      </tbody></table>
-      <div class="callout"><b>One rule:</b> Design the experiment around the claim you want to make. Do not choose a convenient metric first and invent a claim afterward.</div>
-    </section>
-
-    <section class="slide" aria-label="Slide 8">
-      <div class="eyebrow">08 · Experiments</div><h2>Each experiment should answer a question.</h2>
-      <div class="tiles">
-        <div class="tile"><h3>1. Main comparison</h3><p><b>Question:</b> Does it work better than strong alternatives?</p><p>Use fair datasets, splits, settings, metrics, and competitive baselines.</p></div>
-        <div class="tile"><h3>2. Ablation / mechanism</h3><p><b>Question:</b> Which component matters, and why?</p><p>Remove or vary components to test their role.</p></div>
-        <div class="tile"><h3>3. Robustness / generalization</h3><p><b>Question:</b> Does it still work under realistic changes?</p><p>Test different domains, languages, users, prompts, data conditions, or distribution shifts.</p></div>
-        <div class="tile"><h3>4. Human / expert validation</h3><p><b>Question:</b> Does the result matter in practice?</p><p>Use a justified study design, suitable measures, and a transparent analysis.</p></div>
-        <div class="tile"><h3>5. Failure analysis</h3><p><b>Question:</b> Where does it fail, and what pattern explains the failure?</p><p>Inspect representative and systematic failures, not only success examples.</p></div>
-        <div class="tile"><h3>6. Efficiency and trade-offs</h3><p><b>Question:</b> What do we pay for the improvement?</p><p>Report cost, latency, compute, usability, fairness, or other relevant trade-offs.</p></div>
-      </div>
-      <div class="callout">There is no magic number of experiments. Include the evidence needed to support every major claim—and avoid experiments that add tables but no new understanding.</div>
-    </section>
-
-    <section class="slide" aria-label="Slide 9">
-      <div class="eyebrow">09 · Analysis</div><h2>What reviewers look for beyond the headline score.</h2>
-      <p class="lead">A strong paper explains not only <i>whether</i> a result happened, but also <i>why, when, for whom, and at what cost</i>.</p>
-      <div class="tiles">
-        <div class="tile"><h3>Error analysis</h3><p>Group failures into meaningful categories. Which errors dominate? Which are new? What causes them? Show representative examples and counts.</p></div>
-        <div class="tile"><h3>Linguistic analysis</h3><p>For language work: examine negation, ambiguity, coreference, long-distance dependencies, pragmatics, morphology, code-switching, or other phenomena relevant to the claim.</p></div>
-        <div class="tile"><h3>Robustness analysis</h3><p>Vary domains, languages, prompts, noise, populations, or assumptions. Identify which changes break the result and which do not.</p></div>
-        <div class="tile"><h3>Ablation and sensitivity</h3><p>Remove components or vary key settings. Determine whether the proposed mechanism actually explains the gain.</p></div>
-        <div class="tile"><h3>Subgroups and individual differences</h3><p>For CHI: how do experience, goals, ability, context, or interaction style change outcomes? Avoid unsupported subgroup claims.</p></div>
-        <div class="tile"><h3>Qualitative and behavioral insight</h3><p>Use interviews, interaction traces, think-aloud data, or expert review to explain patterns that a score cannot reveal.</p></div>
-        <div class="tile"><h3>Uncertainty and significance</h3><p>Report variability and uncertainty. Distinguish statistical significance from practical importance; do not treat “not significant” as proof of no effect.</p></div>
-        <div class="tile"><h3>Trade-offs, bias, and limitations</h3><p>Who benefits or loses? What resources are required? Where is performance uneven? What alternative explanation remains?</p></div>
-      </div>
-      <div class="dark-callout"><b>Write every analysis as:</b> Observation (what happened) → Interpretation (why it may have happened) → Implication (what researchers should learn or do next).</div>
-    </section>
-
-    <section class="slide" aria-label="Slide 10">
       <div class="eyebrow">10 · Contributions</div><h2>What kind of contribution are you making?</h2>
       <div class="tiles">
         <div class="tile"><h3>Method or model</h3><p>A new algorithm, architecture, objective, or training procedure that shows demonstrated value.</p></div>
@@ -184,8 +124,7 @@
       </div>
       <div class="callout"><b>Focus:</b> One clear central contribution is usually stronger than a long list of loosely connected claims. Technical difficulty is not the same as research value.</div>
     </section>
-
-    <section class="slide" aria-label="Slide 11">
+    <section class="slide" aria-label="Slide 6">
       <div class="eyebrow">11 · Rejection and student pitfalls</div><h2>Common reasons papers are rejected</h2>
       <div class="tiles">
         <div class="tile"><h3>Unclear novelty or significance</h3><p>Reviewers cannot see what is new, why it matters, or how it differs from the closest work.</p></div>
@@ -203,6 +142,72 @@
         <li><b>Scope too big:</b> choose one research question, one central contribution, and one decisive experiment.</li>
       </ul>
     </section>
+    <section class="slide" aria-label="Slide 7">
+<div class="eyebrow">05 · Related work</div><h2>Make a comparison table—not a list of summaries.</h2>
+<p class="lead">Illustrative example: studying whether AI explanations improve appropriate reliance. The rows below are hypothetical placeholders, not citations.</p>
+<table><tr><th>Study</th><th>Research question</th><th>Evidence</th><th>What remains unknown?</th></tr>
+<tr><td>Paper A (example)</td><td>Do explanations increase perceived trust?</td><td>User survey after one task</td><td>Does increased trust mean better decisions?</td></tr>
+<tr><td>Paper B (example)</td><td>Do explanations improve accuracy?</td><td>Controlled task experiment</td><td>What happens when the AI is wrong?</td></tr>
+<tr><td>Paper C (example)</td><td>Do users notice AI errors?</td><td>Behavioral logs and interviews</td><td>Does editable feedback improve correction?</td></tr>
+<tr><td><b>Your proposed study</b></td><td><b>When do explanations help people accept correct advice and reject incorrect advice?</b></td><td><b>Correct/incorrect AI conditions, reliance measures, interviews</b></td><td><b>Tests calibrated reliance and possible mechanisms</b></td></tr>
+</table>
+<div class="callout"><b>How to use:</b> Replace A/B/C with actual closest papers. If one already answers your question, your proposed gap is not established.</div>
+<p>Search <a href="https://scholar.google.com/">Google Scholar</a>, <a href="https://aclanthology.org/">ACL Anthology</a>, <a href="https://dl.acm.org/">ACM Digital Library</a>, and <a href="https://openreview.net/">OpenReview</a>. Read abstract → methods/results → closest papers deeply.</p>
+</section>
+
+    <section class="slide" aria-label="Slide 8">
+<div class="eyebrow">06 · Methodology</div><h2>Bad methodology means your evidence cannot answer your question.</h2>
+<p class="lead">Example research question: <b>Does an AI explanation help doctors detect incorrect medical VQA answers?</b></p>
+<table><tr><th>Decision</th><th>Bad approach</th><th>Better approach</th></tr>
+<tr><td>Who participates?</td><td>Ask five friends who are not clinicians.</td><td>Recruit appropriate clinical participants and justify sample size and scope.</td></tr>
+<tr><td>What is compared?</td><td>Everyone uses the explained AI only.</td><td>Compare relevant explanation and control conditions.</td></tr>
+<tr><td>What is measured?</td><td>Ask “Did you like it?”</td><td>Measure error detection, appropriate reliance, time, and perceived usefulness as distinct outcomes.</td></tr>
+<tr><td>What can bias results?</td><td>Easy questions in one condition; hard questions in another.</td><td>Match or randomize questions and counterbalance order where appropriate.</td></tr>
+<tr><td>What can you conclude?</td><td>“Explanations make doctors safer.”</td><td>State exactly which outcomes improved, under which conditions, with uncertainty and limitations.</td></tr>
+</table><div class="dark-callout"><b>Simple test:</b> If the result is positive, could it be explained by easier tasks, different participants, extra information, or an unsuitable metric? If yes, fix the study design first.</div>
+</section>
+
+    <section class="slide" aria-label="Slide 9">
+      <div class="eyebrow">07 · Methodology by venue</div><h2>Choose methods that fit the claim.</h2>
+      <table><thead><tr><th>Venue</th><th>Core question</th><th>Methodological priorities</th></tr></thead><tbody>
+      <tr><td><b>CHI</b></td><td>What do we learn about people and interaction?</td><td>Relevant HCI literature/theory, justified participants, credible study protocol, careful qualitative and/or quantitative analysis, design implications.</td></tr>
+      <tr><td><b>ACL</b></td><td>What language capability or limitation is revealed?</td><td>Clear task and corpora, valid data splits, annotation quality, competitive baselines, linguistic phenomena, reproducible model/prompt settings.</td></tr>
+      <tr><td><b>NeurIPS</b></td><td>What method or general ML insight is advanced?</td><td>Strong baselines, fair compute, ablations, uncertainty, multiple seeds where appropriate, robustness and reproducibility.</td></tr>
+      </tbody></table>
+      <div class="callout"><b>One rule:</b> Design the experiment around the claim you want to make. Do not choose a convenient metric first and invent a claim afterward.</div>
+    </section>
+
+    <section class="slide" aria-label="Slide 10">
+<div class="eyebrow">08 · Experiments</div><h2>Do not run experiments just to fill tables.</h2>
+<p class="lead">Imagine your claim is: <b>“Grounded medical VQA reduces unsafe answers.”</b> Each experiment should test one part of that claim.</p>
+<table><tr><th>What students should ask</th><th>What to do</th><th>What it teaches us</th></tr>
+<tr><td><b>1. Is the new approach actually better?</b></td><td>Compare against strong VQA and retrieval baselines on the same test set.</td><td>Whether it improves the intended outcome.</td></tr>
+<tr><td><b>2. What part makes it better?</b></td><td>Remove retrieval, grounding, or verification separately.</td><td>Which component drives the improvement.</td></tr>
+<tr><td><b>3. Where does it still fail?</b></td><td>Categorize errors: visual recognition, negation, hallucination, clinical reasoning.</td><td>Failure mechanisms rather than only accuracy.</td></tr>
+<tr><td><b>4. Does it work outside the easy setting?</b></td><td>Test another dataset, question type, or image quality.</td><td>Robustness and limits of generalization.</td></tr>
+<tr><td><b>5. Does the improvement matter?</b></td><td>Have qualified experts assess clinical consequence and usefulness.</td><td>Whether benchmark gains have practical relevance.</td></tr>
+</table><div class="callout"><b>Student exercise:</b> Write your main claim in one sentence. Then ask: “What evidence would convince a skeptical reviewer that this is true?” Not every paper needs all five experiments; choose those that test your claims.</div>
+</section>
+
+    <section class="slide" aria-label="Slide 11">
+      <div class="eyebrow">09 · Analysis</div><h2>What reviewers look for beyond the headline score.</h2>
+      <p class="lead">A strong paper explains not only <i>whether</i> a result happened, but also <i>why, when, for whom, and at what cost</i>.</p>
+      <div class="tiles">
+        <div class="tile"><h3>Error analysis</h3><p>Group failures into meaningful categories. Which errors dominate? Which are new? What causes them? Show representative examples and counts.</p></div>
+        <div class="tile"><h3>Linguistic analysis</h3><p>For language work: examine negation, ambiguity, coreference, long-distance dependencies, pragmatics, morphology, code-switching, or other phenomena relevant to the claim.</p></div>
+        <div class="tile"><h3>Robustness analysis</h3><p>Vary domains, languages, prompts, noise, populations, or assumptions. Identify which changes break the result and which do not.</p></div>
+        <div class="tile"><h3>Ablation and sensitivity</h3><p>Remove components or vary key settings. Determine whether the proposed mechanism actually explains the gain.</p></div>
+        <div class="tile"><h3>Subgroups and individual differences</h3><p>For CHI: how do experience, goals, ability, context, or interaction style change outcomes? Avoid unsupported subgroup claims.</p></div>
+        <div class="tile"><h3>Qualitative and behavioral insight</h3><p>Use interviews, interaction traces, think-aloud data, or expert review to explain patterns that a score cannot reveal.</p></div>
+        <div class="tile"><h3>Uncertainty and significance</h3><p>Report variability and uncertainty. Distinguish statistical significance from practical importance; do not treat “not significant” as proof of no effect.</p></div>
+        <div class="tile"><h3>Trade-offs, bias, and limitations</h3><p>Who benefits or loses? What resources are required? Where is performance uneven? What alternative explanation remains?</p></div>
+      </div>
+      <div class="dark-callout"><b>Write every analysis as:</b> Observation (what happened) → Interpretation (why it may have happened) → Implication (what researchers should learn or do next).</div>
+    </section>
+
+
+
+
 
     <section class="slide" aria-label="Slide 12">
       <div class="eyebrow">12 · Your next step</div><h2>Prepare a one-page research pitch.</h2>
@@ -219,6 +224,50 @@
       <div class="dark-callout"><b>Final reviewer test</b><br>What is new? Why should anyone care? Is the comparison fair? What did you learn from failures? Why do the results happen? When might the claim stop holding?</div>
       <p>Helpful reading: <a href="https://chaklam.com/articles/which-venues-should-i-submit/" target="_blank" rel="noopener">Which venues should I submit?</a> · <a href="https://chaklam.com/articles/how-to-choose-a-good-topic/" target="_blank" rel="noopener">How to choose a good topic</a> · <a href="https://chaklam.com/articles/how-to-write-paper/" target="_blank" rel="noopener">How to write paper</a> · <a href="https://chaklam.com/blog.html" target="_blank" rel="noopener">More research tips</a></p>
     </section>
+    <section class="slide" aria-label="Slide 13">
+<div class="eyebrow">13 · Research resources</div><h2>Templates, examples, and lab resources</h2>
+<p class="lead">Keep these links handy for proposals, progress presentations, final reports, and submissions.</p>
+<div class="tiles">
+<div class="tile"><h3>Templates</h3><p><a target="_blank" href="https://docs.google.com/presentation/d/1SXN2LABIBYnTblk1nbCE1KA83xmR4tt-vUE26Lnl0-E/edit?usp=sharing">Thesis presentation template</a></p><p><a target="_blank" href="https://www.overleaf.com/read/zptzbhxkbvbn#3d83d4">Thesis LaTeX template</a></p><p><a target="_blank" href="https://languages.ait.ac.th/thesis-format-template/">AIT Language Center format</a></p></div>
+<div class="tile"><h3>Proposal examples</h3><p>Master’s: <a href="https://drive.google.com/file/d/1wTPXliTlkLRDIGVBgnxrgg4UUXvyyoCf/view?usp=sharing">Slides</a> · <a href="https://drive.google.com/file/d/19J4Zs12gfBOiCo-Bsn7vS4qhDoxubS1s/view?usp=sharing">Report</a></p><p>PhD: <a href="https://drive.google.com/file/d/1yrMHck1oMszKw_3QfqqtwqvZ8RC05n9P/view?usp=sharing">Slides</a> · <a href="https://drive.google.com/file/d/1Zqek9XC2Xeooz788K_mwIFxaGqZxdMec/view?usp=sharing">Report</a></p></div>
+<div class="tile"><h3>Completed work</h3><p>Research study: <a href="https://drive.google.com/file/d/1RHcmHshJDh_9PQnEUcUoEGM-mENOsIF0/view?usp=sharing">Master</a> · <a href="https://drive.google.com/file/d/1Rcbs5qKUJ9CR3W_1Dwgh_u9-NQCOy6z4/view?usp=sharing">PhD</a></p><p>Final thesis: <a href="https://drive.google.com/file/d/1VSD0-DZHAhDnvD1PSEtpyTjyZynaJqiY/view?usp=sharing">Slides</a> · <a href="https://drive.google.com/file/d/1Vt5qVQEqEhEn1IoVgXw2QOLnii6Rb9yU/view?usp=sharing">Report</a></p><p><a href="https://drive.google.com/file/d/1QV0olPsGYPoYN7EyqoCU6WqFdGhzzWJS/view?usp=sharing">Internship report</a> · <a href="https://drive.google.com/drive/folders/10XQngfTQx8fJdnhVwRpTy8s-Rxov3JWa?usp=sharing">Thesis repository</a></p></div>
+<div class="tile"><h3>Lab tools</h3><p><a href="https://github.com/AIT-brainlab/python-project-starter">Python project starter</a></p><p><a href="https://github.com/orgs/AIT-brainlab/projects/3">Project board</a></p></div>
+</div>
+<h3>Professor's research writing</h3><p><a href="https://chaklam.com/articles/how-to-write-paper/">How to write paper</a> · <a href="https://chaklam.com/articles/how-to-choose-a-good-topic/">How to choose a good topic</a> · <a href="https://chaklam.com/articles/research-process/">Research process</a></p>
+<p><b>Expected deliverables:</b> Code repository, final report, presentation, demo video, and publication submission where applicable. Confirm official degree requirements separately.</p>
+</section>
+<section class="slide" aria-label="Slide 14">
+<div class="eyebrow">14 · 60-minute workshop</div><h2>Research Idea Clinic: from topic to testable question</h2>
+<p class="lead">Work individually or in pairs. No coding needed. By the end, each student has a one-page pitch and feedback from a peer.</p>
+<div class="tiles">
+<div class="tile"><h3>0–10 min · Find a problem</h3><p>Choose medical VQA, small language models, HCI, simulated humans, HAI, or your own domain. Write <b>two observations</b>: an error, contradiction, overlooked user, assumption, or missing measurement.</p></div>
+<div class="tile"><h3>10–25 min · Turn it into an idea</h3><p>Pick the most interesting observation. Write one weak idea and rewrite it as a focused research question. State who benefits and why the answer matters.</p></div>
+<div class="tile"><h3>25–40 min · Novelty detective</h3><p>Find <b>two closely related papers</b> (or use papers you already know). Compare their questions, evidence, limitations, and your proposed difference. Mark what still needs verification.</p></div>
+<div class="tile"><h3>40–50 min · Design one decisive test</h3><p>Specify a baseline/control, data or participants, primary measure, and one error/robustness analysis. Ask what result would disprove your idea.</p></div>
+<div class="tile"><h3>50–60 min · Peer reviewer</h3><p>Exchange pitches. Partner asks: “What is new? Why care? Is this a fair test? What else could explain the result?” Revise one weakness.</p></div>
+</div><div class="dark-callout"><b>Submit:</b> One page with problem, research question, closest papers, gap, contribution, decisive experiment, analysis, and biggest risk.</div>
+</section>
+<section class="slide" aria-label="Slide 15">
+<div class="eyebrow">15 · Workshop worksheet</div><h2>Fill in your one-page research pitch</h2>
+<table><tr><th>Prompt</th><th>Your answer</th></tr>
+<tr><td>1. I noticed this problem or surprising behavior...</td><td>________________________</td></tr>
+<tr><td>2. My research question is...</td><td>________________________</td></tr>
+<tr><td>3. Closest papers and what they already show...</td><td>________________________</td></tr>
+<tr><td>4. What remains unknown, and why it matters...</td><td>________________________</td></tr>
+<tr><td>5. My possible contribution is...</td><td>________________________</td></tr>
+<tr><td>6. The fairest comparison/control would be...</td><td>________________________</td></tr>
+<tr><td>7. I would measure... and analyze failures by...</td><td>________________________</td></tr>
+<tr><td>8. One result that would challenge my hypothesis...</td><td>________________________</td></tr></table>
+<div class="callout"><b>Important:</b> If you cannot find papers during the session, use known work and label your novelty claim <i>unverified</i>. Do not claim to be first without evidence.</div>
+</section>
+<section class="slide" aria-label="Slide 16">
+<div class="eyebrow">16 · Alternative mini-workshops</div><h2>Other one-hour exercises for later lab meetings</h2>
+<div class="tiles">
+<div class="tile"><h3>Workshop A · Novelty detective</h3><p><b>10 min</b> read abstracts of 3 papers; <b>20 min</b> make a comparison matrix; <b>15 min</b> write a gap claim; <b>15 min</b> peer challenge. <b>Output:</b> novelty statement with evidence and uncertainty.</p></div>
+<div class="tile"><h3>Workshop B · Fix the bad study</h3><p><b>10 min</b> inspect a flawed study; <b>20 min</b> identify confounds, metrics, and baseline problems; <b>20 min</b> redesign; <b>10 min</b> defend. <b>Output:</b> corrected study plan.</p></div>
+<div class="tile"><h3>Workshop C · Reviewer for a day</h3><p><b>15 min</b> read a short research pitch; <b>15 min</b> list novelty and validity concerns; <b>20 min</b> propose decisive analyses; <b>10 min</b> give actionable feedback. <b>Output:</b> review with top three fixes.</p></div>
+</div><div class="callout"><b>Recommended first session:</b> Run the Research Idea Clinic (previous two slides). Use these alternatives for follow-up lab meetings.</div>
+</section>
   </div>
   <div class="deck-controls">
     <button type="button" id="prev-slide" disabled>← Previous</button>
