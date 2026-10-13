@@ -529,7 +529,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 50px 0;
+  padding: 40px 0;
   overflow: hidden;
 }
 
@@ -539,14 +539,14 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   padding-bottom: 0;
   color: #124265;
 }
