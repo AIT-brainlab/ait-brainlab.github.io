@@ -1,121 +1,1734 @@
 {{ define "main" }}
 
 <main id="main">
-<!-- ======= Breadcrumbs ======= -->
-<section class="breadcrumbs">
-<div class="container">
-<h2>{{ .Title }}</h2>
-</div>
-</section><!-- End Breadcrumbs -->
-<!-- ======= Portfolio Details Section ======= -->
-<section class="portfolio-details" id="portfolio-details">
-<div class="container research-handbook">
-<style>
-.research-handbook{--ink:#172b46;--accent:#16718b;--soft:#edf5f8;color:var(--ink);font-size:16px;line-height:1.65}
-.research-handbook *{box-sizing:border-box}
-.research-handbook .deck{max-width:1050px;margin:1rem auto 2rem;background:#f7fafc;border:1px solid #dce7ee;border-radius:20px;overflow:hidden;box-shadow:0 12px 36px #17334b12}
-.research-handbook .deck-top{padding:1rem 1.4rem;background:#102d47;color:#fff;display:flex;justify-content:space-between;gap:1rem;align-items:center}
-.research-handbook .deck-top small{opacity:.8}
-.research-handbook .progress{height:5px;background:#dbe7ed}
-.research-handbook .progress span{display:block;height:100%;width:0;background:#43c6b7;transition:width .2s}
-.research-handbook .slides{padding:clamp(1.2rem,4vw,3rem);min-height:510px}
-.research-handbook .slide{display:none;animation:fadein .18s ease}
-.research-handbook .slide.active{display:block}
-.research-handbook .eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--accent)}
-.research-handbook .slide h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.12;margin:.35rem 0 1rem;color:var(--ink);font-weight:850}
-.research-handbook .slide h3{font-size:1.18rem;margin:1.3rem 0 .45rem;padding:0}
-.research-handbook .lead{font-size:1.15rem;max-width:820px;color:#3f566d}
-.research-handbook .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:1.4rem 0}
-.research-handbook .tile{background:#fff;border:1px solid #d8e5ec;border-radius:14px;padding:1.05rem}
-.research-handbook .tile h3{margin:.1rem 0 .45rem;font-size:1.05rem}
-.research-handbook .tag{display:inline-block;padding:.15rem .55rem;border-radius:99px;font-size:.78rem;font-weight:800;margin-bottom:.4rem}
-.research-handbook .good{background:#d8f3e8;color:#17634b}.research-handbook .bad{background:#ffe4df;color:#8e342b}.research-handbook .review{background:#ffefc9;color:#795400}
-.research-handbook .callout{padding:1rem 1.2rem;background:#e9f4f8;border-left:4px solid var(--accent);border-radius:0 12px 12px 0;margin:1.2rem 0}
-.research-handbook .dark-callout{padding:1.1rem 1.3rem;background:#102d47;color:white;border-radius:14px;margin:1.2rem 0}
-.research-handbook .deck-controls{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.4rem;border-top:1px solid #dce7ee;background:#fff}
-.research-handbook .deck-controls button{border:0;border-radius:10px;padding:.75rem 1.1rem;font-weight:750;cursor:pointer;background:#16718b;color:#fff}
-.research-handbook .deck-controls .reveal-all{background:#e8f2f5;color:#16435b}
-.research-handbook .reveal-slide .tile,.research-handbook .reveal-slide .mini-flow span{transition:opacity .25s ease,transform .25s ease}
-.research-handbook .reveal-slide .hidden-step{display:none}
-.research-handbook .title-slide{padding:3rem 0}.research-handbook .title-slide h2{font-size:clamp(2.5rem,6vw,4.4rem)}.research-handbook .title-slide .author{font-size:1.4rem;font-weight:700;color:#16718b}
-@media(prefers-reduced-motion:reduce){.research-handbook .slide,.research-handbook .reveal-slide .tile{animation:none;transition:none}}
-.research-handbook .deck-controls button:disabled{opacity:.35;cursor:not-allowed}
-.research-handbook .dots{display:flex;gap:5px;justify-content:center;flex-wrap:wrap}
-.research-handbook .dots button{width:9px;height:9px;padding:0;border-radius:50%;background:#c8d7e0;min-width:0}
-.research-handbook .dots button[aria-current=true]{background:#16718b;transform:scale(1.25)}
-.research-handbook .slide table{width:100%;border-collapse:collapse;margin:1rem 0;background:white}
-.research-handbook .slide th,.research-handbook .slide td{border:1px solid #d9e5eb;padding:.7rem;text-align:left;vertical-align:top}
-.research-handbook .slide th{background:#e7f2f7}
-.research-handbook .mini-flow{display:flex;gap:8px;flex-wrap:wrap;align-items:stretch;margin:1.2rem 0}
-.research-handbook .mini-flow span{flex:1;min-width:130px;background:#e5f2f6;border-radius:10px;padding:.8rem;text-align:center;font-weight:750}
-.research-handbook .mini-flow b{align-self:center;color:#5c7b8d}
-.research-handbook .deck a{color:#08749a;text-decoration:underline}
-.research-handbook .deck-top a{color:#fff}
-@keyframes fadein{from{opacity:.45;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:600px){.research-handbook .slides{min-height:0}.research-handbook .deck-top{align-items:flex-start;flex-direction:column}.research-handbook .deck-controls{padding:.8rem;flex-wrap:wrap}.research-handbook .deck-controls button{padding:.65rem .8rem}}
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <h2>{{ .Title }}</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section class="portfolio-details" id="portfolio-details">
+        <div class="container research-handbook">
+            <style>
+                .research-handbook {
+                    --ink: #172b46;
+                    --accent: #16718b;
+                    --soft: #edf5f8;
+                    color: var(--ink);
+                    font-size: 16px;
+                    line-height: 1.65
+                }
 
-.research-handbook .slide{animation:none!important}.research-handbook .bloom{display:flex;flex-direction:column;align-items:center;gap:5px;margin:1.5rem auto;max-width:760px}.research-handbook .bloom-row{padding:.6rem 1rem;text-align:center;border:1px solid #b8d4df;border-radius:8px;background:#eaf3f7;display:flex;flex-direction:column;line-height:1.35}.research-handbook .bloom-row small{font-size:.8rem}.research-handbook .bloom-row:nth-child(1){width:42%}.research-handbook .bloom-row:nth-child(2){width:53%}.research-handbook .bloom-row:nth-child(3){width:64%}.research-handbook .bloom-row:nth-child(4){width:76%}.research-handbook .bloom-row:nth-child(5){width:88%}.research-handbook .bloom-row:nth-child(6){width:100%}.research-handbook .bloom-row.wisdom{background:#d7eee8}.research-handbook .bloom-row.knowledge{background:#deebf5}.research-handbook .bloom-row.information{background:#f1f3f5}@media(max-width:600px){.research-handbook .bloom-row{width:100%!important}.research-handbook .slide table{display:block;overflow-x:auto}}
-.research-handbook .slide,.research-handbook .slide *{animation:none!important;transition:none!important}.research-handbook .table-scroll{overflow-x:auto}.research-handbook .table-scroll table{min-width:580px}
+                .research-handbook * {
+                    box-sizing: border-box
+                }
 
-.slide:has(.eyebrow:first-child) {}
-</style>
-<div class="deck" id="research-deck">
-<div class="deck-top">
-<div><strong>From Research Idea to Top-Tier Publication</strong><br/><small>A practical, self-paced guide for CHI · ACL · NeurIPS</small></div>
-<div aria-live="polite" id="slide-count">Slide 1</div>
-</div>
-<div class="progress"><span id="slide-progress"></span></div>
-<div class="slides">
-<section class="slide"><div class="eyebrow">WELCOME</div><h2>Ultimate Guide to Your Research Success</h2><p class="author">By Chaklam</p><p class="lead">Research is not just building an application. It is asking a meaningful question, finding convincing evidence, and contributing knowledge that <b>other people</b> find useful.</p><div class="callout"><b>The research test:</b> What new understanding will other researchers, designers, or practitioners gain from your paper—and why would it matter to them?</div></section><section class="slide"><div class="eyebrow">HOW TO THINK</div><h2>From information to wisdom: Bloom’s pyramid</h2><p>Research is difficult because we must move beyond describing facts to explaining them, judging evidence, and creating useful new knowledge.</p><div class="bloom"><div class="bloom-row wisdom"><b>Create</b><small>Wisdom</small></div><div class="bloom-row wisdom"><b>Evaluate</b><small>Wisdom</small></div><div class="bloom-row knowledge"><b>Analyze</b><small>Knowledge</small></div><div class="bloom-row knowledge"><b>Apply</b><small>Knowledge</small></div><div class="bloom-row information"><b>Understand</b><small>Information</small></div><div class="bloom-row information"><b>Remember</b><small>Information</small></div></div></section><section class="slide"><div class="eyebrow">HOW TO THINK</div><h2>Six levels of thinking — same topic, deeper questions</h2><p>Follow each column downward: the question becomes less about recalling facts and more about understanding causes and making better decisions.</p><div class="table-scroll"><table><tr><th>Bloom</th><th>Personal life: selling more sushi</th><th>AI that helps people manage emotions</th><th>AI-simulated humans in research</th></tr>
-<tr><td><b>Remember</b><br/>Information</td><td>How many sushi boxes did I sell last week?</td><td>What emotions do people report when using an AI support chatbot?</td><td>What answers do AI-generated survey participants give?</td></tr>
-<tr><td><b>Understand</b><br/>Information</td><td>Which sushi sells most, and at what times?</td><td>How does the chatbot respond when users say they feel sad, angry, or anxious?</td><td>How similar are those answers to responses from real people?</td></tr>
-<tr><td><b>Apply</b><br/>Knowledge</td><td>Can I use sales patterns to adjust how much sushi I prepare each day?</td><td>Can I apply established emotion-regulation strategies to the chatbot's responses?</td><td>Can I use AI-generated responses to test a survey before giving it to real participants?</td></tr>
-<tr><td><b>Analyze</b><br/>Knowledge</td><td>Why do some customers buy once but not return: price, taste, freshness, or variety?</td><td>Why does the same AI response calm one person but upset another?</td><td>On which questions, groups, or situations do AI-generated answers differ most from real people's answers?</td></tr>
-<tr><td><b>Evaluate</b><br/>Wisdom</td><td>Which change actually increases repeat purchases without reducing quality or profit?</td><td>When should AI offer advice, ask a question, adapt its tone, or avoid intervening?</td><td>For which research questions can simulated answers be useful, and when must we ask real people?</td></tr>
-<tr><td><b>Create</b><br/>Wisdom</td><td>How can I design and test a sushi experience that makes customers return regularly without relying on discounts?</td><td>How can we design and evaluate AI support that adapts to a person's <b>emotions, values, and culture</b> to help them regulate emotions appropriately?</td><td>How can we design a research method that uses AI simulations for early exploration but checks important findings with real participants?</td></tr></table></div></section><section class="slide"><div class="eyebrow">THINKING TOOLS</div><h2>Thinking tools</h2><p class="lead"><b>Original question:</b> “Can an AI chatbot help students cope with stress?”</p><div class="table-scroll"><table><tr><th>Thinking tool</th><th>How the question changes</th><th>Why it helps</th></tr><tr><td>Challenge assumptions</td><td>Can chatbot advice sometimes increase stress instead of reducing it?</td><td>Challenges the belief that more AI help is always better.</td></tr><tr><td>First principles</td><td>What do stressed students actually need before we decide to use a chatbot?</td><td>Starts from the human need, not the technology.</td></tr><tr><td>Systems thinking</td><td>How do deadlines, sleep, friends, and chatbot use affect stress together?</td><td>Looks at interacting causes.</td></tr><tr><td>Second-order thinking</td><td>If students rely on a chatbot for months, does their ability to cope independently change?</td><td>Investigates longer-term effects.</td></tr><tr><td>Inversion</td><td>When might a chatbot make a stressed student feel worse?</td><td>Identifies risks and failure conditions.</td></tr><tr><td>Root-cause analysis</td><td>Is the main problem a lack of advice, or an overwhelming workload?</td><td>Investigates the underlying cause.</td></tr><tr><td>Thinking by analogy</td><td>What can chatbot designers learn from how peer-support groups listen?</td><td>Transfers ideas from another domain.</td></tr><tr><td>Compare alternatives</td><td>When is a chatbot more useful than journaling or talking with a friend?</td><td>Defines a meaningful comparison.</td></tr><tr><td><b>Stakeholder perspectives</b></td><td>Would students, counselors, and instructors define “helpful” in the same way?</td><td>Reveals competing needs and evaluation criteria.</td></tr></table></div><p class="callout" style="text-align:center"><b>Thinking tools ↑</b> help us climb toward deeper questions and wiser judgment.</p></section><section class="slide exercise-slide"><div class="eyebrow">EXERCISE · THINKING</div><h2>Try reframing a weak question</h2><p><b>Original:</b> “Can AI help students choose a career?”</p><p>Pick eight thinking tools. Rewrite the original question in eight different ways.</p><div class="table-scroll"><table><tr><th>Thinking tool</th><th>Your stronger question</th></tr><tr><td>________________________</td><td>___________________________________________________</td></tr><tr><td>________________________</td><td>___________________________________________________</td></tr><tr><td>________________________</td><td>___________________________________________________</td></tr><tr><td>________________________</td><td>___________________________________________________</td></tr><tr><td>________________________</td><td>___________________________________________________</td></tr><tr><td>________________________</td><td>___________________________________________________</td></tr><tr><td>________________________</td><td>___________________________________________________</td></tr><tr><td>________________________</td><td>___________________________________________________</td></tr></table></div><p>Spend 6 minutes; compare with the answer slide.</p></section><section class="slide"><div class="eyebrow">POSSIBLE ANSWERS</div><h2>How thinking tools improve the career question</h2><p><b>Original question:</b> Can AI help students choose a career?</p><div class="table-scroll"><table><tr><th>Thinking tool</th><th>How the question changes</th><th>Why it helps</th></tr>
-<tr><td>Challenge assumptions</td><td>Could confident AI recommendations stop students from exploring careers they might enjoy?</td><td>Tests whether more guidance is always beneficial.</td></tr>
-<tr><td>First principles</td><td>Do students need a job recommendation, or a better understanding of their interests and values?</td><td>Starts with the underlying need.</td></tr>
-<tr><td>Systems thinking</td><td>How do family expectations, financial pressure, grades, and AI recommendations jointly shape choices?</td><td>Looks at interacting influences.</td></tr>
-<tr><td>Second-order thinking</td><td>After using AI career advice repeatedly, do students become more or less confident deciding independently?</td><td>Examines longer-term consequences.</td></tr>
-<tr><td>Inversion</td><td>When might AI career guidance lead students to regret a choice?</td><td>Finds failure conditions.</td></tr>
-<tr><td>Root-cause analysis</td><td>Is career uncertainty caused by missing information or by conflicting personal goals?</td><td>Investigates the underlying cause.</td></tr>
-<tr><td>Thinking by analogy</td><td>Could AI borrow the questioning approach used by good career counselors rather than giving instant answers?</td><td>Transfers a useful approach.</td></tr>
-<tr><td>Compare alternatives</td><td>Do students make better decisions with AI recommendations, self-reflection questions, or human counseling?</td><td>Identifies meaningful baselines.</td></tr>
-<tr><td>Stakeholder perspectives</td><td>Do students, parents, and career counselors disagree about what makes a career choice successful?</td><td>Reveals different definitions of success.</td></tr></table></div></section><section class="slide"><div class="eyebrow">SECTION</div><h2>Novelty</h2><p class="lead">New to the field. Interesting to others. Important enough to investigate.</p></section><section class="slide"><div class="eyebrow">NOVELTY</div><h2>Novelty is judged by the research community</h2><p><b>Novelty is not about what feels new to you.</b> Other researchers decide whether your idea is <b>new</b> relative to published work, <b>interesting</b> to the field, and <b>important</b> enough to change understanding or practice. The only credible starting point is to <b>read closely related papers</b>.</p><div class="table-scroll"><table><tr><th>Idea</th><th>Novel?</th><th>Why?</th></tr><tr><td>First stress chatbot at my university</td><td>No</td><td>A new location alone teaches little beyond prior work.</td></tr><tr><td>Use a newer LLM for emotion support</td><td>No</td><td>A model swap alone is not a research insight.</td></tr><tr><td>Discover when AI advice makes people feel less in control</td><td>Potentially</td><td>A meaningful effect, if not already established.</td></tr><tr><td>Generate 10,000 simulated survey respondents</td><td>No</td><td>More simulated responses alone do not establish validity.</td></tr><tr><td>Identify which questions AI-simulated people answer differently from real people</td><td>Potentially</td><td>Could show when simulations should not be trusted.</td></tr><tr><td>Change a dashboard's color</td><td>No</td><td>Appearance alone rarely yields new understanding.</td></tr><tr><td>Find when AI reminders help beginners but distract experienced students</td><td>Potentially</td><td>Could reveal an important boundary condition.</td></tr></table></div></section><section class="slide exercise-slide"><div class="eyebrow">EXERCISE · NOVELTY</div><h2>Eight ideas: novel or not?</h2><p>For each, choose <b>No</b> or <b>Potentially</b>. Ask whether other researchers would find it new, interesting, and important. Confirming novelty still requires reading papers.</p><div class="table-scroll"><table><tr><th>Idea</th><th>Your judgment</th></tr><tr><td>A. Translate an existing chatbot into Thai without studying new issues.</td><td>________________</td></tr><tr><td>B. Investigate whether emotion classifiers miss indirect expressions of sadness in Thai.</td><td>________________</td></tr><tr><td>C. Add emojis to an AI habit coach.</td><td>________________</td></tr><tr><td>D. Test when simulated people disagree with real people about the same product.</td><td>________________</td></tr><tr><td>E. Replace a model with a newer one and report higher accuracy.</td><td>________________</td></tr><tr><td>F. Show that an AI coach helps some users but undermines confidence in others.</td><td>________________</td></tr><tr><td>G. Add voice input to an existing journaling app.</td><td>________________</td></tr><tr><td>H. Identify when voice input changes what people are willing to disclose about their emotions.</td><td>________________</td></tr></table></div></section><section class="slide"><div class="eyebrow">SECTION</div><h2>Related work</h2><p class="lead">Find out what is known, what is disputed, and what is still unanswered.</p></section><section class="slide"><div class="eyebrow">RELATED WORK</div><h2>Synthesize related work — not a shopping list</h2><p><b>Shared topic:</b> Can AI conversations offer useful emotional support? These are <b>real ACL papers</b>; read across rows to see how the research question evolves.</p><div class="table-scroll"><table><tr><th>Study</th><th>Research question</th><th>Method / evidence</th><th>What it adds</th><th>What we still need to know</th></tr><tr><td><a href="https://aclanthology.org/P19-1534/">A · Rashkin et al. (ACL 2019)</a></td><td>Can models produce responses that people perceive as empathetic?</td><td>EmpatheticDialogues dataset and human evaluation.</td><td>Models trained with the dataset were rated more empathetic than a comparison trained on broad internet dialogue.</td><td>Does sounding empathetic mean providing useful support?</td></tr><tr><td><a href="https://aclanthology.org/2021.acl-long.269/">B · Liu et al. (ACL 2021)</a></td><td>How can systems learn different emotional-support strategies?</td><td>ESConv conversations with support-strategy annotations and model evaluations.</td><td>Shows why support strategies matter for emotional-support dialogue.</td><td>Which strategy should be used in which situation?</td></tr><tr><td><a href="https://aclanthology.org/2022.acl-long.25/">C · Tu et al. (ACL 2022)</a></td><td>Can finer-grained emotion modeling and mixed strategies improve support responses?</td><td>MISC model and evaluation on ESConv.</td><td>Reports benefits of modeling changing emotion and mixing strategies.</td><td>Do these improvements lead to better outcomes for real users over time?</td></tr><tr><td><b>Next study?</b></td><td>________________</td><td>________________</td><td>________________</td><td>________________</td></tr></table></div></section><section class="slide exercise-slide"><div class="eyebrow">EXERCISE · RELATED WORK</div><h2>Find a gap from three related papers</h2>
-<p><b>Simple question:</b> Can AI give people helpful emotional support? Compare what these real papers actually test.</p>
-<div class="table-scroll"><table><tr><th>Paper</th><th>What did they study?</th><th>What did they not establish?</th></tr>
-<tr><td><a href="https://aclanthology.org/P19-1534/">A · Rashkin et al. (2019)</a></td><td>Can chatbots reply in ways that sound understanding?</td><td>Whether users feel better afterward.</td></tr>
-<tr><td><a href="https://aclanthology.org/2021.acl-long.269/">B · Liu et al. (2021)</a></td><td>Can AI learn different ways of offering emotional support?</td><td>Which approach helps which person in real life.</td></tr>
-<tr><td><a href="https://aclanthology.org/2022.acl-long.25/">C · Tu et al. (2022)</a></td><td>Can AI improve supportive replies by tracking emotions and combining strategies?</td><td>Whether better replies lead to lasting benefits for users.</td></tr>
-<tr><td style="background:#e5f2ff"><b style="color:#0b5b9c">Proposed study: culture × values × humor</b></td><td style="background:#e5f2ff"><b style="color:#0b5b9c">When does humor help or hurt emotional support from AI across cultures, and does matching a person’s values change the outcome?</b></td><td style="background:#e5f2ff"><b style="color:#9b2431">Compare culturally adapted / generic responses, with and without humor; measure feeling understood, offense, and willingness to continue. Check whether differences depend on personal values.</b></td></tr></table></div>
-<p class="callout"><b>Why this is more interesting:</b> Earlier work builds empathetic replies and support strategies. Our question asks <b>when the same joke comforts one person but offends another</b>, depending on culture and personal values. <b>Candidate idea, not verified novelty:</b> search newer humor, culture, and personalization papers before claiming a gap.</p></section><section class="slide"><div class="eyebrow">SECTION</div><h2>Methodology &amp; evidence</h2><p class="lead">Make the question testable and the evidence trustworthy.</p></section><section class="slide"><div class="eyebrow">METHODOLOGY</div><h2>What makes a good methodology?</h2><p><b>Example question:</b> Do reflective AI prompts help students regulate emotions better than direct AI advice?</p><div class="table-scroll"><table><thead><tr><th>Component</th><th>What to specify</th></tr></thead><tbody><tr><td>Independent variable (IV)</td><td>Type of AI response: reflective questions vs direct advice.</td></tr><tr><td>Dependent variable (DV)</td><td>Emotion-regulation outcome, e.g., validated self-report measure, plus appropriate behavioral outcomes.</td></tr><tr><td>Confounding variables</td><td>Baseline distress, prior AI use, expectations, participant characteristics.</td></tr><tr><td>Controls and comparison</td><td>Same tasks, duration, interface, and access; suitable non-AI or alternative-AI baseline.</td></tr><tr><td>Randomization</td><td>How participants are assigned; order counterbalancing if using both conditions.</td></tr><tr><td>Participants / datasets</td><td>Who is eligible, sample-size rationale, language, recruitment, and exclusion criteria.</td></tr><tr><td>Tasks and procedures</td><td>Exactly what participants see/do, timing, consent, ethics, and safeguards.</td></tr><tr><td>Analysis methods</td><td>Statistical comparisons and uncertainty; qualitative themes; error categories; subgroup patterns.</td></tr><tr><td>Reproducibility</td><td>Materials, prompts, versions, scripts, coding rules, and limitations.</td></tr><tr><td>Venue fit</td><td>CHI: human behavior, design, and experience. ACL: language phenomena, baselines, error and linguistic analysis.</td></tr></tbody></table></div><h3>Which analyses answer which questions?</h3><div class="table-scroll"><table><thead><tr><th>Analysis</th><th>Purpose</th></tr></thead><tbody><tr><td>Comparison / baseline</td><td>Is it better than a fair alternative?</td></tr><tr><td>Ablation</td><td>Which component causes the improvement?</td></tr><tr><td>Error analysis</td><td>Where and why does it fail?</td></tr><tr><td>Linguistic analysis</td><td>Do negation, sarcasm, or phrasing affect results?</td></tr><tr><td>Robustness</td><td>Does it hold across people, prompts, or datasets?</td></tr><tr><td>Qualitative analysis</td><td>What do users experience, and why?</td></tr></tbody></table></div></section><section class="slide"><div class="eyebrow">CONTRIBUTIONS</div><h2>Different research contributions need different evidence</h2><p class="lead">Before choosing a method, ask: <b>What new knowledge will others gain?</b> Not every study needs an IV, DV, or random assignment.</p><div class="table-scroll"><table><thead><tr><th>Contribution</th><th>What others learn</th><th>Example</th><th>Suitable evidence</th><th>When do IV / DV help?</th></tr></thead><tbody>
-<tr><td><b>Controlled experiment</b></td><td>Whether a change causes a difference</td><td>Do supportive AI replies make students feel more understood than neutral replies?</td><td>Groups, measured outcomes, fair comparison, statistics</td><td>Yes for a causal experiment: IV = what changes; DV = what you measure.</td></tr>
-<tr><td><b>Design contribution</b></td><td>How to design better systems, and why</td><td>Design an AI tool that helps people name emotions while keeping control of decisions</td><td>Design theory, prototype, user feedback, design lessons</td><td>Not automatically. Add a comparison experiment if you want to claim the design or framework causes an improvement.</td></tr>
-<tr><td><b>Algorithm / method</b></td><td>A better way to solve a technical problem</td><td>Detect emotionally harmful chatbot responses</td><td>Strong baselines, ablation, errors, robustness</td><td>Often useful: IV = new method vs baseline or with/without a component; DV = accuracy, speed, cost, or safety score. Human participants are not always needed.</td></tr>
-<tr><td><b>Dataset / benchmark</b></td><td>A reliable resource for future research</td><td>A dataset of how people express frustration in different cultures</td><td>Sampling, labeling quality, coverage, documentation</td><td>Not needed to collect and validate a dataset. Useful in a downstream experiment: IV = train with vs without the new dataset; DV = model accuracy or another score.</td></tr>
-<tr><td><b>Qualitative insight</b></td><td>How people experience a phenomenon</td><td>Why students avoid using mental-health apps</td><td>Interviews, systematic coding, themes, supporting quotes</td><td>Not automatically. Add a comparison experiment if you want to claim the design or framework causes an improvement.</td></tr>
-<tr><td><b>Conceptual framework</b></td><td>A new way to explain or organize a problem</td><td>A framework of when AI support helps or undermines autonomy</td><td>Grounding in literature, coherent reasoning, empirical illustration where appropriate</td><td>Not automatically. Add a comparison experiment if you want to claim the design or framework causes an improvement.</td></tr>
-</tbody></table></div><p><b>Rule:</b> A methodology is good when it produces convincing evidence for <em>that kind</em> of contribution.</p><p class="callout"><b>Dataset example:</b> Making a culturally diverse emotion dataset requires good sampling and reliable labels. To <em>test its usefulness</em>, train the same model with and without that dataset (IV), then compare performance on a held-out test set (DV). Both kinds of evidence matter, but they answer different questions.</p></section>
-<section class="slide"><div class="eyebrow">REAL DESIGN PAPER · CHI 2006 EXTENDED ABSTRACT</div><h2>Affective Diary: designing for emotional reflection</h2><p class="lead"><b>Real paper:</b> Lindström et al. (2006), <a href="https://doi.org/10.1145/1125451.1125649" target="_blank">Affective Diary: Designing for Bodily Expressiveness and Self-Reflection</a>.</p><p>Instead of telling people what they feel, the researchers designed a diary that lets people <b>interpret their own experiences</b> through colors, body shapes, and memories from their phone.</p><div class="table-scroll"><table><tr><th>Methodology component</th><th>What the researchers actually did</th></tr><tr><td>Research goal</td><td>Explore how a digital diary can support reflection on feelings and bodily experiences.</td></tr><tr><td>Design idea / theory</td><td>Use <b>ambiguity as a design resource</b>: show suggestive shapes rather than claim to know a person's emotion.</td></tr><tr><td>Participants</td><td><b>12 people</b> in early cultural probes: 4 teenagers, 3 dance students, and 5 older adults.</td></tr><tr><td>Design process</td><td>Ask people to record personal experiences; use their materials to inspire designs; sketch three concepts; build a working prototype.</td></tr><tr><td>Artifact</td><td>A diary combining body-sensor readings with photos and messages, displayed as editable abstract body shapes and colors.</td></tr><tr><td>Evaluation / evidence</td><td>Cultural probes, participant feedback and participatory design; the team also wore sensors and kept diaries for 24 hours to explore the experience.</td></tr><tr><td>IV / DV / random assignment</td><td><b>Not central here.</b> This is exploratory design research, not a randomized test of whether the diary improves mental health.</td></tr><tr><td>Contribution to other researchers</td><td>A concrete design example of how ambiguous, editable representations can invite personal interpretation and reflection.</td></tr><tr><td>Limitation</td><td>Early prototype and exploratory feedback; does <b>not</b> establish long-term emotion-regulation benefits.</td></tr></table></div><p><small><b>Lesson:</b> A design contribution can be rigorous by explaining the design choices, process, evidence, and transferable lessons—even without an experimental IV or DV. This is a CHI <b>extended abstract</b>, not a CHI full paper.</small></p></section><section class="slide"><div class="eyebrow">WORKED EXAMPLE · CONTROLLED EXPERIMENT</div><h2>Does culturally matched humor help?</h2><p class="lead">We want to know whether a change in the AI reply <b>causes</b> people to feel more understood.</p><div class="table-scroll"><table><tr><th>Component</th><th>Concrete example</th></tr><tr><td>Research question</td><td>Does culturally appropriate humor help users feel supported, or can it backfire?</td></tr><tr><td>IV</td><td>Reply style: no humor / generic humor / culturally adapted humor.</td></tr><tr><td>DV</td><td>Feeling understood (1–7), perceived offense (1–7), and willingness to continue.</td></tr><tr><td>Participants</td><td>Recruit participants from relevant cultural groups; measure personal values rather than guessing them.</td></tr><tr><td>Controls</td><td>Same stressful scenario, model, interface, approximate reply length, and task.</td></tr><tr><td>Randomization</td><td>Randomly assign reply condition; counterbalance order if each person sees several replies.</td></tr><tr><td>Confounders</td><td>Humor preference, baseline distress, language fluency, and prior AI experience.</td></tr><tr><td>Analysis</td><td>Compare group scores; examine culture × humor interactions and cases where jokes offend.</td></tr><tr><td>Contribution</td><td>Evidence about <b>when</b> humor helps, for whom, and why it can fail.</td></tr></table></div><p><small>Hypothetical study design—not a published result. Use ethical safeguards when discussing distress.</small></p></section><section class="slide"><div class="eyebrow">WORKED EXAMPLE · ALGORITHM &amp; DATASET</div><h2>A new dataset or algorithm: what must we test?</h2><div class="table-scroll"><table><tr><th>Component</th><th>New dataset</th><th>New algorithm</th></tr><tr><td>Research question</td><td>Can we represent culturally different ways of expressing distress?</td><td>Can a model better recognize indirect distress?</td></tr><tr><td>What is new?</td><td>Carefully sampled, annotated cross-cultural examples.</td><td>A method combining context and cultural cues.</td></tr><tr><td>IV in comparison</td><td>Training with vs without the new dataset.</td><td>New method vs strong baselines; with vs without each module.</td></tr><tr><td>DV in comparison</td><td>Performance on a separate, held-out test set.</td><td>Precision/recall/F1, robustness, cost, and fairness gaps.</td></tr><tr><td>Quality checks</td><td>Label agreement, consent, coverage, leakage checks.</td><td>Fair training setup, baselines, hyperparameters.</td></tr><tr><td>Analysis</td><td>Where does the dataset improve or hurt performance?</td><td>Ablation, error, linguistic, cross-group and robustness analysis.</td></tr><tr><td>Contribution</td><td>A reusable resource <b>plus evidence of its quality and usefulness</b>.</td><td>A repeatable method <b>plus evidence of when and why it works</b>.</td></tr></table></div><p class="callout"><b>Key distinction:</b> A dataset does not need an IV to exist. But an experiment testing whether that dataset improves a model <b>does</b> have an IV and DV.</p></section><section class="slide"><div class="eyebrow">REAL PAPER · CUI 2026</div><h2>Empathetic prompts: a comparison study</h2><p><a href="https://doi.org/10.1145/3816046.3816221">Read the original CUI paper</a>. Below is a <b>teaching-level summary</b>; consult its Methods section for exact instruments and assignment details.</p><div class="table-scroll"><table><tr><th>Methodology component</th><th>What it means in this study</th></tr><tr><td>Research question</td><td>Do instructions telling a chatbot to be empathetic change the user experience?</td></tr><tr><td>IV (what changes)</td><td>Chatbot response instruction: empathy-focused vs neutral.</td></tr><tr><td>DV (what is measured)</td><td>Participant-reported experience, including perceived empathy / emotional response.</td></tr><tr><td>Participants</td><td>People interacting with the chatbot; check the paper for exact sample and recruitment.</td></tr><tr><td>Baseline / control</td><td>Chatbot without the empathy-focused instruction.</td></tr><tr><td>Assignment</td><td>Alternating assignment reported; not equivalent to fully random assignment.</td></tr><tr><td>Procedure</td><td>Interact with assigned chatbot, then answer user-experience questions.</td></tr><tr><td>Possible confounders (our analysis)</td><td>Starting anxiety, chatbot familiarity, individual expectations, response differences beyond empathy.</td></tr><tr><td>Analysis</td><td>Compare reported ratings across conditions; interpret uncertainty.</td></tr><tr><td>Finding / limitation</td><td>Reported results were statistically inconclusive; do not claim the empathetic prompt improved outcomes.</td></tr><tr><td>Reproducibility</td><td>Record prompts, model/version, participant tasks, scales, assignment, and analysis.</td></tr></table></div></section><section class="slide"><div class="eyebrow">REAL PAPER · CoNLL 2026</div><h2>Human vs AI empathy: a rating experiment</h2><p><a href="https://aclanthology.org/2026.conll-main.21/">Read the original CoNLL paper</a>. This is a <b>comparison of responses</b>, not a trial of therapy or long-term mental health.</p><div class="table-scroll"><table><tr><th>Methodology component</th><th>What it means in this study</th></tr><tr><td>Research question</td><td>Are AI-generated replies judged as empathetic as human-written replies?</td></tr><tr><td>IV (what changes)</td><td>Source of the reply: human writer versus language-model systems.</td></tr><tr><td>DV (what is measured)</td><td>Human empathy judgments of replies.</td></tr><tr><td>Dataset / evaluators</td><td>Dialogue prompts and human evaluators (reported study scale: 2,000 prompts and 1,000 evaluators).</td></tr><tr><td>Baseline / control</td><td>Human-written replies serve as an important comparison.</td></tr><tr><td>Assignment / blinding</td><td>Check the full paper for how replies were shown, ordered, and source labels handled; do not assume randomization.</td></tr><tr><td>Procedure</td><td>Generate or collect replies to emotional situations; ask people to judge their empathy.</td></tr><tr><td>Possible confounders (our analysis)</td><td>Reply length, topic, evaluator background, model familiarity, cultural interpretation.</td></tr><tr><td>Analysis</td><td>Compare empathy ratings across reply sources and emotional contexts.</td></tr><tr><td>Important limitation</td><td>A high empathy rating does not prove that a reply improves real-world emotional health.</td></tr><tr><td>Reproducibility</td><td>Publish or describe prompts, response sources, rating instructions, sampling, and analysis.</td></tr></table></div></section><section class="slide exercise-slide"><div class="eyebrow">EXERCISE · METHODOLOGY</div><h2>Design a new study inspired by an ACL paper</h2><p><b>Starting paper:</b> <a href="https://aclanthology.org/P19-1534/">EmpatheticDialogues (ACL 2019)</a>. Now design a <b>new</b> study: “Do students feel more understood after an empathetic AI reply than after a neutral AI reply?”</p><p>Think about how to make a <b>fair comparison</b>. What could mislead you into thinking the AI is helping when it is not?</p><div class="table-scroll"><table><tr><th>Component</th><th>Your proposed study</th></tr><tr><td>Research question / hypothesis</td><td>____________________________________________</td></tr><tr><td>IV (what do you change?)</td><td>____________________________________________</td></tr><tr><td>DV (how do you measure the result?)</td><td>____________________________________________</td></tr><tr><td>Control (what stays equal?)</td><td>____________________________________________</td></tr><tr><td>Confounders (what else may affect the result?)</td><td>____________________________________________</td></tr><tr><td>Study design (same students see both replies, or different students see one? Why?)</td><td>____________________________________________</td></tr><tr><td>Procedure (what does each student actually do?)</td><td>____________________________________________</td></tr><tr><td>Analysis (how will you compare and explain results?)</td><td>____________________________________________</td></tr><tr><td>Limitations (what can you <em>not</em> conclude?)</td><td>____________________________________________</td></tr></table></div><p><b>Discuss:</b> If empathetic replies are longer, how would you know whether students preferred the empathy or simply the extra detail?</p></section><section class="slide"><div class="eyebrow">ANSWER KEY · METHODOLOGY</div><h2>One possible study design</h2><p class="lead">This is a <b>proposed follow-up experiment</b>, not a method or result reported by the ACL paper.</p><div class="table-scroll"><table><tr><th>Component</th><th>Example answer</th></tr><tr><td>Research question / hypothesis</td><td>Students will feel more understood after an empathetic reply than after a neutral reply.</td></tr><tr><td>IV</td><td>Reply style: <b>empathetic</b> versus <b>neutral</b>.</td></tr><tr><td>DV</td><td>Rating of “I felt understood” on a <b>1–7 scale</b>; optionally add perceived appropriateness and trust.</td></tr><tr><td>Control</td><td>Same stressful scenario, interface, reading time, and <b>similar reply length and information</b> so length does not explain the difference.</td></tr><tr><td>Confounders</td><td>Prior AI experience, stress level, language proficiency, cultural background, and whether the response matches the student's values. Measure relevant ones.</td></tr><tr><td>Study design</td><td>Use <b>random assignment to two groups</b> for a simple clean comparison. Alternatively, have each student see both styles in randomized order, using different but matched scenarios to reduce carryover.</td></tr><tr><td>Procedure</td><td>Consent → record relevant background → present stressful scenario → show assigned reply → collect rating and short written reason → debrief.</td></tr><tr><td>Analysis</td><td>Compare mean ratings and uncertainty across groups; check balance on background factors; read comments to understand <b>why</b> replies helped or failed.</td></tr><tr><td>Limitations</td><td>A higher “felt understood” rating does <b>not</b> prove lasting emotion regulation or better mental health.</td></tr></table></div><p><b>Important:</b> There is more than one defensible design. Explain the trade-offs instead of treating the answer key as the only solution.</p></section><section class="slide"><div class="eyebrow">SECTION</div><h2>Writing the paper</h2><p class="lead">Tell a coherent story: question → evidence → insight.</p></section><section class="slide"><div class="eyebrow">PAPER WRITING</div><h2>What belongs in each section?</h2><div class="table-scroll"><table><thead><tr><th>Section</th><th>What to write</th><th>Question to answer</th></tr></thead><tbody><tr><td>Introduction</td><td>Context, problem, gap, research question, approach, main findings, contributions.</td><td>Why should anyone care?</td></tr><tr><td>Related Work</td><td>Synthesize closest research; show agreement, disagreement, and gap.</td><td>What is known and missing?</td></tr><tr><td>Methodology</td><td>Participants/data, IV/DV, controls, procedures, models, evaluation and analysis methods.</td><td>Could others repeat and trust this study?</td></tr><tr><td>Results</td><td>Report observations, estimates, tables, uncertainty, and outcomes without overclaiming.</td><td>What happened?</td></tr><tr><td>Analysis / Discussion</td><td>Interpret mechanisms, errors, robustness, alternatives, implications and limitations.</td><td>Why did it happen and what does it mean?</td></tr><tr><td>Conclusion</td><td>Answer the question, state contributions and limits, identify next steps.</td><td>What should readers remember?</td></tr></tbody></table></div></section><section class="slide exercise-slide"><div class="eyebrow">EXERCISE · WRITING</div><h2>Write five sentences about emotion regulation—or your own topic</h2><p><b>Choose:</b> AI-supported emotion regulation <b>or your own research topic</b>. Fill the blanks for a proposed study; do not invent results.</p><div class="table-scroll"><table><thead><tr><th>Sentence</th><th>Your draft</th></tr></thead><tbody><tr><td>Background</td><td>Emotion regulation is ________.</td></tr><tr><td>Problem</td><td>However, existing AI tools ________, and it remains unclear ________.</td></tr><tr><td>Methodology</td><td>This paper proposes ________ and compares ________.</td></tr><tr><td>Key findings</td><td>If supported by the data, the key findings would be ________. (After running the study, replace this with actual results.)</td></tr><tr><td>Contribution</td><td>This paper contributes ________ to understanding when and why ________.</td></tr></tbody></table></div></section><section aria-label="Slide 13" class="slide">
-<div class="eyebrow">13 · Research resources</div><h2>Templates, examples, and lab resources</h2>
-<p class="lead">Keep these links handy for proposals, progress presentations, final reports, and submissions.</p>
-<div class="tiles">
-<div class="tile"><h3>Templates</h3><p><a href="https://docs.google.com/presentation/d/1SXN2LABIBYnTblk1nbCE1KA83xmR4tt-vUE26Lnl0-E/edit?usp=sharing" target="_blank">Thesis presentation template</a></p><p><a href="https://www.overleaf.com/read/zptzbhxkbvbn#3d83d4" target="_blank">Thesis LaTeX template</a></p><p><a href="https://languages.ait.ac.th/thesis-format-template/" target="_blank">AIT Language Center format</a></p></div>
-<div class="tile"><h3>Proposal examples</h3><p>Master’s: <a href="https://drive.google.com/file/d/1wTPXliTlkLRDIGVBgnxrgg4UUXvyyoCf/view?usp=sharing">Slides</a> · <a href="https://drive.google.com/file/d/19J4Zs12gfBOiCo-Bsn7vS4qhDoxubS1s/view?usp=sharing">Report</a></p><p>PhD: <a href="https://drive.google.com/file/d/1yrMHck1oMszKw_3QfqqtwqvZ8RC05n9P/view?usp=sharing">Slides</a> · <a href="https://drive.google.com/file/d/1Zqek9XC2Xeooz788K_mwIFxaGqZxdMec/view?usp=sharing">Report</a></p></div>
-<div class="tile"><h3>Completed work</h3><p>Research study: <a href="https://drive.google.com/file/d/1RHcmHshJDh_9PQnEUcUoEGM-mENOsIF0/view?usp=sharing">Master</a> · <a href="https://drive.google.com/file/d/1Rcbs5qKUJ9CR3W_1Dwgh_u9-NQCOy6z4/view?usp=sharing">PhD</a></p><p>Final thesis: <a href="https://drive.google.com/file/d/1VSD0-DZHAhDnvD1PSEtpyTjyZynaJqiY/view?usp=sharing">Slides</a> · <a href="https://drive.google.com/file/d/1Vt5qVQEqEhEn1IoVgXw2QOLnii6Rb9yU/view?usp=sharing">Report</a></p><p><a href="https://drive.google.com/file/d/1QV0olPsGYPoYN7EyqoCU6WqFdGhzzWJS/view?usp=sharing">Internship report</a> · <a href="https://drive.google.com/drive/folders/10XQngfTQx8fJdnhVwRpTy8s-Rxov3JWa?usp=sharing">Thesis repository</a></p></div>
-<div class="tile"><h3>Lab tools</h3><p><a href="https://github.com/AIT-brainlab/python-project-starter">Python project starter</a></p><p><a href="https://github.com/orgs/AIT-brainlab/projects/3">Project board</a></p></div>
-</div>
-<h3>Professor's research writing</h3><p><a href="https://chaklam.com/articles/how-to-write-paper/">How to write paper</a> · <a href="https://chaklam.com/articles/how-to-choose-a-good-topic/">How to choose a good topic</a> · <a href="https://chaklam.com/articles/research-process/">Research process</a></p>
-<p><b>Expected deliverables:</b> Code repository, final report, presentation, demo video, and publication submission where applicable. Confirm official degree requirements separately.</p>
-</section><section class="slide"><div class="eyebrow">FURTHER READING</div><h2>Chaklam’s research guides</h2><p><a href="https://chaklam.com/articles/how-to-write-paper/">How to write a paper</a></p><p><a href="https://chaklam.com/articles/how-to-choose-a-good-topic/">How to choose a good topic</a></p><p><a href="https://chaklam.com/articles/research-process/">Research process</a></p></section></div>
-<div class="deck-controls">
-<button disabled="" id="prev-slide" type="button">← Previous</button>
-<div aria-label="Choose a slide" class="dots" id="slide-dots"></div>
-<button id="next-slide" type="button">Next →</button>
-</div>
-</div>
-<script>(function(){const deck=document.getElementById('research-deck');if(!deck)return;const slides=[...deck.querySelectorAll('.slide')],prev=deck.querySelector('#prev-slide'),next=deck.querySelector('#next-slide'),count=deck.querySelector('#slide-count'),progress=deck.querySelector('#slide-progress'),dots=deck.querySelector('#slide-dots');let current=0;function show(i){current=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,j)=>{s.classList.toggle('active',j===current);s.setAttribute('aria-hidden',j===current?'false':'true')});[...dots.children].forEach((d,j)=>d.setAttribute('aria-current',j===current?'true':'false'));prev.disabled=current===0;next.disabled=current===slides.length-1;count.textContent='Slide '+(current+1)+' of '+slides.length;progress.style.width=((current+1)/slides.length*100)+'%';}slides.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Go to slide '+(i+1));b.addEventListener('click',()=>show(i));dots.appendChild(b)});prev.addEventListener('click',()=>show(current-1));next.addEventListener('click',()=>show(current+1));deck.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName))return;if(e.key==='ArrowRight'){e.preventDefault();show(current+1)}if(e.key==='ArrowLeft'){e.preventDefault();show(current-1)}});show(0);})();</script>
-</div>
-</section><!-- End Portfolio Details Section -->
+                .research-handbook .deck {
+                    max-width: 1050px;
+                    margin: 1rem auto 2rem;
+                    background: #f7fafc;
+                    border: 1px solid #dce7ee;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    box-shadow: 0 12px 36px #17334b12
+                }
+
+                .research-handbook .deck-top {
+                    padding: 1rem 1.4rem;
+                    background: #102d47;
+                    color: #fff;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1rem;
+                    align-items: center
+                }
+
+                .research-handbook .deck-top small {
+                    opacity: .8
+                }
+
+                .research-handbook .progress {
+                    height: 5px;
+                    background: #dbe7ed
+                }
+
+                .research-handbook .progress span {
+                    display: block;
+                    height: 100%;
+                    width: 0;
+                    background: #43c6b7;
+                    transition: width .2s
+                }
+
+                .research-handbook .slides {
+                    padding: clamp(1.2rem, 4vw, 3rem);
+                    min-height: 510px
+                }
+
+                .research-handbook .slide {
+                    display: none;
+                    animation: fadein .18s ease
+                }
+
+                .research-handbook .slide.active {
+                    display: block
+                }
+
+                .research-handbook .eyebrow {
+                    font-size: .78rem;
+                    text-transform: uppercase;
+                    letter-spacing: .12em;
+                    font-weight: 800;
+                    color: var(--accent)
+                }
+
+                .research-handbook .slide h2 {
+                    font-size: clamp(1.8rem, 4vw, 2.7rem);
+                    line-height: 1.12;
+                    margin: .35rem 0 1rem;
+                    color: var(--ink);
+                    font-weight: 850
+                }
+
+                .research-handbook .slide h3 {
+                    font-size: 1.18rem;
+                    margin: 1.3rem 0 .45rem;
+                    padding: 0
+                }
+
+                .research-handbook .lead {
+                    font-size: 1.15rem;
+                    max-width: 820px;
+                    color: #3f566d
+                }
+
+                .research-handbook .tiles {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+                    gap: 14px;
+                    margin: 1.4rem 0
+                }
+
+                .research-handbook .tile {
+                    background: #fff;
+                    border: 1px solid #d8e5ec;
+                    border-radius: 14px;
+                    padding: 1.05rem
+                }
+
+                .research-handbook .tile h3 {
+                    margin: .1rem 0 .45rem;
+                    font-size: 1.05rem
+                }
+
+                .research-handbook .tag {
+                    display: inline-block;
+                    padding: .15rem .55rem;
+                    border-radius: 99px;
+                    font-size: .78rem;
+                    font-weight: 800;
+                    margin-bottom: .4rem
+                }
+
+                .research-handbook .good {
+                    background: #d8f3e8;
+                    color: #17634b
+                }
+
+                .research-handbook .bad {
+                    background: #ffe4df;
+                    color: #8e342b
+                }
+
+                .research-handbook .review {
+                    background: #ffefc9;
+                    color: #795400
+                }
+
+                .research-handbook .callout {
+                    padding: 1rem 1.2rem;
+                    background: #e9f4f8;
+                    border-left: 4px solid var(--accent);
+                    border-radius: 0 12px 12px 0;
+                    margin: 1.2rem 0
+                }
+
+                .research-handbook .dark-callout {
+                    padding: 1.1rem 1.3rem;
+                    background: #102d47;
+                    color: white;
+                    border-radius: 14px;
+                    margin: 1.2rem 0
+                }
+
+                .research-handbook .deck-controls {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 1rem;
+                    padding: 1rem 1.4rem;
+                    border-top: 1px solid #dce7ee;
+                    background: #fff
+                }
+
+                .research-handbook .deck-controls button {
+                    border: 0;
+                    border-radius: 10px;
+                    padding: .75rem 1.1rem;
+                    font-weight: 750;
+                    cursor: pointer;
+                    background: #16718b;
+                    color: #fff
+                }
+
+                .research-handbook .deck-controls .reveal-all {
+                    background: #e8f2f5;
+                    color: #16435b
+                }
+
+                .research-handbook .reveal-slide .tile,
+                .research-handbook .reveal-slide .mini-flow span {
+                    transition: opacity .25s ease, transform .25s ease
+                }
+
+                .research-handbook .reveal-slide .hidden-step {
+                    display: none
+                }
+
+                .research-handbook .title-slide {
+                    padding: 3rem 0
+                }
+
+                .research-handbook .title-slide h2 {
+                    font-size: clamp(2.5rem, 6vw, 4.4rem)
+                }
+
+                .research-handbook .title-slide .author {
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: #16718b
+                }
+
+                @media(prefers-reduced-motion:reduce) {
+
+                    .research-handbook .slide,
+                    .research-handbook .reveal-slide .tile {
+                        animation: none;
+                        transition: none
+                    }
+                }
+
+                .research-handbook .deck-controls button:disabled {
+                    opacity: .35;
+                    cursor: not-allowed
+                }
+
+                .research-handbook .dots {
+                    display: flex;
+                    gap: 5px;
+                    justify-content: center;
+                    flex-wrap: wrap
+                }
+
+                .research-handbook .dots button {
+                    width: 9px;
+                    height: 9px;
+                    padding: 0;
+                    border-radius: 50%;
+                    background: #c8d7e0;
+                    min-width: 0
+                }
+
+                .research-handbook .dots button[aria-current=true] {
+                    background: #16718b;
+                    transform: scale(1.25)
+                }
+
+                .research-handbook .slide table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin: 1rem 0;
+                    background: white
+                }
+
+                .research-handbook .slide th,
+                .research-handbook .slide td {
+                    border: 1px solid #d9e5eb;
+                    padding: .7rem;
+                    text-align: left;
+                    vertical-align: top
+                }
+
+                .research-handbook .slide th {
+                    background: #e7f2f7
+                }
+
+                .research-handbook .mini-flow {
+                    display: flex;
+                    gap: 8px;
+                    flex-wrap: wrap;
+                    align-items: stretch;
+                    margin: 1.2rem 0
+                }
+
+                .research-handbook .mini-flow span {
+                    flex: 1;
+                    min-width: 130px;
+                    background: #e5f2f6;
+                    border-radius: 10px;
+                    padding: .8rem;
+                    text-align: center;
+                    font-weight: 750
+                }
+
+                .research-handbook .mini-flow b {
+                    align-self: center;
+                    color: #5c7b8d
+                }
+
+                .research-handbook .deck a {
+                    color: #08749a;
+                    text-decoration: underline
+                }
+
+                .research-handbook .deck-top a {
+                    color: #fff
+                }
+
+                @keyframes fadein {
+                    from {
+                        opacity: .45;
+                        transform: translateY(4px)
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: translateY(0)
+                    }
+                }
+
+                @media(max-width:600px) {
+                    .research-handbook .slides {
+                        min-height: 0
+                    }
+
+                    .research-handbook .deck-top {
+                        align-items: flex-start;
+                        flex-direction: column
+                    }
+
+                    .research-handbook .deck-controls {
+                        padding: .8rem;
+                        flex-wrap: wrap
+                    }
+
+                    .research-handbook .deck-controls button {
+                        padding: .65rem .8rem
+                    }
+                }
+
+                .research-handbook .slide {
+                    animation: none !important
+                }
+
+                .research-handbook .bloom {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 5px;
+                    margin: 1.5rem auto;
+                    max-width: 760px
+                }
+
+                .research-handbook .bloom-row {
+                    padding: .6rem 1rem;
+                    text-align: center;
+                    border: 1px solid #b8d4df;
+                    border-radius: 8px;
+                    background: #eaf3f7;
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 1.35
+                }
+
+                .research-handbook .bloom-row small {
+                    font-size: .8rem
+                }
+
+                .research-handbook .bloom-row:nth-child(1) {
+                    width: 42%
+                }
+
+                .research-handbook .bloom-row:nth-child(2) {
+                    width: 53%
+                }
+
+                .research-handbook .bloom-row:nth-child(3) {
+                    width: 64%
+                }
+
+                .research-handbook .bloom-row:nth-child(4) {
+                    width: 76%
+                }
+
+                .research-handbook .bloom-row:nth-child(5) {
+                    width: 88%
+                }
+
+                .research-handbook .bloom-row:nth-child(6) {
+                    width: 100%
+                }
+
+                .research-handbook .bloom-row.wisdom {
+                    background: #d7eee8
+                }
+
+                .research-handbook .bloom-row.knowledge {
+                    background: #deebf5
+                }
+
+                .research-handbook .bloom-row.information {
+                    background: #f1f3f5
+                }
+
+                @media(max-width:600px) {
+                    .research-handbook .bloom-row {
+                        width: 100% !important
+                    }
+
+                    .research-handbook .slide table {
+                        display: block;
+                        overflow-x: auto
+                    }
+                }
+
+                .research-handbook .slide,
+                .research-handbook .slide * {
+                    animation: none !important;
+                    transition: none !important
+                }
+
+                .research-handbook .table-scroll {
+                    overflow-x: auto
+                }
+
+                .research-handbook .table-scroll table {
+                    min-width: 580px
+                }
+
+                .slide:has(.eyebrow:first-child) {}
+            </style>
+            <div class="deck" id="research-deck">
+                <div class="deck-top">
+                    <div><strong>From Research Idea to Publication</strong><br /><small>Journal · CHI · ACL ·
+                            NeurIPS</small></div>
+                    <div aria-live="polite" id="slide-count">Slide 1</div>
+                </div>
+                <div class="progress"><span id="slide-progress"></span></div>
+                <div class="slides">
+                    <section class="slide">
+                        <div class="eyebrow">WELCOME</div>
+                        <h2>Ultimate Guide to Your Research Success</h2>
+                        <p class="author">By Chaklam</p>
+                        <p class="lead">Research is not just building an application. It is asking a meaningful
+                            question, finding convincing evidence, and contributing knowledge that <b>other people</b>
+                            find useful.</p>
+                        <div class="callout"><b>The research test:</b> What new understanding will other researchers,
+                            designers, or practitioners gain from your paper—and why would it matter to them?</div>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">HOW TO THINK</div>
+                        <h2>From information to wisdom: Bloom’s pyramid</h2>
+                        <p>Research is difficult because we must move beyond describing facts to explaining them,
+                            judging evidence, and creating useful new knowledge.</p>
+                        <div class="bloom">
+                            <div class="bloom-row wisdom"><b>Create</b><small>Wisdom</small></div>
+                            <div class="bloom-row wisdom"><b>Evaluate</b><small>Wisdom</small></div>
+                            <div class="bloom-row knowledge"><b>Analyze</b><small>Knowledge</small></div>
+                            <div class="bloom-row knowledge"><b>Apply</b><small>Knowledge</small></div>
+                            <div class="bloom-row information"><b>Understand</b><small>Information</small></div>
+                            <div class="bloom-row information"><b>Remember</b><small>Information</small></div>
+                        </div>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">HOW TO THINK</div>
+                        <h2>Bloom taxonomy in action</h2>
+                        <p>Follow each column downward: the question becomes less about recalling facts and more about
+                            understanding causes and making better decisions.</p>
+                        <div class="table-scroll">
+                            <table>
+                                <tr>
+                                    <th>Bloom</th>
+                                    <th>Selling more sushi</th>
+                                    <th>AI helping people regulate emotions</th>
+                                    <th>AI-simulated humans</th>
+                                </tr>
+                                <tr>
+                                    <td><b>Remember</b><br />Information</td>
+                                    <td>How many sushi boxes did I sell last week?</td>
+                                    <td>What emotions do people report when using an AI support chatbot?</td>
+                                    <td>What answers do AI-generated survey participants give?</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Understand</b><br />Information</td>
+                                    <td>Which sushi sells most, and at what times?</td>
+                                    <td>How does the chatbot respond when users say they feel sad, angry, or anxious?
+                                    </td>
+                                    <td>How similar are those answers to responses from real people?</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Apply</b><br />Knowledge</td>
+                                    <td>Can I use sales patterns to adjust how much sushi I prepare each day?</td>
+                                    <td>Can I apply established emotion-regulation strategies to the chatbot's
+                                        responses?</td>
+                                    <td>Can I use AI-generated responses to test a survey before giving it to real
+                                        participants?</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Analyze</b><br />Knowledge</td>
+                                    <td>Why do some customers buy once but not return: price, taste, freshness, or
+                                        variety?</td>
+                                    <td>Why does the same AI response calm one person but upset another?</td>
+                                    <td>On which questions, groups, or situations do AI-generated answers differ most
+                                        from real people's answers?</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Evaluate</b><br />Wisdom</td>
+                                    <td>Which change actually increases repeat purchases without reducing quality or
+                                        profit?</td>
+                                    <td>When should AI offer advice, ask a question, adapt its tone, or avoid
+                                        intervening?</td>
+                                    <td>For which research questions can simulated answers be useful, and when must we
+                                        ask real people?</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Create</b><br />Wisdom</td>
+                                    <td>How can I design and test a sushi experience that makes customers return
+                                        regularly without relying on discounts?</td>
+                                    <td>How can we design and evaluate AI support that adapts to a person's emotions,
+                                        values, and culture to help them regulate emotions appropriately?</td>
+                                    <td>How can we design a research method that uses AI simulations for early
+                                        exploration but checks important findings with real participants?</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">THINKING TOOLS</div>
+                        <h2>"Critical" thinking tools</h2>
+                        <p class="lead"><b>Weak starting question:</b> “Can an AI chatbot help students cope with
+                            stress?”
+                        </p>
+                        <p class="callout" style="text-align:center"><b>Thinking tools ↑</b> help us climb toward deeper
+                            questions and wiser judgment toward wisdom.</p>
+                        <div class="table-scroll">
+                            <table>
+                                <tr>
+                                    <th>Thinking tool</th>
+                                    <th>How the question changes</th>
+                                    <th>Why it helps</th>
+                                </tr>
+                                <tr>
+                                    <td>Challenge assumptions</td>
+                                    <td>Can chatbot advice sometimes increase stress instead of reducing it?</td>
+                                    <td>Challenges the belief that more AI help is always better.</td>
+                                </tr>
+                                <tr>
+                                    <td>First principles</td>
+                                    <td>What do stressed students actually need before we decide to use a chatbot?</td>
+                                    <td>Starts from the human need, not the technology.</td>
+                                </tr>
+                                <tr>
+                                    <td>Systems thinking</td>
+                                    <td>How do deadlines, sleep, friends, and chatbot use affect stress together?</td>
+                                    <td>Looks at interacting causes.</td>
+                                </tr>
+                                <tr>
+                                    <td>Second-order thinking</td>
+                                    <td>If students rely on a chatbot for months, does their ability to cope
+                                        independently change?</td>
+                                    <td>Investigates longer-term effects.</td>
+                                </tr>
+                                <tr>
+                                    <td>Inversion</td>
+                                    <td>When might a chatbot make a stressed student feel worse?</td>
+                                    <td>Identifies risks and failure conditions.</td>
+                                </tr>
+                                <tr>
+                                    <td>Root-cause analysis</td>
+                                    <td>Is the main problem a lack of advice, or an overwhelming workload?</td>
+                                    <td>Investigates the underlying cause.</td>
+                                </tr>
+                                <tr>
+                                    <td>Thinking by analogy</td>
+                                    <td>What can chatbot designers learn from how peer-support groups listen?</td>
+                                    <td>Transfers ideas from another domain.</td>
+                                </tr>
+                                <tr>
+                                    <td>Compare alternatives</td>
+                                    <td>When is a chatbot more useful than journaling or talking with a friend?</td>
+                                    <td>Defines a meaningful comparison.</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Stakeholder perspectives</b></td>
+                                    <td>Would students, counselors, and instructors define “helpful” in the same way?
+                                    </td>
+                                    <td>Reveals competing needs and evaluation criteria.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="slide exercise-slide">
+                        <div class="eyebrow">EXERCISE</div>
+                        <h2>Exercise 1: Try reframing a weak question</h2>
+                        <p><b>Original:</b> “Can AI help students choose a career?”</p>
+                        <p>Pick five thinking tools. Rewrite the original question in five different ways.</p>
+                        <div class="table-scroll">
+                            <table>
+                                <tr>
+                                    <th>Thinking tool</th>
+                                    <th>Your stronger question</th>
+                                </tr>
+                                <tr>
+                                    <td>________________________</td>
+                                    <td>___________________________________________________</td>
+                                </tr>
+                                <tr>
+                                    <td>________________________</td>
+                                    <td>___________________________________________________</td>
+                                </tr>
+                                <tr>
+                                    <td>________________________</td>
+                                    <td>___________________________________________________</td>
+                                </tr>
+                                <tr>
+                                    <td>________________________</td>
+                                    <td>___________________________________________________</td>
+                                </tr>
+                                <tr>
+                                    <td>________________________</td>
+                                    <td>___________________________________________________</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">POSSIBLE ANSWERS</div>
+                        <h2>How thinking tools improve the career question</h2>
+                        <p><b>Original question:</b> Can AI help students choose a career?</p>
+                        <div class="table-scroll">
+                            <table>
+                                <tr>
+                                    <th>Thinking tool</th>
+                                    <th>How the question changes</th>
+                                    <th>Why it helps</th>
+                                </tr>
+                                <tr>
+                                    <td>Challenge assumptions</td>
+                                    <td>Could confident AI recommendations stop students from exploring careers they
+                                        might enjoy?</td>
+                                    <td>Tests whether more guidance is always beneficial.</td>
+                                </tr>
+                                <tr>
+                                    <td>First principles</td>
+                                    <td>Do students really need a job recommendation, or a better understanding of their
+                                        interests and values?</td>
+                                    <td>Starts with the underlying need.</td>
+                                </tr>
+                                <tr>
+                                    <td>Systems thinking</td>
+                                    <td>How do family expectations, financial pressure, grades, and AI recommendations
+                                        jointly shape choices?</td>
+                                    <td>Looks at interacting influences.</td>
+                                </tr>
+                                <tr>
+                                    <td>Second-order thinking</td>
+                                    <td>After using AI career advice repeatedly, do students become more or less
+                                        confident deciding independently?</td>
+                                    <td>Examines longer-term consequences.</td>
+                                </tr>
+                                <tr>
+                                    <td>Inversion</td>
+                                    <td>When might AI career guidance lead students to regret a choice?</td>
+                                    <td>Finds failure conditions.</td>
+                                </tr>
+                                <tr>
+                                    <td>Root-cause analysis</td>
+                                    <td>Is career uncertainty caused by missing information or by conflicting personal
+                                        goals?</td>
+                                    <td>Investigates the underlying cause.</td>
+                                </tr>
+                                <tr>
+                                    <td>Thinking by analogy</td>
+                                    <td>Could AI borrow the questioning approach used by good career counselors rather
+                                        than giving instant answers?</td>
+                                    <td>Transfers a useful approach.</td>
+                                </tr>
+                                <tr>
+                                    <td>Compare alternatives</td>
+                                    <td>Do students make better decisions with AI recommendations, self-reflection
+                                        questions, or human counseling?</td>
+                                    <td>Identifies meaningful baselines.</td>
+                                </tr>
+                                <tr>
+                                    <td>Stakeholder perspectives</td>
+                                    <td>Do students, parents, and career counselors disagree about what makes a career
+                                        choice successful?</td>
+                                    <td>Reveals different definitions of success.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">SECTION</div>
+                        <h2>Novelty</h2>
+                        <p class="lead">New to the field. Interesting to others. Important enough to investigate.</p>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">NOVELTY</div>
+                        <h2>Novelty is judged by the research community</h2>
+                        <p><b>Novelty is not about what feels new to you.</b> Other researchers decide whether your idea
+                            is <b>new</b> relative to published work, <b>interesting</b> to the field, and
+                            <b>important</b> enough to change understanding or practice. The only credible starting
+                            point is to <b>read closely related papers</b>.
+                        </p>
+                        <div class="table-scroll">
+                            <table>
+                                <tr>
+                                    <th>Idea</th>
+                                    <th>Novel?</th>
+                                    <th>Why?</th>
+                                </tr>
+                                <tr>
+                                    <td>First stress chatbot at my university</td>
+                                    <td>No</td>
+                                    <td>A new location alone teaches little beyond prior work.</td>
+                                </tr>
+                                <tr>
+                                    <td>Use a newer LLM for emotion support</td>
+                                    <td>No</td>
+                                    <td>A model swap alone is not a research insight.</td>
+                                </tr>
+                                <tr>
+                                    <td>Discover when AI advice makes people feel less in control</td>
+                                    <td>Potentially</td>
+                                    <td>A meaningful effect, if not already established.</td>
+                                </tr>
+                                <tr>
+                                    <td>Generate 10,000 simulated survey respondents</td>
+                                    <td>No</td>
+                                    <td>More simulated responses alone do not establish validity.</td>
+                                </tr>
+                                <tr>
+                                    <td>Identify which questions AI-simulated people answer differently from real people
+                                    </td>
+                                    <td>Potentially</td>
+                                    <td>Could show when simulations should not be trusted.</td>
+                                </tr>
+                                <tr>
+                                    <td>Change a dashboard's color</td>
+                                    <td>No</td>
+                                    <td>Appearance alone rarely yields new understanding.</td>
+                                </tr>
+                                <tr>
+                                    <td>Find when AI reminders help beginners but distract experienced students</td>
+                                    <td>Potentially</td>
+                                    <td>Could reveal an important boundary condition.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="slide exercise-slide">
+                        <div class="eyebrow">EXERCISE</div>
+                        <h2>Exercise 2: Eight ideas: novel or not?</h2>
+                        <p>For each, choose <b>No</b> or <b>Potentially</b>. Ask whether other researchers would find it
+                            new, interesting, and important. Confirming novelty still requires reading papers.</p>
+                        <div class="table-scroll">
+                            <table>
+                                <tr>
+                                    <th>Idea</th>
+                                    <th>Your judgment</th>
+                                </tr>
+                                <tr>
+                                    <td>A. Translate an existing chatbot into Thai without studying new issues.</td>
+                                    <td>________________</td>
+                                </tr>
+                                <tr>
+                                    <td>B. Investigate whether emotion classifiers miss indirect expressions of sadness
+                                        in Thai.</td>
+                                    <td>________________</td>
+                                </tr>
+                                <tr>
+                                    <td>C. Add emojis to an AI habit coach.</td>
+                                    <td>________________</td>
+                                </tr>
+                                <tr>
+                                    <td>D. Test when simulated people disagree with real people about the same product.
+                                    </td>
+                                    <td>________________</td>
+                                </tr>
+                                <tr>
+                                    <td>E. Replace a model with a newer one and report higher accuracy.</td>
+                                    <td>________________</td>
+                                </tr>
+                                <tr>
+                                    <td>F. Show that an AI coach helps some users but undermines confidence in others.
+                                    </td>
+                                    <td>________________</td>
+                                </tr>
+                                <tr>
+                                    <td>G. Add voice input to an existing journaling app.</td>
+                                    <td>________________</td>
+                                </tr>
+                                <tr>
+                                    <td>H. Identify when voice input changes what people are willing to disclose about
+                                        their emotions.</td>
+                                    <td>________________</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">SECTION</div>
+                        <h2>Related work</h2>
+                        <p class="lead">Find out what is known, what is disputed, and what is still unanswered.</p>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">RELATED WORK</div>
+
+                        <h2>8 Ways to Synthesize Related Work</h2>
+
+                        <p>
+                            Don't just summarize papers.
+                            <strong>Compare them to discover new research opportunities.</strong>
+                        </p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Ask yourself</th>
+                                    <th>Example: AI Emotional Support</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><strong>1. Similarities</strong></td>
+                                    <td>What do papers agree on?</td>
+                                    <td>Several papers study how AI can respond empathetically.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>2. Differences</strong></td>
+                                    <td>How are their approaches different?</td>
+                                    <td>One focuses on empathy; another on support strategies.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>3. Contradictions</strong></td>
+                                    <td>Where do findings disagree?</td>
+                                    <td>One study reports benefits; another finds little improvement.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>4. Evolution</strong></td>
+                                    <td>How has research changed over time?</td>
+                                    <td>Empathetic replies → support strategies → adaptive support.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>5. Limitations</strong></td>
+                                    <td>What are the weaknesses of existing work?</td>
+                                    <td>Good chatbot replies may not mean better well-being.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>6. Missing Factors</strong></td>
+                                    <td>What important factors were overlooked?</td>
+                                    <td>Culture, personal values, humor, personality.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>7. Missing Contexts</strong></td>
+                                    <td>Where has the idea not been tested?</td>
+                                    <td>Different countries, ages, or real-life situations.</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>8. Integration</strong></td>
+                                    <td>Can we combine ideas from different papers?</td>
+                                    <td>Combine emotion detection with cultural adaptation.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p>
+                            <strong>Remember:</strong>
+                            Comparison shows differences.
+                            <strong>Synthesis explains what those differences mean.</strong>
+                        </p>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">RELATED WORK</div>
+                        <h2>Exercise: Find the gap</h2>
+                        <p><b>Topic:</b> Can AI conversations offer useful emotional support?</p>
+                        <div class="table-scroll">
+                            <table>
+                                <tr>
+                                    <th>Study</th>
+                                    <th>Research question</th>
+                                    <th>Method / evidence</th>
+                                    <th>What it adds</th>
+                                    <th>What we still need to know</th>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://aclanthology.org/P19-1534/">A · Rashkin et al. (ACL 2019)</a>
+                                    </td>
+                                    <td>Can models produce responses that people perceive as empathetic?</td>
+                                    <td>EmpatheticDialogues dataset and human evaluation.</td>
+                                    <td>Models trained with the dataset were rated more empathetic than a comparison
+                                        trained on broad internet dialogue.</td>
+                                    <td>Does sounding empathetic mean providing useful support?</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://aclanthology.org/2021.acl-long.269/">B · Liu et al. (ACL
+                                            2021)</a></td>
+                                    <td>How can systems learn different emotional-support strategies?</td>
+                                    <td>Conversations with support-strategy annotations and model evaluations.
+                                    </td>
+                                    <td>Shows how support strategies matter for emotional-support dialogue.</td>
+                                    <td>Which strategy should be used in which situation?</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://aclanthology.org/2022.acl-long.25/">C · Tu et al. (ACL
+                                            2022)</a></td>
+                                    <td>Can finer-grained emotion modeling and mixed strategies improve support
+                                        responses?</td>
+                                    <td>An emotional-support chatbot tested on real conversations.</td>
+                                    <td>Better emotional support by tracking emotions and combining different support
+                                        strategies.</td>
+                                    <td>Do these improvements lead to better outcomes for real users over time?</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Next study?</b></td>
+                                    <td>________________</td>
+                                    <td>________________</td>
+                                    <td>________________</td>
+                                    <td>________________</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">SECTION</div>
+                        <h2>Methodology</h2>
+                        <p class="lead">Now let's look at how we can design a solid methodology for our research.</p>
+                    </section>
+                    <!-- <section class="slide">
+                        <div class="eyebrow">METHODOLOGY</div>
+                        <h2>What makes a good methodology?</h2>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Component</th>
+                                        <th>What to specify</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Independent variable (IV)</td>
+                                        <td>Factors under study</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dependent variable (DV)</td>
+                                        <td>Metrics</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Confounding variables</td>
+                                        <td>Factors that can influence the DV but are not part of the IV
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Control variables</td>
+                                        <td>Factors that are held constant or controlled for in the study.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Analysis methods</td>
+                                        <td>Comparison with baselines;  ablation studies; error analysis; linguistic analysis; robustness analysis; qualitative analysis, etc.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section> -->
+                    <section class="slide">
+                        <div class="eyebrow">CONTRIBUTIONS</div>
+                        <h2>Different research contributions need different evidence</h2>
+                        <p>A good methodology must be <b>reproducible.</b>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Contribution</th>
+                                        <th>What others learn</th>
+                                        <th>Example</th>
+                                        <th>Suitable evidence</th>
+                                        <th>Need clear IV / DV / Confounding?</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><b>Controlled experiment</b></td>
+                                        <td>Whether a change causes a difference</td>
+                                        <td>Do supportive AI replies make students feel more understood than neutral
+                                            replies?</td>
+                                        <td>Groups, measured outcomes, fair comparison, statistics</td>
+                                        <td>Yes: IV = what changes; DV = what you measure.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Design contribution</b></td>
+                                        <td>How to design better systems, and why</td>
+                                        <td>Design an AI tool that helps people understand their emotions</td>
+                                        <td>Design theory, prototype, user feedback, design lessons</td>
+                                        <td>Not common: usually an interview and system-level behavioral analysis</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Algorithm / model / technique</b></td>
+                                        <td>A better way to solve a technical problem</td>
+                                        <td>Propose new model or new metric for measuring something</td>
+                                        <td>Strong baselines, ablation, errors, robustness</td>
+                                        <td>Yes: IV = new method vs baseline or with/without a component; DV =
+                                            metrics that your method claims to improve</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Dataset</b></td>
+                                        <td>A resource for future research</td>
+                                        <td>A dataset of how people express frustration in different cultures</td>
+                                        <td>Sampling, labeling quality, coverage, documentation</td>
+                                        <td>Yes: IV = train with vs without the new dataset; DV = model accuracy
+                                            or other scores.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Qualitative insight</b></td>
+                                        <td>How people experience a phenomenon</td>
+                                        <td>Why students avoid using mental-health apps</td>
+                                        <td>Interviews, systematic coding, themes, supporting quotes</td>
+                                        <td>Commonly no: mostly interview or observation or questionnaires.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Conceptual framework</b></td>
+                                        <td>A new way to explain or organize a problem</td>
+                                        <td>A framework of when AI support helps or undermines autonomy</td>
+                                        <td>Grounding in literature, coherent reasoning, empirical illustration where
+                                            appropriate</td>
+                                        <td>Depends: If we want to prove it works, we need IV and DV.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">WORKED EXAMPLE · DESIGN</div>
+                        <h2>Affective Diary: designing for emotional reflection</h2>
+                        <p class="lead">Lindström et al. (2006), <a href="https://doi.org/10.1145/1125451.1125649"
+                                target="_blank">Affective Diary:
+                                Designing for Bodily Expressiveness and Self-Reflection</a>.</p>
+                        <p>Instead of telling people what they feel, the researchers designed a diary that lets people
+                            <b>interpret their own experiences</b> through colors, body shapes, and memories from their
+                            phone.
+                        </p>
+                        <div class="table-scroll">
+                            <table>
+                                <tr>
+                                    <th>Methodology component</th>
+                                    <th>What the researchers actually did</th>
+                                </tr>
+                                <tr>
+                                    <td>Research goal</td>
+                                    <td>Explore how a digital diary can support reflection on feelings and bodily
+                                        experiences.</td>
+                                </tr>
+                                <tr>
+                                    <td>Design idea / theory</td>
+                                    <td>Instead of telling users, "You are sad," show abstract colors and shapes so they
+                                        can decide what those representations mean.</td>
+                                </tr>
+                                <tr>
+                                    <td>Participants</td>
+                                    <td>The researchers involved 12 people from different backgrounds to understand how
+                                        people express and reflect on their experiences.</td>
+                                </tr>
+                                <tr>
+                                    <td>Design process</td>
+                                    <td>They collected people's experiences, explored design ideas, and built a
+                                        prototype.</td>
+                                </tr>
+                                <tr>
+                                    <td>What they built</td>
+                                    <td>A digital diary that combines body-sensor data like heart rate and skin
+                                        conductance, photos, and messages into visual representations of personal
+                                        experiences.</td>
+                                </tr>
+                                <tr>
+                                    <td>Evaluation / evidence</td>
+                                    <td>They explored how people might use the diary through participant activities,
+                                        feedback, and hands-on design exploration.</td>
+                                </tr>
+                                <tr>
+                                    <td>IV / DV / random assignment</td>
+                                    <td><b>Not central here.</b> This is exploratory design research.</td>
+                                </tr>
+                                <tr>
+                                    <td>Contribution to other researchers</td>
+                                    <td>A concrete design example of how ambiguous, editable representations can invite
+                                        personal interpretation and reflection.</td>
+                                </tr>
+                                <tr>
+                                    <td>Limitation</td>
+                                    <td>Early prototype and exploratory feedback does NOT establish long-term
+                                        emotion-regulation benefits.</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p><small><b>Lesson:</b> A design contribution can be rigorous by explaining the design choices,
+                                process, evidence, and transferable lessons—with or without strong IVs.</p>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">WORKED EXAMPLE · CONTROLLED EXPERIMENT</div>
+
+                        <h2>Does ChatGPT help people write faster and better?</h2>
+
+                        <p class="lead">
+                            Noy &amp; Zhang (2023),
+                            <a href="https://doi.org/10.1126/science.adh2586" target="_blank">
+                                Experimental Evidence on the Productivity Effects of
+                                Generative Artificial Intelligence
+                            </a>.
+                        </p>
+
+                        <p>
+                            The researchers tested whether people using ChatGPT could
+                            <b>finish professional writing tasks faster and produce better work</b>
+                            than people without ChatGPT.
+                        </p>
+
+                        <div class="table-scroll">
+                            <table>
+                                <tr>
+                                    <th>Methodology component</th>
+                                    <th>What the researchers actually did</th>
+                                </tr>
+
+                                <tr>
+                                    <td>Research question</td>
+                                    <td>
+                                        Does access to ChatGPT improve writing speed and quality?
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Hypothesis</td>
+                                    <td>
+                                        People with ChatGPT will finish faster and produce
+                                        higher-quality writing.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Independent variable (IV)</td>
+                                    <td>
+                                        <b>ChatGPT access:</b> allowed vs. not allowed.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Dependent variables (DV)</td>
+                                    <td>
+                                        <b>Writing time</b> and <b>writing quality</b>.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Participants</td>
+                                    <td>
+                                        453 college-educated professionals.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Control group</td>
+                                    <td>
+                                        Participants who completed the writing tasks
+                                        without ChatGPT.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Experimental group</td>
+                                    <td>
+                                        Participants who could use ChatGPT.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Random assignment</td>
+                                    <td>
+                                        Participants were randomly assigned to
+                                        ChatGPT or no-ChatGPT conditions.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Procedure</td>
+                                    <td>
+                                        Participants completed professional writing tasks.
+                                        The researchers recorded how long they took
+                                        and evaluated their writing.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Analysis</td>
+                                    <td>
+                                        Compare average writing time and quality
+                                        between the two conditions.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Results</td>
+                                    <td>
+                                        ChatGPT reduced average task time by about
+                                        <b>40%</b> and improved quality ratings
+                                        by about <b>18%</b>.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Contribution to other researchers</td>
+                                    <td>
+                                        Experimental evidence that generative AI
+                                        can improve performance on certain
+                                        professional writing tasks.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Limitation</td>
+                                    <td>
+                                        Results from short writing tasks do not prove
+                                        that ChatGPT improves every type of work
+                                        or long-term writing ability.
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <p>
+                            <small>
+                                <b>Lesson:</b>
+                                A controlled experiment changes one main factor (IV),
+                                measures its effect (DV), and uses a comparison group
+                                to test whether the change makes a difference.
+                            </small>
+                        </p>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">WORKED EXAMPLE · DATASET</div>
+
+                        <h2>EmpatheticDialogues: teaching AI to respond with empathy</h2>
+
+                        <p class="lead">
+                            Rashkin et al. (ACL 2019),
+                            <a href="https://aclanthology.org/P19-1534/" target="_blank">
+                                Towards Empathetic Open-domain Conversation Models:
+                                A New Benchmark and Dataset
+                            </a>.
+                        </p>
+
+                        <p>
+                            The researchers created a dataset of conversations about
+                            emotional experiences to help AI learn
+                            <b>how people respond empathetically</b>.
+                        </p>
+
+                        <div class="table-scroll">
+                            <table>
+                                <tr>
+                                    <th>Methodology component</th>
+                                    <th>What the researchers actually did</th>
+                                </tr>
+
+                                <tr>
+                                    <td>Research question</td>
+                                    <td>
+                                        Can conversations about emotions help AI
+                                        generate more empathetic responses?
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Research gap</td>
+                                    <td>
+                                        Existing conversation datasets were not
+                                        specifically designed to teach AI empathy.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Dataset</td>
+                                    <td>
+                                        <b>EmpatheticDialogues:</b> approximately
+                                        25,000 conversations about emotional situations.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Data collection</td>
+                                    <td>
+                                        People described emotional experiences.
+                                        Other people responded in conversations
+                                        about those experiences.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Labels</td>
+                                    <td>
+                                        Conversations were associated with
+                                        <b>32 emotions</b>, such as sadness,
+                                        excitement, and frustration.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Data quality</td>
+                                    <td>
+                                        The researchers used a structured collection
+                                        process to gather conversations grounded
+                                        in emotional situations.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Independent variable (IV)</td>
+                                    <td>
+                                        In the model comparison:
+                                        <b>the training approach</b>, including whether
+                                        the model learned from EmpatheticDialogues.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Dependent variable (DV)</td>
+                                    <td>
+                                        <b>Response quality and empathy</b>,
+                                        measured using automatic evaluation
+                                        and human judgments.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Baselines</td>
+                                    <td>
+                                        Compare models trained using different
+                                        conversation datasets and approaches.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Evaluation</td>
+                                    <td>
+                                        Test the models on held-out conversations
+                                        and ask human evaluators to judge
+                                        their responses.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Results</td>
+                                    <td>
+                                        Models trained using empathy-focused
+                                        conversations generally received
+                                        better human empathy judgments.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Contribution to other researchers</td>
+                                    <td>
+                                        A reusable dataset and benchmark
+                                        for developing and evaluating
+                                        empathetic conversational AI.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Limitation</td>
+                                    <td>
+                                        Better empathy ratings do not prove
+                                        that a chatbot improves users'
+                                        mental health in real life.
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <p>
+                            <small>
+                                <b>Lesson:</b>
+                                A dataset paper must explain how the data was
+                                collected, why it is useful, and how it helps
+                                researchers build or evaluate better models.
+                                <b>The dataset itself has no IV or DV;
+                                    experiments evaluating its usefulness can have them.</b>
+                            </small>
+                        </p>
+                    </section>
+                    <section class="slide exercise-slide">
+                        <div class="eyebrow">EXERCISE</div>
+
+                        <h2>Exercise 4:Different research questions need different methods</h2>
+
+                        <p class="lead">
+                            You have three research ideas about AI and emotional support.
+                            How would you study each one?
+                        </p>
+
+                        <p>
+                            For each idea, identify the <b>contribution type</b>,
+                            propose a <b>methodology</b>, and explain
+                            <b>how you would evaluate your work</b>.
+                        </p>
+
+                        <div class="table-scroll">
+                            <table>
+                                <tr>
+                                    <th>Research idea</th>
+                                    <th>Contribution type</th>
+                                    <th>Methodology</th>
+                                    <th>Evaluation</th>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <b>A.</b> Can empathetic AI replies make students
+                                        feel more understood than neutral replies?
+                                    </td>
+                                    <td>____________</td>
+                                    <td>____________</td>
+                                    <td>____________</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <b>B.</b> How can we design an AI tool that helps
+                                        people reflect on their emotions without
+                                        telling them what they feel?
+                                    </td>
+                                    <td>____________</td>
+                                    <td>____________</td>
+                                    <td>____________</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <b>C.</b> Can we create a dataset that helps AI
+                                        understand how people from different cultures
+                                        express emotions?
+                                    </td>
+                                    <td>____________</td>
+                                    <td>____________</td>
+                                    <td>____________</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <p>
+                            <b>Think:</b> Which studies need IV, DV, and a control group?
+                            Which do not? Why?
+                        </p>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">ANSWER</div>
+
+                        <h2>Answer to Exercise 4</h2>
+
+                        <p class="lead">
+                            All three studies concern AI and emotions,
+                            but they contribute different knowledge.
+                            Therefore, they need different methodologies.
+                        </p>
+
+                        <div class="table-scroll">
+                            <table>
+                                <tr>
+                                    <th>Research idea</th>
+                                    <th>Contribution type</th>
+                                    <th>Methodology</th>
+                                    <th>Evaluation</th>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <b>A. Empathetic vs. neutral AI</b>
+                                    </td>
+                                    <td>
+                                        <b>Controlled experiment</b>
+                                    </td>
+                                    <td>
+                                        Randomly assign students to empathetic
+                                        or neutral AI replies.
+                                        <br><br>
+                                        <b>IV:</b> Reply style.
+                                        <br>
+                                        <b>DV:</b> Feeling understood (1–7 rating).
+                                    </td>
+                                    <td>
+                                        Compare ratings between groups.
+                                        Keep scenarios and reply lengths similar.
+                                        Analyze why some replies work better.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <b>B. AI for emotional reflection</b>
+                                    </td>
+                                    <td>
+                                        <b>Design contribution</b>
+                                    </td>
+                                    <td>
+                                        Study relevant theories.
+                                        Interview users.
+                                        Design and build a prototype.
+                                        Refine it using feedback.
+                                    </td>
+                                    <td>
+                                        Conduct user studies.
+                                        Examine whether the design helps
+                                        people reflect on their emotions.
+                                        Derive reusable design principles.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <b>C. Cultural emotion dataset</b>
+                                    </td>
+                                    <td>
+                                        <b>Dataset contribution</b>
+                                    </td>
+                                    <td>
+                                        Collect emotional expressions from
+                                        different cultures.
+                                        Create clear labels.
+                                        Check annotation quality and
+                                        cultural coverage.
+                                    </td>
+                                    <td>
+                                        Compare AI models trained
+                                        <b>with vs. without</b> the new dataset.
+                                        Measure performance across cultures.
+                                        Analyze errors and biases.
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <p>
+                            <b>Important:</b>
+                            A dataset does not inherently require IV and DV.
+                            However, an experiment testing whether the dataset
+                            improves AI performance can have them.
+                        </p>
+
+                        <p>
+                            <small>
+                                <b>Lesson:</b>
+                                Choose your methodology based on
+                                <b>what new knowledge you want to contribute</b>,
+                                not because every paper must follow the same experiment.
+                            </small>
+                        </p>
+                    </section>
+
+                    <section class="slide">
+                        <div class="eyebrow">SECTION</div>
+                        <h2>Writing the paper</h2>
+                        <p class="lead">Tell a coherent story: question → evidence → insight.</p>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">PAPER WRITING</div>
+                        <h2>What belongs in each section?</h2>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Section</th>
+                                        <th>What to write</th>
+                                        <th>Question to answer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Introduction</td>
+                                        <td>Context, problem, gap, research question, approach, main findings,
+                                            contributions.</td>
+                                        <td>Why should anyone care?</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Related Work</td>
+                                        <td>Synthesize closest research; show agreement, disagreement, and gap.</td>
+                                        <td>What is known and missing?</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Methodology</td>
+                                        <td>Participants/data, IV/DV, controls, procedures, models, evaluation and
+                                            analysis methods.</td>
+                                        <td>Could others repeat and trust this study?</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Results</td>
+                                        <td>Report observations, estimates, tables, uncertainty, and outcomes without
+                                            overclaiming.</td>
+                                        <td>What happened?</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Analysis / Discussion</td>
+                                        <td>Interpret mechanisms, errors, robustness, alternatives, implications and
+                                            limitations.</td>
+                                        <td>Why did it happen and what does it mean?</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Conclusion</td>
+                                        <td>Answer the question, state contributions and limits, identify next steps.
+                                        </td>
+                                        <td>What should readers remember?</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="slide exercise-slide">
+                        <div class="eyebrow">EXERCISE </div>
+                        <h2>Exercise:  Write five sentences about emotion regulation—or your own topic</h2>
+                        <p>If you can write these five sentences, you have a good start on your research proposal because each sentence represents each section of the paper!!</p>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Sentence</th>
+                                        <th>Your draft</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Background</td>
+                                        <td>Emotion regulation is ________.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Problem</td>
+                                        <td>However, existing AI tools ________, and it remains unclear ________.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Methodology</td>
+                                        <td>This paper proposes ________ and compares ________.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Key findings</td>
+                                        <td>If supported by the data, the key findings would be ________. (After running
+                                            the study, replace this with actual results.)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Contribution</td>
+                                        <td>This paper contributes ________ to understanding when and why ________.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section aria-label="Slide 13" class="slide">
+                        <div class="eyebrow">13 · Research resources</div>
+                        <h2>Templates, examples, and lab resources</h2>
+                        <p class="lead">Keep these links handy for proposals, progress presentations, final reports, and
+                            submissions.</p>
+                        <div class="tiles">
+                            <div class="tile">
+                                <h3>Templates</h3>
+                                <p><a href="https://docs.google.com/presentation/d/1SXN2LABIBYnTblk1nbCE1KA83xmR4tt-vUE26Lnl0-E/edit?usp=sharing"
+                                        target="_blank">Thesis presentation template</a></p>
+                                <p><a href="https://www.overleaf.com/read/zptzbhxkbvbn#3d83d4" target="_blank">Thesis
+                                        LaTeX template</a></p>
+                                <p><a href="https://languages.ait.ac.th/thesis-format-template/" target="_blank">AIT
+                                        Language Center format</a></p>
+                            </div>
+                            <div class="tile">
+                                <h3>Proposal examples</h3>
+                                <p>Master’s: <a
+                                        href="https://drive.google.com/file/d/1wTPXliTlkLRDIGVBgnxrgg4UUXvyyoCf/view?usp=sharing">Slides</a>
+                                    · <a
+                                        href="https://drive.google.com/file/d/19J4Zs12gfBOiCo-Bsn7vS4qhDoxubS1s/view?usp=sharing">Report</a>
+                                </p>
+                                <p>PhD: <a
+                                        href="https://drive.google.com/file/d/1yrMHck1oMszKw_3QfqqtwqvZ8RC05n9P/view?usp=sharing">Slides</a>
+                                    · <a
+                                        href="https://drive.google.com/file/d/1Zqek9XC2Xeooz788K_mwIFxaGqZxdMec/view?usp=sharing">Report</a>
+                                </p>
+                            </div>
+                            <div class="tile">
+                                <h3>Completed work</h3>
+                                <p>Research study: <a
+                                        href="https://drive.google.com/file/d/1RHcmHshJDh_9PQnEUcUoEGM-mENOsIF0/view?usp=sharing">Master</a>
+                                    · <a
+                                        href="https://drive.google.com/file/d/1Rcbs5qKUJ9CR3W_1Dwgh_u9-NQCOy6z4/view?usp=sharing">PhD</a>
+                                </p>
+                                <p>Final thesis: <a
+                                        href="https://drive.google.com/file/d/1VSD0-DZHAhDnvD1PSEtpyTjyZynaJqiY/view?usp=sharing">Slides</a>
+                                    · <a
+                                        href="https://drive.google.com/file/d/1Vt5qVQEqEhEn1IoVgXw2QOLnii6Rb9yU/view?usp=sharing">Report</a>
+                                </p>
+                                <p><a
+                                        href="https://drive.google.com/file/d/1QV0olPsGYPoYN7EyqoCU6WqFdGhzzWJS/view?usp=sharing">Internship
+                                        report</a> · <a
+                                        href="https://drive.google.com/drive/folders/10XQngfTQx8fJdnhVwRpTy8s-Rxov3JWa?usp=sharing">Thesis
+                                        repository</a></p>
+                            </div>
+                            <div class="tile">
+                                <h3>Lab tools</h3>
+                                <p><a href="https://github.com/AIT-brainlab/python-project-starter">Python project
+                                        starter</a></p>
+                                <p><a href="https://github.com/orgs/AIT-brainlab/projects/3">Project board</a></p>
+                            </div>
+                        </div>
+                        <h3>Professor's research writing</h3>
+                        <p><a href="https://chaklam.com/articles/how-to-write-paper/">How to write paper</a> · <a
+                                href="https://chaklam.com/articles/how-to-choose-a-good-topic/">How to choose a good
+                                topic</a> · <a href="https://chaklam.com/articles/research-process/">Research
+                                process</a></p>
+                        <p><b>Expected deliverables:</b> Code repository, final report, presentation, demo video, and
+                            publication submission where applicable. Confirm official degree requirements separately.
+                        </p>
+                    </section>
+                    <section class="slide">
+                        <div class="eyebrow">FURTHER READING</div>
+                        <h2>Chaklam’s research guides</h2>
+                        <p><a href="https://chaklam.com/articles/how-to-write-paper/">How to write a paper</a></p>
+                        <p><a href="https://chaklam.com/articles/how-to-choose-a-good-topic/">How to choose a good
+                                topic</a></p>
+                        <p><a href="https://chaklam.com/articles/research-process/">Research process</a></p>
+                    </section>
+                </div>
+                <div class="deck-controls">
+                    <button disabled="" id="prev-slide" type="button">← Previous</button>
+                    <div aria-label="Choose a slide" class="dots" id="slide-dots"></div>
+                    <button id="next-slide" type="button">Next →</button>
+                </div>
+            </div>
+            <script>(function () { const deck = document.getElementById('research-deck'); if (!deck) return; const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), progress = deck.querySelector('#slide-progress'), dots = deck.querySelector('#slide-dots'); let current = 0; function show(i) { current = Math.max(0, Math.min(slides.length - 1, i)); slides.forEach((s, j) => { s.classList.toggle('active', j === current); s.setAttribute('aria-hidden', j === current ? 'false' : 'true') });[...dots.children].forEach((d, j) => d.setAttribute('aria-current', j === current ? 'true' : 'false')); prev.disabled = current === 0; next.disabled = current === slides.length - 1; count.textContent = 'Slide ' + (current + 1) + ' of ' + slides.length; progress.style.width = ((current + 1) / slides.length * 100) + '%'; } slides.forEach((s, i) => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Go to slide ' + (i + 1)); b.addEventListener('click', () => show(i)); dots.appendChild(b) }); prev.addEventListener('click', () => show(current - 1)); next.addEventListener('click', () => show(current + 1)); deck.addEventListener('keydown', e => { if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return; if (e.key === 'ArrowRight') { e.preventDefault(); show(current + 1) } if (e.key === 'ArrowLeft') { e.preventDefault(); show(current - 1) } }); show(0); })();</script>
+        </div>
+    </section><!-- End Portfolio Details Section -->
 </main>
 {{ end }}
