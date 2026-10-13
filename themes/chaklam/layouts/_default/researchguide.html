@@ -418,6 +418,48 @@
                 }
 
                 .slide:has(.eyebrow:first-child) {}
+            
+                /* Keep navigation buttons stable even with many slide dots. */
+                .research-handbook .deck-controls > #prev-slide,
+                .research-handbook .deck-controls > #next-slide {
+                    flex: 0 0 auto;
+                    min-width: 112px;
+                    width: auto;
+                    white-space: nowrap;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    line-height: 1.25;
+                    font-size: 15px;
+                    text-transform: none;
+                    letter-spacing: normal;
+                }
+                .research-handbook .deck-controls > .dots {
+                    flex: 1 1 auto;
+                    min-width: 0;
+                    max-width: 100%;
+                    overflow-x: auto;
+                    flex-wrap: nowrap;
+                    scrollbar-width: thin;
+                    padding: 7px 3px;
+                }
+                .research-handbook .deck-controls > .dots button {
+                    flex: 0 0 9px;
+                    min-height: 9px;
+                }
+                @media (max-width: 600px) {
+                    .research-handbook .deck-controls {
+                        flex-wrap: nowrap;
+                        gap: .5rem;
+                    }
+                    .research-handbook .deck-controls > #prev-slide,
+                    .research-handbook .deck-controls > #next-slide {
+                        min-width: 86px;
+                        padding: .65rem .6rem;
+                        font-size: 13px;
+                    }
+                }
+
             </style>
             <div class="deck" id="research-deck">
                 <div class="deck-top">
