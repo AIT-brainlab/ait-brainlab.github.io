@@ -35,6 +35,11 @@
 .research-handbook .dark-callout{padding:1.1rem 1.3rem;background:#102d47;color:white;border-radius:14px;margin:1.2rem 0}
 .research-handbook .deck-controls{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.4rem;border-top:1px solid #dce7ee;background:#fff}
 .research-handbook .deck-controls button{border:0;border-radius:10px;padding:.75rem 1.1rem;font-weight:750;cursor:pointer;background:#16718b;color:#fff}
+.research-handbook .deck-controls .reveal-all{background:#e8f2f5;color:#16435b}
+.research-handbook .reveal-slide .tile,.research-handbook .reveal-slide .mini-flow span{transition:opacity .25s ease,transform .25s ease}
+.research-handbook .reveal-slide .hidden-step{display:none}
+.research-handbook .title-slide{padding:3rem 0}.research-handbook .title-slide h2{font-size:clamp(2.5rem,6vw,4.4rem)}.research-handbook .title-slide .author{font-size:1.4rem;font-weight:700;color:#16718b}
+@media(prefers-reduced-motion:reduce){.research-handbook .slide,.research-handbook .reveal-slide .tile{animation:none;transition:none}}
 .research-handbook .deck-controls button:disabled{opacity:.35;cursor:not-allowed}
 .research-handbook .dots{display:flex;gap:5px;justify-content:center;flex-wrap:wrap}
 .research-handbook .dots button{width:9px;height:9px;padding:0;border-radius:50%;background:#c8d7e0;min-width:0}
@@ -53,11 +58,20 @@
 <div class="deck" id="research-deck">
   <div class="deck-top">
     <div><strong>From Research Idea to Top-Tier Publication</strong><br><small>A practical, self-paced guide for CHI · ACL · NeurIPS</small></div>
-    <div id="slide-count" aria-live="polite">Slide 1 of 16</div>
+    <div id="slide-count" aria-live="polite">Slide 1</div>
   </div>
   <div class="progress"><span id="slide-progress"></span></div>
   <div class="slides">
-    <section class="slide active" aria-label="Slide 1">
+<section class="slide active title-slide"><div class="eyebrow">A practical guide for master’s researchers</div><h2>Ultimate Guide to Your Research Success</h2><p class="lead">From your first research idea to evidence you can defend.</p><p class="author">By Chaklam</p><div class="mini-flow"><span>Think clearly</span><b>→</b><span>Ask a good question</span><b>→</b><span>Test it fairly</span><b>→</b><span>Explain what we learned</span></div><p>Use <b>Next</b> to reveal one idea at a time. Select <b>Show all</b> whenever you want the complete slide.</p></section>
+<section class="slide reveal-slide"><div class="eyebrow">01 · Start with purpose</div><h2>What is research really for?</h2><p class="lead">You do not need to invent a whole new field. You need a meaningful question and trustworthy evidence.</p><div class="tiles"><div class="tile"><h3>Building</h3><p>“I created a medical chatbot.” Useful engineering, but what have we learned?</p></div><div class="tile"><h3>Measuring</h3><p>“My chatbot scored 90%.” Better—but a number alone explains little.</p></div><div class="tile"><h3>Researching</h3><p>“It fails on negation, and grounding reduces this failure under specific conditions.” Now others can learn from the result.</p></div></div><div class="callout">Ask yourself: <b>If my software disappeared, what would my paper still teach?</b></div></section>
+<section class="slide reveal-slide"><div class="eyebrow">02 · From results to judgment</div><h2>Information → Knowledge → Wisdom</h2><p class="lead">Imagine you tested a medical visual question-answering model.</p><div class="tiles"><div class="tile"><h3>Information · What happened?</h3><p>It answered 90 of 100 questions correctly.</p></div><div class="tile"><h3>Knowledge · Why and when?</h3><p>After analyzing errors, you find that negation questions are disproportionately difficult.</p></div><div class="tile"><h3>Wisdom · What should we do?</h3><p>Use the model cautiously on those questions, show uncertainty, and require human review where consequences are serious.</p></div></div><div class="callout">Numbers are useful. <b>Understanding why</b> makes them meaningful. <b>Good judgment</b> considers consequences and limitations.</div></section>
+<section class="slide reveal-slide"><div class="eyebrow">03 · Depth of thinking</div><h2>Bloom’s Taxonomy: go beyond “I built it”</h2><p class="lead">Bloom describes kinds of cognitive work. It is not identical to information → knowledge → wisdom, but the two ideas help explain deeper research thinking.</p><div class="tiles"><div class="tile"><h3>1 · Remember</h3><p>Define RAG.</p></div><div class="tile"><h3>2 · Understand</h3><p>Explain why retrieval may help an LLM.</p></div><div class="tile"><h3>3 · Apply</h3><p>Build a working RAG pipeline.</p></div><div class="tile"><h3>4 · Analyze</h3><p>Find which questions and documents cause failures.</p></div><div class="tile"><h3>5 · Evaluate</h3><p>Judge whether RAG helps compared with a fair baseline.</p></div><div class="tile"><h3>6 · Create</h3><p>Propose and test a method that addresses a well-defined gap.</p></div></div><div class="callout">A master’s thesis usually needs more than <b>Apply</b>. Look for opportunities to <b>Analyze, Evaluate, and Create</b> credible knowledge.</div></section>
+<section class="slide reveal-slide"><div class="eyebrow">04 · Tools for better questions</div><h2>Thinking tools are not theories to memorize</h2><p class="lead">Use them when you are stuck, overly confident, or unsure what to investigate.</p><div class="tiles"><div class="tile"><h3>First principles</h3><p>What is the actual problem, without assuming a particular technology?</p></div><div class="tile"><h3>Systems thinking</h3><p>What else changes when we improve one part?</p></div><div class="tile"><h3>Second-order thinking</h3><p>What happens after the immediate result?</p></div><div class="tile"><h3>Thinking in bets</h3><p>How confident am I—and what evidence would change my mind?</p></div><div class="tile"><h3>Critical thinking</h3><p>What alternative explanation fits these results?</p></div><div class="tile"><h3>Inversion</h3><p>How could this idea or experiment fail?</p></div></div><div class="callout">You do not need to use all six. <b>Choose one question that helps you think better today.</b></div></section>
+<section class="slide reveal-slide"><div class="eyebrow">05 · First principles</div><h2>Don’t begin with your favorite model</h2><p class="lead">A student says: “I want to use a larger LLM for medical VQA.”</p><div class="tiles"><div class="tile"><h3>Step 1 · Name the real problem</h3><p>Answers are unreliable for some clinical images.</p></div><div class="tile"><h3>Step 2 · Identify what must work</h3><p>Image interpretation, question understanding, and safe uncertainty handling.</p></div><div class="tile"><h3>Step 3 · Challenge assumptions</h3><p>Would a larger model solve image grounding? What evidence says so?</p></div><div class="tile"><h3>Step 4 · Find a research question</h3><p>Which source of error dominates, and which intervention addresses it?</p></div></div><div class="callout">The research idea comes from the <b>problem</b>, not the model name.</div></section>
+<section class="slide reveal-slide"><div class="eyebrow">06 · Systems and consequences</div><h2>Better technology can create new problems</h2><p class="lead">Suppose an AI assistant becomes more accurate.</p><div class="mini-flow"><span>Higher accuracy</span><b>→</b><span>More user trust</span><b>→</b><span>Less checking</span><b>→</b><span>Missed errors</span></div><div class="tiles"><div class="tile"><h3>First-order effect</h3><p>Users get more correct answers.</p></div><div class="tile"><h3>Second-order effect</h3><p>Users may rely on the system more, even when it is wrong.</p></div><div class="tile"><h3>Systems-thinking question</h3><p>How do accuracy, confidence, explanations, user expertise, and verification interact?</p></div></div><div class="callout">A good HCI research question: <b>When does improved AI performance lead to better human decisions—and when does it not?</b></div></section>
+<section class="slide reveal-slide"><div class="eyebrow">07 · Think in bets</div><h2>Treat your idea as a hypothesis, not your identity</h2><p class="lead">“I think my interface will help users detect AI mistakes.” Good start. But how sure are you?</p><div class="tiles"><div class="tile"><h3>State your belief</h3><p>“I expect the interface to improve error detection.”</p></div><div class="tile"><h3>Look for disconfirming evidence</h3><p>Maybe it makes users feel confident without improving decisions.</p></div><div class="tile"><h3>Run a small, fair test</h3><p>Compare detection of incorrect AI advice with and without the interface.</p></div><div class="tile"><h3>Update your belief</h3><p>If the result is negative, revise the explanation or abandon the idea.</p></div></div><div class="callout">Strong researchers are willing to be wrong. <b>What evidence would change your mind?</b></div></section>
+<section class="slide reveal-slide"><div class="eyebrow">08 · Bridge to ideation</div><h2>Now: where do research ideas come from?</h2><p class="lead">You have learned to look beneath a result, question assumptions, and consider consequences.</p><div class="tiles"><div class="tile"><h3>Notice</h3><p>What is failing, confusing, surprising, or important?</p></div><div class="tile"><h3>Question</h3><p>Why does it happen? What assumption might be wrong?</p></div><div class="tile"><h3>Investigate</h3><p>What could I compare or measure to find out?</p></div></div><div class="dark-callout"><b>Research idea starter:</b> “I noticed ___. I wonder why ___. I could investigate it by ___.”</div></section>
+    <section class="slide" aria-label="Slide 1">
       <div class="eyebrow">01 · Start here</div><h2>Research is not just building something.</h2>
       <p class="lead">A research paper should help other people understand something they did not understand before.</p>
       <div class="mini-flow"><span>Important problem</span><b>→</b><span>Clear question</span><b>→</b><span>Convincing evidence</span><b>→</b><span>New knowledge</span></div>
@@ -236,74 +250,26 @@
 <h3>Professor's research writing</h3><p><a href="https://chaklam.com/articles/how-to-write-paper/">How to write paper</a> · <a href="https://chaklam.com/articles/how-to-choose-a-good-topic/">How to choose a good topic</a> · <a href="https://chaklam.com/articles/research-process/">Research process</a></p>
 <p><b>Expected deliverables:</b> Code repository, final report, presentation, demo video, and publication submission where applicable. Confirm official degree requirements separately.</p>
 </section>
-<section class="slide" aria-label="Slide 14">
-<div class="eyebrow">14 · 60-minute workshop</div><h2>Research Idea Clinic: from topic to testable question</h2>
-<p class="lead">Work individually or in pairs. No coding needed. By the end, each student has a one-page pitch and feedback from a peer.</p>
-<div class="tiles">
-<div class="tile"><h3>0–10 min · Find a problem</h3><p>Choose medical VQA, small language models, HCI, simulated humans, HAI, or your own domain. Write <b>two observations</b>: an error, contradiction, overlooked user, assumption, or missing measurement.</p></div>
-<div class="tile"><h3>10–25 min · Turn it into an idea</h3><p>Pick the most interesting observation. Write one weak idea and rewrite it as a focused research question. State who benefits and why the answer matters.</p></div>
-<div class="tile"><h3>25–40 min · Novelty detective</h3><p>Find <b>two closely related papers</b> (or use papers you already know). Compare their questions, evidence, limitations, and your proposed difference. Mark what still needs verification.</p></div>
-<div class="tile"><h3>40–50 min · Design one decisive test</h3><p>Specify a baseline/control, data or participants, primary measure, and one error/robustness analysis. Ask what result would disprove your idea.</p></div>
-<div class="tile"><h3>50–60 min · Peer reviewer</h3><p>Exchange pitches. Partner asks: “What is new? Why care? Is this a fair test? What else could explain the result?” Revise one weakness.</p></div>
-</div><div class="dark-callout"><b>Submit:</b> One page with problem, research question, closest papers, gap, contribution, decisive experiment, analysis, and biggest risk.</div>
-</section>
-<section class="slide" aria-label="Slide 15">
-<div class="eyebrow">15 · Workshop worksheet</div><h2>Fill in your one-page research pitch</h2>
-<table><tr><th>Prompt</th><th>Your answer</th></tr>
-<tr><td>1. I noticed this problem or surprising behavior...</td><td>________________________</td></tr>
-<tr><td>2. My research question is...</td><td>________________________</td></tr>
-<tr><td>3. Closest papers and what they already show...</td><td>________________________</td></tr>
-<tr><td>4. What remains unknown, and why it matters...</td><td>________________________</td></tr>
-<tr><td>5. My possible contribution is...</td><td>________________________</td></tr>
-<tr><td>6. The fairest comparison/control would be...</td><td>________________________</td></tr>
-<tr><td>7. I would measure... and analyze failures by...</td><td>________________________</td></tr>
-<tr><td>8. One result that would challenge my hypothesis...</td><td>________________________</td></tr></table>
-<div class="callout"><b>Important:</b> If you cannot find papers during the session, use known work and label your novelty claim <i>unverified</i>. Do not claim to be first without evidence.</div>
-</section>
-<section class="slide" aria-label="Slide 16">
-<div class="eyebrow">16 · Alternative mini-workshops</div><h2>Other one-hour exercises for later lab meetings</h2>
-<div class="tiles">
-<div class="tile"><h3>Workshop A · Novelty detective</h3><p><b>10 min</b> read abstracts of 3 papers; <b>20 min</b> make a comparison matrix; <b>15 min</b> write a gap claim; <b>15 min</b> peer challenge. <b>Output:</b> novelty statement with evidence and uncertainty.</p></div>
-<div class="tile"><h3>Workshop B · Fix the bad study</h3><p><b>10 min</b> inspect a flawed study; <b>20 min</b> identify confounds, metrics, and baseline problems; <b>20 min</b> redesign; <b>10 min</b> defend. <b>Output:</b> corrected study plan.</p></div>
-<div class="tile"><h3>Workshop C · Reviewer for a day</h3><p><b>15 min</b> read a short research pitch; <b>15 min</b> list novelty and validity concerns; <b>20 min</b> propose decisive analyses; <b>10 min</b> give actionable feedback. <b>Output:</b> review with top three fixes.</p></div>
-</div><div class="callout"><b>Recommended first session:</b> Run the Research Idea Clinic (previous two slides). Use these alternatives for follow-up lab meetings.</div>
-</section>
+<section class="slide reveal-slide"><div class="eyebrow">Final activity · 60 minutes</div><h2>One idea, four sentences</h2><p class="lead">Work alone or with a partner. <b>No coding, paper search, or presentation required.</b> You can finish this even if you do not have a thesis topic yet.</p><div class="tiles"><div class="tile"><h3>0–10 min · Pick a problem</h3><p>Choose something you have seen, read about, or found confusing.</p></div><div class="tile"><h3>10–25 min · Ask a question</h3><p>Make it narrower: what exactly do you want to understand?</p></div><div class="tile"><h3>25–40 min · Imagine a test</h3><p>What would you compare, observe, or measure?</p></div><div class="tile"><h3>40–60 min · Discuss in pairs</h3><p>Explain your idea; your partner asks one difficult question. Improve one sentence.</p></div></div><div class="dark-callout"><b>Only four sentences to submit:</b><br>1. My research question is…<br>2. This matters because…<br>3. My idea might be new because… <em>(not yet verified)</em><br>4. I could test it by…</div></section>
   </div>
   <div class="deck-controls">
     <button type="button" id="prev-slide" disabled>← Previous</button>
-    <div class="dots" id="slide-dots" aria-label="Choose a slide"></div>
+    <button type="button" id="reveal-all" class="reveal-all">Show all</button><div class="dots" id="slide-dots" aria-label="Choose a slide"></div>
     <button type="button" id="next-slide">Next →</button>
   </div>
 </div>
 <script>
 (function(){
-  const deck=document.getElementById('research-deck');
-  if(!deck) return;
-  const slides=Array.from(deck.querySelectorAll('.slide'));
-  const prev=deck.querySelector('#prev-slide'), next=deck.querySelector('#next-slide');
-  const count=deck.querySelector('#slide-count'), progress=deck.querySelector('#slide-progress'), dots=deck.querySelector('#slide-dots');
-  let current=0;
-  slides.forEach((slide,i)=>{
-    const dot=document.createElement('button');
-    dot.type='button'; dot.setAttribute('aria-label','Go to slide '+(i+1));
-    dot.addEventListener('click',()=>show(i)); dots.appendChild(dot);
-  });
-  function show(i){
-    current=Math.max(0,Math.min(slides.length-1,i));
-    slides.forEach((s,j)=>{s.classList.toggle('active',j===current);s.setAttribute('aria-hidden',j===current?'false':'true');});
-    Array.from(dots.children).forEach((d,j)=>d.setAttribute('aria-current',j===current?'true':'false'));
-    prev.disabled=current===0; next.disabled=current===slides.length-1;
-    count.textContent='Slide '+(current+1)+' of '+slides.length;
-    progress.style.width=((current+1)/slides.length*100)+'%';
-  }
-  prev.addEventListener('click',()=>show(current-1));
-  next.addEventListener('click',()=>show(current+1));
-  document.addEventListener('keydown',e=>{
-    if(!deck.contains(document.activeElement)) return;
-    if(e.key==='ArrowRight') show(current+1);
-    if(e.key==='ArrowLeft') show(current-1);
-  });
-  show(0);
+const deck=document.getElementById('research-deck');if(!deck)return;
+const slides=[...deck.querySelectorAll('.slide')],prev=deck.querySelector('#prev-slide'),next=deck.querySelector('#next-slide'),all=deck.querySelector('#reveal-all'),count=deck.querySelector('#slide-count'),progress=deck.querySelector('#slide-progress'),dots=deck.querySelector('#slide-dots');
+let current=0;const revealed=new Map();
+function steps(i){return [...slides[i].querySelectorAll('.tiles > .tile')];}
+function updateSteps(){slides.forEach((s,i)=>{const list=steps(i),shown=revealed.get(i)??(s.classList.contains('reveal-slide')?0:list.length);list.forEach((node,k)=>node.classList.toggle('hidden-step',i===current&&s.classList.contains('reveal-slide')&&k>=shown));});const list=steps(current);all.hidden=!slides[current].classList.contains('reveal-slide')||list.length===0;all.textContent='Show all';next.textContent=(slides[current].classList.contains('reveal-slide')&&(revealed.get(current)??0)<list.length)?'Reveal next →':'Next slide →';}
+function show(i){current=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,j)=>{s.classList.toggle('active',j===current);s.setAttribute('aria-hidden',j===current?'false':'true')});[...dots.children].forEach((d,j)=>d.setAttribute('aria-current',j===current?'true':'false'));prev.disabled=current===0;next.disabled=current===slides.length-1&&(!slides[current].classList.contains('reveal-slide')||(revealed.get(current)??0)>=steps(current).length);count.textContent='Slide '+(current+1)+' of '+slides.length;progress.style.width=((current+1)/slides.length*100)+'%';updateSteps();}
+function forward(){const list=steps(current);if(slides[current].classList.contains('reveal-slide')&&(revealed.get(current)??0)<list.length){revealed.set(current,(revealed.get(current)??0)+1);show(current)}else show(current+1)}
+slides.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Go to slide '+(i+1));b.addEventListener('click',()=>show(i));dots.appendChild(b)});
+prev.addEventListener('click',()=>show(current-1));next.addEventListener('click',forward);all.addEventListener('click',()=>{revealed.set(current,steps(current).length);show(current)});
+deck.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName))return;if(e.key==='ArrowRight'){e.preventDefault();forward()}if(e.key==='ArrowLeft'){e.preventDefault();show(current-1)}});show(0);
 })();
 </script>
     </div>
