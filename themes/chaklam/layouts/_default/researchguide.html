@@ -460,7 +460,44 @@
                     }
                 }
 
-            </style>
+            
+                /* Override site theme styles that stack the three navigation items. */
+                .research-handbook #research-deck > .deck-controls {
+                    display: flex !important;
+                    flex-direction: row !important;
+                    flex-wrap: nowrap !important;
+                    align-items: center !important;
+                    justify-content: space-between !important;
+                    width: 100%;
+                    gap: 12px;
+                }
+                .research-handbook #research-deck > .deck-controls > #prev-slide,
+                .research-handbook #research-deck > .deck-controls > #next-slide {
+                    display: inline-flex !important;
+                    flex: 0 0 auto !important;
+                    width: auto !important;
+                    margin: 0 !important;
+                }
+                .research-handbook #research-deck > .deck-controls > #slide-dots {
+                    display: flex !important;
+                    flex: 1 1 0 !important;
+                    min-width: 0;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    overflow: visible;
+                }
+                @media (max-width: 600px) {
+                    .research-handbook #research-deck > .deck-controls {
+                        gap: 6px;
+                    }
+                    .research-handbook #research-deck > .deck-controls > #slide-dots {
+                        flex-wrap: nowrap;
+                        overflow-x: auto;
+                        justify-content: flex-start;
+                    }
+                }
+</style>
             <div class="deck" id="research-deck">
                 <div class="deck-top">
                     <div><strong>From Research Idea to Publication</strong><br /><small>Journal · CHI · ACL ·
@@ -1763,7 +1800,7 @@
                         <p><a href="https://chaklam.com/articles/research-process/">Research process</a></p>
                     </section>
                 </div>
-                <div class="deck-controls">
+                <div class="deck-controls" style="display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:space-between;">
                     <button disabled="" id="prev-slide" type="button">← Previous</button>
                     <div aria-label="Choose a slide" class="dots" id="slide-dots"></div>
                     <button id="next-slide" type="button">Next →</button>
