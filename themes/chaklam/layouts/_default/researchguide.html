@@ -25,7 +25,8 @@
                 }
 
                 .research-handbook .deck {
-                    max-width: 1050px;
+                    max-width: 1440px;
+                     width: 100%;
                     margin: 1rem auto 2rem;
                     background: #f7fafc;
                     border: 1px solid #dce7ee;
@@ -99,7 +100,7 @@
 
                 .research-handbook .lead {
                     font-size: 1.15rem;
-                    max-width: 820px;
+                    max-width: 1050px;
                     color: #3f566d
                 }
 
@@ -456,7 +457,7 @@
                 <div class="deck-top">
                     <div><strong>From Research Idea to Publication</strong><br /><small>Journal · CHI · ACL ·
                             NeurIPS</small></div>
-                    <div aria-live="polite" id="slide-count">Slide 1</div>
+                    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;"><div aria-live="polite" id="slide-count">Slide 1</div><button class="fullscreen-toggle" id="fullscreen-slide" type="button" aria-label="Enter presentation fullscreen" title="Press F for fullscreen">⛶ Fullscreen</button></div>
                 </div>
                 <div class="progress"><span id="slide-progress"></span></div>
                 <div class="slides">
@@ -2150,7 +2151,7 @@
                             id="next-slide" type="button">Next →</button></div>
                 </div>
             </div>
-            <script>(function () { const deck = document.getElementById('research-deck'); if (!deck) return; const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), progress = deck.querySelector('#slide-progress'), dots = deck.querySelector('#slide-dots'); let current = 0; function show(i) { current = Math.max(0, Math.min(slides.length - 1, i)); slides.forEach((s, j) => { s.classList.toggle('active', j === current); s.setAttribute('aria-hidden', j === current ? 'false' : 'true') });[...dots.children].forEach((d, j) => d.setAttribute('aria-current', j === current ? 'true' : 'false')); prev.disabled = current === 0; next.disabled = current === slides.length - 1; count.textContent = 'Slide ' + (current + 1) + ' of ' + slides.length; progress.style.width = ((current + 1) / slides.length * 100) + '%'; } slides.forEach((s, i) => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Go to slide ' + (i + 1)); b.addEventListener('click', () => show(i)); dots.appendChild(b) }); prev.addEventListener('click', () => show(current - 1)); next.addEventListener('click', () => show(current + 1)); deck.addEventListener('keydown', e => { if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return; if (e.key === 'ArrowRight') { e.preventDefault(); show(current + 1) } if (e.key === 'ArrowLeft') { e.preventDefault(); show(current - 1) } }); show(0); })();</script>
+            <script>(function () { const deck = document.getElementById('research-deck'); if (!deck) return; const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), progress = deck.querySelector('#slide-progress'), dots = deck.querySelector('#slide-dots'); let current = 0; function show(i) { current = Math.max(0, Math.min(slides.length - 1, i)); slides.forEach((s, j) => { s.classList.toggle('active', j === current); s.setAttribute('aria-hidden', j === current ? 'false' : 'true') });[...dots.children].forEach((d, j) => d.setAttribute('aria-current', j === current ? 'true' : 'false')); prev.disabled = current === 0; next.disabled = current === slides.length - 1; count.textContent = 'Slide ' + (current + 1) + ' of ' + slides.length; progress.style.width = ((current + 1) / slides.length * 100) + '%'; } slides.forEach((s, i) => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Go to slide ' + (i + 1)); b.addEventListener('click', () => show(i)); dots.appendChild(b) }); prev.addEventListener('click', () => show(current - 1)); next.addEventListener('click', () => show(current + 1)); deck.addEventListener('keydown', e => { if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return; if (e.key === 'ArrowRight') { e.preventDefault(); show(current + 1) } if (e.key === 'ArrowLeft') { e.preventDefault(); show(current - 1) } }); const full = deck.querySelector('#fullscreen-slide'); function syncFull() { const active = document.fullscreenElement === deck; full.textContent = active ? '⛶ Exit fullscreen' : '⛶ Fullscreen'; full.setAttribute('aria-label', active ? 'Exit presentation fullscreen' : 'Enter presentation fullscreen'); } async function toggleFull() { try { if (document.fullscreenElement === deck) await document.exitFullscreen(); else if (!document.fullscreenElement) await deck.requestFullscreen(); } catch (err) { console.warn('Fullscreen is unavailable:', err); } } full.addEventListener('click', toggleFull); document.addEventListener('fullscreenchange', syncFull); document.addEventListener('keydown', e => { if (['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName) || e.altKey || e.ctrlKey || e.metaKey) return; if (e.key.toLowerCase() === 'f' && !e.repeat) { e.preventDefault(); toggleFull(); } else if (document.fullscreenElement === deck && e.key === 'ArrowRight') { e.preventDefault(); show(current + 1); } else if (document.fullscreenElement === deck && e.key === 'ArrowLeft') { e.preventDefault(); show(current - 1); } }); show(0); })();</script>
         </div>
     </section><!-- End Portfolio Details Section -->
 </main>
