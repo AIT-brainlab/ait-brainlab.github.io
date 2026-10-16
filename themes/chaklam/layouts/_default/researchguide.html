@@ -252,6 +252,57 @@
           font-weight: 730
         }
 
+        .research-guide .paper-points {
+          list-style: none;
+          padding: 0;
+          margin: 1rem 0 0
+        }
+
+        .research-guide .paper-points li {
+          margin: 0 0 .7rem;
+          padding: .85rem 1rem;
+          background: #f3f8fa;
+          border-left: 4px solid var(--mint);
+          border-radius: 0 8px 8px 0;
+          line-height: 1.5
+        }
+
+        .research-guide .paper-points li:last-child {
+          margin-bottom: 0
+        }
+
+        .research-guide .exercise-table {
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0 .55rem;
+          margin-top: 1rem
+        }
+
+        .research-guide .exercise-table th {
+          width: 26%;
+          padding: .85rem 1rem;
+          text-align: left;
+          vertical-align: top;
+          background: #e8f3f5;
+          color: #124f5e;
+          border-radius: 8px 0 0 8px
+        }
+
+        .research-guide .exercise-table td {
+          min-height: 3.2rem;
+          padding: .85rem 1rem;
+          vertical-align: top;
+          background: #fff;
+          border: 1px solid var(--line);
+          border-left: 0;
+          border-radius: 0 8px 8px 0
+        }
+
+        .research-guide .exercise-table td[contenteditable="true"]:empty::before {
+          content: attr(data-placeholder);
+          color: #8a9aa6
+        }
+
         .research-guide .workshop {
           display: grid;
           grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr);
@@ -536,23 +587,8 @@
             margin: 0 0 1rem
           }
 
-          .research-guide .paper-points {
-            list-style: none;
-            padding: 0;
-            margin: 1rem 0 0;
-          }
-
-          .research-guide .paper-points li {
-            margin-bottom: 0.65rem;
-            padding: 0.8rem 1rem;
-            background: #f3f8fa;
-            border-left: 4px solid #42c6b7;
-            border-radius: 0 8px 8px 0;
-            line-height: 1.5;
-          }
-
-          .research-guide .paper-points li:last-child {
-            margin-bottom: 0;
+          .research-guide .exercise-table th {
+            width: 34%
           }
         }
 
@@ -691,7 +727,12 @@
                       </li>
 
                       <li>
-                        <strong>Research idea:</strong>
+                        <strong>Initial idea:</strong>
+                        Can we use bodily sensors to help people understand their emotions?
+                      </li>
+
+                      <li>
+                        <strong>What the paper did:</strong>
                         The researchers designed a diary that combines body data, personal notes, and pictures to
                         support emotional reflection.
                       </li>
@@ -705,25 +746,17 @@
           <section class="slide" data-session="Session 1">
             <div class="slide-inner">
               <div class="eyebrow">Workshop · Observe</div>
-              <h2>From friction to a question</h2>
-              <div class="workshop">
-                <div class="prompt"><strong>Seven minutes</strong>
-                  <ol>
-                    <li>List three frustrations from study, work, or daily life.</li>
-                    <li>Choose one. Name the affected person and setting.</li>
-                    <li>Ask why it persists.</li>
-                    <li>Write a question that does not assume the solution.</li>
-                  </ol>
-                </div>
-                <div class="answers">
-                  <div class="answer weak"><span>Weak</span>
-                    <p>“I want to build an AI tutor.”</p>
-                  </div>
-                  <div class="answer strong"><span>Strong</span>
-                    <p>“When do students accept an AI explanation without checking whether they understood it?”</p>
-                  </div>
-                </div>
-              </div>
+              <h2>Develop an idea from a problem</h2>
+              <p class="plain">Think about a problem you repeatedly notice in study, work, or daily life.</p>
+              <table class="exercise-table">
+                <tbody>
+                  <tr><th>Problem</th><td contenteditable="true" data-placeholder="What problem do people face?"></td></tr>
+                  <tr><th>When</th><td contenteditable="true" data-placeholder="When or where does the problem happen?"></td></tr>
+                  <tr><th>Why it matters</th><td contenteditable="true" data-placeholder="Who is affected, and why is the problem important?"></td></tr>
+                  <tr><th>Initial idea</th><td contenteditable="true" data-placeholder="What question could you ask about the problem?"></td></tr>
+                  <tr><th>How you could study it</th><td contenteditable="true" data-placeholder="What could you observe, compare, or build?"></td></tr>
+                </tbody>
+              </table>
               <div class="takeaway">A clear problem can lead to many possible research ideas.</div>
             </div>
           </section>
@@ -731,28 +764,20 @@
           <section class="slide" data-session="Session 1">
             <div class="slide-inner">
               <div class="eyebrow">Technique 2 · Notice a surprise</div>
-              <h2>Something unexpected happened</h2>
-              <p class="question">What did you expect, and what happened instead?</p>
-              <p class="plain">An unexpected result may show that we have missed something important. Write down what
-                you expected. Then write what you actually saw.</p>
+              <h2>Did something unexpected happen?</h2>
+              <p class="plain">A research idea can begin when reality does not match what we expected. The surprise may
+                show that our understanding is incomplete.</p>
               <div class="paper-list">
                 <div class="paper"><b>1</b>
                   <div><a href="https://doi.org/10.1068/p2952" target="_blank" rel="noopener">Gorillas in our midst</a>
-                    · Simons &amp; Chabris, 1999<p>People watched a video and counted ball passes. Many did not see a
-                      person in a gorilla suit walk through the scene.</p>
-                  </div>
-                </div>
-                <div class="paper"><b>2</b>
-                  <div><a href="https://proceedings.mlr.press/v81/buolamwini18a.html" target="_blank"
-                      rel="noopener">Gender Shades</a> · Buolamwini &amp; Gebru, 2018<p>Face-analysis systems worked
-                      much better for some groups than others. The largest errors affected darker-skinned women.</p>
-                  </div>
-                </div>
-                <div class="paper"><b>3</b>
-                  <div><a href="https://doi.org/10.1126/science.1190700" target="_blank" rel="noopener">The weirdest
-                      people in the world?</a> · Henrich et al., 2010<p>Many psychology studies used people from a small
-                      set of wealthy countries. Their behavior did not always represent people in the rest of the world.
-                    </p>
+                    · Simons &amp; Chabris, 1999
+                    <ul class="paper-points">
+                      <li><strong>Situation:</strong> People watched a video and counted how many times a ball was passed.</li>
+                      <li><strong>What researchers expected:</strong> People would notice an unusual event in front of them.</li>
+                      <li><strong>What actually happened:</strong> Many people did not see a person in a gorilla suit walk through the scene.</li>
+                      <li><strong>Initial idea:</strong> Can focusing strongly on one task make people miss something obvious?</li>
+                      <li><strong>What the paper did:</strong> The researchers tested how attention to one task can hide other visible events.</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -762,57 +787,38 @@
           <section class="slide" data-session="Session 1">
             <div class="slide-inner">
               <div class="eyebrow">Workshop · Surprise</div>
-              <h2>The expectation gap</h2>
-              <div class="workshop">
-                <div class="prompt"><strong>Complete four lines</strong>
-                  <ul>
-                    <li>I expected ______.</li>
-                    <li>Instead, ______ happened.</li>
-                    <li>One explanation might be ______.</li>
-                    <li>I could distinguish explanations by measuring ______.</li>
-                  </ul>
-                </div>
-                <div class="answers">
-                  <div class="answer weak"><span>Weak</span>
-                    <p>“The model performed badly. I will tune it.”</p>
-                  </div>
-                  <div class="answer strong"><span>Strong</span>
-                    <p>“Accuracy fell only for short, ambiguous requests. Does missing conversational context explain
-                      the drop?”</p>
-                  </div>
-                </div>
-              </div>
-              <div class="takeaway">A surprising pattern becomes research when it creates competing explanations.</div>
+              <h2>Describe a surprise you noticed</h2>
+              <p class="plain">Use an observation from your study, work, experiment, or daily life.</p>
+              <table class="exercise-table">
+                <tbody>
+                  <tr><th>Situation</th><td contenteditable="true" data-placeholder="What was happening?"></td></tr>
+                  <tr><th>What you expected</th><td contenteditable="true" data-placeholder="What did you think would happen?"></td></tr>
+                  <tr><th>What actually happened</th><td contenteditable="true" data-placeholder="What surprised you?"></td></tr>
+                  <tr><th>Initial idea</th><td contenteditable="true" data-placeholder="What question could explain the difference?"></td></tr>
+                  <tr><th>How you could study it</th><td contenteditable="true" data-placeholder="What could you observe, compare, or measure?"></td></tr>
+                </tbody>
+              </table>
+              <div class="takeaway">A surprise becomes a research idea when it leads to a question.</div>
             </div>
           </section>
 
           <section class="slide" data-session="Session 1">
             <div class="slide-inner">
               <div class="eyebrow">Technique 3 · Use a theory</div>
-              <h2>A theory can help explain your problem</h2>
-              <p class="question">Is there an idea that helps explain why this problem happens?</p>
-              <p class="plain">Start with a problem you care about. Then find a theory that gives you a possible
-                explanation. The theory should help you decide what to test.</p>
+              <h2>Can a theory help explain the problem?</h2>
+              <p class="plain">Start with a problem you care about. Then look for a theory that gives you a possible
+                explanation and helps you decide what to test.</p>
               <div class="paper-list">
                 <div class="paper"><b>1</b>
                   <div><a href="https://doi.org/10.1145/3544549.3585692" target="_blank" rel="noopener">Impact of User
-                      Mobility on Attentional Tunneling in Handheld AR</a> · Parmar &amp; Silpasuwanchai, CHI EA 2023<p>
-                      Problem: people using augmented reality while walking may miss things around them. An idea from
-                      aviation, called attentional tunneling, helped explain why.</p>
-                  </div>
-                </div>
-                <div class="paper"><b>2</b>
-                  <div><a href="https://doi.org/10.1145/3359593" target="_blank" rel="noopener">Attention Regulation
-                      Framework</a> · Niksirat et al., TOCHI 2019<p>Problem: meditation apps often tell everyone to
-                      follow the same audio guide. Ideas about relaxation and restoring attention helped the team design
-                      more flexible practice.</p>
-                  </div>
-                </div>
-                <div class="paper"><b>3</b>
-                  <div><a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to
-                      Convergence</a> · Parmar &amp; Silpasuwanchai, CHI 2026<p>Problem: people become overloaded when
-                      negotiating many issues with AI. Bayesian reasoning helped show which agreements were becoming
-                      more likely.</p>
+                      Mobility on Attentional Tunneling in Handheld AR</a> · Parmar &amp; Silpasuwanchai, CHI EA 2023
+                    <ul class="paper-points">
+                      <li><strong>Problem:</strong> People using augmented reality while walking may miss important things around them.</li>
+                      <li><strong>Theory:</strong> Aviation research calls this attentional tunneling. A person focuses on one source of information and misses other information.</li>
+                      <li><strong>How the theory helps:</strong> It explains why looking at virtual content may reduce awareness of the real world.</li>
+                      <li><strong>Initial idea:</strong> Does walking make attentional tunneling in augmented reality worse?</li>
+                      <li><strong>What the paper did:</strong> The researchers compared sitting and walking while people completed augmented-reality tasks.</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -822,57 +828,36 @@
           <section class="slide" data-session="Session 1">
             <div class="slide-inner">
               <div class="eyebrow">Workshop · Theory</div>
-              <h2>Start with a problem you care about</h2>
-              <div class="workshop">
-                <div class="prompt">
-                  <ol>
-                    <li>Write the problem in one simple sentence.</li>
-                    <li>Ask why it may happen.</li>
-                    <li>Find one theory that gives a possible answer.</li>
-                    <li>Use the theory to predict what you will see.</li>
-                  </ol>
-                </div>
-                <div class="answers">
-                  <div class="answer weak"><span>Weak</span>
-                    <p>“I want to use cognitive load theory to study AI.”</p>
-                  </div>
-                  <div class="answer strong"><span>Strong</span>
-                    <p>“Students may ignore long AI explanations because their working memory becomes full. I predict
-                      that beginners will learn more from shorter explanations with one example.”</p>
-                  </div>
-                </div>
-              </div>
-              <div class="takeaway">Use a theory when it helps you explain the problem and plan a test.</div>
+              <h2>Use a theory to develop an idea</h2>
+              <table class="exercise-table">
+                <tbody>
+                  <tr><th>Problem</th><td contenteditable="true" data-placeholder="What problem do you care about?"></td></tr>
+                  <tr><th>Theory</th><td contenteditable="true" data-placeholder="What theory may help explain it?"></td></tr>
+                  <tr><th>How the theory helps</th><td contenteditable="true" data-placeholder="What does the theory suggest is happening?"></td></tr>
+                  <tr><th>Initial idea</th><td contenteditable="true" data-placeholder="What research question follows from the theory?"></td></tr>
+                  <tr><th>How you could study it</th><td contenteditable="true" data-placeholder="What could you compare or measure?"></td></tr>
+                </tbody>
+              </table>
+              <div class="takeaway">A useful theory helps you explain the problem and plan a test.</div>
             </div>
           </section>
 
           <section class="slide" data-session="Session 1">
             <div class="slide-inner">
               <div class="eyebrow">Technique 4 · Learn from another field</div>
-              <h2>Other fields may know something useful</h2>
-              <p class="question">Who else studies a problem like yours?</p>
-              <p class="plain">Start with your problem. Look for another field that studies a similar human behavior or
-                technical challenge. Ask whether one of its ideas can help you see your problem differently.</p>
+              <h2>Does another field study a similar problem?</h2>
+              <p class="plain">A different field may already have a useful idea, method, or way to explain your problem.</p>
               <div class="paper-list">
                 <div class="paper"><b>1</b>
-                  <div><a href="https://doi.org/10.1145/3544549.3585692" target="_blank" rel="noopener">Attentional
-                      tunneling in handheld AR</a>
-                    <p>An aviation safety idea helped explain why people may miss real-world events while looking at
-                      augmented reality.</p>
-                  </div>
-                </div>
-                <div class="paper"><b>2</b>
                   <div><a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">Bayesian visualization
-                      for negotiation</a>
-                    <p>An idea from probability helped people understand how close they were to an agreement with AI.
-                    </p>
-                  </div>
-                </div>
-                <div class="paper"><b>3</b>
-                  <div><a href="https://doi.org/10.1145/3290605.3300233" target="_blank" rel="noopener">Human-centered
-                      tools for imperfect algorithms</a> · Kocielnik et al., CHI 2019<p>Ideas from human-computer
-                      interaction helped people understand when an algorithm may be wrong and what they could do next.
-                    </p>
+                      for negotiation</a> · Parmar &amp; Silpasuwanchai, CHI 2026
+                    <ul class="paper-points">
+                      <li><strong>Problem:</strong> People can feel overloaded when they negotiate many issues with AI.</li>
+                      <li><strong>Other field:</strong> Bayesian statistics studies how probabilities change when new information appears.</li>
+                      <li><strong>Useful idea:</strong> Show how the chance of reaching an agreement changes during the negotiation.</li>
+                      <li><strong>Initial idea:</strong> Can a probability display help people find a good agreement without losing control?</li>
+                      <li><strong>What the paper did:</strong> The researchers built a Bayesian display and tested it in a rental negotiation with AI.</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -882,57 +867,37 @@
           <section class="slide" data-session="Session 1">
             <div class="slide-inner">
               <div class="eyebrow">Workshop · Another field</div>
-              <h2>Start with your problem</h2>
-              <div class="workshop">
-                <div class="prompt">
-                  <ol>
-                    <li>Write a topic or problem you care about.</li>
-                    <li>Ask which other field studies a similar problem.</li>
-                    <li>Choose one useful idea from that field.</li>
-                    <li>Explain how the idea changes your research question.</li>
-                  </ol>
-                </div>
-                <div class="answers">
-                  <div class="answer weak"><span>Weak</span>
-                    <p>“I will combine AI and psychology.”</p>
-                  </div>
-                  <div class="answer strong"><span>Strong</span>
-                    <p>“People sometimes reject advice that feels controlling. Psychology calls this reactance. Does
-                      forceful wording make users reject correct AI advice?”</p>
-                  </div>
-                </div>
-              </div>
-              <div class="takeaway">The other field should help you ask a better question about your problem.</div>
+              <h2>Bring an idea from another field</h2>
+              <table class="exercise-table">
+                <tbody>
+                  <tr><th>Problem</th><td contenteditable="true" data-placeholder="What problem do you care about?"></td></tr>
+                  <tr><th>Other field</th><td contenteditable="true" data-placeholder="Which field studies something similar?"></td></tr>
+                  <tr><th>Useful idea</th><td contenteditable="true" data-placeholder="What idea, method, or explanation can you borrow?"></td></tr>
+                  <tr><th>Initial idea</th><td contenteditable="true" data-placeholder="What new research question can you ask?"></td></tr>
+                  <tr><th>How you could study it</th><td contenteditable="true" data-placeholder="How could you test whether the borrowed idea helps?"></td></tr>
+                </tbody>
+              </table>
+              <div class="takeaway">Use the other field to ask a clearer question about your problem.</div>
             </div>
           </section>
 
           <section class="slide" data-session="Session 1">
             <div class="slide-inner">
               <div class="eyebrow">Technique 5 · Continue from a paper</div>
-              <h2>The next question</h2>
-              <p class="question">What question could we ask after reading this paper?</p>
-              <p class="plain">Look at what the paper studied and what it did not study. Check the people, setting,
-                task, length of time, and result. Then search newer papers to make sure the question is still open.</p>
+              <h2>What could researchers study next?</h2>
+              <p class="plain">A paper answers one question, but it often leaves another question open. Look closely at
+                what the paper tested and what it did not test.</p>
               <div class="paper-list">
                 <div class="paper"><b>1</b>
-                  <div><a href="https://doi.org/10.1145/3544549.3585692" target="_blank" rel="noopener">HCI: Attentional
-                      tunneling in handheld AR</a>
-                    <p>The study found that walking made people slower to notice real-world events. Next question: which
-                      interface design can reduce this problem?</p>
-                  </div>
-                </div>
-                <div class="paper"><b>2</b>
-                  <div><a href="https://aclanthology.org/P19-1534/" target="_blank" rel="noopener">ACL:
-                      EmpatheticDialogues</a>
-                    <p>The study helped chatbots give replies that sound more caring. Next question: which kind of
-                      caring reply works best for each person and situation?</p>
-                  </div>
-                </div>
-                <div class="paper"><b>3</b>
                   <div><a href="https://doi.org/10.1016/0013-4694(88)90149-6" target="_blank" rel="noopener">EEG and
-                      BCI: the P300 speller</a> · Farwell &amp; Donchin, 1988<p>The system let people choose letters
-                      using brain signals. Next question: can prediction make writing faster without causing more
-                      mistakes or taking control away from the user?</p>
+                      BCI: the P300 speller</a> · Farwell &amp; Donchin, 1988
+                    <ul class="paper-points">
+                      <li><strong>What the paper studied:</strong> A system that lets people choose letters by detecting brain responses.</li>
+                      <li><strong>Main finding:</strong> People could use the system to spell words without moving their hands.</li>
+                      <li><strong>What was still difficult:</strong> Selecting letters was slow, and mistakes took time to correct.</li>
+                      <li><strong>Next idea:</strong> Can word prediction make BCI writing faster without increasing mistakes?</li>
+                      <li><strong>How it could be studied:</strong> Compare the same speller with and without word prediction.</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -943,25 +908,16 @@
             <div class="slide-inner">
               <div class="eyebrow">Workshop · Continue from a paper</div>
               <h2>What could we study next?</h2>
-              <div class="workshop">
-                <div class="prompt">
-                  <ol>
-                    <li>Write the paper's main finding in simple words.</li>
-                    <li>Write one thing the paper did not study.</li>
-                    <li>Explain why that missing part matters.</li>
-                    <li>Search for newer work before saying it is a research gap.</li>
-                  </ol>
-                </div>
-                <div class="answers">
-                  <div class="answer weak"><span>Weak</span>
-                    <p>“Use a newer model on the same dataset.”</p>
-                  </div>
-                  <div class="answer strong"><span>Strong</span>
-                    <p>“The paper shows that AI helps people finish a task now. Will they still do well later when the
-                      AI is removed?”</p>
-                  </div>
-                </div>
-              </div>
+              <p class="plain">Choose one paper related to your interests. Read enough to complete the table.</p>
+              <table class="exercise-table">
+                <tbody>
+                  <tr><th>What the paper studied</th><td contenteditable="true" data-placeholder="What question or problem did the paper study?"></td></tr>
+                  <tr><th>Main finding</th><td contenteditable="true" data-placeholder="What did the researchers learn?"></td></tr>
+                  <tr><th>What is still difficult or unknown</th><td contenteditable="true" data-placeholder="What did the paper not answer?"></td></tr>
+                  <tr><th>Next idea</th><td contenteditable="true" data-placeholder="What research question could come next?"></td></tr>
+                  <tr><th>How you could study it</th><td contenteditable="true" data-placeholder="What could you compare, observe, or measure?"></td></tr>
+                </tbody>
+              </table>
               <div class="takeaway">A good next question helps us understand something new.</div>
             </div>
           </section>
