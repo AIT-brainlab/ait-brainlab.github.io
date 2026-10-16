@@ -2,310 +2,1865 @@
 
 <main id="main">
   <section class="breadcrumbs">
-    <div class="container"><h2>{{ .Title }}</h2></div>
+    <div class="container">
+      <h2>{{ .Title }}</h2>
+    </div>
   </section>
 
   <section class="portfolio-details" id="portfolio-details">
     <div class="container research-guide">
       <style>
-        .research-guide{--navy:#102d47;--ink:#172b46;--teal:#087f8c;--mint:#42c6b7;--paper:#f6f3ec;--line:#d7e2e7;--muted:#53697c;--gold:#dc9d2d;color:var(--ink);font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-        .research-guide *{box-sizing:border-box}.research-guide .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.research-guide a{color:#076e86;text-decoration-thickness:1px;text-underline-offset:3px}.research-guide a:focus,.research-guide button:focus,.research-guide select:focus{outline:3px solid #f2bd55;outline-offset:3px}
-        .research-guide .deck{max-width:1440px;width:100%;margin:1rem auto 2rem;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 18px 45px #102d4718}
-        .research-guide .deck-top{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:1rem;align-items:center;padding:.8rem 1.2rem;background:var(--navy);color:#fff}.research-guide .deck-title{font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.research-guide .deck-meta{font-size:.9rem;color:#d6e5ee}.research-guide .top-actions{display:flex;gap:.55rem;align-items:center}.research-guide button,.research-guide select{font:inherit}.research-guide .top-actions button,.research-guide .top-actions select{border:1px solid #ffffff55;border-radius:8px;background:#ffffff12;color:#fff;padding:.5rem .7rem}.research-guide .top-actions select option{color:#172b46}
-        .research-guide .progress{height:5px;background:#dbe7ed}.research-guide .progress span{display:block;height:100%;width:0;background:var(--mint);transition:width .2s}
-        .research-guide .slides{padding:clamp(1.25rem,3.6vw,3.1rem);min-height:620px;background:linear-gradient(135deg,#fff 0%,#fff 65%,#f3f8fa 100%)}.research-guide .slide{display:none;animation:fadein .18s ease}.research-guide .slide.active{display:block}.research-guide .slide-inner{max-width:1180px;margin:0 auto}.research-guide .title-slide{padding-top:4.2rem}.research-guide .title-slide h2{max-width:1000px;font-size:clamp(2.6rem,6vw,5.1rem);line-height:1.02;margin:.25rem 0 1.2rem}.research-guide .section-slide{padding-top:5rem}.research-guide .section-slide h2{font-size:clamp(2.7rem,5vw,4.7rem);max-width:900px}.research-guide .session-number{font-size:clamp(4rem,10vw,8rem);line-height:.8;color:#d8e8ec;font-weight:900;float:right;margin:.3rem 0 1rem 2rem}
-        .research-guide .eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:850;color:var(--teal)}.research-guide .slide h2{font-size:clamp(1.9rem,3.8vw,3rem);line-height:1.1;margin:.35rem 0 1rem;color:var(--ink);font-weight:820}.research-guide .slide h3{font-size:1.1rem;line-height:1.25;margin:.9rem 0 .35rem}.research-guide .lead{font-size:clamp(1.05rem,1.8vw,1.28rem);max-width:1050px;color:var(--muted)}.research-guide .question{font:800 clamp(1.55rem,3.4vw,2.65rem)/1.18 Georgia,serif;max-width:1050px;margin:1.2rem 0 1.5rem;color:#0e5367}.research-guide .plain{max-width:1050px;font-size:1.05rem}.research-guide .takeaway{margin-top:1.2rem;padding:1rem 0;border-top:3px solid var(--mint);font-size:1.18rem;font-weight:760;color:#124f5e}
-        .research-guide .paper-list{margin:1.25rem 0 0;border-top:1px solid var(--line)}.research-guide .paper{display:grid;grid-template-columns:2.3rem minmax(0,1fr);gap:.85rem;padding:.75rem 0;border-bottom:1px solid var(--line)}.research-guide .paper b{display:grid;place-items:center;width:2.1rem;height:2.1rem;border-radius:50%;background:#e6f3f4;color:#126878}.research-guide .paper p{margin:.2rem 0;color:#43596d}.research-guide .paper a{font-weight:730}
-        .research-guide .workshop{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:clamp(1.2rem,3vw,2.5rem);margin-top:1.15rem}.research-guide .prompt{padding:1.15rem 1.3rem;background:var(--paper);border-left:5px solid var(--gold)}.research-guide .prompt ol,.research-guide .prompt ul{margin:.6rem 0 .1rem;padding-left:1.25rem}.research-guide .answers{border-left:1px solid var(--line);padding-left:1.5rem}.research-guide .answer{margin:0 0 1rem}.research-guide .answer span{display:inline-block;font-size:.74rem;font-weight:850;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.25rem}.research-guide .weak span{color:#a1483f}.research-guide .strong span{color:#14735f}.research-guide .answer p{margin:0}.research-guide .mini-table{width:100%;border-collapse:collapse;margin:1rem 0}.research-guide .mini-table th,.research-guide .mini-table td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:.65rem .55rem}.research-guide .mini-table th{color:#126878;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em}.research-guide .two-col{display:grid;grid-template-columns:1fr 1fr;gap:2rem}.research-guide .steps{counter-reset:step;list-style:none;padding:0;margin:1rem 0}.research-guide .steps li{counter-increment:step;position:relative;padding:.65rem 0 .65rem 3rem;border-bottom:1px solid var(--line)}.research-guide .steps li:before{content:counter(step);position:absolute;left:0;top:.55rem;display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--navy);color:#fff;font-weight:800}.research-guide .compact{columns:2;column-gap:2rem}.research-guide .compact li{break-inside:avoid;margin:.25rem 0}
-        .research-guide .controls{display:grid;grid-template-columns:150px minmax(0,1fr) 150px;align-items:center;gap:1rem;padding:.85rem 1.2rem;border-top:1px solid var(--line);background:#fff}.research-guide .controls button{border:0;border-radius:9px;padding:.72rem 1rem;font-weight:760;cursor:pointer;background:var(--teal);color:#fff}.research-guide .controls button:disabled{opacity:.35;cursor:not-allowed}.research-guide .controls .next{justify-self:end}.research-guide .dots{display:flex;justify-content:center;align-items:center;gap:5px;flex-wrap:wrap;max-height:48px;overflow:auto}.research-guide .dots button{width:8px;height:8px;border:0;border-radius:50%;padding:0;background:#bdd0d8}.research-guide .dots button[aria-current="true"]{width:22px;border-radius:8px;background:var(--teal)}
-        .research-guide .kbd{font-size:.82rem;color:#667b8b}.research-guide .optional{border-left:4px solid #9aaeb8;padding-left:1rem;color:#405566}.research-guide blockquote{margin:1rem 0;padding:1rem 1.25rem;background:#edf6f7;border-left:5px solid var(--teal);font-size:1.08rem}.research-guide .resource-columns{columns:2;column-gap:2rem}.research-guide .resource-group{break-inside:avoid;margin:0 0 1.2rem}.research-guide .resource-group p{margin:.25rem 0}
-        .research-guide .resume-note{font-size:.83rem;color:#d6e5ee}.research-guide .slide-number{font-variant-numeric:tabular-nums}
-        .research-guide .deck:fullscreen{border:0;border-radius:0;max-width:none;width:100vw;height:100vh;background:#fff}.research-guide .deck:fullscreen .slides{min-height:calc(100vh - 130px);display:flex;align-items:center}.research-guide .deck:fullscreen .slide.active{width:100%}
-        @keyframes fadein{from{opacity:.25;transform:translateY(5px)}to{opacity:1;transform:none}}@media(max-width:820px){.research-guide .deck-top{grid-template-columns:1fr auto}.research-guide .deck-meta{display:none}.research-guide .slides{min-height:690px}.research-guide .workshop,.research-guide .two-col{grid-template-columns:1fr}.research-guide .answers{border-left:0;border-top:1px solid var(--line);padding:1rem 0 0}.research-guide .compact,.research-guide .resource-columns{columns:1}.research-guide .controls{grid-template-columns:115px 1fr 115px}.research-guide .controls button{padding:.65rem}.research-guide .session-number{float:none;margin:0 0 1rem}}@media(prefers-reduced-motion:reduce){.research-guide .slide{animation:none}.research-guide .progress span{transition:none}}
+        .research-guide {
+          --navy: #102d47;
+          --ink: #172b46;
+          --teal: #087f8c;
+          --mint: #42c6b7;
+          --paper: #f6f3ec;
+          --line: #d7e2e7;
+          --muted: #53697c;
+          --gold: #dc9d2d;
+          color: var(--ink);
+          font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif
+        }
+
+        .research-guide * {
+          box-sizing: border-box
+        }
+
+        .research-guide .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0
+        }
+
+        .research-guide a {
+          color: #076e86;
+          text-decoration-thickness: 1px;
+          text-underline-offset: 3px
+        }
+
+        .research-guide a:focus,
+        .research-guide button:focus,
+        .research-guide select:focus {
+          outline: 3px solid #f2bd55;
+          outline-offset: 3px
+        }
+
+        .research-guide .deck {
+          max-width: 1440px;
+          width: 100%;
+          margin: 1rem auto 2rem;
+          background: #fff;
+          border: 1px solid var(--line);
+          border-radius: 18px;
+          overflow: hidden;
+          box-shadow: 0 18px 45px #102d4718
+        }
+
+        .research-guide .deck-top {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto auto;
+          gap: 1rem;
+          align-items: center;
+          padding: .8rem 1.2rem;
+          background: var(--navy);
+          color: #fff
+        }
+
+        .research-guide .deck-title {
+          font-weight: 750;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis
+        }
+
+        .research-guide .deck-meta {
+          font-size: .9rem;
+          color: #d6e5ee
+        }
+
+        .research-guide .top-actions {
+          display: flex;
+          gap: .55rem;
+          align-items: center
+        }
+
+        .research-guide button,
+        .research-guide select {
+          font: inherit
+        }
+
+        .research-guide .top-actions button,
+        .research-guide .top-actions select {
+          border: 1px solid #ffffff55;
+          border-radius: 8px;
+          background: #ffffff12;
+          color: #fff;
+          padding: .5rem .7rem
+        }
+
+        .research-guide .top-actions select option {
+          color: #172b46
+        }
+
+        .research-guide .progress {
+          height: 5px;
+          background: #dbe7ed
+        }
+
+        .research-guide .progress span {
+          display: block;
+          height: 100%;
+          width: 0;
+          background: var(--mint);
+          transition: width .2s
+        }
+
+        .research-guide .slides {
+          padding: clamp(1.25rem, 3.6vw, 3.1rem);
+          min-height: 620px;
+          background: linear-gradient(135deg, #fff 0%, #fff 65%, #f3f8fa 100%)
+        }
+
+        .research-guide .slide {
+          display: none;
+          animation: fadein .18s ease
+        }
+
+        .research-guide .slide.active {
+          display: block
+        }
+
+        .research-guide .slide-inner {
+          max-width: 1180px;
+          margin: 0 auto
+        }
+
+        .research-guide .title-slide {
+          padding-top: 4.2rem
+        }
+
+        .research-guide .title-slide h2 {
+          max-width: 1000px;
+          font-size: clamp(2.6rem, 6vw, 5.1rem);
+          line-height: 1.02;
+          margin: .25rem 0 1.2rem
+        }
+
+        .research-guide .section-slide {
+          padding-top: 5rem
+        }
+
+        .research-guide .section-slide h2 {
+          font-size: clamp(2.7rem, 5vw, 4.7rem);
+          max-width: 900px
+        }
+
+        .research-guide .session-number {
+          font-size: clamp(4rem, 10vw, 8rem);
+          line-height: .8;
+          color: #d8e8ec;
+          font-weight: 900;
+          float: right;
+          margin: .3rem 0 1rem 2rem
+        }
+
+        .research-guide .eyebrow {
+          font-size: .78rem;
+          text-transform: uppercase;
+          letter-spacing: .12em;
+          font-weight: 850;
+          color: var(--teal)
+        }
+
+        .research-guide .slide h2 {
+          font-size: clamp(1.9rem, 3.8vw, 3rem);
+          line-height: 1.1;
+          margin: .35rem 0 1rem;
+          color: var(--ink);
+          font-weight: 820
+        }
+
+        .research-guide .slide h3 {
+          font-size: 1.1rem;
+          line-height: 1.25;
+          margin: .9rem 0 .35rem
+        }
+
+        .research-guide .lead {
+          font-size: clamp(1.05rem, 1.8vw, 1.28rem);
+          max-width: 1050px;
+          color: var(--muted)
+        }
+
+        .research-guide .question {
+          font: 800 clamp(1.55rem, 3.4vw, 2.65rem)/1.18 Georgia, serif;
+          max-width: 1050px;
+          margin: 1.2rem 0 1.5rem;
+          color: #0e5367
+        }
+
+        .research-guide .plain {
+          max-width: 1050px;
+          font-size: 1.05rem
+        }
+
+        .research-guide .takeaway {
+          margin-top: 1.2rem;
+          padding: 1rem 0;
+          border-top: 3px solid var(--mint);
+          font-size: 1.18rem;
+          font-weight: 760;
+          color: #124f5e
+        }
+
+        .research-guide .paper-list {
+          margin: 1.25rem 0 0;
+          border-top: 1px solid var(--line)
+        }
+
+        .research-guide .paper {
+          display: grid;
+          grid-template-columns: 2.3rem minmax(0, 1fr);
+          gap: .85rem;
+          padding: .75rem 0;
+          border-bottom: 1px solid var(--line)
+        }
+
+        .research-guide .paper b {
+          display: grid;
+          place-items: center;
+          width: 2.1rem;
+          height: 2.1rem;
+          border-radius: 50%;
+          background: #e6f3f4;
+          color: #126878
+        }
+
+        .research-guide .paper p {
+          margin: .2rem 0;
+          color: #43596d
+        }
+
+        .research-guide .paper a {
+          font-weight: 730
+        }
+
+        .research-guide .workshop {
+          display: grid;
+          grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr);
+          gap: clamp(1.2rem, 3vw, 2.5rem);
+          margin-top: 1.15rem
+        }
+
+        .research-guide .prompt {
+          padding: 1.15rem 1.3rem;
+          background: var(--paper);
+          border-left: 5px solid var(--gold)
+        }
+
+        .research-guide .prompt ol,
+        .research-guide .prompt ul {
+          margin: .6rem 0 .1rem;
+          padding-left: 1.25rem
+        }
+
+        .research-guide .answers {
+          border-left: 1px solid var(--line);
+          padding-left: 1.5rem
+        }
+
+        .research-guide .answer {
+          margin: 0 0 1rem
+        }
+
+        .research-guide .answer span {
+          display: inline-block;
+          font-size: .74rem;
+          font-weight: 850;
+          letter-spacing: .06em;
+          text-transform: uppercase;
+          margin-bottom: .25rem
+        }
+
+        .research-guide .weak span {
+          color: #a1483f
+        }
+
+        .research-guide .strong span {
+          color: #14735f
+        }
+
+        .research-guide .answer p {
+          margin: 0
+        }
+
+        .research-guide .mini-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 1rem 0
+        }
+
+        .research-guide .mini-table th,
+        .research-guide .mini-table td {
+          text-align: left;
+          vertical-align: top;
+          border-bottom: 1px solid var(--line);
+          padding: .65rem .55rem
+        }
+
+        .research-guide .mini-table th {
+          color: #126878;
+          font-size: .85rem;
+          text-transform: uppercase;
+          letter-spacing: .05em
+        }
+
+        .research-guide .two-col {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem
+        }
+
+        .research-guide .steps {
+          counter-reset: step;
+          list-style: none;
+          padding: 0;
+          margin: 1rem 0
+        }
+
+        .research-guide .steps li {
+          counter-increment: step;
+          position: relative;
+          padding: .65rem 0 .65rem 3rem;
+          border-bottom: 1px solid var(--line)
+        }
+
+        .research-guide .steps li:before {
+          content: counter(step);
+          position: absolute;
+          left: 0;
+          top: .55rem;
+          display: grid;
+          place-items: center;
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+          background: var(--navy);
+          color: #fff;
+          font-weight: 800
+        }
+
+        .research-guide .compact {
+          columns: 2;
+          column-gap: 2rem
+        }
+
+        .research-guide .compact li {
+          break-inside: avoid;
+          margin: .25rem 0
+        }
+
+        .research-guide .controls {
+          display: grid;
+          grid-template-columns: 150px minmax(0, 1fr) 150px;
+          align-items: center;
+          gap: 1rem;
+          padding: .85rem 1.2rem;
+          border-top: 1px solid var(--line);
+          background: #fff
+        }
+
+        .research-guide .controls button {
+          border: 0;
+          border-radius: 9px;
+          padding: .72rem 1rem;
+          font-weight: 760;
+          cursor: pointer;
+          background: var(--teal);
+          color: #fff
+        }
+
+        .research-guide .controls button:disabled {
+          opacity: .35;
+          cursor: not-allowed
+        }
+
+        .research-guide .controls .next {
+          justify-self: end
+        }
+
+        .research-guide .dots {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          flex-wrap: wrap;
+          max-height: 48px;
+          overflow: auto
+        }
+
+        .research-guide .dots button {
+          width: 8px;
+          height: 8px;
+          border: 0;
+          border-radius: 50%;
+          padding: 0;
+          background: #bdd0d8
+        }
+
+        .research-guide .dots button[aria-current="true"] {
+          width: 22px;
+          border-radius: 8px;
+          background: var(--teal)
+        }
+
+        .research-guide .kbd {
+          font-size: .82rem;
+          color: #667b8b
+        }
+
+        .research-guide .optional {
+          border-left: 4px solid #9aaeb8;
+          padding-left: 1rem;
+          color: #405566
+        }
+
+        .research-guide blockquote {
+          margin: 1rem 0;
+          padding: 1rem 1.25rem;
+          background: #edf6f7;
+          border-left: 5px solid var(--teal);
+          font-size: 1.08rem
+        }
+
+        .research-guide .resource-columns {
+          columns: 2;
+          column-gap: 2rem
+        }
+
+        .research-guide .resource-group {
+          break-inside: avoid;
+          margin: 0 0 1.2rem
+        }
+
+        .research-guide .resource-group p {
+          margin: .25rem 0
+        }
+
+        .research-guide .resume-note {
+          font-size: .83rem;
+          color: #d6e5ee
+        }
+
+        .research-guide .slide-number {
+          font-variant-numeric: tabular-nums
+        }
+
+        .research-guide .deck:fullscreen {
+          border: 0;
+          border-radius: 0;
+          max-width: none;
+          width: 100vw;
+          height: 100vh;
+          background: #fff
+        }
+
+        .research-guide .deck:fullscreen .slides {
+          min-height: calc(100vh - 130px);
+          display: flex;
+          align-items: center
+        }
+
+        .research-guide .deck:fullscreen .slide.active {
+          width: 100%
+        }
+
+        @keyframes fadein {
+          from {
+            opacity: .25;
+            transform: translateY(5px)
+          }
+
+          to {
+            opacity: 1;
+            transform: none
+          }
+        }
+
+        @media(max-width:820px) {
+          .research-guide .deck-top {
+            grid-template-columns: 1fr auto
+          }
+
+          .research-guide .deck-meta {
+            display: none
+          }
+
+          .research-guide .slides {
+            min-height: 690px
+          }
+
+          .research-guide .workshop,
+          .research-guide .two-col {
+            grid-template-columns: 1fr
+          }
+
+          .research-guide .answers {
+            border-left: 0;
+            border-top: 1px solid var(--line);
+            padding: 1rem 0 0
+          }
+
+          .research-guide .compact,
+          .research-guide .resource-columns {
+            columns: 1
+          }
+
+          .research-guide .controls {
+            grid-template-columns: 115px 1fr 115px
+          }
+
+          .research-guide .controls button {
+            padding: .65rem
+          }
+
+          .research-guide .session-number {
+            float: none;
+            margin: 0 0 1rem
+          }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+          .research-guide .slide {
+            animation: none
+          }
+
+          .research-guide .progress span {
+            transition: none
+          }
+        }
       </style>
 
       <div class="deck" id="research-deck" tabindex="0" aria-label="Research guide presentation">
         <header class="deck-top">
-          <div><div class="deck-title">Research Guide · AIT Brain Lab</div></div>
-          <div class="deck-meta"><span class="slide-number" id="slide-count"></span> · <span id="session-label"></span></div>
+          <div>
+            <div class="deck-title">Research Guide · AIT Brain Lab</div>
+          </div>
+          <div class="deck-meta"><span class="slide-number" id="slide-count"></span> · <span id="session-label"></span>
+          </div>
           <div class="top-actions">
-            <label><span class="sr-only">Jump to session</span><select id="session-jump" aria-label="Jump to session"><option value="0">Start</option><option value="3">Session 1</option><option value="14">Session 2</option><option value="22">Session 3</option><option value="30">Session 4</option><option value="41">Advanced</option><option value="45">Resources</option></select></label>
+            <label><span class="sr-only">Jump to session</span><select id="session-jump" aria-label="Jump to session">
+                <option value="0">Start</option>
+                <option value="3">Session 1</option>
+                <option value="14">Session 2</option>
+                <option value="22">Session 3</option>
+                <option value="30">Session 4</option>
+                <option value="41">Advanced</option>
+                <option value="45">Resources</option>
+              </select></label>
             <button id="fullscreen-slide" type="button" title="Fullscreen (F)">⛶ Fullscreen</button>
           </div>
         </header>
         <div class="progress" aria-hidden="true"><span id="slide-progress"></span></div>
 
         <div class="slides">
-          <section class="slide" data-session="Start"><div class="slide-inner title-slide">
-            <h2>From Zero to Hero:  How to Do Research?</h2>
-            <p class="lead">A self-paced tutorial and exercises covering idea generation, idea refinement, idea validation, idea storytelling</p>
-            <p class="kbd">Use ← →, the buttons, or the session menu. Press F for fullscreen.</p>
-          </div></section>
-
-          <section class="slide" data-session="Start"><div class="slide-inner">
-            <h2>Research Journey</h2>
-            <table class="mini-table"><thead><tr><th>Stage</th><th>Main question</th></tr></thead><tbody>
-              <tr><td>Idea Generation</td><td>Where could a good idea come from?</td></tr>
-              <tr><td>Idea Refinement</td><td>How to sharpen the idea?</td></tr>
-              <tr><td>Idea Validation</td><td>What needs to be done to validate the idea?</td></tr>
-              <tr><td>Idea Storytelling</td><td>How to storytell the idea?</td></tr>
-            </tbody></table>
-          </div></section>
-
-          <section class="slide" data-session="Session 1"><div class="slide-inner section-slide"><div class="session-number">01</div><div class="eyebrow">Part 1 · Idea generation</div><h2>Where could a good idea come from?</h2></div></section>
-
-          <section class="slide" data-session="Session 1"><div class="slide-inner">
-            <div class="eyebrow">Idea generation</div>
-            <h2>Five ways to find a starting idea</h2>
-            <ol class="steps">
-              <li><strong>Notice a problem.</strong> What problem do people still face?</li>
-              <li><strong>Notice a surprise.</strong> What happened differently from what you expected?</li>
-              <li><strong>Use a theory.</strong> Can a theory help explain a problem you care about?</li>
-              <li><strong>Learn from another field.</strong> Who else studies a similar problem?</li>
-              <li><strong>Continue from a paper.</strong> What useful question could come next?</li>
-            </ol>
-            <div class="takeaway">Choose one starting point. You can check the idea's importance and novelty later.</div>
-          </div></section>
-          
-          <section class="slide" data-session="Session 1"><div class="slide-inner">
-            <div class="eyebrow">Technique 1 · Observe a problem</div><h2>Start with a problem you care about</h2><p class="question">What problem do people still face?</p>
-            <p class="plain">Look at what people do in real life. Who has the problem? When does it happen? Why does it matter?</p>
-            <div class="paper-list">
-              <div class="paper"><b>1</b><div><a href="https://doi.org/10.1145/1125451.1125649" target="_blank" rel="noopener">Affective Diary</a> · Lindström et al., CHI 2006<p>People often find it hard to understand their own emotions. The researchers built a diary that combines body data with personal notes and pictures.</p></div></div>
-              <div class="paper"><b>2</b><div><a href="https://doi.org/10.1126/science.adh2586" target="_blank" rel="noopener">Experimental evidence on the productivity effects of generative AI</a> · Noy &amp; Zhang, Science 2023<p>Many people spend a long time on writing tasks. The researchers tested whether ChatGPT could help them write faster and better.</p></div></div>
-              <div class="paper"><b>3</b><div><a href="https://aclanthology.org/P19-1534/" target="_blank" rel="noopener">EmpatheticDialogues</a> · Rashkin et al., ACL 2019<p>Chatbots often give replies that do not match a person's feelings. The researchers created conversations that could help computers learn more caring replies.</p></div></div>
+          <section class="slide" data-session="Start">
+            <div class="slide-inner title-slide">
+              <h2>From Zero to Hero: How to Do Research?</h2>
+              <p class="lead">A self-paced tutorial and exercises covering idea generation, idea refinement, idea
+                validation, idea storytelling</p>
+              <p class="kbd">Use ← →, the buttons, or the session menu. Press F for fullscreen.</p>
             </div>
-          </div></section>
+          </section>
 
-          <section class="slide" data-session="Session 1"><div class="slide-inner">
-            <div class="eyebrow">Workshop · Observe</div><h2>From friction to a question</h2><div class="workshop">
-              <div class="prompt"><strong>Seven minutes</strong><ol><li>List three frustrations from study, work, or daily life.</li><li>Choose one. Name the affected person and setting.</li><li>Ask why it persists.</li><li>Write a question that does not assume the solution.</li></ol></div>
-              <div class="answers"><div class="answer weak"><span>Weak</span><p>“I want to build an AI tutor.”</p></div><div class="answer strong"><span>Strong</span><p>“When do students accept an AI explanation without checking whether they understood it?”</p></div></div>
-            </div><div class="takeaway">A clear problem can lead to many possible research ideas.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 1"><div class="slide-inner">
-            <div class="eyebrow">Technique 2 · Notice a surprise</div><h2>Something unexpected happened</h2><p class="question">What did you expect, and what happened instead?</p>
-            <p class="plain">An unexpected result may show that we have missed something important. Write down what you expected. Then write what you actually saw.</p>
-            <div class="paper-list">
-              <div class="paper"><b>1</b><div><a href="https://doi.org/10.1068/p2952" target="_blank" rel="noopener">Gorillas in our midst</a> · Simons &amp; Chabris, 1999<p>People watched a video and counted ball passes. Many did not see a person in a gorilla suit walk through the scene.</p></div></div>
-              <div class="paper"><b>2</b><div><a href="https://proceedings.mlr.press/v81/buolamwini18a.html" target="_blank" rel="noopener">Gender Shades</a> · Buolamwini &amp; Gebru, 2018<p>Face-analysis systems worked much better for some groups than others. The largest errors affected darker-skinned women.</p></div></div>
-              <div class="paper"><b>3</b><div><a href="https://doi.org/10.1126/science.1190700" target="_blank" rel="noopener">The weirdest people in the world?</a> · Henrich et al., 2010<p>Many psychology studies used people from a small set of wealthy countries. Their behavior did not always represent people in the rest of the world.</p></div></div>
+          <section class="slide" data-session="Start">
+            <div class="slide-inner">
+              <h2>Research Journey</h2>
+              <table class="mini-table">
+                <thead>
+                  <tr>
+                    <th>Stage</th>
+                    <th>Main question</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Idea Generation</td>
+                    <td>Where could a good idea come from?</td>
+                  </tr>
+                  <tr>
+                    <td>Idea Refinement</td>
+                    <td>How to sharpen the idea?</td>
+                  </tr>
+                  <tr>
+                    <td>Idea Validation</td>
+                    <td>What needs to be done to validate the idea?</td>
+                  </tr>
+                  <tr>
+                    <td>Idea Storytelling</td>
+                    <td>How to storytell the idea?</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </div></section>
+          </section>
 
-          <section class="slide" data-session="Session 1"><div class="slide-inner">
-            <div class="eyebrow">Workshop · Surprise</div><h2>The expectation gap</h2><div class="workshop"><div class="prompt"><strong>Complete four lines</strong><ul><li>I expected ______.</li><li>Instead, ______ happened.</li><li>One explanation might be ______.</li><li>I could distinguish explanations by measuring ______.</li></ul></div><div class="answers"><div class="answer weak"><span>Weak</span><p>“The model performed badly. I will tune it.”</p></div><div class="answer strong"><span>Strong</span><p>“Accuracy fell only for short, ambiguous requests. Does missing conversational context explain the drop?”</p></div></div></div><div class="takeaway">A surprising pattern becomes research when it creates competing explanations.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 1"><div class="slide-inner">
-            <div class="eyebrow">Technique 3 · Use a theory</div><h2>A theory can help explain your problem</h2><p class="question">Is there an idea that helps explain why this problem happens?</p>
-            <p class="plain">Start with a problem you care about. Then find a theory that gives you a possible explanation. The theory should help you decide what to test.</p>
-            <div class="paper-list">
-              <div class="paper"><b>1</b><div><a href="https://doi.org/10.1145/3544549.3585692" target="_blank" rel="noopener">Impact of User Mobility on Attentional Tunneling in Handheld AR</a> · Parmar &amp; Silpasuwanchai, CHI EA 2023<p>Problem: people using augmented reality while walking may miss things around them. An idea from aviation, called attentional tunneling, helped explain why.</p></div></div>
-              <div class="paper"><b>2</b><div><a href="https://doi.org/10.1145/3359593" target="_blank" rel="noopener">Attention Regulation Framework</a> · Niksirat et al., TOCHI 2019<p>Problem: meditation apps often tell everyone to follow the same audio guide. Ideas about relaxation and restoring attention helped the team design more flexible practice.</p></div></div>
-              <div class="paper"><b>3</b><div><a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Parmar &amp; Silpasuwanchai, CHI 2026<p>Problem: people become overloaded when negotiating many issues with AI. Bayesian reasoning helped show which agreements were becoming more likely.</p></div></div>
+          <section class="slide" data-session="Session 1">
+            <div class="slide-inner section-slide">
+              <div class="session-number">01</div>
+              <div class="eyebrow">Part 1 · Idea generation</div>
+              <h2>Where could a good idea come from?</h2>
             </div>
-          </div></section>
+          </section>
 
-          <section class="slide" data-session="Session 1"><div class="slide-inner">
-            <div class="eyebrow">Workshop · Theory</div><h2>Start with a problem you care about</h2><div class="workshop"><div class="prompt"><ol><li>Write the problem in one simple sentence.</li><li>Ask why it may happen.</li><li>Find one theory that gives a possible answer.</li><li>Use the theory to predict what you will see.</li></ol></div><div class="answers"><div class="answer weak"><span>Weak</span><p>“I want to use cognitive load theory to study AI.”</p></div><div class="answer strong"><span>Strong</span><p>“Students may ignore long AI explanations because their working memory becomes full. I predict that beginners will learn more from shorter explanations with one example.”</p></div></div></div><div class="takeaway">Use a theory when it helps you explain the problem and plan a test.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 1"><div class="slide-inner">
-            <div class="eyebrow">Technique 4 · Learn from another field</div><h2>Other fields may know something useful</h2><p class="question">Who else studies a problem like yours?</p>
-            <p class="plain">Start with your problem. Look for another field that studies a similar human behavior or technical challenge. Ask whether one of its ideas can help you see your problem differently.</p>
-            <div class="paper-list">
-              <div class="paper"><b>1</b><div><a href="https://doi.org/10.1145/3544549.3585692" target="_blank" rel="noopener">Attentional tunneling in handheld AR</a><p>An aviation safety idea helped explain why people may miss real-world events while looking at augmented reality.</p></div></div>
-              <div class="paper"><b>2</b><div><a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">Bayesian visualization for negotiation</a><p>An idea from probability helped people understand how close they were to an agreement with AI.</p></div></div>
-              <div class="paper"><b>3</b><div><a href="https://doi.org/10.1145/3290605.3300233" target="_blank" rel="noopener">Human-centered tools for imperfect algorithms</a> · Kocielnik et al., CHI 2019<p>Ideas from human-computer interaction helped people understand when an algorithm may be wrong and what they could do next.</p></div></div>
+          <section class="slide" data-session="Session 1">
+            <div class="slide-inner">
+              <div class="eyebrow">Idea generation</div>
+              <h2>Five ways to find a starting idea</h2>
+              <ol class="steps">
+                <li><strong>Notice a problem.</strong> What problem do people still face?</li>
+                <li><strong>Notice a surprise.</strong> What happened differently from what you expected?</li>
+                <li><strong>Use a theory.</strong> Can a theory help explain a problem you care about?</li>
+                <li><strong>Learn from another field.</strong> Who else studies a similar problem?</li>
+                <li><strong>Continue from a paper.</strong> What useful question could come next?</li>
+              </ol>
+              <div class="takeaway">Choose one starting point. You can check the idea's importance and novelty later.
+              </div>
             </div>
-          </div></section>
+          </section>
 
-          <section class="slide" data-session="Session 1"><div class="slide-inner">
-            <div class="eyebrow">Workshop · Another field</div><h2>Start with your problem</h2><div class="workshop"><div class="prompt"><ol><li>Write a topic or problem you care about.</li><li>Ask which other field studies a similar problem.</li><li>Choose one useful idea from that field.</li><li>Explain how the idea changes your research question.</li></ol></div><div class="answers"><div class="answer weak"><span>Weak</span><p>“I will combine AI and psychology.”</p></div><div class="answer strong"><span>Strong</span><p>“People sometimes reject advice that feels controlling. Psychology calls this reactance. Does forceful wording make users reject correct AI advice?”</p></div></div></div><div class="takeaway">The other field should help you ask a better question about your problem.</div>
-          </div></section>
+          <section class="slide" data-session="Session 1">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 1 · Notice a problem</div>
+              <h2>What problem do people still face?</h2>
 
-          <section class="slide" data-session="Session 1"><div class="slide-inner">
-            <div class="eyebrow">Technique 5 · Continue from a paper</div><h2>The next question</h2><p class="question">What question could we ask after reading this paper?</p>
-            <p class="plain">Look at what the paper studied and what it did not study. Check the people, setting, task, length of time, and result. Then search newer papers to make sure the question is still open.</p>
-            <div class="paper-list">
-              <div class="paper"><b>1</b><div><a href="https://doi.org/10.1145/3544549.3585692" target="_blank" rel="noopener">HCI: Attentional tunneling in handheld AR</a><p>The study found that walking made people slower to notice real-world events. Next question: which interface design can reduce this problem?</p></div></div>
-              <div class="paper"><b>2</b><div><a href="https://aclanthology.org/P19-1534/" target="_blank" rel="noopener">ACL: EmpatheticDialogues</a><p>The study helped chatbots give replies that sound more caring. Next question: which kind of caring reply works best for each person and situation?</p></div></div>
-              <div class="paper"><b>3</b><div><a href="https://doi.org/10.1016/0013-4694(88)90149-6" target="_blank" rel="noopener">EEG and BCI: the P300 speller</a> · Farwell &amp; Donchin, 1988<p>The system let people choose letters using brain signals. Next question: can prediction make writing faster without causing more mistakes or taking control away from the user?</p></div></div>
+              <p class="plain">
+                Look at the people and situations around you. What problem do you notice repeatedly?
+                When does it happen, and why does it matter?
+              </p>
+
+              <div class="paper-list">
+                <div class="paper">
+                  <b>1</b>
+                  <div>
+                    <a href="https://doi.org/10.1145/1125451.1125649" target="_blank" rel="noopener">
+                      Affective Diary
+                    </a>
+                    · Lindström et al., CHI 2006
+
+                    <ul>
+                      <li><strong>Problem:</strong> People may find it difficult to understand and reflect on their
+                        emotions.</li>
+                      <li><strong>When:</strong> The problem can occur when people cannot connect their feelings with
+                        what happened during the day.</li>
+                      <li><strong>Why it matters:</strong> Understanding our emotions can help us manage them and
+                        communicate with others.</li>
+                      <li><strong>Research idea:</strong> The researchers designed a diary that combines body data,
+                        personal notes, and pictures to support emotional reflection.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="takeaway">
+                A research idea can begin with a problem you repeatedly notice.
+              </div>
             </div>
-          </div></section>
+          </section>
 
-          <section class="slide" data-session="Session 1"><div class="slide-inner">
-            <div class="eyebrow">Workshop · Continue from a paper</div><h2>What could we study next?</h2><div class="workshop"><div class="prompt"><ol><li>Write the paper's main finding in simple words.</li><li>Write one thing the paper did not study.</li><li>Explain why that missing part matters.</li><li>Search for newer work before saying it is a research gap.</li></ol></div><div class="answers"><div class="answer weak"><span>Weak</span><p>“Use a newer model on the same dataset.”</p></div><div class="answer strong"><span>Strong</span><p>“The paper shows that AI helps people finish a task now. Will they still do well later when the AI is removed?”</p></div></div></div><div class="takeaway">A good next question helps us understand something new.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 2"><div class="slide-inner section-slide"><div class="session-number">02</div><div class="eyebrow">Part 1 · Critical thinking</div><h2>Challenge one assumption at a time</h2><p class="lead">Three tools for turning a broad question into an explanatory one</p></div></section>
-
-          <section class="slide" data-session="Session 2"><div class="slide-inner">
-            <div class="eyebrow">Technique 6 · First principles</div><h2>Claims and foundations</h2><p class="question">What must be true for your claim to make sense?</p>
-            <p class="plain">Break the claim into definitions, assumptions, and necessary conditions. Test the weakest foundation first.</p>
-            <div class="paper-list">
-              <div class="paper"><b>1</b><div><a href="https://aclanthology.org/2020.emnlp-main.186/" target="_blank" rel="noopener">With Little Power Comes Great Responsibility</a> · Card et al., EMNLP 2020<p>Power analysis challenged whether common NLP experiments could detect meaningful improvements.</p></div></div>
-              <div class="paper"><b>2</b><div><a href="https://arxiv.org/abs/1803.09010" target="_blank" rel="noopener">Datasheets for Datasets</a> · Gebru et al., 2018<p>Dataset claims depend on provenance, composition, intended uses, and limitations.</p></div></div>
-              <div class="paper"><b>3</b><div><a href="https://doi.org/10.1145/3287560.3287596" target="_blank" rel="noopener">Model Cards for Model Reporting</a> · Mitchell et al., 2019<p>Model performance requires explicit context, subgroups, and use conditions.</p></div></div>
+          <section class="slide" data-session="Session 1">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · Observe</div>
+              <h2>From friction to a question</h2>
+              <div class="workshop">
+                <div class="prompt"><strong>Seven minutes</strong>
+                  <ol>
+                    <li>List three frustrations from study, work, or daily life.</li>
+                    <li>Choose one. Name the affected person and setting.</li>
+                    <li>Ask why it persists.</li>
+                    <li>Write a question that does not assume the solution.</li>
+                  </ol>
+                </div>
+                <div class="answers">
+                  <div class="answer weak"><span>Weak</span>
+                    <p>“I want to build an AI tutor.”</p>
+                  </div>
+                  <div class="answer strong"><span>Strong</span>
+                    <p>“When do students accept an AI explanation without checking whether they understood it?”</p>
+                  </div>
+                </div>
+              </div>
+              <div class="takeaway">A clear problem can lead to many possible research ideas.</div>
             </div>
-          </div></section>
+          </section>
 
-          <section class="slide" data-session="Session 2"><div class="slide-inner">
-            <div class="eyebrow">Workshop · First principles</div><h2>Assumption audit</h2><div class="workshop"><div class="prompt"><p>Claim: “Personalized AI feedback improves learning.”</p><ol><li>Define personalized.</li><li>Define learning.</li><li>Name three necessary assumptions.</li><li>Choose the most fragile assumption.</li></ol></div><div class="answers"><div class="answer weak"><span>Weak</span><p>“Personalization is usually helpful.”</p></div><div class="answer strong"><span>Strong</span><p>“The feedback must diagnose the learner correctly. If the diagnosis is wrong, personalization may reinforce the misconception.”</p></div></div></div><div class="takeaway">The strongest experiment often targets the most fragile assumption.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 2"><div class="slide-inner">
-            <div class="eyebrow">Technique 7 · Alternative explanations</div><h2>Rival causal stories</h2><p class="question">What else could have produced the same pattern?</p>
-            <p class="plain">List plausible confounds, selection effects, measurement artifacts, and reverse causality before choosing a method.</p>
-            <div class="paper-list">
-              <div class="paper"><b>1</b><div><a href="https://doi.org/10.1001/jama.2016.17217" target="_blank" rel="noopener">Using big data to emulate a target trial</a> · Hernán &amp; Robins, 2016<p>The target-trial framework makes causal assumptions and time zero explicit.</p></div></div>
-              <div class="paper"><b>2</b><div><a href="https://doi.org/10.1126/science.aap9555" target="_blank" rel="noopener">The spread of true and false news online</a> · Vosoughi et al., 2018<p>Diffusion differences required separating human behavior from automated activity.</p></div></div>
-              <div class="paper"><b>3</b><div><a href="https://doi.org/10.1371/journal.pone.0069841" target="_blank" rel="noopener">Facebook use predicts declines in subjective well-being</a> · Kross et al., 2013<p>Experience sampling and longitudinal measures probed competing explanations for association.</p></div></div>
+          <section class="slide" data-session="Session 1">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 2 · Notice a surprise</div>
+              <h2>Something unexpected happened</h2>
+              <p class="question">What did you expect, and what happened instead?</p>
+              <p class="plain">An unexpected result may show that we have missed something important. Write down what
+                you expected. Then write what you actually saw.</p>
+              <div class="paper-list">
+                <div class="paper"><b>1</b>
+                  <div><a href="https://doi.org/10.1068/p2952" target="_blank" rel="noopener">Gorillas in our midst</a>
+                    · Simons &amp; Chabris, 1999<p>People watched a video and counted ball passes. Many did not see a
+                      person in a gorilla suit walk through the scene.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>2</b>
+                  <div><a href="https://proceedings.mlr.press/v81/buolamwini18a.html" target="_blank"
+                      rel="noopener">Gender Shades</a> · Buolamwini &amp; Gebru, 2018<p>Face-analysis systems worked
+                      much better for some groups than others. The largest errors affected darker-skinned women.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>3</b>
+                  <div><a href="https://doi.org/10.1126/science.1190700" target="_blank" rel="noopener">The weirdest
+                      people in the world?</a> · Henrich et al., 2010<p>Many psychology studies used people from a small
+                      set of wealthy countries. Their behavior did not always represent people in the rest of the world.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div></section>
+          </section>
 
-          <section class="slide" data-session="Session 2"><div class="slide-inner">
-            <div class="eyebrow">Workshop · Alternatives</div><h2>Three explanations, one discriminator</h2><div class="workshop"><div class="prompt"><p>Observation: frequent AI-tool users finish assignments faster.</p><ol><li>Write three explanations.</li><li>For each, predict another observable pattern.</li><li>Choose one measure or comparison that separates them.</li></ol></div><div class="answers"><div class="answer weak"><span>Weak</span><p>“AI causes productivity.”</p></div><div class="answer strong"><span>Strong</span><p>“Users may be more skilled, may choose easier tasks, or may gain speed from AI. Random assignment or within-person crossover helps separate these stories.”</p></div></div></div><div class="takeaway">Good methods emerge from the rival explanation you need to rule out.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 2"><div class="slide-inner">
-            <div class="eyebrow">Technique 8 · Second-order and systems thinking</div><h2>Effects after the first effect</h2><p class="question">If the intervention works, what changes next?</p>
-            <p class="plain">Trace adaptation, incentives, feedback loops, spillovers, and delayed harm. Decide where the system boundary lies.</p>
-            <div class="paper-list">
-              <div class="paper"><b>1</b><div><a href="https://arxiv.org/abs/1609.05807" target="_blank" rel="noopener">Inherent trade-offs in the fair determination of risk scores</a> · Kleinberg et al., 2016<p>Different fairness criteria can become mutually incompatible when base rates differ.</p></div></div>
-              <div class="paper"><b>2</b><div><a href="https://proceedings.mlr.press/v80/liu18c.html" target="_blank" rel="noopener">Delayed Impact of Fair Machine Learning</a> · Liu et al., ICML 2018<p>Immediate fairness interventions can produce different long-run outcomes.</p></div></div>
-              <div class="paper"><b>3</b><div><a href="https://arxiv.org/abs/1706.09847" target="_blank" rel="noopener">Runaway Feedback Loops in Predictive Policing</a> · Ensign et al., 2017<p>Biased observations can reinforce future deployments and data collection.</p></div></div>
+          <section class="slide" data-session="Session 1">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · Surprise</div>
+              <h2>The expectation gap</h2>
+              <div class="workshop">
+                <div class="prompt"><strong>Complete four lines</strong>
+                  <ul>
+                    <li>I expected ______.</li>
+                    <li>Instead, ______ happened.</li>
+                    <li>One explanation might be ______.</li>
+                    <li>I could distinguish explanations by measuring ______.</li>
+                  </ul>
+                </div>
+                <div class="answers">
+                  <div class="answer weak"><span>Weak</span>
+                    <p>“The model performed badly. I will tune it.”</p>
+                  </div>
+                  <div class="answer strong"><span>Strong</span>
+                    <p>“Accuracy fell only for short, ambiguous requests. Does missing conversational context explain
+                      the drop?”</p>
+                  </div>
+                </div>
+              </div>
+              <div class="takeaway">A surprising pattern becomes research when it creates competing explanations.</div>
             </div>
-          </div></section>
+          </section>
 
-          <section class="slide" data-session="Session 2"><div class="slide-inner">
-            <div class="eyebrow">Workshop · Systems</div><h2>The consequence map</h2><div class="workshop"><div class="prompt"><p>Intervention: an AI assistant answers students immediately.</p><ol><li>Write the immediate benefit.</li><li>Trace a behavior change after one month.</li><li>Name one feedback loop.</li><li>Add a delayed outcome to measure.</li></ol></div><div class="answers"><div class="answer weak"><span>Weak</span><p>“Students complete more tasks.”</p></div><div class="answer strong"><span>Strong</span><p>“Completion may rise while help-seeking becomes habitual. Measure unaided transfer after access ends.”</p></div></div></div><div class="takeaway">Measure what the intervention changes in the system, not only the first outcome.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 2"><div class="slide-inner">
-            <div class="eyebrow">Session checkpoint</div><h2>The question should now contain tension</h2>
-            <table class="mini-table"><thead><tr><th>Before</th><th>After critical thinking</th></tr></thead><tbody><tr><td>Does AI feedback improve learning?</td><td>When does immediate AI feedback improve task completion but weaken unaided transfer?</td></tr><tr><td>Can we make chatbots empathetic?</td><td>Which response strategy helps users feel understood, and when does it become intrusive?</td></tr></tbody></table>
-            <div class="takeaway">A useful research question allows a plausible, informative “no.”</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 3"><div class="slide-inner section-slide"><div class="session-number">03</div><div class="eyebrow">Part 1 · Literature synthesis and novelty</div><h2>Turn papers into a map of knowledge</h2><p class="lead">The goal is an argument, not an annotated bibliography</p></div></section>
-
-          <section class="slide" data-session="Session 3"><div class="slide-inner">
-            <div class="eyebrow">Technique 9 · Synthesis matrix</div><h2>Read across papers</h2><p class="question">Where do studies agree, differ, and leave uncertainty?</p>
-            <p class="plain">Create columns for question, theory, population, method, comparison, outcome, finding, and limitation. Compare by column before writing prose.</p>
-            <div class="paper-list">
-              <div class="paper"><b>1</b><div><a href="https://doi.org/10.1136/bmj.n71" target="_blank" rel="noopener">PRISMA 2020 statement</a> · Page et al., 2021<p>Transparent search, selection, and reporting make evidence synthesis reproducible.</p></div></div>
-              <div class="paper"><b>2</b><div><a href="https://www.jstor.org/stable/4132319" target="_blank" rel="noopener">Analyzing the Past to Prepare for the Future</a> · Webster &amp; Watson, 2002<p>A concept-centric review organizes ideas across authors rather than paper by paper.</p></div></div>
-              <div class="paper"><b>3</b><div><a href="https://doi.org/10.1136/bmj.327.7414.557" target="_blank" rel="noopener">Measuring inconsistency in meta-analyses</a> · Higgins et al., BMJ 2003<p>Heterogeneity helps distinguish an average pattern from its boundary conditions.</p></div></div>
+          <section class="slide" data-session="Session 1">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 3 · Use a theory</div>
+              <h2>A theory can help explain your problem</h2>
+              <p class="question">Is there an idea that helps explain why this problem happens?</p>
+              <p class="plain">Start with a problem you care about. Then find a theory that gives you a possible
+                explanation. The theory should help you decide what to test.</p>
+              <div class="paper-list">
+                <div class="paper"><b>1</b>
+                  <div><a href="https://doi.org/10.1145/3544549.3585692" target="_blank" rel="noopener">Impact of User
+                      Mobility on Attentional Tunneling in Handheld AR</a> · Parmar &amp; Silpasuwanchai, CHI EA 2023<p>
+                      Problem: people using augmented reality while walking may miss things around them. An idea from
+                      aviation, called attentional tunneling, helped explain why.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>2</b>
+                  <div><a href="https://doi.org/10.1145/3359593" target="_blank" rel="noopener">Attention Regulation
+                      Framework</a> · Niksirat et al., TOCHI 2019<p>Problem: meditation apps often tell everyone to
+                      follow the same audio guide. Ideas about relaxation and restoring attention helped the team design
+                      more flexible practice.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>3</b>
+                  <div><a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to
+                      Convergence</a> · Parmar &amp; Silpasuwanchai, CHI 2026<p>Problem: people become overloaded when
+                      negotiating many issues with AI. Bayesian reasoning helped show which agreements were becoming
+                      more likely.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div></section>
+          </section>
 
-          <section class="slide" data-session="Session 3"><div class="slide-inner">
-            <div class="eyebrow">Workshop · Synthesis</div><h2>Three papers, one paragraph</h2>
-            <table class="mini-table"><thead><tr><th>Paper</th><th>Main contribution</th><th>What remains</th></tr></thead><tbody><tr><td><a href="https://aclanthology.org/P19-1534/" target="_blank" rel="noopener">Rashkin et al.</a></td><td>Dataset and benchmark for empathetic dialogue</td><td>Which response intentions help?</td></tr><tr><td><a href="https://aclanthology.org/D19-1012/" target="_blank" rel="noopener">Lin et al.</a></td><td>Mixture of listeners conditioned on emotion</td><td>How should intentions be represented?</td></tr><tr><td><a href="https://aclanthology.org/2020.coling-main.429/" target="_blank" rel="noopener">Welivita &amp; Pu</a></td><td>Taxonomy of empathetic response intents</td><td>When do users prefer each intent?</td></tr></tbody></table>
-            <div class="answers"><div class="answer weak"><span>Weak synthesis</span><p>“Paper A created a dataset. Paper B proposed a model. Paper C created a taxonomy.”</p></div><div class="answer strong"><span>Strong synthesis</span><p>“The literature progressed from data, to emotion-conditioned generation, to interpretable response intentions. It still offers limited evidence about which intention users prefer in a given context.”</p></div></div>
-          </div></section>
-
-          <section class="slide" data-session="Session 3"><div class="slide-inner">
-            <div class="eyebrow">Technique 10 · Contradiction map</div><h2>When findings disagree</h2><p class="question">Could both results be correct under different conditions?</p>
-            <p class="plain">Compare populations, tasks, exposure length, measures, and analytic choices. Contradiction often signals a moderator.</p>
-            <div class="paper-list"><div class="paper"><b>1</b><div><a href="https://doi.org/10.1038/s41562-018-0506-1" target="_blank" rel="noopener">Screens, teens, and psychological well-being</a> · Orben &amp; Przybylski, 2019<p>Large datasets suggested small associations sensitive to analytic choices.</p></div></div><div class="paper"><b>2</b><div><a href="https://doi.org/10.1371/journal.pone.0069841" target="_blank" rel="noopener">Facebook use and subjective well-being</a> · Kross et al., 2013<p>Within-person longitudinal data linked use with later declines in well-being.</p></div></div><div class="paper"><b>3</b><div><a href="https://doi.org/10.1177/2167702617723376" target="_blank" rel="noopener">A preregistered replication of social media effects</a><p>Preregistered designs show how definitions and measurement windows can alter conclusions.</p></div></div></div>
-          </div></section>
-
-          <section class="slide" data-session="Session 3"><div class="slide-inner">
-            <div class="eyebrow">Workshop · Contradiction</div><h2>The moderator hunt</h2><div class="workshop"><div class="prompt"><ol><li>Write the two apparently conflicting claims.</li><li>List differences in people, context, duration, and measure.</li><li>Choose one difference as a moderator.</li><li>Write a conditional hypothesis.</li></ol></div><div class="answers"><div class="answer weak"><span>Weak</span><p>“Prior work is inconsistent.”</p></div><div class="answer strong"><span>Strong</span><p>“AI assistance may improve immediate output but reduce later unaided performance when learners can copy answers without generating explanations.”</p></div></div></div><div class="takeaway">A contradiction becomes useful when it predicts where each result should occur.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 3"><div class="slide-inner">
-            <div class="eyebrow">Technique 11 · Novelty test</div><h2>A gap that changes understanding</h2><p class="question">If answered, what belief, decision, or design would change?</p>
-            <p class="plain">Your knowledge gap is personal. A research gap is a documented uncertainty that matters to a research community or stakeholder.</p>
-            <table class="mini-table"><thead><tr><th>Gap type</th><th>Prompt</th><th>Evidence needed</th></tr></thead><tbody><tr><td>Mechanism</td><td>Why does the effect occur?</td><td>Mediation, process data, qualitative evidence</td></tr><tr><td>Boundary</td><td>When or for whom does it change?</td><td>Moderator or comparative setting</td></tr><tr><td>Contradiction</td><td>Why do credible studies disagree?</td><td>Matched definitions and discriminating test</td></tr><tr><td>Consequence</td><td>What happens later or elsewhere?</td><td>Longitudinal or system-level outcome</td></tr></tbody></table>
-          </div></section>
-
-          <section class="slide" data-session="Session 3"><div class="slide-inner">
-            <div class="eyebrow">Workshop · Novelty</div><h2>The contribution sentence</h2><div class="workshop"><div class="prompt"><p>Complete:</p><blockquote>Prior work establishes ______. It remains unclear ______ because existing studies ______. We test ______, which matters because ______.</blockquote><p>Then identify the three closest papers and state the exact difference from each.</p></div><div class="answers"><div class="answer weak"><span>Weak</span><p>“Few studies use this model in Thailand.”</p></div><div class="answer strong"><span>Strong</span><p>“Prior studies measure immediate writing quality. We test whether repeated AI assistance changes unaided revision skill, separating short-term productivity from learning.”</p></div></div></div><div class="takeaway">Novelty is a precise difference plus a reason that difference matters.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 3"><div class="slide-inner">
-            <div class="eyebrow">Positioning checkpoint</div><h2>Evidence before adjectives</h2><ul class="steps"><li>Show what the closest work establishes.</li><li>Name the unresolved uncertainty without exaggerating “no one has studied.”</li><li>Explain why resolving it changes theory, method, design, or practice.</li><li>State the contribution as a result you can defend, not a feature list.</li></ul><div class="takeaway">“First,” “novel,” and “comprehensive” never substitute for a comparison with prior work.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 4"><div class="slide-inner section-slide"><div class="session-number">04</div><div class="eyebrow">Part 2 · Research design and communication</div><h2>Match evidence to the claim</h2><p class="lead">Methods, experiments, analysis, and storytelling</p></div></section>
-
-          <section class="slide" data-session="Session 4"><div class="slide-inner">
-            <div class="eyebrow">Technique 12 · Method–claim fit</div><h2>What kind of claim?</h2><p class="question">What evidence would make a skeptical reader update their belief?</p>
-            <table class="mini-table"><thead><tr><th>Claim</th><th>Typical method</th><th>Main threat</th></tr></thead><tbody><tr><td>Describe</td><td>Survey, corpus, observation</td><td>Coverage and measurement</td></tr><tr><td>Explain experience</td><td>Interview, diary, field study</td><td>Interpretation and reflexivity</td></tr><tr><td>Estimate causal effect</td><td>Randomized or strong quasi-experiment</td><td>Confounding and noncompliance</td></tr><tr><td>Build and assess</td><td>Artifact plus comparative evaluation</td><td>Weak baseline or unrealistic task</td></tr></tbody></table>
-            <div class="paper-list"><div class="paper"><b>1</b><div><a href="https://doi.org/10.1145/1125451.1125649" target="_blank" rel="noopener">Affective Diary</a><p>Research through design and field deployment explored emotional reflection.</p></div></div><div class="paper"><b>2</b><div><a href="https://doi.org/10.1126/science.adh2586" target="_blank" rel="noopener">Noy &amp; Zhang</a><p>A preregistered experiment estimated effects on writing time and quality.</p></div></div><div class="paper"><b>3</b><div><a href="https://aclanthology.org/P19-1534/" target="_blank" rel="noopener">EmpatheticDialogues</a><p>Dataset creation, modeling, and human evaluation supported benchmark claims.</p></div></div></div>
-          </div></section>
-
-          <section class="slide" data-session="Session 4"><div class="slide-inner">
-            <div class="eyebrow">Workshop · Methods</div><h2>The skeptical reviewer</h2><div class="workshop"><div class="prompt"><ol><li>Underline the verb in your claim.</li><li>Name the comparison implied by that verb.</li><li>Write the strongest alternative explanation.</li><li>Choose the least complex method that addresses it.</li></ol></div><div class="answers"><div class="answer weak"><span>Weak</span><p>“We will use a survey because it is easy.”</p></div><div class="answer strong"><span>Strong</span><p>“A survey can describe trust, but it cannot show that explanations cause trust. Random assignment to explanation conditions matches the causal claim.”</p></div></div></div><div class="takeaway">Choose the method after the claim and threat are explicit.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 4"><div class="slide-inner">
-            <div class="eyebrow">Technique 13 · Experiment design</div><h2>A comparison that isolates the idea</h2><p class="question">What must remain equal so the focal difference can explain the result?</p>
-            <p class="plain">Define the unit, treatment, control, assignment, primary outcome, exclusion rules, and sample plan before seeing results.</p>
-            <div class="paper-list"><div class="paper"><b>1</b><div><a href="https://doi.org/10.1145/1835804.1835810" target="_blank" rel="noopener">Controlled experiments on the web</a> · Kohavi et al., 2009<p>Large online experiments reveal both practical value and common pitfalls.</p></div></div><div class="paper"><b>2</b><div><a href="https://www.consort-statement.org/" target="_blank" rel="noopener">CONSORT statement</a><p>Randomized trials require transparent allocation, flow, outcomes, and harms.</p></div></div><div class="paper"><b>3</b><div><a href="https://doi.org/10.1177/2515245918770963" target="_blank" rel="noopener">Justify Your Alpha</a> · Lakens et al., 2018<p>Design choices should follow the decision context rather than ritual thresholds.</p></div></div></div>
-          </div></section>
-
-          <section class="slide" data-session="Session 4"><div class="slide-inner">
-            <div class="eyebrow">Workshop · Experiments</div><h2>The minimum convincing study</h2><div class="workshop"><div class="prompt"><p>For your main claim, specify:</p><ul><li>Unit and population</li><li>Treatment and active control</li><li>Primary outcome and time point</li><li>Randomization or matching</li><li>One manipulation check</li><li>One failure criterion</li></ul></div><div class="answers"><div class="answer weak"><span>Weak</span><p>“Compare our system with ChatGPT.”</p></div><div class="answer strong"><span>Strong</span><p>“Compare adaptive versus equally long nonadaptive feedback using the same base model, then test immediate accuracy and unaided transfer one week later.”</p></div></div></div><div class="takeaway">A fair control differs only in the mechanism your claim depends on.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 4"><div class="slide-inner">
-            <div class="eyebrow">Technique 14 · Analysis</div><h2>Estimate, diagnose, interpret</h2><p class="question">What pattern would support the claim, and what pattern would weaken it?</p>
-            <p class="plain">Plan the estimand, uncertainty, assumptions, missing data, robustness checks, and qualitative coding before choosing attractive results.</p>
-            <div class="paper-list"><div class="paper"><b>1</b><div><a href="https://doi.org/10.1080/00031305.2016.1154108" target="_blank" rel="noopener">ASA Statement on p-values</a> · Wasserstein &amp; Lazar, 2016<p>A p-value does not measure effect size, practical importance, or truth.</p></div></div><div class="paper"><b>2</b><div><a href="https://doi.org/10.1037/met0000169" target="_blank" rel="noopener">Moving to a world beyond p &lt; .05</a> · Cumming, 2014 tradition<p>Estimation and intervals emphasize magnitude and uncertainty.</p></div></div><div class="paper"><b>3</b><div><a href="https://doi.org/10.1191/1478088706qp063oa" target="_blank" rel="noopener">Using thematic analysis in psychology</a> · Braun &amp; Clarke, 2006<p>Qualitative analysis requires explicit analytic choices and a coherent relation between data and claims.</p></div></div></div>
-          </div></section>
-
-          <section class="slide" data-session="Session 4"><div class="slide-inner">
-            <div class="eyebrow">Workshop · Analysis</div><h2>The result table before the results</h2><div class="workshop"><div class="prompt"><ol><li>Draw the empty table or figure that would answer the question.</li><li>Label the effect and uncertainty.</li><li>Write the expected pattern.</li><li>Write one null, opposite, or subgroup pattern and its interpretation.</li></ol></div><div class="answers"><div class="answer weak"><span>Weak</span><p>“Run tests and see what is significant.”</p></div><div class="answer strong"><span>Strong</span><p>“Estimate the adaptive-minus-control difference in transfer score with a confidence interval, then test the preregistered expertise interaction.”</p></div></div></div><div class="takeaway">Analysis answers a planned question. It does not search for a publishable pattern.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 4"><div class="slide-inner">
-            <div class="eyebrow">Technique 15 · Research storytelling</div><h2>An argument with evidence</h2><p class="question">What must the reader believe before your contribution feels necessary?</p>
-            <ol class="steps"><li>Context: establish the important situation.</li><li>Problem: show the tension or consequence.</li><li>Gap: identify the unresolved uncertainty.</li><li>Approach: explain the test at the right level.</li><li>Finding and contribution: state what changes in understanding.</li></ol>
-            <p class="plain">Study the narrative moves in <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Vaswani et al.</a>, <a href="https://doi.org/10.1126/science.adh2586" target="_blank" rel="noopener">Noy &amp; Zhang</a>, and <a href="https://aclanthology.org/P19-1534/" target="_blank" rel="noopener">Rashkin et al.</a>. Each motivates a specific limitation before presenting a method.</p>
-          </div></section>
-
-          <section class="slide" data-session="Session 4"><div class="slide-inner">
-            <div class="eyebrow">Workshop · Story</div><h2>Five sentences</h2><div class="workshop"><div class="prompt"><ol><li>People or systems ______.</li><li>However, ______ causes ______.</li><li>Prior work explains ______, but not ______.</li><li>We compare or investigate ______.</li><li>This reveals ______, which changes ______.</li></ol></div><div class="answers"><div class="answer weak"><span>Weak</span><p>“We collected data, trained three models, and achieved 92% accuracy.”</p></div><div class="answer strong"><span>Strong</span><p>“AI feedback can speed practice, but its effect on unaided transfer remains unclear. We isolate adaptivity while holding model and feedback length constant, then measure performance after access ends.”</p></div></div></div><div class="takeaway">Methods are plot events. The research question supplies the plot.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 4"><div class="slide-inner">
-            <div class="eyebrow">Complete study canvas</div><h2>One page before months of work</h2><div class="two-col"><ol class="steps"><li>Observation or surprising pattern</li><li>Research question with tension</li><li>Closest literature and unresolved gap</li><li>Claim and contribution</li></ol><ol class="steps" start="5"><li>Alternative explanation</li><li>Method and fair comparison</li><li>Primary outcome and analysis</li><li>Failure criterion and next decision</li></ol></div><div class="takeaway">If the pieces do not connect on one page, more implementation will not repair the logic.</div>
-          </div></section>
-
-          <section class="slide" data-session="Session 4"><div class="slide-inner">
-            <div class="eyebrow">Research practice</div><h2>Ownership with frequent feedback</h2><ul class="compact"><li>Meet your advisor early enough for small corrections.</li><li>Bring alternatives and a recommendation.</li><li>Read before claiming novelty.</li><li>Write while the idea is still changing.</li><li>Pilot the strongest claim first.</li><li>Keep decisions, failures, and rationale in a research log.</li><li>Use the lab's expertise and resources.</li><li>Report inconvenient results, not only supportive ones.</li></ul><blockquote>Show what you think should happen next and explain why.</blockquote>
-          </div></section>
-
-          <section class="slide" data-session="Advanced"><div class="slide-inner section-slide"><div class="eyebrow">Optional advanced material</div><h2>Use these tools when the project demands them</h2><p class="lead">The core sessions teach one move at a time. The following slides keep the original broader frameworks available without putting them in the critical path.</p></div></section>
-
-          <section class="slide" data-session="Advanced"><div class="slide-inner">
-            <div class="eyebrow">Advanced · Learning depth</div><h2>Bloom's taxonomy as a diagnostic</h2><table class="mini-table"><thead><tr><th>Level</th><th>Research behavior</th><th>Diagnostic question</th></tr></thead><tbody><tr><td>Remember / understand</td><td>Summarize concepts and findings</td><td>Can I explain the claim accurately?</td></tr><tr><td>Apply / analyze</td><td>Use a method and compare evidence</td><td>Which assumption produces the result?</td></tr><tr><td>Evaluate</td><td>Judge evidence against alternatives</td><td>What would change my conclusion?</td></tr><tr><td>Create</td><td>Form a new, testable synthesis</td><td>What study would resolve the uncertainty?</td></tr></tbody></table><p class="optional">Use Bloom to diagnose the next learning move. Do not treat it as a rigid ladder or a substitute for domain expertise.</p>
-          </div></section>
-
-          <section class="slide" data-session="Advanced"><div class="slide-inner">
-            <div class="eyebrow">Advanced · Tool library</div><h2>Additional critical-thinking tools</h2><table class="mini-table"><tbody><tr><th>Tool</th><th>Best used when</th><th>Prompt</th></tr><tr><td>Counterfactual</td><td>Causal claim</td><td>What would happen to the same unit without the intervention?</td></tr><tr><td>Inversion</td><td>Designing safeguards</td><td>How could this study fail or cause harm?</td></tr><tr><td>Fermi estimate</td><td>Checking feasibility</td><td>What order of magnitude should I expect?</td></tr><tr><td>Stakeholder lens</td><td>Deployment or policy</td><td>Who gains, who pays, and who remains unmeasured?</td></tr><tr><td>Pre-mortem</td><td>Before data collection</td><td>Imagine the project failed. What caused it?</td></tr><tr><td>Negative case</td><td>Qualitative explanation</td><td>Which case contradicts the emerging account?</td></tr></tbody></table>
-          </div></section>
-
-          <section class="slide" data-session="Advanced"><div class="slide-inner">
-            <div class="eyebrow">Advanced · Synthesis library</div><h2>Eight patterns for organizing literature</h2><div class="two-col"><ol class="steps"><li>Agreement: repeated result</li><li>Contradiction: incompatible findings</li><li>Progression: problem, improvement, remaining limit</li><li>Methods: how design choices change conclusions</li></ol><ol class="steps" start="5"><li>Population: who is represented or missing</li><li>Theory: competing mechanisms</li><li>Boundary: where the effect changes</li><li>Consequence: delayed or system-level outcomes</li></ol></div><div class="takeaway">Choose the pattern that supports the argument. Do not force all eight into one review.</div>
-          </div></section>
-
-          <section class="slide" data-session="Resources"><div class="slide-inner">
-            <div class="eyebrow">Lab resources</div><h2>Templates, examples, and tools</h2><div class="resource-columns">
-              <div class="resource-group"><h3>Templates</h3><p><a href="https://docs.google.com/presentation/d/1SXN2LABIBYnTblk1nbCE1KA83xmR4tt-vUE26Lnl0-E/edit?usp=sharing" target="_blank" rel="noopener">Thesis presentation template</a></p><p><a href="https://www.overleaf.com/read/zptzbhxkbvbn#3d83d4" target="_blank" rel="noopener">Thesis LaTeX template</a></p><p><a href="https://languages.ait.ac.th/thesis-format-template/" target="_blank" rel="noopener">AIT Language Center format</a></p></div>
-              <div class="resource-group"><h3>Proposal examples</h3><p>Master’s: <a href="https://drive.google.com/file/d/1wTPXliTlkLRDIGVBgnxrgg4UUXvyyoCf/view?usp=sharing" target="_blank" rel="noopener">slides</a> · <a href="https://drive.google.com/file/d/19J4Zs12gfBOiCo-Bsn7vS4qhDoxubS1s/view?usp=sharing" target="_blank" rel="noopener">report</a></p><p>PhD: <a href="https://drive.google.com/file/d/1yrMHck1oMszKw_3QfqqtwqvZ8RC05n9P/view?usp=sharing" target="_blank" rel="noopener">slides</a> · <a href="https://drive.google.com/file/d/1Zqek9XC2Xeooz788K_mwIFxaGqZxdMec/view?usp=sharing" target="_blank" rel="noopener">report</a></p></div>
-              <div class="resource-group"><h3>Completed work</h3><p>Research study: <a href="https://drive.google.com/file/d/1RHcmHshJDh_9PQnEUcUoEGM-mENOsIF0/view?usp=sharing" target="_blank" rel="noopener">Master</a> · <a href="https://drive.google.com/file/d/1Rcbs5qKUJ9CR3W_1Dwgh_u9-NQCOy6z4/view?usp=sharing" target="_blank" rel="noopener">PhD</a></p><p>Final thesis: <a href="https://drive.google.com/file/d/1VSD0-DZHAhDnvD1PSEtpyTjyZynaJqiY/view?usp=sharing" target="_blank" rel="noopener">slides</a> · <a href="https://drive.google.com/file/d/1Vt5qVQEqEhEn1IoVgXw2QOLnii6Rb9yU/view?usp=sharing" target="_blank" rel="noopener">report</a></p><p><a href="https://drive.google.com/file/d/1QV0olPsGYPoYN7EyqoCU6WqFdGhzzWJS/view?usp=sharing" target="_blank" rel="noopener">Internship report</a> · <a href="https://drive.google.com/drive/folders/10XQngfTQx8fJdnhVwRpTy8s-Rxov3JWa?usp=sharing" target="_blank" rel="noopener">Thesis repository</a></p></div>
-              <div class="resource-group"><h3>Lab tools and guides</h3><p><a href="https://github.com/AIT-brainlab/python-project-starter" target="_blank" rel="noopener">Python project starter</a></p><p><a href="https://github.com/orgs/AIT-brainlab/projects/3" target="_blank" rel="noopener">Project board</a></p><p><a href="https://chaklam.com/articles/how-to-write-paper/" target="_blank" rel="noopener">How to write a paper</a></p><p><a href="https://chaklam.com/articles/how-to-choose-a-good-topic/" target="_blank" rel="noopener">How to choose a good topic</a></p><p><a href="https://chaklam.com/articles/research-process/" target="_blank" rel="noopener">Research process</a></p></div>
+          <section class="slide" data-session="Session 1">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · Theory</div>
+              <h2>Start with a problem you care about</h2>
+              <div class="workshop">
+                <div class="prompt">
+                  <ol>
+                    <li>Write the problem in one simple sentence.</li>
+                    <li>Ask why it may happen.</li>
+                    <li>Find one theory that gives a possible answer.</li>
+                    <li>Use the theory to predict what you will see.</li>
+                  </ol>
+                </div>
+                <div class="answers">
+                  <div class="answer weak"><span>Weak</span>
+                    <p>“I want to use cognitive load theory to study AI.”</p>
+                  </div>
+                  <div class="answer strong"><span>Strong</span>
+                    <p>“Students may ignore long AI explanations because their working memory becomes full. I predict
+                      that beginners will learn more from shorter explanations with one example.”</p>
+                  </div>
+                </div>
+              </div>
+              <div class="takeaway">Use a theory when it helps you explain the problem and plan a test.</div>
             </div>
-          </div></section>
+          </section>
 
-          <section class="slide" data-session="Resources"><div class="slide-inner title-slide"><div class="eyebrow">Final prompt</div><h2>What will you test next?</h2><p class="lead">Bring one research question, its strongest alternative explanation, and the smallest study that could prove you wrong.</p><blockquote>Book a meeting with your advisor when feedback can still change the work.</blockquote></div></section>
+          <section class="slide" data-session="Session 1">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 4 · Learn from another field</div>
+              <h2>Other fields may know something useful</h2>
+              <p class="question">Who else studies a problem like yours?</p>
+              <p class="plain">Start with your problem. Look for another field that studies a similar human behavior or
+                technical challenge. Ask whether one of its ideas can help you see your problem differently.</p>
+              <div class="paper-list">
+                <div class="paper"><b>1</b>
+                  <div><a href="https://doi.org/10.1145/3544549.3585692" target="_blank" rel="noopener">Attentional
+                      tunneling in handheld AR</a>
+                    <p>An aviation safety idea helped explain why people may miss real-world events while looking at
+                      augmented reality.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>2</b>
+                  <div><a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">Bayesian visualization
+                      for negotiation</a>
+                    <p>An idea from probability helped people understand how close they were to an agreement with AI.
+                    </p>
+                  </div>
+                </div>
+                <div class="paper"><b>3</b>
+                  <div><a href="https://doi.org/10.1145/3290605.3300233" target="_blank" rel="noopener">Human-centered
+                      tools for imperfect algorithms</a> · Kocielnik et al., CHI 2019<p>Ideas from human-computer
+                      interaction helped people understand when an algorithm may be wrong and what they could do next.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 1">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · Another field</div>
+              <h2>Start with your problem</h2>
+              <div class="workshop">
+                <div class="prompt">
+                  <ol>
+                    <li>Write a topic or problem you care about.</li>
+                    <li>Ask which other field studies a similar problem.</li>
+                    <li>Choose one useful idea from that field.</li>
+                    <li>Explain how the idea changes your research question.</li>
+                  </ol>
+                </div>
+                <div class="answers">
+                  <div class="answer weak"><span>Weak</span>
+                    <p>“I will combine AI and psychology.”</p>
+                  </div>
+                  <div class="answer strong"><span>Strong</span>
+                    <p>“People sometimes reject advice that feels controlling. Psychology calls this reactance. Does
+                      forceful wording make users reject correct AI advice?”</p>
+                  </div>
+                </div>
+              </div>
+              <div class="takeaway">The other field should help you ask a better question about your problem.</div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 1">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 5 · Continue from a paper</div>
+              <h2>The next question</h2>
+              <p class="question">What question could we ask after reading this paper?</p>
+              <p class="plain">Look at what the paper studied and what it did not study. Check the people, setting,
+                task, length of time, and result. Then search newer papers to make sure the question is still open.</p>
+              <div class="paper-list">
+                <div class="paper"><b>1</b>
+                  <div><a href="https://doi.org/10.1145/3544549.3585692" target="_blank" rel="noopener">HCI: Attentional
+                      tunneling in handheld AR</a>
+                    <p>The study found that walking made people slower to notice real-world events. Next question: which
+                      interface design can reduce this problem?</p>
+                  </div>
+                </div>
+                <div class="paper"><b>2</b>
+                  <div><a href="https://aclanthology.org/P19-1534/" target="_blank" rel="noopener">ACL:
+                      EmpatheticDialogues</a>
+                    <p>The study helped chatbots give replies that sound more caring. Next question: which kind of
+                      caring reply works best for each person and situation?</p>
+                  </div>
+                </div>
+                <div class="paper"><b>3</b>
+                  <div><a href="https://doi.org/10.1016/0013-4694(88)90149-6" target="_blank" rel="noopener">EEG and
+                      BCI: the P300 speller</a> · Farwell &amp; Donchin, 1988<p>The system let people choose letters
+                      using brain signals. Next question: can prediction make writing faster without causing more
+                      mistakes or taking control away from the user?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 1">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · Continue from a paper</div>
+              <h2>What could we study next?</h2>
+              <div class="workshop">
+                <div class="prompt">
+                  <ol>
+                    <li>Write the paper's main finding in simple words.</li>
+                    <li>Write one thing the paper did not study.</li>
+                    <li>Explain why that missing part matters.</li>
+                    <li>Search for newer work before saying it is a research gap.</li>
+                  </ol>
+                </div>
+                <div class="answers">
+                  <div class="answer weak"><span>Weak</span>
+                    <p>“Use a newer model on the same dataset.”</p>
+                  </div>
+                  <div class="answer strong"><span>Strong</span>
+                    <p>“The paper shows that AI helps people finish a task now. Will they still do well later when the
+                      AI is removed?”</p>
+                  </div>
+                </div>
+              </div>
+              <div class="takeaway">A good next question helps us understand something new.</div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 2">
+            <div class="slide-inner section-slide">
+              <div class="session-number">02</div>
+              <div class="eyebrow">Part 1 · Critical thinking</div>
+              <h2>Challenge one assumption at a time</h2>
+              <p class="lead">Three tools for turning a broad question into an explanatory one</p>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 2">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 6 · First principles</div>
+              <h2>Claims and foundations</h2>
+              <p class="question">What must be true for your claim to make sense?</p>
+              <p class="plain">Break the claim into definitions, assumptions, and necessary conditions. Test the weakest
+                foundation first.</p>
+              <div class="paper-list">
+                <div class="paper"><b>1</b>
+                  <div><a href="https://aclanthology.org/2020.emnlp-main.186/" target="_blank" rel="noopener">With
+                      Little Power Comes Great Responsibility</a> · Card et al., EMNLP 2020<p>Power analysis challenged
+                      whether common NLP experiments could detect meaningful improvements.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>2</b>
+                  <div><a href="https://arxiv.org/abs/1803.09010" target="_blank" rel="noopener">Datasheets for
+                      Datasets</a> · Gebru et al., 2018<p>Dataset claims depend on provenance, composition, intended
+                      uses, and limitations.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>3</b>
+                  <div><a href="https://doi.org/10.1145/3287560.3287596" target="_blank" rel="noopener">Model Cards for
+                      Model Reporting</a> · Mitchell et al., 2019<p>Model performance requires explicit context,
+                      subgroups, and use conditions.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 2">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · First principles</div>
+              <h2>Assumption audit</h2>
+              <div class="workshop">
+                <div class="prompt">
+                  <p>Claim: “Personalized AI feedback improves learning.”</p>
+                  <ol>
+                    <li>Define personalized.</li>
+                    <li>Define learning.</li>
+                    <li>Name three necessary assumptions.</li>
+                    <li>Choose the most fragile assumption.</li>
+                  </ol>
+                </div>
+                <div class="answers">
+                  <div class="answer weak"><span>Weak</span>
+                    <p>“Personalization is usually helpful.”</p>
+                  </div>
+                  <div class="answer strong"><span>Strong</span>
+                    <p>“The feedback must diagnose the learner correctly. If the diagnosis is wrong, personalization may
+                      reinforce the misconception.”</p>
+                  </div>
+                </div>
+              </div>
+              <div class="takeaway">The strongest experiment often targets the most fragile assumption.</div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 2">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 7 · Alternative explanations</div>
+              <h2>Rival causal stories</h2>
+              <p class="question">What else could have produced the same pattern?</p>
+              <p class="plain">List plausible confounds, selection effects, measurement artifacts, and reverse causality
+                before choosing a method.</p>
+              <div class="paper-list">
+                <div class="paper"><b>1</b>
+                  <div><a href="https://doi.org/10.1001/jama.2016.17217" target="_blank" rel="noopener">Using big data
+                      to emulate a target trial</a> · Hernán &amp; Robins, 2016<p>The target-trial framework makes
+                      causal assumptions and time zero explicit.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>2</b>
+                  <div><a href="https://doi.org/10.1126/science.aap9555" target="_blank" rel="noopener">The spread of
+                      true and false news online</a> · Vosoughi et al., 2018<p>Diffusion differences required separating
+                      human behavior from automated activity.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>3</b>
+                  <div><a href="https://doi.org/10.1371/journal.pone.0069841" target="_blank" rel="noopener">Facebook
+                      use predicts declines in subjective well-being</a> · Kross et al., 2013<p>Experience sampling and
+                      longitudinal measures probed competing explanations for association.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 2">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · Alternatives</div>
+              <h2>Three explanations, one discriminator</h2>
+              <div class="workshop">
+                <div class="prompt">
+                  <p>Observation: frequent AI-tool users finish assignments faster.</p>
+                  <ol>
+                    <li>Write three explanations.</li>
+                    <li>For each, predict another observable pattern.</li>
+                    <li>Choose one measure or comparison that separates them.</li>
+                  </ol>
+                </div>
+                <div class="answers">
+                  <div class="answer weak"><span>Weak</span>
+                    <p>“AI causes productivity.”</p>
+                  </div>
+                  <div class="answer strong"><span>Strong</span>
+                    <p>“Users may be more skilled, may choose easier tasks, or may gain speed from AI. Random assignment
+                      or within-person crossover helps separate these stories.”</p>
+                  </div>
+                </div>
+              </div>
+              <div class="takeaway">Good methods emerge from the rival explanation you need to rule out.</div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 2">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 8 · Second-order and systems thinking</div>
+              <h2>Effects after the first effect</h2>
+              <p class="question">If the intervention works, what changes next?</p>
+              <p class="plain">Trace adaptation, incentives, feedback loops, spillovers, and delayed harm. Decide where
+                the system boundary lies.</p>
+              <div class="paper-list">
+                <div class="paper"><b>1</b>
+                  <div><a href="https://arxiv.org/abs/1609.05807" target="_blank" rel="noopener">Inherent trade-offs in
+                      the fair determination of risk scores</a> · Kleinberg et al., 2016<p>Different fairness criteria
+                      can become mutually incompatible when base rates differ.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>2</b>
+                  <div><a href="https://proceedings.mlr.press/v80/liu18c.html" target="_blank" rel="noopener">Delayed
+                      Impact of Fair Machine Learning</a> · Liu et al., ICML 2018<p>Immediate fairness interventions can
+                      produce different long-run outcomes.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>3</b>
+                  <div><a href="https://arxiv.org/abs/1706.09847" target="_blank" rel="noopener">Runaway Feedback Loops
+                      in Predictive Policing</a> · Ensign et al., 2017<p>Biased observations can reinforce future
+                      deployments and data collection.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 2">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · Systems</div>
+              <h2>The consequence map</h2>
+              <div class="workshop">
+                <div class="prompt">
+                  <p>Intervention: an AI assistant answers students immediately.</p>
+                  <ol>
+                    <li>Write the immediate benefit.</li>
+                    <li>Trace a behavior change after one month.</li>
+                    <li>Name one feedback loop.</li>
+                    <li>Add a delayed outcome to measure.</li>
+                  </ol>
+                </div>
+                <div class="answers">
+                  <div class="answer weak"><span>Weak</span>
+                    <p>“Students complete more tasks.”</p>
+                  </div>
+                  <div class="answer strong"><span>Strong</span>
+                    <p>“Completion may rise while help-seeking becomes habitual. Measure unaided transfer after access
+                      ends.”</p>
+                  </div>
+                </div>
+              </div>
+              <div class="takeaway">Measure what the intervention changes in the system, not only the first outcome.
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 2">
+            <div class="slide-inner">
+              <div class="eyebrow">Session checkpoint</div>
+              <h2>The question should now contain tension</h2>
+              <table class="mini-table">
+                <thead>
+                  <tr>
+                    <th>Before</th>
+                    <th>After critical thinking</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Does AI feedback improve learning?</td>
+                    <td>When does immediate AI feedback improve task completion but weaken unaided transfer?</td>
+                  </tr>
+                  <tr>
+                    <td>Can we make chatbots empathetic?</td>
+                    <td>Which response strategy helps users feel understood, and when does it become intrusive?</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="takeaway">A useful research question allows a plausible, informative “no.”</div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 3">
+            <div class="slide-inner section-slide">
+              <div class="session-number">03</div>
+              <div class="eyebrow">Part 1 · Literature synthesis and novelty</div>
+              <h2>Turn papers into a map of knowledge</h2>
+              <p class="lead">The goal is an argument, not an annotated bibliography</p>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 3">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 9 · Synthesis matrix</div>
+              <h2>Read across papers</h2>
+              <p class="question">Where do studies agree, differ, and leave uncertainty?</p>
+              <p class="plain">Create columns for question, theory, population, method, comparison, outcome, finding,
+                and limitation. Compare by column before writing prose.</p>
+              <div class="paper-list">
+                <div class="paper"><b>1</b>
+                  <div><a href="https://doi.org/10.1136/bmj.n71" target="_blank" rel="noopener">PRISMA 2020
+                      statement</a> · Page et al., 2021<p>Transparent search, selection, and reporting make evidence
+                      synthesis reproducible.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>2</b>
+                  <div><a href="https://www.jstor.org/stable/4132319" target="_blank" rel="noopener">Analyzing the Past
+                      to Prepare for the Future</a> · Webster &amp; Watson, 2002<p>A concept-centric review organizes
+                      ideas across authors rather than paper by paper.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>3</b>
+                  <div><a href="https://doi.org/10.1136/bmj.327.7414.557" target="_blank" rel="noopener">Measuring
+                      inconsistency in meta-analyses</a> · Higgins et al., BMJ 2003<p>Heterogeneity helps distinguish an
+                      average pattern from its boundary conditions.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 3">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · Synthesis</div>
+              <h2>Three papers, one paragraph</h2>
+              <table class="mini-table">
+                <thead>
+                  <tr>
+                    <th>Paper</th>
+                    <th>Main contribution</th>
+                    <th>What remains</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="https://aclanthology.org/P19-1534/" target="_blank" rel="noopener">Rashkin et al.</a>
+                    </td>
+                    <td>Dataset and benchmark for empathetic dialogue</td>
+                    <td>Which response intentions help?</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://aclanthology.org/D19-1012/" target="_blank" rel="noopener">Lin et al.</a></td>
+                    <td>Mixture of listeners conditioned on emotion</td>
+                    <td>How should intentions be represented?</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://aclanthology.org/2020.coling-main.429/" target="_blank" rel="noopener">Welivita
+                        &amp; Pu</a></td>
+                    <td>Taxonomy of empathetic response intents</td>
+                    <td>When do users prefer each intent?</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="answers">
+                <div class="answer weak"><span>Weak synthesis</span>
+                  <p>“Paper A created a dataset. Paper B proposed a model. Paper C created a taxonomy.”</p>
+                </div>
+                <div class="answer strong"><span>Strong synthesis</span>
+                  <p>“The literature progressed from data, to emotion-conditioned generation, to interpretable response
+                    intentions. It still offers limited evidence about which intention users prefer in a given context.”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 3">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 10 · Contradiction map</div>
+              <h2>When findings disagree</h2>
+              <p class="question">Could both results be correct under different conditions?</p>
+              <p class="plain">Compare populations, tasks, exposure length, measures, and analytic choices.
+                Contradiction often signals a moderator.</p>
+              <div class="paper-list">
+                <div class="paper"><b>1</b>
+                  <div><a href="https://doi.org/10.1038/s41562-018-0506-1" target="_blank" rel="noopener">Screens,
+                      teens, and psychological well-being</a> · Orben &amp; Przybylski, 2019<p>Large datasets suggested
+                      small associations sensitive to analytic choices.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>2</b>
+                  <div><a href="https://doi.org/10.1371/journal.pone.0069841" target="_blank" rel="noopener">Facebook
+                      use and subjective well-being</a> · Kross et al., 2013<p>Within-person longitudinal data linked
+                      use with later declines in well-being.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>3</b>
+                  <div><a href="https://doi.org/10.1177/2167702617723376" target="_blank" rel="noopener">A preregistered
+                      replication of social media effects</a>
+                    <p>Preregistered designs show how definitions and measurement windows can alter conclusions.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 3">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · Contradiction</div>
+              <h2>The moderator hunt</h2>
+              <div class="workshop">
+                <div class="prompt">
+                  <ol>
+                    <li>Write the two apparently conflicting claims.</li>
+                    <li>List differences in people, context, duration, and measure.</li>
+                    <li>Choose one difference as a moderator.</li>
+                    <li>Write a conditional hypothesis.</li>
+                  </ol>
+                </div>
+                <div class="answers">
+                  <div class="answer weak"><span>Weak</span>
+                    <p>“Prior work is inconsistent.”</p>
+                  </div>
+                  <div class="answer strong"><span>Strong</span>
+                    <p>“AI assistance may improve immediate output but reduce later unaided performance when learners
+                      can copy answers without generating explanations.”</p>
+                  </div>
+                </div>
+              </div>
+              <div class="takeaway">A contradiction becomes useful when it predicts where each result should occur.
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 3">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 11 · Novelty test</div>
+              <h2>A gap that changes understanding</h2>
+              <p class="question">If answered, what belief, decision, or design would change?</p>
+              <p class="plain">Your knowledge gap is personal. A research gap is a documented uncertainty that matters
+                to a research community or stakeholder.</p>
+              <table class="mini-table">
+                <thead>
+                  <tr>
+                    <th>Gap type</th>
+                    <th>Prompt</th>
+                    <th>Evidence needed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mechanism</td>
+                    <td>Why does the effect occur?</td>
+                    <td>Mediation, process data, qualitative evidence</td>
+                  </tr>
+                  <tr>
+                    <td>Boundary</td>
+                    <td>When or for whom does it change?</td>
+                    <td>Moderator or comparative setting</td>
+                  </tr>
+                  <tr>
+                    <td>Contradiction</td>
+                    <td>Why do credible studies disagree?</td>
+                    <td>Matched definitions and discriminating test</td>
+                  </tr>
+                  <tr>
+                    <td>Consequence</td>
+                    <td>What happens later or elsewhere?</td>
+                    <td>Longitudinal or system-level outcome</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 3">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · Novelty</div>
+              <h2>The contribution sentence</h2>
+              <div class="workshop">
+                <div class="prompt">
+                  <p>Complete:</p>
+                  <blockquote>Prior work establishes ______. It remains unclear ______ because existing studies ______.
+                    We test ______, which matters because ______.</blockquote>
+                  <p>Then identify the three closest papers and state the exact difference from each.</p>
+                </div>
+                <div class="answers">
+                  <div class="answer weak"><span>Weak</span>
+                    <p>“Few studies use this model in Thailand.”</p>
+                  </div>
+                  <div class="answer strong"><span>Strong</span>
+                    <p>“Prior studies measure immediate writing quality. We test whether repeated AI assistance changes
+                      unaided revision skill, separating short-term productivity from learning.”</p>
+                  </div>
+                </div>
+              </div>
+              <div class="takeaway">Novelty is a precise difference plus a reason that difference matters.</div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 3">
+            <div class="slide-inner">
+              <div class="eyebrow">Positioning checkpoint</div>
+              <h2>Evidence before adjectives</h2>
+              <ul class="steps">
+                <li>Show what the closest work establishes.</li>
+                <li>Name the unresolved uncertainty without exaggerating “no one has studied.”</li>
+                <li>Explain why resolving it changes theory, method, design, or practice.</li>
+                <li>State the contribution as a result you can defend, not a feature list.</li>
+              </ul>
+              <div class="takeaway">“First,” “novel,” and “comprehensive” never substitute for a comparison with prior
+                work.</div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 4">
+            <div class="slide-inner section-slide">
+              <div class="session-number">04</div>
+              <div class="eyebrow">Part 2 · Research design and communication</div>
+              <h2>Match evidence to the claim</h2>
+              <p class="lead">Methods, experiments, analysis, and storytelling</p>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 4">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 12 · Method–claim fit</div>
+              <h2>What kind of claim?</h2>
+              <p class="question">What evidence would make a skeptical reader update their belief?</p>
+              <table class="mini-table">
+                <thead>
+                  <tr>
+                    <th>Claim</th>
+                    <th>Typical method</th>
+                    <th>Main threat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Describe</td>
+                    <td>Survey, corpus, observation</td>
+                    <td>Coverage and measurement</td>
+                  </tr>
+                  <tr>
+                    <td>Explain experience</td>
+                    <td>Interview, diary, field study</td>
+                    <td>Interpretation and reflexivity</td>
+                  </tr>
+                  <tr>
+                    <td>Estimate causal effect</td>
+                    <td>Randomized or strong quasi-experiment</td>
+                    <td>Confounding and noncompliance</td>
+                  </tr>
+                  <tr>
+                    <td>Build and assess</td>
+                    <td>Artifact plus comparative evaluation</td>
+                    <td>Weak baseline or unrealistic task</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="paper-list">
+                <div class="paper"><b>1</b>
+                  <div><a href="https://doi.org/10.1145/1125451.1125649" target="_blank" rel="noopener">Affective
+                      Diary</a>
+                    <p>Research through design and field deployment explored emotional reflection.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>2</b>
+                  <div><a href="https://doi.org/10.1126/science.adh2586" target="_blank" rel="noopener">Noy &amp;
+                      Zhang</a>
+                    <p>A preregistered experiment estimated effects on writing time and quality.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>3</b>
+                  <div><a href="https://aclanthology.org/P19-1534/" target="_blank"
+                      rel="noopener">EmpatheticDialogues</a>
+                    <p>Dataset creation, modeling, and human evaluation supported benchmark claims.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 4">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · Methods</div>
+              <h2>The skeptical reviewer</h2>
+              <div class="workshop">
+                <div class="prompt">
+                  <ol>
+                    <li>Underline the verb in your claim.</li>
+                    <li>Name the comparison implied by that verb.</li>
+                    <li>Write the strongest alternative explanation.</li>
+                    <li>Choose the least complex method that addresses it.</li>
+                  </ol>
+                </div>
+                <div class="answers">
+                  <div class="answer weak"><span>Weak</span>
+                    <p>“We will use a survey because it is easy.”</p>
+                  </div>
+                  <div class="answer strong"><span>Strong</span>
+                    <p>“A survey can describe trust, but it cannot show that explanations cause trust. Random assignment
+                      to explanation conditions matches the causal claim.”</p>
+                  </div>
+                </div>
+              </div>
+              <div class="takeaway">Choose the method after the claim and threat are explicit.</div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 4">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 13 · Experiment design</div>
+              <h2>A comparison that isolates the idea</h2>
+              <p class="question">What must remain equal so the focal difference can explain the result?</p>
+              <p class="plain">Define the unit, treatment, control, assignment, primary outcome, exclusion rules, and
+                sample plan before seeing results.</p>
+              <div class="paper-list">
+                <div class="paper"><b>1</b>
+                  <div><a href="https://doi.org/10.1145/1835804.1835810" target="_blank" rel="noopener">Controlled
+                      experiments on the web</a> · Kohavi et al., 2009<p>Large online experiments reveal both practical
+                      value and common pitfalls.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>2</b>
+                  <div><a href="https://www.consort-statement.org/" target="_blank" rel="noopener">CONSORT statement</a>
+                    <p>Randomized trials require transparent allocation, flow, outcomes, and harms.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>3</b>
+                  <div><a href="https://doi.org/10.1177/2515245918770963" target="_blank" rel="noopener">Justify Your
+                      Alpha</a> · Lakens et al., 2018<p>Design choices should follow the decision context rather than
+                      ritual thresholds.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 4">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · Experiments</div>
+              <h2>The minimum convincing study</h2>
+              <div class="workshop">
+                <div class="prompt">
+                  <p>For your main claim, specify:</p>
+                  <ul>
+                    <li>Unit and population</li>
+                    <li>Treatment and active control</li>
+                    <li>Primary outcome and time point</li>
+                    <li>Randomization or matching</li>
+                    <li>One manipulation check</li>
+                    <li>One failure criterion</li>
+                  </ul>
+                </div>
+                <div class="answers">
+                  <div class="answer weak"><span>Weak</span>
+                    <p>“Compare our system with ChatGPT.”</p>
+                  </div>
+                  <div class="answer strong"><span>Strong</span>
+                    <p>“Compare adaptive versus equally long nonadaptive feedback using the same base model, then test
+                      immediate accuracy and unaided transfer one week later.”</p>
+                  </div>
+                </div>
+              </div>
+              <div class="takeaway">A fair control differs only in the mechanism your claim depends on.</div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 4">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 14 · Analysis</div>
+              <h2>Estimate, diagnose, interpret</h2>
+              <p class="question">What pattern would support the claim, and what pattern would weaken it?</p>
+              <p class="plain">Plan the estimand, uncertainty, assumptions, missing data, robustness checks, and
+                qualitative coding before choosing attractive results.</p>
+              <div class="paper-list">
+                <div class="paper"><b>1</b>
+                  <div><a href="https://doi.org/10.1080/00031305.2016.1154108" target="_blank" rel="noopener">ASA
+                      Statement on p-values</a> · Wasserstein &amp; Lazar, 2016<p>A p-value does not measure effect
+                      size, practical importance, or truth.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>2</b>
+                  <div><a href="https://doi.org/10.1037/met0000169" target="_blank" rel="noopener">Moving to a world
+                      beyond p &lt; .05</a> · Cumming, 2014 tradition<p>Estimation and intervals emphasize magnitude and
+                      uncertainty.</p>
+                  </div>
+                </div>
+                <div class="paper"><b>3</b>
+                  <div><a href="https://doi.org/10.1191/1478088706qp063oa" target="_blank" rel="noopener">Using thematic
+                      analysis in psychology</a> · Braun &amp; Clarke, 2006<p>Qualitative analysis requires explicit
+                      analytic choices and a coherent relation between data and claims.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 4">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · Analysis</div>
+              <h2>The result table before the results</h2>
+              <div class="workshop">
+                <div class="prompt">
+                  <ol>
+                    <li>Draw the empty table or figure that would answer the question.</li>
+                    <li>Label the effect and uncertainty.</li>
+                    <li>Write the expected pattern.</li>
+                    <li>Write one null, opposite, or subgroup pattern and its interpretation.</li>
+                  </ol>
+                </div>
+                <div class="answers">
+                  <div class="answer weak"><span>Weak</span>
+                    <p>“Run tests and see what is significant.”</p>
+                  </div>
+                  <div class="answer strong"><span>Strong</span>
+                    <p>“Estimate the adaptive-minus-control difference in transfer score with a confidence interval,
+                      then test the preregistered expertise interaction.”</p>
+                  </div>
+                </div>
+              </div>
+              <div class="takeaway">Analysis answers a planned question. It does not search for a publishable pattern.
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 4">
+            <div class="slide-inner">
+              <div class="eyebrow">Technique 15 · Research storytelling</div>
+              <h2>An argument with evidence</h2>
+              <p class="question">What must the reader believe before your contribution feels necessary?</p>
+              <ol class="steps">
+                <li>Context: establish the important situation.</li>
+                <li>Problem: show the tension or consequence.</li>
+                <li>Gap: identify the unresolved uncertainty.</li>
+                <li>Approach: explain the test at the right level.</li>
+                <li>Finding and contribution: state what changes in understanding.</li>
+              </ol>
+              <p class="plain">Study the narrative moves in <a href="https://arxiv.org/abs/1706.03762" target="_blank"
+                  rel="noopener">Vaswani et al.</a>, <a href="https://doi.org/10.1126/science.adh2586" target="_blank"
+                  rel="noopener">Noy &amp; Zhang</a>, and <a href="https://aclanthology.org/P19-1534/" target="_blank"
+                  rel="noopener">Rashkin et al.</a>. Each motivates a specific limitation before presenting a method.
+              </p>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 4">
+            <div class="slide-inner">
+              <div class="eyebrow">Workshop · Story</div>
+              <h2>Five sentences</h2>
+              <div class="workshop">
+                <div class="prompt">
+                  <ol>
+                    <li>People or systems ______.</li>
+                    <li>However, ______ causes ______.</li>
+                    <li>Prior work explains ______, but not ______.</li>
+                    <li>We compare or investigate ______.</li>
+                    <li>This reveals ______, which changes ______.</li>
+                  </ol>
+                </div>
+                <div class="answers">
+                  <div class="answer weak"><span>Weak</span>
+                    <p>“We collected data, trained three models, and achieved 92% accuracy.”</p>
+                  </div>
+                  <div class="answer strong"><span>Strong</span>
+                    <p>“AI feedback can speed practice, but its effect on unaided transfer remains unclear. We isolate
+                      adaptivity while holding model and feedback length constant, then measure performance after access
+                      ends.”</p>
+                  </div>
+                </div>
+              </div>
+              <div class="takeaway">Methods are plot events. The research question supplies the plot.</div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 4">
+            <div class="slide-inner">
+              <div class="eyebrow">Complete study canvas</div>
+              <h2>One page before months of work</h2>
+              <div class="two-col">
+                <ol class="steps">
+                  <li>Observation or surprising pattern</li>
+                  <li>Research question with tension</li>
+                  <li>Closest literature and unresolved gap</li>
+                  <li>Claim and contribution</li>
+                </ol>
+                <ol class="steps" start="5">
+                  <li>Alternative explanation</li>
+                  <li>Method and fair comparison</li>
+                  <li>Primary outcome and analysis</li>
+                  <li>Failure criterion and next decision</li>
+                </ol>
+              </div>
+              <div class="takeaway">If the pieces do not connect on one page, more implementation will not repair the
+                logic.</div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Session 4">
+            <div class="slide-inner">
+              <div class="eyebrow">Research practice</div>
+              <h2>Ownership with frequent feedback</h2>
+              <ul class="compact">
+                <li>Meet your advisor early enough for small corrections.</li>
+                <li>Bring alternatives and a recommendation.</li>
+                <li>Read before claiming novelty.</li>
+                <li>Write while the idea is still changing.</li>
+                <li>Pilot the strongest claim first.</li>
+                <li>Keep decisions, failures, and rationale in a research log.</li>
+                <li>Use the lab's expertise and resources.</li>
+                <li>Report inconvenient results, not only supportive ones.</li>
+              </ul>
+              <blockquote>Show what you think should happen next and explain why.</blockquote>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Advanced">
+            <div class="slide-inner section-slide">
+              <div class="eyebrow">Optional advanced material</div>
+              <h2>Use these tools when the project demands them</h2>
+              <p class="lead">The core sessions teach one move at a time. The following slides keep the original broader
+                frameworks available without putting them in the critical path.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Advanced">
+            <div class="slide-inner">
+              <div class="eyebrow">Advanced · Learning depth</div>
+              <h2>Bloom's taxonomy as a diagnostic</h2>
+              <table class="mini-table">
+                <thead>
+                  <tr>
+                    <th>Level</th>
+                    <th>Research behavior</th>
+                    <th>Diagnostic question</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Remember / understand</td>
+                    <td>Summarize concepts and findings</td>
+                    <td>Can I explain the claim accurately?</td>
+                  </tr>
+                  <tr>
+                    <td>Apply / analyze</td>
+                    <td>Use a method and compare evidence</td>
+                    <td>Which assumption produces the result?</td>
+                  </tr>
+                  <tr>
+                    <td>Evaluate</td>
+                    <td>Judge evidence against alternatives</td>
+                    <td>What would change my conclusion?</td>
+                  </tr>
+                  <tr>
+                    <td>Create</td>
+                    <td>Form a new, testable synthesis</td>
+                    <td>What study would resolve the uncertainty?</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="optional">Use Bloom to diagnose the next learning move. Do not treat it as a rigid ladder or a
+                substitute for domain expertise.</p>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Advanced">
+            <div class="slide-inner">
+              <div class="eyebrow">Advanced · Tool library</div>
+              <h2>Additional critical-thinking tools</h2>
+              <table class="mini-table">
+                <tbody>
+                  <tr>
+                    <th>Tool</th>
+                    <th>Best used when</th>
+                    <th>Prompt</th>
+                  </tr>
+                  <tr>
+                    <td>Counterfactual</td>
+                    <td>Causal claim</td>
+                    <td>What would happen to the same unit without the intervention?</td>
+                  </tr>
+                  <tr>
+                    <td>Inversion</td>
+                    <td>Designing safeguards</td>
+                    <td>How could this study fail or cause harm?</td>
+                  </tr>
+                  <tr>
+                    <td>Fermi estimate</td>
+                    <td>Checking feasibility</td>
+                    <td>What order of magnitude should I expect?</td>
+                  </tr>
+                  <tr>
+                    <td>Stakeholder lens</td>
+                    <td>Deployment or policy</td>
+                    <td>Who gains, who pays, and who remains unmeasured?</td>
+                  </tr>
+                  <tr>
+                    <td>Pre-mortem</td>
+                    <td>Before data collection</td>
+                    <td>Imagine the project failed. What caused it?</td>
+                  </tr>
+                  <tr>
+                    <td>Negative case</td>
+                    <td>Qualitative explanation</td>
+                    <td>Which case contradicts the emerging account?</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Advanced">
+            <div class="slide-inner">
+              <div class="eyebrow">Advanced · Synthesis library</div>
+              <h2>Eight patterns for organizing literature</h2>
+              <div class="two-col">
+                <ol class="steps">
+                  <li>Agreement: repeated result</li>
+                  <li>Contradiction: incompatible findings</li>
+                  <li>Progression: problem, improvement, remaining limit</li>
+                  <li>Methods: how design choices change conclusions</li>
+                </ol>
+                <ol class="steps" start="5">
+                  <li>Population: who is represented or missing</li>
+                  <li>Theory: competing mechanisms</li>
+                  <li>Boundary: where the effect changes</li>
+                  <li>Consequence: delayed or system-level outcomes</li>
+                </ol>
+              </div>
+              <div class="takeaway">Choose the pattern that supports the argument. Do not force all eight into one
+                review.</div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Resources">
+            <div class="slide-inner">
+              <div class="eyebrow">Lab resources</div>
+              <h2>Templates, examples, and tools</h2>
+              <div class="resource-columns">
+                <div class="resource-group">
+                  <h3>Templates</h3>
+                  <p><a
+                      href="https://docs.google.com/presentation/d/1SXN2LABIBYnTblk1nbCE1KA83xmR4tt-vUE26Lnl0-E/edit?usp=sharing"
+                      target="_blank" rel="noopener">Thesis presentation template</a></p>
+                  <p><a href="https://www.overleaf.com/read/zptzbhxkbvbn#3d83d4" target="_blank" rel="noopener">Thesis
+                      LaTeX template</a></p>
+                  <p><a href="https://languages.ait.ac.th/thesis-format-template/" target="_blank" rel="noopener">AIT
+                      Language Center format</a></p>
+                </div>
+                <div class="resource-group">
+                  <h3>Proposal examples</h3>
+                  <p>Master’s: <a
+                      href="https://drive.google.com/file/d/1wTPXliTlkLRDIGVBgnxrgg4UUXvyyoCf/view?usp=sharing"
+                      target="_blank" rel="noopener">slides</a> · <a
+                      href="https://drive.google.com/file/d/19J4Zs12gfBOiCo-Bsn7vS4qhDoxubS1s/view?usp=sharing"
+                      target="_blank" rel="noopener">report</a></p>
+                  <p>PhD: <a href="https://drive.google.com/file/d/1yrMHck1oMszKw_3QfqqtwqvZ8RC05n9P/view?usp=sharing"
+                      target="_blank" rel="noopener">slides</a> · <a
+                      href="https://drive.google.com/file/d/1Zqek9XC2Xeooz788K_mwIFxaGqZxdMec/view?usp=sharing"
+                      target="_blank" rel="noopener">report</a></p>
+                </div>
+                <div class="resource-group">
+                  <h3>Completed work</h3>
+                  <p>Research study: <a
+                      href="https://drive.google.com/file/d/1RHcmHshJDh_9PQnEUcUoEGM-mENOsIF0/view?usp=sharing"
+                      target="_blank" rel="noopener">Master</a> · <a
+                      href="https://drive.google.com/file/d/1Rcbs5qKUJ9CR3W_1Dwgh_u9-NQCOy6z4/view?usp=sharing"
+                      target="_blank" rel="noopener">PhD</a></p>
+                  <p>Final thesis: <a
+                      href="https://drive.google.com/file/d/1VSD0-DZHAhDnvD1PSEtpyTjyZynaJqiY/view?usp=sharing"
+                      target="_blank" rel="noopener">slides</a> · <a
+                      href="https://drive.google.com/file/d/1Vt5qVQEqEhEn1IoVgXw2QOLnii6Rb9yU/view?usp=sharing"
+                      target="_blank" rel="noopener">report</a></p>
+                  <p><a href="https://drive.google.com/file/d/1QV0olPsGYPoYN7EyqoCU6WqFdGhzzWJS/view?usp=sharing"
+                      target="_blank" rel="noopener">Internship report</a> · <a
+                      href="https://drive.google.com/drive/folders/10XQngfTQx8fJdnhVwRpTy8s-Rxov3JWa?usp=sharing"
+                      target="_blank" rel="noopener">Thesis repository</a></p>
+                </div>
+                <div class="resource-group">
+                  <h3>Lab tools and guides</h3>
+                  <p><a href="https://github.com/AIT-brainlab/python-project-starter" target="_blank"
+                      rel="noopener">Python project starter</a></p>
+                  <p><a href="https://github.com/orgs/AIT-brainlab/projects/3" target="_blank" rel="noopener">Project
+                      board</a></p>
+                  <p><a href="https://chaklam.com/articles/how-to-write-paper/" target="_blank" rel="noopener">How to
+                      write a paper</a></p>
+                  <p><a href="https://chaklam.com/articles/how-to-choose-a-good-topic/" target="_blank"
+                      rel="noopener">How to choose a good topic</a></p>
+                  <p><a href="https://chaklam.com/articles/research-process/" target="_blank" rel="noopener">Research
+                      process</a></p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-session="Resources">
+            <div class="slide-inner title-slide">
+              <div class="eyebrow">Final prompt</div>
+              <h2>What will you test next?</h2>
+              <p class="lead">Bring one research question, its strongest alternative explanation, and the smallest study
+                that could prove you wrong.</p>
+              <blockquote>Book a meeting with your advisor when feedback can still change the work.</blockquote>
+            </div>
+          </section>
         </div>
 
         <nav class="controls" aria-label="Presentation navigation">
@@ -316,18 +1871,18 @@
       </div>
 
       <script>
-        (function(){
-          const deck=document.getElementById('research-deck');if(!deck)return;
-          const slides=[...deck.querySelectorAll('.slide')],prev=deck.querySelector('#prev-slide'),next=deck.querySelector('#next-slide'),count=deck.querySelector('#slide-count'),progress=deck.querySelector('#slide-progress'),dots=deck.querySelector('#slide-dots'),sessionLabel=deck.querySelector('#session-label'),jump=deck.querySelector('#session-jump'),full=deck.querySelector('#fullscreen-slide'),resume=deck.querySelector('#resume-note');
-          const storageKey='ait-research-guide-slide-v2';let current=0;
-          try{const saved=parseInt(localStorage.getItem(storageKey),10);if(Number.isFinite(saved)&&saved>=0&&saved<slides.length){current=saved;resume.textContent='Resumed where you left off';}}catch(e){}
-          function show(i,save=true){current=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,j)=>{s.classList.toggle('active',j===current);s.setAttribute('aria-hidden',j===current?'false':'true')});[...dots.children].forEach((d,j)=>d.setAttribute('aria-current',j===current?'true':'false'));prev.disabled=current===0;next.disabled=current===slides.length-1;count.textContent='Slide '+(current+1)+' of '+slides.length;progress.style.width=((current+1)/slides.length*100)+'%';sessionLabel.textContent=slides[current].dataset.session||'';if(save){try{localStorage.setItem(storageKey,String(current))}catch(e){}}deck.scrollIntoView({block:'nearest'});}
-          slides.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Go to slide '+(i+1));b.addEventListener('click',()=>show(i));dots.appendChild(b)});
-          prev.addEventListener('click',()=>show(current-1));next.addEventListener('click',()=>show(current+1));jump.addEventListener('change',()=>show(parseInt(jump.value,10)||0));
-          deck.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT','A','BUTTON'].includes(e.target.tagName))return;if(e.key==='ArrowRight'||e.key==='PageDown'){e.preventDefault();show(current+1)}if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();show(current-1)}if(e.key==='Home'){e.preventDefault();show(0)}if(e.key==='End'){e.preventDefault();show(slides.length-1)}});
-          function syncFull(){const active=document.fullscreenElement===deck;full.textContent=active?'⛶ Exit':'⛶ Fullscreen';full.setAttribute('aria-label',active?'Exit presentation fullscreen':'Enter presentation fullscreen')}
-          async function toggleFull(){try{if(document.fullscreenElement===deck)await document.exitFullscreen();else if(!document.fullscreenElement)await deck.requestFullscreen()}catch(err){console.warn('Fullscreen is unavailable:',err)}}
-          full.addEventListener('click',toggleFull);document.addEventListener('fullscreenchange',syncFull);document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)||e.altKey||e.ctrlKey||e.metaKey)return;if(e.key.toLowerCase()==='f'&&!e.repeat){e.preventDefault();toggleFull()}});show(current,false);
+        (function () {
+          const deck = document.getElementById('research-deck'); if (!deck) return;
+          const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), progress = deck.querySelector('#slide-progress'), dots = deck.querySelector('#slide-dots'), sessionLabel = deck.querySelector('#session-label'), jump = deck.querySelector('#session-jump'), full = deck.querySelector('#fullscreen-slide'), resume = deck.querySelector('#resume-note');
+          const storageKey = 'ait-research-guide-slide-v2'; let current = 0;
+          try { const saved = parseInt(localStorage.getItem(storageKey), 10); if (Number.isFinite(saved) && saved >= 0 && saved < slides.length) { current = saved; resume.textContent = 'Resumed where you left off'; } } catch (e) { }
+          function show(i, save = true) { current = Math.max(0, Math.min(slides.length - 1, i)); slides.forEach((s, j) => { s.classList.toggle('active', j === current); s.setAttribute('aria-hidden', j === current ? 'false' : 'true') });[...dots.children].forEach((d, j) => d.setAttribute('aria-current', j === current ? 'true' : 'false')); prev.disabled = current === 0; next.disabled = current === slides.length - 1; count.textContent = 'Slide ' + (current + 1) + ' of ' + slides.length; progress.style.width = ((current + 1) / slides.length * 100) + '%'; sessionLabel.textContent = slides[current].dataset.session || ''; if (save) { try { localStorage.setItem(storageKey, String(current)) } catch (e) { } } deck.scrollIntoView({ block: 'nearest' }); }
+          slides.forEach((s, i) => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Go to slide ' + (i + 1)); b.addEventListener('click', () => show(i)); dots.appendChild(b) });
+          prev.addEventListener('click', () => show(current - 1)); next.addEventListener('click', () => show(current + 1)); jump.addEventListener('change', () => show(parseInt(jump.value, 10) || 0));
+          deck.addEventListener('keydown', e => { if (['INPUT', 'TEXTAREA', 'SELECT', 'A', 'BUTTON'].includes(e.target.tagName)) return; if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); show(current + 1) } if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(current - 1) } if (e.key === 'Home') { e.preventDefault(); show(0) } if (e.key === 'End') { e.preventDefault(); show(slides.length - 1) } });
+          function syncFull() { const active = document.fullscreenElement === deck; full.textContent = active ? '⛶ Exit' : '⛶ Fullscreen'; full.setAttribute('aria-label', active ? 'Exit presentation fullscreen' : 'Enter presentation fullscreen') }
+          async function toggleFull() { try { if (document.fullscreenElement === deck) await document.exitFullscreen(); else if (!document.fullscreenElement) await deck.requestFullscreen() } catch (err) { console.warn('Fullscreen is unavailable:', err) } }
+          full.addEventListener('click', toggleFull); document.addEventListener('fullscreenchange', syncFull); document.addEventListener('keydown', e => { if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName) || e.altKey || e.ctrlKey || e.metaKey) return; if (e.key.toLowerCase() === 'f' && !e.repeat) { e.preventDefault(); toggleFull() } }); show(current, false);
         })();
       </script>
     </div>
