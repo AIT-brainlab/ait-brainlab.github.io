@@ -109,19 +109,6 @@
           color: #172b46
         }
 
-        .research-guide .progress {
-          height: 5px;
-          background: #dbe7ed
-        }
-
-        .research-guide .progress span {
-          display: block;
-          height: 100%;
-          width: 0;
-          background: var(--mint);
-          transition: width .2s
-        }
-
         .research-guide .journey-progress {
           display: grid;
           grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -776,8 +763,8 @@
         }
 
         .research-guide .deck:fullscreen .slides {
-          min-height: calc(100vh - 205px);
-          max-height: calc(100vh - 205px);
+          min-height: calc(100vh - 200px);
+          max-height: calc(100vh - 200px);
           display: flex;
           align-items: center;
           padding: clamp(2rem, 4vw, 5rem);
@@ -917,9 +904,6 @@
             animation: none
           }
 
-          .research-guide .progress span {
-            transition: none
-          }
         }
       </style>
 
@@ -943,7 +927,6 @@
             <button id="fullscreen-slide" type="button" title="Fullscreen (F)">⛶ Fullscreen</button>
           </div>
         </header>
-        <div class="progress" aria-hidden="true"><span id="slide-progress"></span></div>
         <div class="journey-progress" id="journey-progress" aria-label="Research journey progress">
           <div class="journey-stage" data-stage="Idea generation">Generation</div>
           <div class="journey-stage" data-stage="Idea refinement">Refinement</div>
@@ -1770,7 +1753,7 @@
       <script>
         (function () {
           const deck = document.getElementById('research-deck'); if (!deck) return;
-          const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), progress = deck.querySelector('#slide-progress'), dots = deck.querySelector('#slide-dots'), sessionLabel = deck.querySelector('#session-label'), jump = deck.querySelector('#session-jump'), full = deck.querySelector('#fullscreen-slide'), resume = deck.querySelector('#resume-note'), journeyStages = [...deck.querySelectorAll('.journey-stage')], journeyStatus = deck.querySelector('#journey-status');
+          const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), dots = deck.querySelector('#slide-dots'), sessionLabel = deck.querySelector('#session-label'), jump = deck.querySelector('#session-jump'), full = deck.querySelector('#fullscreen-slide'), resume = deck.querySelector('#resume-note'), journeyStages = [...deck.querySelectorAll('.journey-stage')], journeyStatus = deck.querySelector('#journey-status');
           const stageNames = journeyStages.map(stage => stage.dataset.stage);
           const storageKey = 'ait-research-guide-slide-v2'; let current = 0;
           try { const saved = parseInt(localStorage.getItem(storageKey), 10); if (Number.isFinite(saved) && saved >= 0 && saved < slides.length) { current = saved; resume.textContent = 'Resumed where you left off'; } } catch (e) { }
@@ -1781,7 +1764,6 @@
             prev.disabled = current === 0;
             next.disabled = current === slides.length - 1;
             count.textContent = 'Slide ' + (current + 1) + ' of ' + slides.length;
-            progress.style.width = ((current + 1) / slides.length * 100) + '%';
             const activeSlide = slides[current], session = activeSlide.dataset.session || '';
             sessionLabel.textContent = session;
             const stageIndex = stageNames.indexOf(session);
