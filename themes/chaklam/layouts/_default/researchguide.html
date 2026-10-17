@@ -196,6 +196,42 @@
           margin: 0 auto
         }
 
+        .research-guide .career-slide {
+          text-align: center
+        }
+
+        .research-guide .intro-slide {
+          min-height: 520px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center
+        }
+
+        .research-guide .career-questions {
+          width: min(100%, 980px);
+          margin: 1.5rem auto 0;
+          padding: 0;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: .8rem;
+          list-style: none;
+          text-align: left
+        }
+
+        .research-guide .career-questions li {
+          padding: 1rem 1.15rem;
+          border: 1px solid var(--line);
+          border-left: 5px solid var(--teal);
+          border-radius: 12px;
+          background: #f5fafb;
+          font-size: clamp(1rem, 1.35vw, 1.25rem)
+        }
+
+        .research-guide .career-questions li:last-child {
+          grid-column: 1 / -1
+        }
+
         .research-guide .paper-example {
           margin: .8rem 0 0;
           padding: .75rem 1rem;
@@ -866,6 +902,14 @@
             padding: .42rem .2rem;
             font-size: .62rem
           }
+
+          .research-guide .career-questions {
+            grid-template-columns: 1fr
+          }
+
+          .research-guide .career-questions li:last-child {
+            grid-column: auto
+          }
         }
 
         @media(prefers-reduced-motion:reduce) {
@@ -882,7 +926,7 @@
       <div class="deck" id="research-deck" tabindex="0" aria-label="Research guide presentation">
         <header class="deck-top">
           <div>
-            <div class="deck-title" id="deck-breadcrumb" aria-live="polite">Research Journey</div>
+            <div class="deck-title">Research Guide · AIT Brain Lab</div>
           </div>
           <div class="deck-meta"><span class="slide-number" id="slide-count"></span> · <span id="session-label"></span>
           </div>
@@ -911,7 +955,7 @@
 
         <div class="slides">
           <section class="slide" data-session="Start">
-            <div class="slide-inner title-slide">
+            <div class="slide-inner title-slide intro-slide">
               <h2>From Zero to Hero: How to Do Research?</h2>
               <p class="lead">A self-paced tutorial and exercises covering idea generation, refinement, novelty validation, methodology testing, and storytelling</p>
               <p class="kbd">Use ← →, the buttons, or the session menu. Press F for fullscreen.</p>
@@ -919,6 +963,7 @@
           </section>
 
           <section class="slide" data-session="Start">
+            <div class="slide-inner career-slide intro-slide">
                                   <div class="eyebrow">CAREER DEVELOPMENT</div>
           
                                   <h2>Peter's Level of Incompetence</h2>
@@ -987,8 +1032,10 @@
                                       <strong>— Laurence J. Peter</strong><br>
                                       <em>The Peter Principle</em> (1969)
                                   </p>
+            </div>
                               </section>
                               <section class="slide" data-session="Start">
+                                <div class="slide-inner intro-slide">
                                   <div class="eyebrow">CAREER DEVELOPMENT</div>
           
                                   <h2>As You Move Up, Thinking Matters More</h2>
@@ -1071,38 +1118,27 @@
                                       <span style="color:#10b981;">■</span> Adaptation
                                   </p>
           
-                                  <p>
-                                      <strong>Key idea:</strong>
-                                      As responsibility increases, thinking and adaptation
-                                      become more important relative to routine execution.
-                                  </p>
+                                </div>
                               </section>
                               <section class="slide" data-session="Start">
+                                <div class="slide-inner intro-slide">
                                   <div class="eyebrow">WHY RESEARCH MATTERS</div>
           
-                                  <h2>Research Trains You to Think Better</h2>
+                                  <h2>Every career needs research skills</h2>
           
                                   <p class="lead">
                                       Research is not just about discovering new knowledge.
                                       It trains you to think when the answer is unknown.
                                   </p>
           
-                                  <p>Almost every career requires research skills:</p>
-          
-                                  <ul>
+                                  <ul class="career-questions">
                                       <li><strong>Entrepreneur:</strong> What do customers really need?</li>
                                       <li><strong>Engineer:</strong> Why does this system keep failing?</li>
                                       <li><strong>Doctor:</strong> Which treatment works best?</li>
                                       <li><strong>Manager:</strong> Why are we losing customers?</li>
                                       <li><strong>AI Developer:</strong> How can we make our model more reliable?</li>
                                   </ul>
-          
-                                  <p>
-                                      Good researchers learn to <strong>ask better questions,
-                                          challenge assumptions, analyze evidence, connect ideas,
-                                          and adapt their thinking</strong>.
-                                  </p>
-          
+                                </div>
                               </section>
 
           <section class="slide" data-session="Start">
@@ -1174,8 +1210,7 @@
 
           <section class="slide" data-session="Idea generation">
             <div class="slide-inner visual-layout"><div class="visual-copy">
-              <div class="eyebrow">Technique 1</div>
-              <h2>Notice a problem</h2>
+              <h2>1. Notice a problem</h2>
               <p class="lead">What problem do people still face?</p>
 
               <p class="plain">
@@ -1243,8 +1278,7 @@
 
           <section class="slide" data-session="Idea generation">
             <div class="slide-inner visual-layout"><div class="visual-copy">
-              <div class="eyebrow">Technique 2</div>
-              <h2>Notice a surprise</h2>
+              <h2>2. Notice a surprise</h2>
               <p class="lead">What happened differently from what you expected?</p>
 
               <div class="paper-list">
@@ -1309,8 +1343,7 @@
 
           <section class="slide" data-session="Idea generation">
             <div class="slide-inner visual-layout"><div class="visual-copy">
-              <div class="eyebrow">Technique 3</div>
-              <h2>Borrow a theory</h2>
+              <h2>3. Borrow a theory</h2>
               <p class="lead">Can an idea from another practice help solve your problem?</p>
 
               <div class="paper-list">
@@ -1349,8 +1382,7 @@
 
           <section class="slide" data-session="Idea generation">
             <div class="slide-inner visual-layout"><div class="visual-copy">
-              <div class="eyebrow">Technique 4</div>
-              <h2>Extend a recent paper</h2>
+              <h2>4. Extend a recent paper</h2>
               <p class="lead">What useful question could come next?</p>
 
               <div class="paper-list">
@@ -1502,8 +1534,7 @@
           </section>
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner visual-layout"><div class="visual-copy">
-              <div class="eyebrow">Technique 1</div>
-              <h2>Challenge an assumption</h2>
+              <h2>1. Challenge an assumption</h2>
               <p class="lead">What are you taking for granted?</p>
               <div class="paper-list"><div class="paper"><b>1</b><div>
                 <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Bayesian reasoning example
@@ -1519,8 +1550,7 @@
           </section>
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner visual-layout"><div class="visual-copy">
-              <div class="eyebrow">Technique 2</div>
-              <h2>Consider another explanation</h2>
+              <h2>2. Consider another explanation</h2>
               <p class="lead">What else could produce the same result?</p>
               <div class="paper-list"><div class="paper"><b>2</b><div>
                 <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Bayesian reasoning example
@@ -1536,8 +1566,7 @@
           </section>
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner visual-layout"><div class="visual-copy">
-              <div class="eyebrow">Technique 3</div>
-              <h2>Use first principles</h2>
+              <h2>3. Use first principles</h2>
               <p class="lead">What is the problem made of?</p>
               <div class="paper-list"><div class="paper"><b>3</b><div>
                 <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Bayesian reasoning example
@@ -1553,8 +1582,7 @@
           </section>
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner visual-layout"><div class="visual-copy">
-              <div class="eyebrow">Technique 4</div>
-              <h2>Think about the whole system</h2>
+              <h2>4. Think about the whole system</h2>
               <p class="lead">How do the parts affect one another?</p>
               <div class="paper-list"><div class="paper"><b>4</b><div>
                 <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Bayesian reasoning example
@@ -1570,8 +1598,7 @@
           </section>
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner visual-layout"><div class="visual-copy">
-              <div class="eyebrow">Technique 5</div>
-              <h2>Consider second-order effects</h2>
+              <h2>5. Consider second-order effects</h2>
               <p class="lead">What happens after the first benefit?</p>
               <div class="paper-list"><div class="paper"><b>5</b><div>
                 <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Bayesian reasoning example
@@ -1601,7 +1628,7 @@
           </section>
 
           <section class="slide" data-session="Idea validation">
-            <div class="slide-inner visual-layout"><div class="visual-copy"><div class="eyebrow">Technique</div><h2>Validate the research gap</h2><p class="lead">Your knowledge gap is not yet a research gap.</p>
+            <div class="slide-inner visual-layout"><div class="visual-copy"><h2>1. Validate the research gap</h2><p class="lead">Your knowledge gap is not yet a research gap.</p>
               <ol class="steps">
                 <li><strong>Is there really a gap?</strong> Past work must leave an important question unanswered, inconsistent, or poorly supported.</li>
                 <li><strong>Is the gap in the field—not only in your reading?</strong> Search broadly across keywords, venues, methods, theories, and nearby fields until you can show that no strong answer already exists.</li>
@@ -1727,8 +1754,8 @@
             <div class="slide-inner title-slide"><div class="eyebrow">Keep going</div><h2>Progress over Perfection</h2><ul class="paper-points">
               <li><strong>Start with something you are curious about.</strong></li>
               <li><strong>Read many top-tier papers, especially from CHI, ACL, and NeurIPS.</strong></li>
-              <li><strong>Your professor does not have the answer.</strong> They can guide the process and ask challenging questions that help you find it.</li>
-              <li><strong>Do one thing at a time.</strong> If you are unclear, build or code a small part, inspect it, think again, or return to the papers. Research is iterative; you do not need to solve everything in one pass.</li>
+              <li><strong>Your professor does not have the answer.</strong></li>
+              <li><strong>Do one thing at a time.</strong></li>
             </ul></div>
           </section>
         </div>
@@ -1743,7 +1770,7 @@
       <script>
         (function () {
           const deck = document.getElementById('research-deck'); if (!deck) return;
-          const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), progress = deck.querySelector('#slide-progress'), dots = deck.querySelector('#slide-dots'), breadcrumb = deck.querySelector('#deck-breadcrumb'), sessionLabel = deck.querySelector('#session-label'), jump = deck.querySelector('#session-jump'), full = deck.querySelector('#fullscreen-slide'), resume = deck.querySelector('#resume-note'), journeyStages = [...deck.querySelectorAll('.journey-stage')], journeyStatus = deck.querySelector('#journey-status');
+          const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), progress = deck.querySelector('#slide-progress'), dots = deck.querySelector('#slide-dots'), sessionLabel = deck.querySelector('#session-label'), jump = deck.querySelector('#session-jump'), full = deck.querySelector('#fullscreen-slide'), resume = deck.querySelector('#resume-note'), journeyStages = [...deck.querySelectorAll('.journey-stage')], journeyStatus = deck.querySelector('#journey-status');
           const stageNames = journeyStages.map(stage => stage.dataset.stage);
           const storageKey = 'ait-research-guide-slide-v2'; let current = 0;
           try { const saved = parseInt(localStorage.getItem(storageKey), 10); if (Number.isFinite(saved) && saved >= 0 && saved < slides.length) { current = saved; resume.textContent = 'Resumed where you left off'; } } catch (e) { }
@@ -1755,9 +1782,8 @@
             next.disabled = current === slides.length - 1;
             count.textContent = 'Slide ' + (current + 1) + ' of ' + slides.length;
             progress.style.width = ((current + 1) / slides.length * 100) + '%';
-            const activeSlide = slides[current], session = activeSlide.dataset.session || '', heading = activeSlide.querySelector('h2')?.textContent.trim() || '', topic = activeSlide.dataset.topic || heading;
+            const activeSlide = slides[current], session = activeSlide.dataset.session || '';
             sessionLabel.textContent = session;
-            breadcrumb.textContent = ['Research Journey', session, topic, heading === 'Exercise' ? 'Exercise' : ''].filter((part, index, parts) => part && parts.indexOf(part) === index).join(' › ');
             const stageIndex = stageNames.indexOf(session);
             journeyStages.forEach((stage, index) => {
               stage.classList.toggle('completed', stageIndex > index || session === 'Resources');
