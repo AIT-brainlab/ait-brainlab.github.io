@@ -1,9 +1,9 @@
 ---
-title: Pranisaa Charnparttaravanit
+title: Pranisaa Charnparttaravanit ('23)
 date: 2023-06-14T04:02:03+07:00
-roles: PhD
+roles: Master
 image: /img/members/beau.jpg
-project: Mental health chatbot
+project: NLP masking
 draft: false
 ---
 
