@@ -469,6 +469,45 @@
           font-weight: 800
         }
 
+        .research-guide .paper.paper-single {
+          grid-template-columns: 1fr
+        }
+
+        .research-guide .concept-visual {
+          min-height: 20rem;
+          border-radius: 24px;
+          border: 1px solid var(--line);
+          background: linear-gradient(145deg, #f3fbfc, #eef2f7);
+          display: grid;
+          place-content: center;
+          gap: 1rem;
+          padding: 2rem;
+          text-align: center
+        }
+
+        .research-guide .concept-visual .unknown {
+          padding: 1rem 1.35rem;
+          border-radius: 999px;
+          background: var(--navy);
+          color: white;
+          font-weight: 800
+        }
+
+        .research-guide .concept-row {
+          display: flex;
+          justify-content: center;
+          gap: .7rem;
+          flex-wrap: wrap
+        }
+
+        .research-guide .concept-row span {
+          padding: .7rem 1rem;
+          border-radius: 999px;
+          background: white;
+          border: 1px solid #b9d3da;
+          font-weight: 750
+        }
+
         .research-guide .compact {
           columns: 2;
           column-gap: 2rem
@@ -686,9 +725,17 @@
         }
 
         @media(min-width:1800px) {
-          .research-guide .deck:fullscreen .paper-points li,
-          .research-guide .deck:fullscreen .steps li {
+          .research-guide .deck:fullscreen .paper-points li {
             padding: .85rem 1.05rem
+          }
+
+          .research-guide .deck:fullscreen .steps li {
+            padding: .85rem 1.05rem .85rem 3.5rem
+          }
+
+          .research-guide .deck:fullscreen .steps li:before {
+            left: 0;
+            top: .72rem
           }
         }
 
@@ -1173,7 +1220,7 @@
                   </div>
                 </div>
               </div>
-            </div><figure class="slide-visual"><a href="https://unsplash.com/photos/W7wBNLlryPM" target="_blank" rel="noopener"><img src="/img/researchguide/surprise.jpg" alt="Person reacting with surprise" loading="lazy"></a><figcaption>Photo: Engin Akyurt · Unsplash</figcaption></figure></div>
+            </div><figure class="slide-visual"><a href="https://www.indiatoday.in/technology/news/story/ai-chatbots-can-be-dangerously-agreeable-study-warns-sycophancy-can-change-users-beliefs-2809188-2025-10-28" target="_blank" rel="noopener"><img src="/img/researchguide/sycophancy.png" alt="Illustration of an AI assistant agreeing too readily with a user" loading="lazy"></a><figcaption>AI sycophancy · India Today</figcaption></figure></div>
           </section>
 
           <section class="slide" data-session="Session 1">
@@ -1212,7 +1259,7 @@
                   </div>
                 </div>
               </div>
-            </div><figure class="slide-visual"><a href="https://ustwo.com/work/pause/" target="_blank" rel="noopener"><img src="/img/researchguide/pause-app.jpg" alt="Pause mindfulness app shown on a smartphone" loading="lazy"></a><figcaption>Pause app · ustwo</figcaption></figure></div>
+            </div><figure class="slide-visual"><a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener"><img src="/img/researchguide/negotiation-visual.png" alt="Bayesian visualization supporting a multi-issue human-AI negotiation" loading="lazy"></a><figcaption>Negotiation Horizon visualization · Parmar &amp; Silpasuwanchai</figcaption></figure></div>
           </section>
 
           <section class="slide" data-session="Session 1">
@@ -1234,7 +1281,7 @@
           </section>
 
           <section class="slide" data-session="Session 1">
-            <div class="slide-inner">
+            <div class="slide-inner visual-layout"><div class="visual-copy">
               <div class="eyebrow">Technique 4 · Extend a recent paper</div>
               <h2>What useful question could come next?</h2>
 
@@ -1279,7 +1326,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div><figure class="slide-visual"><a href="https://medium.com/swlh/the-illusion-of-easy-success-11a9b32860bf" target="_blank" rel="noopener"><img src="/img/researchguide/whats-next.png" alt="A path continuing toward the question what is next" loading="lazy"></a><figcaption>What comes next? · Maya Say</figcaption></figure></div>
           </section>
 
           <section class="slide" data-session="Session 1">
@@ -1387,14 +1434,14 @@
             </div>
           </section>
           <section class="slide" data-session="Session 2">
-            <div class="slide-inner">
+            <div class="slide-inner visual-layout"><div class="visual-copy">
               <div class="eyebrow">Technique 1 · Challenge an assumption</div>
               <h2>What are you taking for granted?</h2>
               <div class="paper-list"><div class="paper"><b>1</b><div>
                 <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Bayesian reasoning example
                 <ul class="paper-points"><li><strong>Starting question:</strong> Can Bayesian reasoning help people make better decisions in complex negotiations?</li><li><strong>Hidden assumption:</strong> If probabilities are mathematically correct, people will understand and use them correctly.</li><li><strong>Challenge:</strong> People may misunderstand probabilities, trust them too much, or ignore information that is not shown.</li><li><strong>Better question:</strong> When does Bayesian support improve negotiation decisions, and when does it create false confidence?</li><li><strong>Why it is better:</strong> The question identifies a condition and a possible failure, rather than assuming the method is helpful.</li></ul>
               </div></div></div>
-            </div>
+            </div><figure class="slide-visual"><a href="https://www.leadbeyondcode.com/blog/decision-making-implicit-explicit-assumptions" target="_blank" rel="noopener"><img src="/img/researchguide/assumption.png" alt="Iceberg showing visible statements above hidden assumptions" loading="lazy"></a><figcaption>Visible claims and hidden assumptions · Lead Beyond Code</figcaption></figure></div>
           </section>
           <section class="slide" data-session="Session 2">
             <div class="slide-inner">
@@ -1403,14 +1450,14 @@
             </div>
           </section>
           <section class="slide" data-session="Session 2">
-            <div class="slide-inner">
+            <div class="slide-inner visual-layout"><div class="visual-copy">
               <div class="eyebrow">Technique 2 · Consider another explanation</div>
               <h2>What else could produce the same result?</h2>
               <div class="paper-list"><div class="paper"><b>2</b><div>
                 <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Bayesian reasoning example
                 <ul class="paper-points"><li><strong>Starting question:</strong> Does Bayesian visualization improve negotiation performance?</li><li><strong>Expected explanation:</strong> Performance improves because Bayesian reasoning helps people understand uncertainty.</li><li><strong>Alternative explanation:</strong> Any clear visual summary may reduce effort; the improvement may not come from Bayesian reasoning.</li><li><strong>Better question:</strong> Does Bayesian information help beyond the benefit of a simpler non-Bayesian visualization?</li><li><strong>Why it is better:</strong> It separates the proposed explanation from a simpler competing explanation.</li></ul>
               </div></div></div>
-            </div>
+            </div><figure class="slide-visual"><a href="https://unsplash.com/photos/two-roads-surrounded-by-trees-3Hl3xGmThas" target="_blank" rel="noopener"><img src="/img/researchguide/alternative-path.jpg" alt="A road dividing into two possible paths" loading="lazy"></a><figcaption>More than one possible path · Unsplash</figcaption></figure></div>
           </section>
           <section class="slide" data-session="Session 2">
             <div class="slide-inner">
@@ -1419,14 +1466,14 @@
             </div>
           </section>
           <section class="slide" data-session="Session 2">
-            <div class="slide-inner">
+            <div class="slide-inner visual-layout"><div class="visual-copy">
               <div class="eyebrow">Technique 3 · Use first principles</div>
               <h2>What is the problem made of?</h2>
               <div class="paper-list"><div class="paper"><b>3</b><div>
                 <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Bayesian reasoning example
                 <ul class="paper-points"><li><strong>Starting question:</strong> How can we use Bayesian reasoning to improve negotiation?</li><li><strong>Break it down:</strong> Negotiation requires people to express preferences, compare trade-offs, handle uncertainty, and choose an offer.</li><li><strong>Basic need:</strong> The user does not need “Bayesian reasoning” itself; the user needs help seeing uncertain trade-offs without losing control.</li><li><strong>Better question:</strong> Which uncertain trade-offs should the system estimate, and how should it show them so people can still make the final choice?</li><li><strong>Why it is better:</strong> It begins with the human decision problem, then selects mathematics only where it is useful.</li></ul>
               </div></div></div>
-            </div>
+            </div><figure class="slide-visual"><a href="https://lawsofsoftwareengineering.com/laws/first-principles-thinking/" target="_blank" rel="noopener"><img src="/img/researchguide/first-principles.png" alt="First-principles diagram breaking a problem into basic truths" loading="lazy"></a><figcaption>First-principles thinking · Laws of Software Engineering</figcaption></figure></div>
           </section>
           <section class="slide" data-session="Session 2">
             <div class="slide-inner">
@@ -1451,14 +1498,14 @@
             </div>
           </section>
           <section class="slide" data-session="Session 2">
-            <div class="slide-inner">
+            <div class="slide-inner visual-layout"><div class="visual-copy">
               <div class="eyebrow">Technique 5 · Consider second-order effects</div>
               <h2>What happens after the first benefit?</h2>
               <div class="paper-list"><div class="paper"><b>5</b><div>
                 <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Bayesian reasoning example
                 <ul class="paper-points"><li><strong>Starting question:</strong> Can Bayesian guidance help people reach an agreement faster?</li><li><strong>First-order effect:</strong> People may identify promising offers and converge more quickly.</li><li><strong>Second-order effect:</strong> They may depend on the guidance, explore fewer unusual offers, or overlook options outside the model.</li><li><strong>Better question:</strong> Does Bayesian guidance improve convergence while reducing exploration or independent judgment?</li><li><strong>Why it is better:</strong> It tests both the immediate benefit and the new problem that the benefit may create.</li></ul>
               </div></div></div>
-            </div>
+            </div><figure class="slide-visual"><a href="https://www.leadbeyondcode.com/blog/first-order-thinking-vs-second-order-thinking" target="_blank" rel="noopener"><img src="/img/researchguide/second-order.png" alt="Diagram tracing immediate and later consequences of a decision" loading="lazy"></a><figcaption>First- and second-order consequences · Lead Beyond Code</figcaption></figure></div>
           </section>
           <section class="slide" data-session="Session 2">
             <div class="slide-inner">
@@ -1478,7 +1525,7 @@
             </div>
           </section>
           <section class="slide" data-session="Session 3">
-            <div class="slide-inner section-slide" style="--section-image:url('/img/researchguide/research-gap.jpg')"><div class="session-number">03</div><div class="eyebrow">Idea validation</div><h2>Is the idea truly novel and worth studying?</h2></div>
+            <div class="slide-inner section-slide"><div class="session-number">03</div><div class="eyebrow">Idea validation</div><h2>Is the idea truly novel and worth studying?</h2></div>
           </section>
 
           <section class="slide" data-session="Session 3">
@@ -1487,7 +1534,7 @@
                 <li><strong>Is there really a gap?</strong> Past work must leave an important question unanswered, inconsistent, or poorly supported.</li>
                 <li><strong>Is the gap in the field—not only in your reading?</strong> Search broadly across keywords, venues, methods, theories, and nearby fields until you can show that no strong answer already exists.</li>
               </ol>
-            </div><figure class="slide-visual"><a href="https://unsplash.com/photos/5z5XKYYVdLU" target="_blank" rel="noopener"><img src="/img/researchguide/research-gap.jpg" alt="Person stopping at a missing plank in a wooden bridge" loading="lazy"></a><figcaption>Photo: Quinten de Graaf · Unsplash</figcaption></figure></div>
+            </div><div class="concept-visual" role="img" aria-label="Past work A, B, and C surround an important unanswered question"><div class="concept-row"><span>Past work A</span><span>Past work B</span><span>Past work C</span></div><div class="unknown">Important question<br>still unanswered</div><small>A research gap exists in the literature—not only in your reading.</small></div></div>
           </section>
 
           <section class="slide" data-session="Session 3">
@@ -1505,7 +1552,7 @@
           </section>
 
           <section class="slide" data-session="Session 3">
-            <div class="slide-inner"><div class="eyebrow">Exercise</div><h2>Write one evidence-based gap</h2>
+            <div class="slide-inner"><h2>Exercise: Write one evidence-based gap</h2>
               <table class="exercise-table"><tbody>
                 <tr><th>Past work A</th><td contenteditable="true" data-placeholder="What does one group of studies consistently show?"></td></tr>
                 <tr><th>Past work B</th><td contenteditable="true" data-placeholder="What does a second group add or dispute?"></td></tr>
@@ -1515,20 +1562,20 @@
               </tbody></table>
             </div>
           </section>
-          <section class="slide" data-session="Session 4"><div class="slide-inner section-slide" style="--section-image:url('/img/researchguide/eeg-experiment.jpg')"><div class="session-number">04</div><div class="eyebrow">Idea testing</div><h2>What kind of contribution will the paper make?</h2></div></section>
+          <section class="slide" data-session="Session 4"><div class="slide-inner section-slide" style="--section-image:url('/img/researchguide/attention-regulation.png')"><div class="session-number">04</div><div class="eyebrow">Idea testing</div><h2>What kind of contribution will the paper make?</h2></div></section>
 
           <section class="slide" data-session="Session 4"><div class="slide-inner"><div class="eyebrow">Choose the contribution first</div><h2>Different contributions need different methodologies</h2><ol class="steps"><li><strong>Experimental:</strong> evidence about an effect or causal relationship.</li><li><strong>Design research:</strong> design knowledge, principles, or rationale.</li><li><strong>Artifact or system:</strong> a working technical capability.</li><li><strong>Exploratory qualitative:</strong> understanding of a new situation.</li><li><strong>Model or dataset:</strong> measurable computational performance and limitations.</li></ol></div></section>
-          <section class="slide" data-session="Session 4"><div class="slide-inner visual-layout"><div class="visual-copy"><div class="eyebrow">Contribution type · Experimental</div><h2>Does X affect Y?</h2><p class="lead">Use an experiment when the contribution is evidence that an independent variable changes a dependent variable. The question, task, and procedure must make that relationship testable.</p><ul class="paper-points"><li><strong>Specify:</strong> IV and levels; DV and operational measure; between-, within-, or mixed design; task; procedure; sample; randomization or counterbalancing; controls and likely confounds.</li><li><strong>Typical evidence and analysis:</strong> Plots and descriptive statistics; t-test for two conditions; ANOVA for several conditions or factors; regression or mixed-effects models for continuous, repeated, or nested data; non-parametric tests when assumptions fail; effect sizes, confidence intervals, manipulation checks, and assumption checks.</li></ul><p class="paper-example"><strong>Example:</strong> <a href="https://doi.org/10.1145/3544549.3585692" target="_blank" rel="noopener">Impact of User Mobility on Attentional Tunneling in Handheld AR · Parmar & Silpasuwanchai, CHI EA 2023</a></p></div><figure class="slide-visual"><a href="https://www.sydney.edu.au/science/study/careers-in-science/psychology.html" target="_blank" rel="noopener"><img src="/img/researchguide/eeg-experiment.jpg" alt="Researcher preparing a participant for an EEG experiment" loading="lazy"></a><figcaption>EEG research session · University of Sydney</figcaption></figure></div></section>
-          <section class="slide" data-session="Session 4"><div class="slide-inner visual-layout"><div class="visual-copy"><div class="eyebrow">Contribution type · Design research</div><h2>What design knowledge can we produce?</h2><p class="lead">A design paper contributes theory-informed rationale, principles, tensions, or implications—not merely proof that one interface is better. A controlled experiment is needed only when the paper makes a causal performance claim.</p><ul class="paper-points"><li><strong>Specify:</strong> human need; grounding theory; related designs; design goals; alternatives; rationale; iterations; context; what knowledge transfers beyond the artifact.</li><li><strong>Typical evidence and analysis:</strong> Formative interviews or observations; co-design; workshops; diaries; field deployment; think-aloud sessions; thematic analysis; reflection across design iterations and triangulation.</li></ul><p class="paper-example"><strong>Example:</strong> <a href="https://doi.org/10.1145/3025453.3025914" target="_blank" rel="noopener">A Framework for Interactive Mindfulness Meditation Using Attention-Regulation Process · Niksirat et al., CHI 2017</a></p></div><figure class="slide-visual"><a href="https://unsplash.com/photos/gcHFXsdcmJE" target="_blank" rel="noopener"><img src="/img/researchguide/design-sketch.jpg" alt="Designer sketching mobile interface wireframes on paper" loading="lazy"></a><figcaption>Photo: Kelly Sikkema · Unsplash</figcaption></figure></div></section>
-          <section class="slide" data-session="Session 4"><div class="slide-inner"><div class="eyebrow">Contribution type · Artifact or system</div><h2>What new capability does the artifact provide?</h2><p class="lead">An artifact paper contributes a working interface, system, technique, or infrastructure. Its evaluation should show that it works, can be used, and meets the technical requirements connected to its claim.</p><ul class="paper-points"><li><strong>Specify:</strong> capability; architecture; implementation; intended users and tasks; prior system or baseline; success criteria; limitations and deployment constraints.</li><li><strong>Typical evidence and analysis:</strong> Technical evaluation such as accuracy, latency, reliability, scalability, or resource use; usability testing; task performance; interviews and observations; benchmark comparison and ablation when components matter.</li></ul><p class="paper-example"><strong>Example:</strong> <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence: Supporting Multi-Issue Human–AI Negotiation with Bayesian Visualization · CHI 2026</a></p></div></section>
-          <section class="slide" data-session="Session 4"><div class="slide-inner visual-layout"><div class="visual-copy"><div class="eyebrow">Contribution type · Exploratory qualitative</div><h2>What is happening in this new situation?</h2><p class="lead">Exploratory qualitative work fits a topic, community, behavior, or technology that is too new for precise variables or hypotheses. It discovers concepts, experiences, needs, tensions, and explanations.</p><ul class="paper-points"><li><strong>Specify:</strong> phenomenon and context; why exploration is needed; purposeful participant selection; researcher position; protocol; how interpretations will be checked.</li><li><strong>Typical evidence and analysis:</strong> Semi-structured interviews, observations, fieldwork, diaries, focus groups, or documents; thematic analysis, grounded theory, or qualitative content analysis; negative cases, reflexivity and triangulation.</li></ul><p class="paper-example"><strong>Example:</strong> <a href="https://doi.org/10.1145/3025453.3026000" target="_blank" rel="noopener">Understanding the Role of Human Senses in Interactive Meditation · Ahmed et al., CHI 2017</a></p></div><figure class="slide-visual"><a href="https://www.qualtrics.com/en-au/articles/strategy-research/qualitative-research-interview/" target="_blank" rel="noopener"><img src="/img/researchguide/interview.jpg" alt="Researcher conducting a face-to-face qualitative interview" loading="lazy"></a><figcaption>Qualitative interview · Qualtrics</figcaption></figure></div></section>
-          <section class="slide" data-session="Session 4"><div class="slide-inner"><div class="eyebrow">Contribution type · Model or dataset</div><h2>How well does it work—and where does it fail?</h2><p class="lead">A model or dataset paper contributes computational performance, data coverage, a benchmark, or analytical insight. Average scores are insufficient: evaluation must expose meaningful strengths and weaknesses.</p><ul class="paper-points"><li><strong>Specify:</strong> data source and representativeness; train/validation/test separation; metrics; strong baselines; reproducibility; leakage, bias, and ethical risks.</li><li><strong>Typical evidence and analysis:</strong> Benchmark comparison; statistical uncertainty; ablations; error analysis; robustness and stress tests; subgroup analysis; human evaluation when automated metrics miss quality.</li></ul><p class="paper-example"><strong>Example:</strong> <a href="https://aclanthology.org/2023.cl-3.1/" target="_blank" rel="noopener">Comparing Selective Masking Methods for Depression Detection in Social Media · Pananookooln et al., Computational Linguistics 2023</a></p></div></section>
-          <section class="slide" data-session="Session 4"><div class="slide-inner"><div class="eyebrow">Exercise</div><h2>Choose the contribution and methodology</h2><table class="exercise-table"><tbody>
-            <tr><th>Mental health</th><td contenteditable="true" data-placeholder="Question: What helps people regulate anxiety? Choose contribution type, evidence, method, and analysis."></td></tr>
-            <tr><th>Simulated humans</th><td contenteditable="true" data-placeholder="Question: When can simulated users stand in for real users? Choose contribution type, evidence, method, and analysis."></td></tr>
-            <tr><th>Ontology + LLM</th><td contenteditable="true" data-placeholder="Question: Can an ontology make LLM answers more consistent? Choose contribution type, evidence, method, and analysis."></td></tr>
-            <tr><th>Medical VQA</th><td contenteditable="true" data-placeholder="Question: Can a model answer clinically grounded questions from medical images? Choose contribution type, evidence, method, and analysis."></td></tr>
-            <tr><th>Raman or EEG</th><td contenteditable="true" data-placeholder="Question: Can Raman spectra or EEG distinguish a meaningful health state? Choose contribution type, evidence, method, and analysis."></td></tr>
+          <section class="slide" data-session="Session 4"><div class="slide-inner visual-layout"><div class="visual-copy"><h2>Experimental contribution</h2><p class="lead"><strong>Typical question:</strong> Does X affect Y? Use an experiment when the contribution is evidence that an independent variable changes a dependent variable.</p><ul class="paper-points"><li><strong>Specify:</strong> IV and levels; DV and operational measure; between-, within-, or mixed design; task; procedure; sample; randomization or counterbalancing; controls and likely confounds.</li><li><strong>Typical evidence and analysis:</strong> Descriptive plots; t-test; ANOVA; regression or mixed-effects models; effect sizes, confidence intervals, manipulation checks, and assumption checks.</li></ul><p class="paper-example"><strong>Example:</strong> <a href="https://doi.org/10.1145/3544549.3585692" target="_blank" rel="noopener">Impact of User Mobility on Attentional Tunneling in Handheld AR · Parmar &amp; Silpasuwanchai, CHI EA 2023</a></p></div><div class="concept-visual" role="img" aria-label="Two by three attentional tunneling experiment comparing sitting and walking across three augmented reality tasks"><strong>2 × 3 study design</strong><div class="concept-row"><span>Sitting</span><span>Walking</span></div><div class="concept-row"><span>Baseline</span><span>Memory task</span><span>Monitoring task</span></div><small>Study setup from the attentional-tunneling paper</small></div></div></section>
+          <section class="slide" data-session="Session 4"><div class="slide-inner visual-layout"><div class="visual-copy"><h2>Design research contribution</h2><p class="lead"><strong>Typical question:</strong> What design knowledge can we produce? The contribution is theory-informed rationale, principles, tensions, or implications—not merely proof that one interface is better.</p><ul class="paper-points"><li><strong>Specify:</strong> human need; grounding theory; design goals; alternatives; rationale; iterations; context; and what transfers beyond the artifact.</li><li><strong>Typical evidence and analysis:</strong> Formative interviews or observations; co-design; workshops; diaries; field deployment; think-aloud; thematic analysis; reflection across iterations and triangulation.</li></ul><p class="paper-example"><strong>Example:</strong> <a href="https://doi.org/10.1145/3025453.3025914" target="_blank" rel="noopener">A Framework for Interactive Mindfulness Meditation Using Attention-Regulation Process · Niksirat et al., CHI 2017</a></p></div><figure class="slide-visual"><a href="https://kavousniksirat.com/wp-content/uploads/2021/06/2017-05-kavous-et-al-chi-2017-full-paper.pdf" target="_blank" rel="noopener"><img src="/img/researchguide/attention-regulation.png" alt="Attention-regulation framework and the movement-controlled feedback ball in Pause" loading="lazy"></a><figcaption>Attention regulation and feedback · Niksirat et al.</figcaption></figure></div></section>
+          <section class="slide" data-session="Session 4"><div class="slide-inner visual-layout"><div class="visual-copy"><h2>Artifact or system contribution</h2><p class="lead"><strong>Typical question:</strong> What new capability does the artifact provide? Its evaluation should show that it works, can be used, and meets the technical requirements connected to its claim.</p><ul class="paper-points"><li><strong>Specify:</strong> capability; architecture; implementation; intended users and tasks; baseline; success criteria; limitations and deployment constraints.</li><li><strong>Typical evidence and analysis:</strong> Accuracy, latency, reliability, scalability, or resource use; usability and task performance; interviews or observations; benchmark comparison and ablation when components matter.</li></ul><p class="paper-example"><strong>Example:</strong> <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence: Supporting Multi-Issue Human–AI Negotiation with Bayesian Visualization · CHI 2026</a></p></div><figure class="slide-visual"><a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener"><img src="/img/researchguide/negotiation-visual.png" alt="Negotiation Horizon Grid and convergence panel beside an AI negotiation chat" loading="lazy"></a><figcaption>Bayesian negotiation visualization · Parmar &amp; Silpasuwanchai</figcaption></figure></div></section>
+          <section class="slide" data-session="Session 4"><div class="slide-inner visual-layout"><div class="visual-copy"><h2>Exploratory qualitative contribution</h2><p class="lead"><strong>Typical question:</strong> What is happening in this new situation? This approach fits a topic, community, behavior, or technology that is too new for precise variables or hypotheses.</p><ul class="paper-points"><li><strong>Specify:</strong> phenomenon and context; why exploration is needed; purposeful participant selection; researcher position; protocol; how interpretations will be checked.</li><li><strong>Typical evidence and analysis:</strong> Semi-structured interviews, observations, fieldwork, diaries, focus groups, or documents; thematic analysis, grounded theory, or qualitative content analysis; negative cases, reflexivity and triangulation.</li></ul><p class="paper-example"><strong>Example:</strong> <a href="https://doi.org/10.1145/3025453.3026000" target="_blank" rel="noopener">Understanding the Role of Human Senses in Interactive Meditation · Ahmed et al., CHI 2017</a></p></div><figure class="slide-visual"><a href="https://www.qualtrics.com/en-au/articles/strategy-research/qualitative-research-interview/" target="_blank" rel="noopener"><img src="/img/researchguide/interview.jpg" alt="Researcher conducting a face-to-face qualitative interview" loading="lazy"></a><figcaption>Qualitative interview · Qualtrics</figcaption></figure></div></section>
+          <section class="slide" data-session="Session 4"><div class="slide-inner visual-layout"><div class="visual-copy"><h2>Model or dataset contribution</h2><p class="lead"><strong>Typical question:</strong> How well does it work—and where does it fail? Average scores are insufficient: evaluation must expose meaningful strengths and weaknesses.</p><ul class="paper-points"><li><strong>Specify:</strong> data source and representativeness; train/validation/test separation; metrics; strong baselines; reproducibility; leakage, bias, and ethical risks.</li><li><strong>Typical evidence and analysis:</strong> Benchmark comparison; statistical uncertainty; ablations; error analysis; robustness and stress tests; subgroup analysis; human evaluation when automated metrics miss quality.</li></ul><p class="paper-example"><strong>Example:</strong> <a href="https://aclanthology.org/2023.cl-3.1/" target="_blank" rel="noopener">Comparing Selective Masking Methods for Depression Detection in Social Media · Pananookooln et al., Computational Linguistics 2023</a></p></div><figure class="slide-visual"><a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_roc.html" target="_blank" rel="noopener"><img src="/img/researchguide/model-comparison.png" alt="Receiver operating characteristic curves comparing model performance" loading="lazy"></a><figcaption>Comparing model performance · scikit-learn</figcaption></figure></div></section>
+          <section class="slide" data-session="Session 4"><div class="slide-inner"><h2>Exercise: Design one study</h2><p class="plain">Choose one topic: mental health, simulated humans, ontology + LLM, medical VQA, or Raman / EEG. Design only the evidence needed for one clear contribution.</p><table class="exercise-table"><tbody>
+            <tr><th>Research question</th><td contenteditable="true" data-placeholder="Write one focused question about your chosen topic."></td></tr>
+            <tr><th>Contribution type</th><td contenteditable="true" data-placeholder="Experimental, design research, artifact/system, exploratory qualitative, or model/dataset?"></td></tr>
+            <tr><th>Closest paper</th><td contenteditable="true" data-placeholder="Which strong CHI, ACL, or NeurIPS paper makes a similar contribution?"></td></tr>
+            <tr><th>Method and procedure</th><td contenteditable="true" data-placeholder="Who or what will you study, what will happen, and what will you measure or collect?"></td></tr>
+            <tr><th>Analysis and quality check</th><td contenteditable="true" data-placeholder="What analysis supports the claim? What confound, baseline, error, bias, or limitation must you check?"></td></tr>
           </tbody></table></div></section>
 
           <section class="slide" data-session="Session 4"><div class="slide-inner"><div class="eyebrow">Session 4 · Summary</div><h2>Different contributions need different methodologies</h2><p class="lead">Read papers close to your intended contribution. Study how strong CHI, ACL, or NeurIPS papers design tasks, collect evidence, analyze results, and state limitations. Reusing a proven methodological pattern is usually safer than inventing one from scratch.</p></div></section>
@@ -1540,9 +1587,9 @@
 
           <section class="slide" data-session="Session 5"><div class="slide-inner"><div class="eyebrow">The verb signals the contribution</div><h2>Choose the verb carefully</h2><ul class="paper-points"><li><strong>Investigates:</strong> tests a focused relationship or question with evidence.</li><li><strong>Explores:</strong> studies a new situation without pretending the answer was known in advance.</li><li><strong>Proposes:</strong> introduces a framework, theory, method, or design direction.</li><li><strong>Develops:</strong> builds an artifact, system, model, dataset, or technique.</li><li><strong>Evaluates:</strong> judges performance, usefulness, experience, or limitations against explicit criteria.</li></ul></div></section>
 
-          <section class="slide" data-session="Session 5"><div class="slide-inner"><div class="eyebrow">Example</div><h2>Attention regulation as one connected story</h2><div class="paper-list"><div class="paper"><b>1</b><div><a href="https://doi.org/10.1145/3025453.3025914" target="_blank" rel="noopener">A Framework for Interactive Mindfulness Meditation Using Attention-Regulation Process</a> · Niksirat et al., CHI 2017<ul class="paper-points"><li><strong>Background:</strong> Emotion regulation supports mental well-being, and mindfulness is widely used to train attention and regulate emotion.</li><li><strong>Problem:</strong> <em>However,</em> existing digital meditation tools mainly use spoken instructions or fixed content, giving users limited ways to regulate attention through their own action.</li><li><strong>Methodology:</strong> The paper proposes an attention-regulation framework, develops Pause, and evaluates the movement-based interaction with users.</li><li><strong>Findings:</strong> Slow, continuous interaction supported attention and produced positive affective and engagement outcomes.</li><li><strong>Contribution / significance:</strong> The paper contributes a framework and design approach for self-regulated mindfulness technologies.</li></ul></div></div></div></div></section>
+          <section class="slide" data-session="Session 5"><div class="slide-inner"><h2>Attention regulation as one connected story</h2><div class="paper-list"><div class="paper paper-single"><div><a href="https://doi.org/10.1145/3025453.3025914" target="_blank" rel="noopener">A Framework for Interactive Mindfulness Meditation Using Attention-Regulation Process</a> · Niksirat et al., CHI 2017<ul class="paper-points"><li><strong>Background:</strong> Emotion regulation supports mental well-being, and mindfulness is widely used to train attention and regulate emotion.</li><li><strong>Problem:</strong> <em>However,</em> existing digital meditation tools mainly use spoken instructions or fixed content, giving users limited ways to regulate attention through their own action.</li><li><strong>Methodology:</strong> The paper proposes an attention-regulation framework, develops Pause, and evaluates the movement-based interaction with users.</li><li><strong>Findings:</strong> Slow, continuous interaction supported attention and produced positive affective and engagement outcomes.</li><li><strong>Contribution / significance:</strong> The paper contributes a framework and design approach for self-regulated mindfulness technologies.</li></ul></div></div></div></div></section>
 
-          <section class="slide" data-session="Session 5"><div class="slide-inner"><div class="eyebrow">Exercise</div><h2>Write your five-part story</h2><table class="exercise-table"><tbody><tr><th>Background</th><td contenteditable="true" data-placeholder="Why is the topic important, and what does past work show? Add citations."></td></tr><tr><th>Problem</th><td contenteditable="true" data-placeholder="However, what remains unresolved or unsupported?"></td></tr><tr><th>Methodology</th><td contenteditable="true" data-placeholder="This paper investigates / explores / proposes / develops / evaluates …"></td></tr><tr><th>Findings</th><td contenteditable="true" data-placeholder="The key findings are …"></td></tr><tr><th>Contribution / significance</th><td contenteditable="true" data-placeholder="This paper contributes … This matters because …"></td></tr></tbody></table></div></section>
+          <section class="slide" data-session="Session 5"><div class="slide-inner"><h2>Exercise: Write your five-part story</h2><table class="exercise-table"><tbody><tr><th>Background</th><td contenteditable="true" data-placeholder="Why is the topic important, and what does past work show? Add citations."></td></tr><tr><th>Problem</th><td contenteditable="true" data-placeholder="However, what remains unresolved or unsupported?"></td></tr><tr><th>Methodology</th><td contenteditable="true" data-placeholder="This paper investigates / explores / proposes / develops / evaluates …"></td></tr><tr><th>Findings</th><td contenteditable="true" data-placeholder="The key findings are …"></td></tr><tr><th>Contribution / significance</th><td contenteditable="true" data-placeholder="This paper contributes … This matters because …"></td></tr></tbody></table></div></section>
           <section class="slide" data-session="Resources">
             <div class="slide-inner">
               <div class="eyebrow">Lab resources</div>
@@ -1609,6 +1656,7 @@
               <li><strong>Start with something you are curious about.</strong></li>
               <li><strong>Read many top-tier papers, especially from CHI, ACL, and NeurIPS.</strong></li>
               <li><strong>Your professor does not have the answer.</strong> They can guide the process and ask challenging questions that help you find it.</li>
+              <li><strong>Do one thing at a time.</strong> If you are unclear, build or code a small part, inspect it, think again, or return to the papers. Research is iterative; you do not need to solve everything in one pass.</li>
             </ul></div>
           </section>
         </div>
