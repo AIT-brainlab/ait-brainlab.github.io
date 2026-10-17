@@ -160,7 +160,19 @@
           color: var(--muted);
           font-size: .76rem;
           font-weight: 700;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
           text-align: center
+        }
+
+        .research-guide .journey-percent {
+          color: var(--navy);
+          font-size: clamp(1.15rem, 1.7vw, 1.65rem);
+          line-height: 1;
+          white-space: nowrap
         }
 
         .research-guide .slides {
@@ -933,7 +945,7 @@
           <div class="journey-stage" data-stage="Idea validation">Validation</div>
           <div class="journey-stage" data-stage="Idea testing">Testing</div>
           <div class="journey-stage" data-stage="Idea storytelling">Storytelling</div>
-          <div class="journey-status" id="journey-status" aria-live="polite">Five stages ahead</div>
+          <div class="journey-status" aria-live="polite"><span id="journey-status">Five stages ahead</span><strong class="journey-percent" id="journey-percent">0% complete</strong></div>
         </div>
 
         <div class="slides">
@@ -1732,7 +1744,7 @@
       <script>
         (function () {
           const deck = document.getElementById('research-deck'); if (!deck) return;
-          const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), dots = deck.querySelector('#slide-dots'), sessionLabel = deck.querySelector('#session-label'), jump = deck.querySelector('#session-jump'), full = deck.querySelector('#fullscreen-slide'), resume = deck.querySelector('#resume-note'), journeyStages = [...deck.querySelectorAll('.journey-stage')], journeyStatus = deck.querySelector('#journey-status');
+          const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), dots = deck.querySelector('#slide-dots'), sessionLabel = deck.querySelector('#session-label'), jump = deck.querySelector('#session-jump'), full = deck.querySelector('#fullscreen-slide'), resume = deck.querySelector('#resume-note'), journeyStages = [...deck.querySelectorAll('.journey-stage')], journeyStatus = deck.querySelector('#journey-status'), journeyPercent = deck.querySelector('#journey-percent');
           const stageNames = journeyStages.map(stage => stage.dataset.stage);
           const storageKey = 'ait-research-guide-slide-v2'; let current = 0;
           try { const saved = parseInt(localStorage.getItem(storageKey), 10); if (Number.isFinite(saved) && saved >= 0 && saved < slides.length) { current = saved; resume.textContent = 'Resumed where you left off'; } } catch (e) { }
@@ -1743,6 +1755,7 @@
             prev.disabled = current === 0;
             next.disabled = current === slides.length - 1;
             count.textContent = 'Slide ' + (current + 1) + ' of ' + slides.length;
+            journeyPercent.textContent = Math.round(current / (slides.length - 1) * 100) + '% complete';
             const activeSlide = slides[current], session = activeSlide.dataset.session || '';
             sessionLabel.textContent = session;
             const stageIndex = stageNames.indexOf(session);
