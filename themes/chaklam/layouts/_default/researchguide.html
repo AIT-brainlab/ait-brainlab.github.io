@@ -122,6 +122,60 @@
           transition: width .2s
         }
 
+        .research-guide .journey-progress {
+          display: grid;
+          grid-template-columns: repeat(5, minmax(0, 1fr));
+          gap: 1px;
+          background: #c8d8df;
+          border-bottom: 1px solid var(--line)
+        }
+
+        .research-guide .journey-stage {
+          position: relative;
+          isolation: isolate;
+          overflow: hidden;
+          padding: .48rem .65rem;
+          background: #eef4f6;
+          color: #53697c;
+          font-size: clamp(.68rem, .8vw, .82rem);
+          font-weight: 750;
+          text-align: center;
+          white-space: nowrap;
+          text-overflow: ellipsis
+        }
+
+        .research-guide .journey-stage::before {
+          content: "";
+          position: absolute;
+          inset: 0 auto 0 0;
+          z-index: -1;
+          width: 0;
+          background: #ccefeb;
+          transition: width .2s ease
+        }
+
+        .research-guide .journey-stage.completed::before {
+          width: 100%
+        }
+
+        .research-guide .journey-stage.current {
+          color: var(--navy)
+        }
+
+        .research-guide .journey-stage.current::before {
+          width: var(--stage-progress, 0%)
+        }
+
+        .research-guide .journey-status {
+          grid-column: 1 / -1;
+          padding: .32rem .8rem;
+          background: #fff;
+          color: var(--muted);
+          font-size: .76rem;
+          font-weight: 700;
+          text-align: center
+        }
+
         .research-guide .slides {
           padding: clamp(1.25rem, 3.6vw, 3.1rem);
           min-height: 620px;
@@ -686,8 +740,8 @@
         }
 
         .research-guide .deck:fullscreen .slides {
-          min-height: calc(100vh - 130px);
-          max-height: calc(100vh - 130px);
+          min-height: calc(100vh - 185px);
+          max-height: calc(100vh - 185px);
           display: flex;
           align-items: center;
           padding: clamp(2rem, 4vw, 5rem);
@@ -807,6 +861,11 @@
           .research-guide .exercise-table th {
             width: 34%
           }
+
+          .research-guide .journey-stage {
+            padding: .42rem .2rem;
+            font-size: .62rem
+          }
         }
 
         @media(prefers-reduced-motion:reduce) {
@@ -841,6 +900,14 @@
           </div>
         </header>
         <div class="progress" aria-hidden="true"><span id="slide-progress"></span></div>
+        <div class="journey-progress" id="journey-progress" aria-label="Research journey progress">
+          <div class="journey-stage" data-stage="Idea generation">Generation</div>
+          <div class="journey-stage" data-stage="Idea refinement">Refinement</div>
+          <div class="journey-stage" data-stage="Idea validation">Validation</div>
+          <div class="journey-stage" data-stage="Idea testing">Testing</div>
+          <div class="journey-stage" data-stage="Idea storytelling">Storytelling</div>
+          <div class="journey-status" id="journey-status" aria-live="polite">Five stages ahead</div>
+        </div>
 
         <div class="slides">
           <section class="slide" data-session="Start">
@@ -1676,10 +1743,41 @@
       <script>
         (function () {
           const deck = document.getElementById('research-deck'); if (!deck) return;
-          const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), progress = deck.querySelector('#slide-progress'), dots = deck.querySelector('#slide-dots'), breadcrumb = deck.querySelector('#deck-breadcrumb'), sessionLabel = deck.querySelector('#session-label'), jump = deck.querySelector('#session-jump'), full = deck.querySelector('#fullscreen-slide'), resume = deck.querySelector('#resume-note');
+          const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), progress = deck.querySelector('#slide-progress'), dots = deck.querySelector('#slide-dots'), breadcrumb = deck.querySelector('#deck-breadcrumb'), sessionLabel = deck.querySelector('#session-label'), jump = deck.querySelector('#session-jump'), full = deck.querySelector('#fullscreen-slide'), resume = deck.querySelector('#resume-note'), journeyStages = [...deck.querySelectorAll('.journey-stage')], journeyStatus = deck.querySelector('#journey-status');
+          const stageNames = journeyStages.map(stage => stage.dataset.stage);
           const storageKey = 'ait-research-guide-slide-v2'; let current = 0;
           try { const saved = parseInt(localStorage.getItem(storageKey), 10); if (Number.isFinite(saved) && saved >= 0 && saved < slides.length) { current = saved; resume.textContent = 'Resumed where you left off'; } } catch (e) { }
-          function show(i, save = true) { current = Math.max(0, Math.min(slides.length - 1, i)); slides.forEach((s, j) => { s.classList.toggle('active', j === current); s.setAttribute('aria-hidden', j === current ? 'false' : 'true') });[...dots.children].forEach((d, j) => d.setAttribute('aria-current', j === current ? 'true' : 'false')); prev.disabled = current === 0; next.disabled = current === slides.length - 1; count.textContent = 'Slide ' + (current + 1) + ' of ' + slides.length; progress.style.width = ((current + 1) / slides.length * 100) + '%'; const activeSlide = slides[current], session = activeSlide.dataset.session || '', heading = activeSlide.querySelector('h2')?.textContent.trim() || '', topic = activeSlide.dataset.topic || heading; sessionLabel.textContent = session; breadcrumb.textContent = ['Research Journey', session, topic, heading === 'Exercise' ? 'Exercise' : ''].filter((part, index, parts) => part && parts.indexOf(part) === index).join(' › '); const matchingSession = [...jump.options].find(option => option.textContent === sessionLabel.textContent); if (matchingSession) jump.value = matchingSession.value; if (save) { try { localStorage.setItem(storageKey, String(current)) } catch (e) { } } deck.scrollIntoView({ block: 'nearest' }); }
+          function show(i, save = true) {
+            current = Math.max(0, Math.min(slides.length - 1, i));
+            slides.forEach((slide, index) => { slide.classList.toggle('active', index === current); slide.setAttribute('aria-hidden', index === current ? 'false' : 'true') });
+            [...dots.children].forEach((dot, index) => dot.setAttribute('aria-current', index === current ? 'true' : 'false'));
+            prev.disabled = current === 0;
+            next.disabled = current === slides.length - 1;
+            count.textContent = 'Slide ' + (current + 1) + ' of ' + slides.length;
+            progress.style.width = ((current + 1) / slides.length * 100) + '%';
+            const activeSlide = slides[current], session = activeSlide.dataset.session || '', heading = activeSlide.querySelector('h2')?.textContent.trim() || '', topic = activeSlide.dataset.topic || heading;
+            sessionLabel.textContent = session;
+            breadcrumb.textContent = ['Research Journey', session, topic, heading === 'Exercise' ? 'Exercise' : ''].filter((part, index, parts) => part && parts.indexOf(part) === index).join(' › ');
+            const stageIndex = stageNames.indexOf(session);
+            journeyStages.forEach((stage, index) => {
+              stage.classList.toggle('completed', stageIndex > index || session === 'Resources');
+              stage.classList.toggle('current', stageIndex === index);
+              stage.style.removeProperty('--stage-progress');
+            });
+            if (stageIndex >= 0) {
+              const stageSlides = slides.filter(slide => slide.dataset.session === session);
+              const position = stageSlides.indexOf(activeSlide) + 1;
+              const remaining = stageSlides.length - position;
+              journeyStages[stageIndex].style.setProperty('--stage-progress', (position / stageSlides.length * 100) + '%');
+              journeyStatus.textContent = session + ' · ' + position + ' of ' + stageSlides.length + ' · ' + (remaining ? remaining + ' slide' + (remaining === 1 ? '' : 's') + ' left' : 'stage complete');
+            } else {
+              journeyStatus.textContent = session === 'Resources' ? 'Research journey complete' : 'Five stages ahead';
+            }
+            const matchingSession = [...jump.options].find(option => option.textContent === sessionLabel.textContent);
+            if (matchingSession) jump.value = matchingSession.value;
+            if (save) { try { localStorage.setItem(storageKey, String(current)) } catch (e) { } }
+            deck.scrollIntoView({ block: 'nearest' });
+          }
           slides.forEach((s, i) => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Go to slide ' + (i + 1)); b.addEventListener('click', () => show(i)); dots.appendChild(b) });
           prev.addEventListener('click', () => show(current - 1)); next.addEventListener('click', () => show(current + 1)); jump.addEventListener('change', () => show(parseInt(jump.value, 10) || 0));
           deck.addEventListener('keydown', e => { if (['INPUT', 'TEXTAREA', 'SELECT', 'A', 'BUTTON'].includes(e.target.tagName)) return; if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); show(current + 1) } if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(current - 1) } if (e.key === 'Home') { e.preventDefault(); show(0) } if (e.key === 'End') { e.preventDefault(); show(slides.length - 1) } });
