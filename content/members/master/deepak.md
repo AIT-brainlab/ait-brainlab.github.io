@@ -1,7 +1,7 @@
 ---
 title: Kasyapa Sai Deepak ('23)
 date: 2023-06-14T04:15:48+07:00
-roles: Alumni
+roles: Who
 image: /img/members/default.jpg
 project: TBD
 draft: false
