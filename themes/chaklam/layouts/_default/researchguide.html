@@ -196,8 +196,8 @@
         }
 
         .research-guide .career-questions {
-          width: min(100%, 980px);
-          margin: 1.5rem auto 0;
+          width: 100%;
+          margin: 1.5rem 0 0;
           padding: 0;
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -922,7 +922,7 @@
                 <option value="30">Idea validation</option>
                 <option value="34">Idea testing</option>
                 <option value="43">Idea storytelling</option>
-                <option value="49">Resources</option>
+                <option value="48">Resources</option>
               </select></label>
             <button id="fullscreen-slide" type="button" title="Fullscreen (F)">⛶ Fullscreen</button>
           </div>
@@ -947,8 +947,6 @@
 
           <section class="slide" data-session="Start">
             <div class="slide-inner career-slide intro-slide">
-                                  <div class="eyebrow">CAREER DEVELOPMENT</div>
-          
                                   <h2>Peter's Level of Incompetence</h2>
           
                                   <p class="lead">
@@ -1019,14 +1017,7 @@
                               </section>
                               <section class="slide" data-session="Start">
                                 <div class="slide-inner intro-slide">
-                                  <div class="eyebrow">CAREER DEVELOPMENT</div>
-          
                                   <h2>As You Move Up, Thinking Matters More</h2>
-          
-                                  <p class="lead">
-                                      The competencies needed for success change
-                                      as your career progresses.
-                                  </p>
           
                                   <div style="display:grid; gap:18px; margin:30px 0;">
           
@@ -1105,14 +1096,7 @@
                               </section>
                               <section class="slide" data-session="Start">
                                 <div class="slide-inner intro-slide">
-                                  <div class="eyebrow">WHY RESEARCH MATTERS</div>
-          
                                   <h2>Every career needs research skills</h2>
-          
-                                  <p class="lead">
-                                      Research is not just about discovering new knowledge.
-                                      It trains you to think when the answer is unknown.
-                                  </p>
           
                                   <ul class="career-questions">
                                       <li><strong>Entrepreneur:</strong> What do customers really need?</li>
@@ -1127,9 +1111,9 @@
           <section class="slide" data-session="Start">
             <div class="slide-inner visual-layout"><div class="visual-copy"><div class="eyebrow">Bloom's taxonomy</div><h2>From information to knowledge to wisdom</h2>
               <div class="grid-3">
-                <div class="card"><h3>Information</h3><p><strong>Remember + Understand</strong></p><p>Recall facts and explain what previous research says.</p></div>
-                <div class="card"><h3>Knowledge</h3><p><strong>Apply + Analyze</strong></p><p>Use methods, compare evidence, and discover patterns.</p></div>
-                <div class="card"><h3>Wisdom</h3><p><strong>Evaluate + Create</strong></p><p>Judge competing explanations and create better questions or solutions.</p></div>
+                <div class="card"><h3>Information</h3><p><strong>Remember + Understand</strong></p></div>
+                <div class="card"><h3>Knowledge</h3><p><strong>Apply + Analyze</strong></p></div>
+                <div class="card"><h3>Wisdom</h3><p><strong>Evaluate + Create</strong></p></div>
               </div>
             </div><figure class="slide-visual contain"><a href="https://learn1.open.ac.uk/mod/oublog/viewpost.php?post=178090" target="_blank" rel="noopener"><img src="/img/researchguide/bloom-taxonomy.png" alt="Bloom taxonomy pyramid progressing from remembering to creating" loading="lazy"></a><figcaption>Bloom’s taxonomy visual · OpenLearn</figcaption></figure></div>
           </section>
@@ -1194,9 +1178,7 @@
           <section class="slide" data-session="Idea generation">
             <div class="slide-inner visual-layout"><div class="visual-copy">
               <h2>1. Notice a problem</h2>
-              <p class="lead">What problem do people still face?</p>
-
-              <p class="plain">
+              <p class="lead">
                 Look at the people and situations around you. What problem do you notice repeatedly?
                 When does it happen, and why does it matter?
               </p>
@@ -1262,7 +1244,7 @@
           <section class="slide" data-session="Idea generation">
             <div class="slide-inner visual-layout"><div class="visual-copy">
               <h2>2. Notice a surprise</h2>
-              <p class="lead">What happened differently from what you expected?</p>
+              <p class="lead">Start from a result that did not match what you expected. The difference can become a research question.</p>
 
               <div class="paper-list">
                 <div class="paper">
@@ -1327,7 +1309,7 @@
           <section class="slide" data-session="Idea generation">
             <div class="slide-inner visual-layout"><div class="visual-copy">
               <h2>3. Borrow a theory</h2>
-              <p class="lead">Can an idea from another practice help solve your problem?</p>
+              <p class="lead">Start with a problem you care about. Use a theory from another field to explain it and guide what to test.</p>
 
               <div class="paper-list">
                 <div class="paper"><b>1</b>
@@ -1359,14 +1341,13 @@
                   <tr><th>How you could study it</th><td contenteditable="true" data-placeholder="What could you compare or measure?"></td></tr>
                 </tbody>
               </table>
-              <div class="takeaway">A useful theory helps you explain the problem and plan a test.</div>
             </div>
           </section>
 
           <section class="slide" data-session="Idea generation">
             <div class="slide-inner visual-layout"><div class="visual-copy">
               <h2>4. Extend a recent paper</h2>
-              <p class="lead">What useful question could come next?</p>
+              <p class="lead">Start with a recent paper. Find what it did not answer, then ask one focused next question.</p>
 
               <div class="paper-list">
                 <div class="paper">
@@ -1458,15 +1439,13 @@
 
           <section class="slide" data-session="Idea generation">
             <div class="slide-inner">
-              <div class="eyebrow">Idea generation · Summary</div>
-              <h2>Four ways to find a starting idea</h2>
+              <h2>Summary: Idea generation</h2>
 
               <table class="mini-table">
                 <thead>
                   <tr>
                     <th>Technique</th>
                     <th>Where you start</th>
-                    <th>Question to ask</th>
                   </tr>
                 </thead>
 
@@ -1474,25 +1453,21 @@
                   <tr>
                     <td><strong>Notice a problem</strong></td>
                     <td>A difficulty that people repeatedly face</td>
-                    <td>Why does this problem continue to happen?</td>
                   </tr>
 
                   <tr>
                     <td><strong>Notice a surprise</strong></td>
                     <td>Something that happened differently from what you expected</td>
-                    <td>Why did the expected and actual results differ?</td>
                   </tr>
 
                   <tr>
                     <td><strong>Borrow a theory</strong></td>
                     <td>An idea from another field, practice, or theory</td>
-                    <td>Can this idea explain the problem and suggest something new to test?</td>
                   </tr>
 
                   <tr>
                     <td><strong>Extend a recent paper</strong></td>
                     <td>An important question that a paper did not answer</td>
-                    <td>What useful question should researchers study next?</td>
                   </tr>
                 </tbody>
               </table>
@@ -1518,7 +1493,7 @@
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner visual-layout"><div class="visual-copy">
               <h2>1. Challenge an assumption</h2>
-              <p class="lead">What are you taking for granted?</p>
+              <p class="lead">Find what your question assumes is already true. Rewrite it so the assumption can be tested.</p>
               <div class="paper-list"><div class="paper"><b>1</b><div>
                 <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Bayesian reasoning example
                 <ul class="paper-points"><li><strong>Starting question:</strong> Can Bayesian reasoning help people make better decisions in complex negotiations?</li><li><strong>Hidden assumption:</strong> If probabilities are mathematically correct, people will understand and use them correctly.</li><li><strong>Challenge:</strong> People may misunderstand probabilities, trust them too much, or ignore information that is not shown.</li><li><strong>Better question:</strong> When does Bayesian support improve negotiation decisions, and when does it create false confidence?</li><li><strong>Why it is better:</strong> The question identifies a condition and a possible failure, rather than assuming the method is helpful.</li></ul>
@@ -1534,7 +1509,7 @@
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner visual-layout"><div class="visual-copy">
               <h2>2. Consider another explanation</h2>
-              <p class="lead">What else could produce the same result?</p>
+              <p class="lead">Ask what else could produce the same result. Compare your explanation with the strongest alternative.</p>
               <div class="paper-list"><div class="paper"><b>2</b><div>
                 <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Bayesian reasoning example
                 <ul class="paper-points"><li><strong>Starting question:</strong> Does Bayesian visualization improve negotiation performance?</li><li><strong>Expected explanation:</strong> Performance improves because Bayesian reasoning helps people understand uncertainty.</li><li><strong>Alternative explanation:</strong> Any clear visual summary may reduce effort; the improvement may not come from Bayesian reasoning.</li><li><strong>Better question:</strong> Does Bayesian information help beyond the benefit of a simpler non-Bayesian visualization?</li><li><strong>Why it is better:</strong> It separates the proposed explanation from a simpler competing explanation.</li></ul>
@@ -1550,7 +1525,7 @@
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner visual-layout"><div class="visual-copy">
               <h2>3. Use first principles</h2>
-              <p class="lead">What is the problem made of?</p>
+              <p class="lead">Break the problem into its most basic needs, decisions, and constraints before choosing a method.</p>
               <div class="paper-list"><div class="paper"><b>3</b><div>
                 <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Bayesian reasoning example
                 <ul class="paper-points"><li><strong>Starting question:</strong> How can we use Bayesian reasoning to improve negotiation?</li><li><strong>Break it down:</strong> Negotiation requires people to express preferences, compare trade-offs, handle uncertainty, and choose an offer.</li><li><strong>Basic need:</strong> The user does not need “Bayesian reasoning” itself; the user needs help seeing uncertain trade-offs without losing control.</li><li><strong>Better question:</strong> Which uncertain trade-offs should the system estimate, and how should it show them so people can still make the final choice?</li><li><strong>Why it is better:</strong> It begins with the human decision problem, then selects mathematics only where it is useful.</li></ul>
@@ -1566,7 +1541,7 @@
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner visual-layout"><div class="visual-copy">
               <h2>4. Think about the whole system</h2>
-              <p class="lead">How do the parts affect one another?</p>
+              <p class="lead">Identify the people, technology, and feedback loops that influence one another over time.</p>
               <div class="paper-list"><div class="paper"><b>4</b><div>
                 <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Bayesian reasoning example
                 <ul class="paper-points"><li><strong>Starting question:</strong> Can Bayesian guidance help a person choose better negotiation offers?</li><li><strong>Parts of the system:</strong> The person, AI agent, probability model, visualization, offers, and responses all influence one another.</li><li><strong>Feedback loop:</strong> A probability display changes the next offer; that offer changes the AI response; the response changes the next probability.</li><li><strong>Better question:</strong> How does Bayesian guidance change the negotiation over several rounds, including offers, trust, and the AI response?</li><li><strong>Why it is better:</strong> It studies the changing interaction, not only one user choice or the final agreement.</li></ul>
@@ -1582,7 +1557,7 @@
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner visual-layout"><div class="visual-copy">
               <h2>5. Consider second-order effects</h2>
-              <p class="lead">What happens after the first benefit?</p>
+              <p class="lead">Look beyond the immediate benefit. Ask how people may adapt and what new effect may appear next.</p>
               <div class="paper-list"><div class="paper"><b>5</b><div>
                 <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Bayesian reasoning example
                 <ul class="paper-points"><li><strong>Starting question:</strong> Can Bayesian guidance help people reach an agreement faster?</li><li><strong>First-order effect:</strong> People may identify promising offers and converge more quickly.</li><li><strong>Second-order effect:</strong> They may depend on the guidance, explore fewer unusual offers, or overlook options outside the model.</li><li><strong>Better question:</strong> Does Bayesian guidance improve convergence while reducing exploration or independent judgment?</li><li><strong>Why it is better:</strong> It tests both the immediate benefit and the new problem that the benefit may create.</li></ul>
@@ -1596,13 +1571,13 @@
             </div>
           </section>
           <section class="slide" data-session="Idea refinement">
-            <div class="slide-inner"><div class="eyebrow">Idea refinement · Summary</div><h2>Five ways to refine one starting idea</h2>
-              <table class="mini-table"><thead><tr><th>Technique</th><th>Ask</th><th>Your question becomes</th></tr></thead><tbody>
-                <tr><td><strong>Challenge an assumption</strong></td><td>What am I taking for granted?</td><td>More cautious</td></tr>
-                <tr><td><strong>Alternative explanation</strong></td><td>What else could cause the result?</td><td>More specific</td></tr>
-                <tr><td><strong>First principles</strong></td><td>What is the basic problem?</td><td>More fundamental</td></tr>
-                <tr><td><strong>Systems thinking</strong></td><td>How do the parts interact?</td><td>More complete</td></tr>
-                <tr><td><strong>Second-order effects</strong></td><td>What happens next?</td><td>More realistic</td></tr>
+            <div class="slide-inner"><h2>Summary: Idea refinement</h2>
+              <table class="mini-table"><thead><tr><th>Technique</th><th>Ask</th></tr></thead><tbody>
+                <tr><td><strong>Challenge an assumption</strong></td><td>What am I taking for granted?</td></tr>
+                <tr><td><strong>Alternative explanation</strong></td><td>What else could cause the result?</td></tr>
+                <tr><td><strong>First principles</strong></td><td>What is the basic problem?</td></tr>
+                <tr><td><strong>Systems thinking</strong></td><td>How do the parts interact?</td></tr>
+                <tr><td><strong>Second-order effects</strong></td><td>What happens next?</td></tr>
               </tbody></table>
             </div>
           </section>
@@ -1615,6 +1590,7 @@
               <ol class="steps">
                 <li><strong>Is there really a gap?</strong> Past work must leave an important question unanswered, inconsistent, or poorly supported.</li>
                 <li><strong>Is the gap in the field—not only in your reading?</strong> Search broadly across keywords, venues, methods, theories, and nearby fields until you can show that no strong answer already exists.</li>
+                <li><strong>Is it a clear next step?</strong> Aim for one useful incremental contribution—not a breakthrough. Build directly on past work and move the field one step forward.</li>
               </ol>
             </div><div class="concept-visual" role="img" aria-label="Past work A, B, and C surround an important unanswered question"><div class="concept-row"><span>Past work A</span><span>Past work B</span><span>Past work C</span></div><div class="unknown">Important question<br>still unanswered</div><small>A research gap exists in the literature—not only in your reading.</small></div></div>
           </section>
@@ -1660,16 +1636,14 @@
             <tr><th>Analysis and quality check</th><td contenteditable="true" data-placeholder="What analysis supports the claim? What confound, baseline, error, bias, or limitation must you check?"></td></tr>
           </tbody></table></div></section>
 
-          <section class="slide" data-session="Idea testing"><div class="slide-inner"><div class="eyebrow">Idea testing · Summary</div><h2>Different contributions need different methodologies</h2><p class="lead">Read papers close to your intended contribution. Study how strong CHI, ACL, or NeurIPS papers design tasks, collect evidence, analyze results, and state limitations. Reusing a proven methodological pattern is usually safer than inventing one from scratch.</p></div></section>
+          <section class="slide" data-session="Idea testing"><div class="slide-inner"><h2>Summary: Idea testing</h2><p class="lead">Find a strong CHI, ACL, or NeurIPS paper with a contribution like yours. Copy its methodological structure: how it designs the task, collects evidence, and analyzes results. You usually will not go wrong. Do not invent a new methodology unless your contribution requires it.</p></div></section>
           <section class="slide" data-session="Idea storytelling"><div class="slide-inner section-slide" style="--section-image:url('/img/researchguide/story-path.jpg')"><div class="session-number">05</div><h2>Idea storytelling</h2><p class="lead">How can readers follow one clear research story?</p></div></section>
 
-          <section class="slide" data-session="Idea storytelling"><div class="slide-inner visual-layout"><div class="visual-copy"><div class="eyebrow">Plot</div><h2>Five parts form one connected story</h2><p class="lead">Aristotle described a complete plot as having a beginning, middle, and end. In a research paper, the problem is the turning point: it changes the story from what the field knows to what your study must do.</p><ol class="steps"><li><strong>Background:</strong> Establish the important topic and synthesize what is known.</li><li><strong>Problem:</strong> Turn the story with “However.”</li><li><strong>Methodology:</strong> Explain how the paper answers the problem.</li><li><strong>Findings:</strong> Reveal what the evidence shows.</li><li><strong>Contribution / significance:</strong> End with what changes because of the work.</li></ol><p class="optional"><a href="https://classics.mit.edu/Aristotle/poetics.1.1.html" target="_blank" rel="noopener">Aristotle, <em>Poetics</em>, Part VII</a></p></div><figure class="slide-visual"><a href="https://unsplash.com/photos/1509266272358-7701da638078" target="_blank" rel="noopener"><img src="/img/researchguide/story-path.jpg" alt="A winding path made from open books" loading="lazy"></a><figcaption>Photo: Laura Kapfer · Unsplash</figcaption></figure></div></section>
+          <section class="slide" data-session="Idea storytelling"><div class="slide-inner visual-layout"><div class="visual-copy"><h2>People remember stories</h2><p class="lead">A research paper is easier to understand and remember when five parts form one connected story. The problem is the turning point: it moves readers from what is known to what your study must do.</p><ol class="steps"><li><strong>Background:</strong> Establish the important topic and synthesize what is known.</li><li><strong>Problem:</strong> Turn the story with “However.”</li><li><strong>Methodology:</strong> Explain how the paper answers the problem.</li><li><strong>Findings:</strong> Reveal what the evidence shows.</li><li><strong>Contribution / significance:</strong> End with what changes because of the work.</li></ol><p class="optional"><strong>Tip—choose the verb carefully:</strong> investigates a relationship; explores a new situation; proposes an idea; develops an artifact; evaluates performance or usefulness.</p></div><figure class="slide-visual"><a href="https://unsplash.com/photos/1509266272358-7701da638078" target="_blank" rel="noopener"><img src="/img/researchguide/story-path.jpg" alt="A winding path made from open books" loading="lazy"></a><figcaption>Photo: Laura Kapfer · Unsplash</figcaption></figure></div></section>
 
           <section class="slide" data-session="Idea storytelling"><div class="slide-inner"><div class="eyebrow">One reusable template</div><h2>Write the story in five parts</h2><ol class="steps"><li><strong>Background:</strong> Emotion regulation is important because … Prior work shows … <em>(use many relevant citations)</em></li><li><strong>Problem:</strong> <em>However,</em> existing digital meditation tools mainly use spoken instructions or fixed content, giving users limited ways to regulate attention through their own action.</li><li><strong>Methodology:</strong> This paper proposes an attention-regulation framework and develops Pause, an interaction based on slow, continuous movement.</li><li><strong>Findings:</strong> The key findings are …</li><li><strong>Contribution / significance:</strong> This paper contributes … This matters because …</li></ol></div></section>
 
-          <section class="slide" data-session="Idea storytelling"><div class="slide-inner"><div class="eyebrow">The verb signals the contribution</div><h2>Choose the verb carefully</h2><ul class="paper-points"><li><strong>Investigates:</strong> tests a focused relationship or question with evidence.</li><li><strong>Explores:</strong> studies a new situation without pretending the answer was known in advance.</li><li><strong>Proposes:</strong> introduces a framework, theory, method, or design direction.</li><li><strong>Develops:</strong> builds an artifact, system, model, dataset, or technique.</li><li><strong>Evaluates:</strong> judges performance, usefulness, experience, or limitations against explicit criteria.</li></ul></div></section>
-
-          <section class="slide" data-session="Idea storytelling"><div class="slide-inner"><h2>Attention regulation as one connected story</h2><div class="paper-list"><div class="paper paper-single"><div><a href="https://doi.org/10.1145/3025453.3025914" target="_blank" rel="noopener">A Framework for Interactive Mindfulness Meditation Using Attention-Regulation Process</a> · Niksirat et al., CHI 2017<ul class="paper-points"><li><strong>Background:</strong> Emotion regulation supports mental well-being, and mindfulness is widely used to train attention and regulate emotion.</li><li><strong>Problem:</strong> <em>However,</em> existing digital meditation tools mainly use spoken instructions or fixed content, giving users limited ways to regulate attention through their own action.</li><li><strong>Methodology:</strong> The paper proposes an attention-regulation framework, develops Pause, and evaluates the movement-based interaction with users.</li><li><strong>Findings:</strong> Slow, continuous interaction supported attention and produced positive affective and engagement outcomes.</li><li><strong>Contribution / significance:</strong> The paper contributes a framework and design approach for self-regulated mindfulness technologies.</li></ul></div></div></div></div></section>
+          <section class="slide" data-session="Idea storytelling"><div class="slide-inner"><h2>Example: Attention regulation as one connected story</h2><div class="paper-list"><div class="paper paper-single"><div><a href="https://doi.org/10.1145/3025453.3025914" target="_blank" rel="noopener">A Framework for Interactive Mindfulness Meditation Using Attention-Regulation Process</a> · Niksirat et al., CHI 2017<ul class="paper-points"><li><strong>Background:</strong> Emotion regulation supports mental well-being, and mindfulness is widely used to train attention and regulate emotion.</li><li><strong>Problem:</strong> <em>However,</em> existing digital meditation tools mainly use spoken instructions or fixed content, giving users limited ways to regulate attention through their own action.</li><li><strong>Methodology:</strong> The paper proposes an attention-regulation framework, develops Pause, and evaluates the movement-based interaction with users.</li><li><strong>Findings:</strong> Slow, continuous interaction supported attention and produced positive affective and engagement outcomes.</li><li><strong>Contribution / significance:</strong> The paper contributes a framework and design approach for self-regulated mindfulness technologies.</li></ul></div></div></div></div></section>
 
           <section class="slide" data-session="Idea storytelling" data-topic="Write the research story"><div class="slide-inner"><h2>Exercise</h2><table class="exercise-table"><tbody><tr><th>Background</th><td contenteditable="true" data-placeholder="Why is the topic important, and what does past work show? Add citations."></td></tr><tr><th>Problem</th><td contenteditable="true" data-placeholder="However, what remains unresolved or unsupported?"></td></tr><tr><th>Methodology</th><td contenteditable="true" data-placeholder="This paper investigates / explores / proposes / develops / evaluates …"></td></tr><tr><th>Findings</th><td contenteditable="true" data-placeholder="The key findings are …"></td></tr><tr><th>Contribution / significance</th><td contenteditable="true" data-placeholder="This paper contributes … This matters because …"></td></tr></tbody></table></div></section>
           <section class="slide" data-session="Resources">
@@ -1737,7 +1711,7 @@
             <div class="slide-inner title-slide"><div class="eyebrow">Keep going</div><h2>Progress over Perfection</h2><ul class="paper-points">
               <li><strong>Start with something you are curious about.</strong></li>
               <li><strong>Read many top-tier papers, especially from CHI, ACL, and NeurIPS.</strong></li>
-              <li><strong>Your professor does not have the answer.</strong></li>
+              <li><strong>Your professor guides the process; you develop the answer.</strong></li>
               <li><strong>Do one thing at a time.</strong></li>
             </ul></div>
           </section>
