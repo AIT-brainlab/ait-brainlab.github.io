@@ -1021,8 +1021,7 @@
           <div class="journey-stage" data-stage="Idea testing">Testing</div>
           <div class="journey-stage" data-stage="Idea storytelling">Storytelling</div>
           <div class="journey-stage" data-stage="Bonus">AI + Journals</div>
-          <div class="journey-stage" data-stage="Resources">Resources</div>
-          <div class="journey-status" aria-live="polite"><strong class="journey-percent" id="journey-percent">0% complete</strong></div>
+          <div class="journey-status" aria-live="polite"><span id="journey-status-text">Six stages ahead</span><strong class="journey-percent" id="journey-percent">0% complete</strong></div>
         </div>
 
         <div class="slides">
@@ -1853,7 +1852,7 @@
       <script>
         (function () {
           const deck = document.getElementById('research-deck'); if (!deck) return;
-          const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), dots = deck.querySelector('#slide-dots'), sessionLabel = deck.querySelector('#session-label'), jump = deck.querySelector('#session-jump'), full = deck.querySelector('#fullscreen-slide'), resume = deck.querySelector('#resume-note'), journeyStages = [...deck.querySelectorAll('.journey-stage')], journeyStatus = deck.querySelector('#journey-status'), journeyPercent = deck.querySelector('#journey-percent');
+          const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), dots = deck.querySelector('#slide-dots'), sessionLabel = deck.querySelector('#session-label'), jump = deck.querySelector('#session-jump'), full = deck.querySelector('#fullscreen-slide'), resume = deck.querySelector('#resume-note'), journeyStages = [...deck.querySelectorAll('.journey-stage')], journeyStatusText = deck.querySelector('#journey-status-text'), journeyPercent = deck.querySelector('#journey-percent');
           const stageNames = journeyStages.map(stage => stage.dataset.stage);
           [...jump.options].forEach(option => { const target = slides.findIndex(slide => slide.dataset.session === option.textContent); if (target >= 0) option.value = String(target) });
           const storageKey = 'ait-research-guide-slide-v2'; let current = 0;
@@ -1879,9 +1878,9 @@
               const position = stageSlides.indexOf(activeSlide) + 1;
               const remaining = stageSlides.length - position;
               journeyStages[stageIndex].style.setProperty('--stage-progress', (position / stageSlides.length * 100) + '%');
-              journeyStatus.textContent = session + ' · ' + position + ' of ' + stageSlides.length + ' · ' + (remaining ? remaining + ' slide' + (remaining === 1 ? '' : 's') + ' left' : 'stage complete');
+              journeyStatusText.textContent = session + ' · ' + position + ' of ' + stageSlides.length + ' · ' + (remaining ? remaining + ' slide' + (remaining === 1 ? '' : 's') + ' left' : 'stage complete');
             } else {
-              journeyStatus.textContent = session === 'Resources' ? 'Research journey complete' : 'Six stages ahead';
+              journeyStatusText.textContent = session === 'Resources' ? 'Research journey complete' : 'Six stages ahead';
             }
             const matchingSession = [...jump.options].find(option => option.textContent === sessionLabel.textContent);
             if (matchingSession) jump.value = matchingSession.value;
