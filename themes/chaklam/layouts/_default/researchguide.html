@@ -111,7 +111,7 @@
 
         .research-guide .journey-progress {
           display: grid;
-          grid-template-columns: repeat(5, minmax(0, 1fr));
+          grid-template-columns: repeat(6, minmax(0, 1fr));
           gap: 1px;
           background: #c8d8df;
           border-bottom: 1px solid var(--line)
@@ -470,6 +470,64 @@
         .research-guide .prompt ul {
           margin: .6rem 0 .1rem;
           padding-left: 1.25rem
+        }
+
+        .research-guide .ai-prompt {
+          margin: .8rem 0 0;
+          padding: 1rem 1.15rem;
+          border: 1px solid #c7d9df;
+          border-left: 5px solid var(--teal);
+          border-radius: 0 12px 12px 0;
+          background: #f4f9fa;
+          color: #20364f;
+          font: 600 clamp(.78rem, .95vw, .98rem)/1.48 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+          white-space: pre-wrap
+        }
+
+        .research-guide .process-flow {
+          display: grid;
+          grid-template-columns: repeat(5, minmax(0, 1fr));
+          align-items: stretch;
+          gap: .65rem;
+          margin: 1.2rem 0
+        }
+
+        .research-guide .process-flow.four {
+          grid-template-columns: repeat(4, minmax(0, 1fr))
+        }
+
+        .research-guide .process-flow div {
+          position: relative;
+          display: grid;
+          place-items: center;
+          min-height: 92px;
+          padding: .85rem;
+          border: 1px solid #bdd4dc;
+          border-radius: 12px;
+          background: #f1f8fa;
+          text-align: center;
+          font-weight: 800
+        }
+
+        .research-guide .process-flow div:not(:last-child)::after {
+          content: "→";
+          position: absolute;
+          right: -.58rem;
+          top: 50%;
+          z-index: 2;
+          transform: translate(50%, -50%);
+          color: var(--teal);
+          font-size: 1.25rem
+        }
+
+        .research-guide .journal-table td:first-child {
+          width: 52%;
+          font-weight: 760
+        }
+
+        .research-guide .journal-table td:last-child,
+        .research-guide .journal-table th:last-child {
+          white-space: nowrap
         }
 
         .research-guide .answers {
@@ -861,6 +919,22 @@
             grid-template-columns: 1fr
           }
 
+          .research-guide .process-flow {
+            grid-template-columns: 1fr
+          }
+
+          .research-guide .process-flow.four {
+            grid-template-columns: 1fr
+          }
+
+          .research-guide .process-flow div:not(:last-child)::after {
+            content: "↓";
+            right: 50%;
+            top: auto;
+            bottom: -.62rem;
+            transform: translate(50%, 50%)
+          }
+
           .research-guide .slide-visual {
             margin-top: .8rem
           }
@@ -929,12 +1003,13 @@
           <div class="top-actions">
             <label><span class="sr-only">Jump to session</span><select id="session-jump" aria-label="Jump to session">
                 <option value="0">Start</option>
-                <option value="6">Idea generation</option>
-                <option value="17">Idea refinement</option>
-                <option value="30">Idea validation</option>
-                <option value="34">Idea testing</option>
-                <option value="44">Idea storytelling</option>
-                <option value="50">Resources</option>
+                <option>Idea generation</option>
+                <option>Idea refinement</option>
+                <option>Idea validation</option>
+                <option>Idea testing</option>
+                <option>Idea storytelling</option>
+                <option>Bonus</option>
+                <option>Resources</option>
               </select></label>
             <button id="fullscreen-slide" type="button" title="Fullscreen (F)">⛶ Fullscreen</button>
           </div>
@@ -945,14 +1020,15 @@
           <div class="journey-stage" data-stage="Idea validation">Validation</div>
           <div class="journey-stage" data-stage="Idea testing">Testing</div>
           <div class="journey-stage" data-stage="Idea storytelling">Storytelling</div>
-          <div class="journey-status" aria-live="polite"><span id="journey-status">Five stages ahead</span><strong class="journey-percent" id="journey-percent">0% complete</strong></div>
+          <div class="journey-stage" data-stage="Bonus">AI + Journals</div>
+          <div class="journey-status" aria-live="polite"><span id="journey-status">Six stages ahead</span><strong class="journey-percent" id="journey-percent">0% complete</strong></div>
         </div>
 
         <div class="slides">
           <section class="slide" data-session="Start">
             <div class="slide-inner title-slide intro-slide">
               <h2>From Zero to Hero: How to Do Research?</h2>
-              <p class="lead">A self-paced tutorial and exercises covering idea generation, refinement, novelty validation, methodology testing, and storytelling</p>
+              <p class="lead">A self-paced tutorial and exercises covering idea generation, refinement, novelty validation, methodology testing, storytelling, and AI-assisted research</p>
               <p class="kbd">Use ← →, the buttons, or the session menu. Press F for fullscreen.</p>
             </div>
           </section>
@@ -1160,6 +1236,10 @@
                   <tr>
                     <td>Idea Storytelling</td>
                     <td>How to storytell the idea?</td>
+                  </tr>
+                  <tr>
+                    <td>AI + Journals</td>
+                    <td>How can AI improve the work, and where should it be submitted?</td>
                   </tr>
                 </tbody>
               </table>
@@ -1662,6 +1742,40 @@
           <section class="slide" data-session="Idea storytelling"><div class="slide-inner"><h2>Example: Attention regulation as one connected story</h2><div class="paper-list"><div class="paper paper-single"><div><a href="https://doi.org/10.1145/3025453.3025914" target="_blank" rel="noopener">A Framework for Interactive Mindfulness Meditation Using Attention-Regulation Process</a> · Niksirat et al., CHI 2017<ul class="paper-points"><li><strong>Background:</strong> Emotion regulation supports mental well-being, and mindfulness is widely used to train attention and regulate emotion.</li><li><strong>Problem:</strong> <em>However,</em> existing digital meditation tools mainly use spoken instructions or fixed content, giving users limited ways to regulate attention through their own action.</li><li><strong>Methodology:</strong> The paper proposes an attention-regulation framework, develops Pause, and evaluates the movement-based interaction with users.</li><li><strong>Findings:</strong> Slow, continuous interaction supported attention and produced positive affective and engagement outcomes.</li><li><strong>Contribution / significance:</strong> The paper contributes a framework and design approach for self-regulated mindfulness technologies.</li></ul></div></div></div></div></section>
 
           <section class="slide" data-session="Idea storytelling" data-topic="Write the research story"><div class="slide-inner"><h2>Exercise</h2><table class="exercise-table"><tbody><tr><th>Background</th><td contenteditable="true" data-placeholder="Why is the topic important, and what does past work show? Add citations."></td></tr><tr><th>Problem</th><td contenteditable="true" data-placeholder="However, what remains unresolved or unsupported?"></td></tr><tr><th>Methodology</th><td contenteditable="true" data-placeholder="This paper investigates / explores / proposes / develops / evaluates …"></td></tr><tr><th>Findings</th><td contenteditable="true" data-placeholder="The key findings are …"></td></tr><tr><th>Contribution / significance</th><td contenteditable="true" data-placeholder="This paper contributes … This matters because …"></td></tr></tbody></table></div></section>
+          <section class="slide" data-session="Bonus"><div class="slide-inner section-slide"><div class="session-number">06</div><h2>Bonus: AI for research</h2><p class="lead">Use AI to challenge, express, visualize, and review your thinking.</p></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner"><h2>Five ways AI can help your research</h2><ol class="steps"><li><strong>Test the novelty.</strong> Search for the closest work and possible counterexamples.</li><li><strong>Build the story.</strong> Connect background, problem, methodology, findings, and contribution.</li><li><strong>Improve in loops.</strong> Diagnose one weakness, revise, and check again.</li><li><strong>Draw the research.</strong> Create a clear Figure 1 and methodology figure.</li><li><strong>Review before submission.</strong> Check novelty, validity, and communication.</li></ol></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner two-col"><div><h2>1. Test the novelty</h2><p class="lead">Ask AI to widen your search, not to decide that the idea is novel.</p><ul class="paper-points"><li><strong>Give:</strong> your question, intended claim, contribution type, and closest papers.</li><li><strong>Ask:</strong> for synonyms, neighboring fields, competing explanations, and search queries.</li><li><strong>Verify:</strong> every title, DOI, finding, and gap in the real paper.</li></ul></div><div class="prompt"><strong>Prompt</strong><div class="ai-prompt">Act as a skeptical CHI / ACL / NeurIPS reviewer.<br><br>My question: [question]<br>My intended claim: [claim]<br>Closest work I know: [papers]<br><br>Create a novelty-search map: synonyms, neighboring fields, likely closest work, disconfirming keywords, and database queries. Then make a comparison table of claim, method, evidence, and what may remain unknown. Give a DOI or URL for every paper. Mark uncertain sources instead of guessing.</div></div></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner"><h2>2. Build the five-part story</h2><p class="lead">Give AI your verified evidence. Ask it to connect the parts without inventing citations or findings.</p><div class="process-flow"><div>Background</div><div>However,<br>problem</div><div>Methodology</div><div>Key findings</div><div>Contribution</div></div><div class="ai-prompt">Using only the evidence below, draft one connected research story with five labeled parts: Background, Problem, Methodology, Findings, and Contribution. Preserve the contrast introduced by “However.” Use a precise research verb. Do not invent citations, methods, or results. Mark missing support as [EVIDENCE NEEDED].<br><br>Evidence: [paste verified notes, citations, method, and results]</div></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner"><h2>3. Improve the writing in loops</h2><p class="lead">Do not ask AI to “make it better.” Give each loop one job and compare the revision with the previous version.</p><div class="process-flow"><div>Draft</div><div>Diagnose</div><div>Revise</div><div>Compare</div><div>Repeat</div></div><div class="grid-3"><div class="card"><h3>Coherence loop</h3><p>Does every paragraph support the same research promise? Find jumps, missing links, and repeated ideas.</p></div><div class="card"><h3>Evidence loop</h3><p>Which claims lack evidence? Which citation does not support the exact sentence?</p></div><div class="card"><h3>Clarity loop</h3><p>Shorten sentences, keep terms consistent, and remove words that do not change the meaning.</p></div></div></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner two-col"><div><h2>4. Draw Figure 1</h2><p class="lead">Figure 1 should explain the paper's main idea before the reader studies the details.</p><div class="process-flow four"><div>Problem<br><small>overload</small></div><div>Insight<br><small>uncertain trade-offs</small></div><div>Solution<br><small>Bayesian view</small></div><div>Value + risk<br><small>convergence / reliance</small></div></div></div><div class="prompt"><strong>Prompt</strong><div class="ai-prompt">Design an editable 16:9 research Figure 1 for this story: [paste five-part story]. Use four labeled panels: problem, mechanism or insight, proposed solution, and expected value plus limitation. Use plain English, one visual grammar, and minimal text. Make relationships explicit with arrows. Avoid decorative icons. Return SVG and explain every visual choice.</div></div></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner two-col"><div><h2>4. Draw the methodology figure</h2><p class="lead">The methodology figure should let a reader reconstruct what happened in the study.</p><div class="process-flow"><div>Question</div><div>Participants<br>or data</div><div>Task +<br>procedure</div><div>Measures +<br>analysis</div><div>Evidence</div></div></div><div class="prompt"><strong>Prompt</strong><div class="ai-prompt">Create an editable methodology diagram from the protocol below. Show inputs, conditions, chronological procedure, collected data, analysis, and the claim each analysis supports. Distinguish measured variables from inferred constructs. Label randomization, controls, baselines, and repeated steps. Do not add a step that is absent from the protocol.<br><br>Protocol: [paste protocol]</div></div></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner"><h2>5. Ask AI to review the paper</h2><p class="lead">Separate the review into three passes. Require evidence from your draft, not generic advice.</p><div class="grid-3"><div class="card"><h3>Novelty check</h3><p>What is already known? Is the gap field-level? Is the contribution more than an application?</p></div><div class="card"><h3>Validity check</h3><p>Do the design and analysis support the claim? Check construct, internal, and external validity.</p></div><div class="card"><h3>Communication check</h3><p>Can a reviewer trace background → problem → method → findings → contribution?</p></div></div><div class="ai-prompt">Act as a demanding reviewer for [target venue]. Quote the exact passage that creates each concern. Classify it as Major, Minor, or Question. Explain why it matters, what evidence would resolve it, and the smallest useful revision. Do not rewrite the paper yet.</div></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner"><h2>Keep yourself responsible</h2><div class="grid-2"><div class="card"><h3>AI may assist</h3><p>Search planning, outlining, language revision, diagrams, code explanation, alternative explanations, and reviewer simulation.</p></div><div class="card"><h3>You must verify</h3><p>Citations, novelty, data, analysis, figures, interpretations, authorship, disclosure, and the target venue's current AI policy.</p></div></div><ul class="paper-points"><li><strong>Never upload:</strong> identifiable participant data, confidential reviews, or protected project material without authorization.</li><li><strong>Never accept:</strong> invented papers, fabricated results, silent changes to numbers, or claims unsupported by your evidence.</li><li><strong>Keep a record:</strong> save important prompts, outputs, decisions, and human corrections when reproducibility or disclosure matters.</li></ul></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner"><h2>Exercise</h2><p class="plain">Use one research idea. Complete one small AI-assisted research loop.</p><table class="exercise-table"><tbody><tr><th>Your research claim</th><td contenteditable="true" data-placeholder="What do you currently believe the paper can claim?"></td></tr><tr><th>Novelty prompt</th><td contenteditable="true" data-placeholder="Ask for a search map and the strongest possible counterexample."></td></tr><tr><th>Five-part story</th><td contenteditable="true" data-placeholder="Write one sentence each for background, problem, methodology, findings, and contribution."></td></tr><tr><th>One review loop</th><td contenteditable="true" data-placeholder="Choose coherence, evidence, or clarity. What did the review expose?"></td></tr><tr><th>Figure brief</th><td contenteditable="true" data-placeholder="What must Figure 1 or the methodology figure help the reader understand?"></td></tr><tr><th>Your verification</th><td contenteditable="true" data-placeholder="Which source, result, number, or policy will you check yourself?"></td></tr></tbody></table></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner"><h2>Summary: AI for research</h2><table class="mini-table"><thead><tr><th>Use AI to</th><th>Your responsibility</th></tr></thead><tbody><tr><td>Expand the search</td><td>Read and verify the closest papers</td></tr><tr><td>Connect the story</td><td>Provide real evidence and protect the meaning</td></tr><tr><td>Diagnose one weakness</td><td>Choose, compare, and justify the revision</td></tr><tr><td>Draft clear figures</td><td>Check that every element matches the study</td></tr><tr><td>Simulate review</td><td>Decide what criticism requires new evidence</td></tr></tbody></table></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner"><h2>Which journal should I submit to?</h2><p class="lead">Choose the readership and contribution first. Use impact factor only as supporting information.</p><table class="mini-table"><thead><tr><th>If the main contribution is…</th><th>Start by reading recent papers from…</th></tr></thead><tbody><tr><td>Core HCI theory, interaction, or evaluation</td><td>TOCHI, IJHCS, IJHCI</td></tr><tr><td>Interactive AI or human–AI systems</td><td>TiiS, TOCHI, IJHCI</td></tr><tr><td>Technology, behavior, or well-being</td><td>CHB, BIT, IJHCS</td></tr><tr><td>Computing or educational technology</td><td>TOCE, Computers &amp; Education, EAIT</td></tr><tr><td>NLP / LLM methods or analysis</td><td>TACL, Computational Linguistics</td></tr><tr><td>Machine-learning methods or empirical insight</td><td>JMLR, TMLR</td></tr></tbody></table></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner"><h2>HCI journals: Core and interactive systems</h2><table class="mini-table journal-table"><thead><tr><th>Journal</th><th>Good fit when…</th><th>2025 JIF</th></tr></thead><tbody><tr><td><a href="https://dl.acm.org/journal/tochi" target="_blank" rel="noopener">ACM TOCHI</a></td><td>The paper makes a strong, general HCI contribution.</td><td>9.6</td></tr><tr><td><a href="https://dl.acm.org/journal/tiis" target="_blank" rel="noopener">ACM TiiS</a></td><td>Interaction with intelligent systems is central.</td><td>6.4</td></tr><tr><td><a href="https://www.sciencedirect.com/journal/international-journal-of-human-computer-studies" target="_blank" rel="noopener">IJHCS</a></td><td>The work connects interaction with cognition or human factors.</td><td>6.0</td></tr><tr><td><a href="https://www.tandfonline.com/journals/hihc20" target="_blank" rel="noopener">IJHCI</a></td><td>The paper offers broad or applied HCI evidence.</td><td>6.1</td></tr><tr><td><a href="https://www.tandfonline.com/journals/tbit20" target="_blank" rel="noopener">Behaviour &amp; Information Technology</a></td><td>Technology use, work, behavior, or social context is central.</td><td>4.2</td></tr></tbody></table></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner"><h2>HCI journals: Behavior and education</h2><table class="mini-table journal-table"><thead><tr><th>Journal</th><th>Good fit when…</th><th>2025 JIF</th></tr></thead><tbody><tr><td><a href="https://www.sciencedirect.com/journal/computers-in-human-behavior" target="_blank" rel="noopener">Computers in Human Behavior</a></td><td>The contribution explains behavior, well-being, or social effects of technology.</td><td>12.2</td></tr><tr><td><a href="https://www.sciencedirect.com/journal/computers-and-education" target="_blank" rel="noopener">Computers &amp; Education</a></td><td>The paper makes a strong learning-science or educational-technology contribution.</td><td>13.2</td></tr><tr><td><a href="https://dl.acm.org/journal/toce" target="_blank" rel="noopener">ACM TOCE</a></td><td>The research advances computing education.</td><td>4.0</td></tr><tr><td><a href="https://link.springer.com/journal/10639" target="_blank" rel="noopener">Education and Information Technologies</a></td><td>The work studies educational technology in authentic contexts.</td><td>7.2</td></tr></tbody></table></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner"><h2>NLP and machine-learning journals</h2><table class="mini-table journal-table"><thead><tr><th>Journal</th><th>Good fit when…</th><th>2025 JIF</th></tr></thead><tbody><tr><td><a href="https://direct.mit.edu/tacl" target="_blank" rel="noopener">Transactions of the ACL</a></td><td>The paper presents substantial, original NLP work with strong evidence.</td><td>11.7</td></tr><tr><td><a href="https://direct.mit.edu/coli" target="_blank" rel="noopener">Computational Linguistics</a></td><td>The work offers deep computational-linguistic insight or comprehensive analysis.</td><td>13.4</td></tr><tr><td><a href="https://jmlr.org" target="_blank" rel="noopener">Journal of Machine Learning Research</a></td><td>The contribution is a mature ML method, theory, resource, or extensive study.</td><td>6.8</td></tr><tr><td><a href="https://jmlr.org/tmlr/" target="_blank" rel="noopener">Transactions on Machine Learning Research</a></td><td>The original ML contribution is technically sound and benefits from open review.</td><td>—</td></tr></tbody></table><p class="optional">2025 Journal Impact Factor values were supplied for this guide. Confirm the current value and indexing in Journal Citation Reports before using a metric in a formal document.</p></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner"><h2>Read the journal before you submit</h2><ol class="steps"><li><strong>Read 10–20 recent papers.</strong> Does the journal publish your contribution type, topic, method, and level of evidence?</li><li><strong>Read the aims and author guidelines.</strong> Check article type, length, anonymization, data policy, AI policy, fees, and required statements.</li><li><strong>Check originality rules.</strong> A journal may or may not accept an extended conference paper. TMLR requires original work rather than an extension of published work.</li><li><strong>Match the claim to the audience.</strong> The best venue is where the readers who care about your contribution will find it.</li><li><strong>Choose before final writing.</strong> Use the journal's recent papers to calibrate structure, depth, terminology, and evaluation.</li></ol></div></section>
+
+          <section class="slide" data-session="Bonus"><div class="slide-inner"><h2>Summary: AI and publication</h2><p class="lead">Use AI as a demanding research partner: ask it to widen the search, expose weak reasoning, improve coherence, and make the work visible. You remain responsible for every source, result, claim, and figure. Then submit where the contribution fits the readers—not simply where the number is highest.</p></div></section>
+
           <section class="slide" data-session="Resources">
             <div class="slide-inner">
               <div class="eyebrow">Lab resources</div>
@@ -1746,8 +1860,9 @@
           const deck = document.getElementById('research-deck'); if (!deck) return;
           const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), dots = deck.querySelector('#slide-dots'), sessionLabel = deck.querySelector('#session-label'), jump = deck.querySelector('#session-jump'), full = deck.querySelector('#fullscreen-slide'), resume = deck.querySelector('#resume-note'), journeyStages = [...deck.querySelectorAll('.journey-stage')], journeyStatus = deck.querySelector('#journey-status'), journeyPercent = deck.querySelector('#journey-percent');
           const stageNames = journeyStages.map(stage => stage.dataset.stage);
+          [...jump.options].forEach(option => { const target = slides.findIndex(slide => slide.dataset.session === option.textContent); if (target >= 0) option.value = String(target) });
           const storageKey = 'ait-research-guide-slide-v2'; let current = 0;
-          try { const saved = parseInt(localStorage.getItem(storageKey), 10); if (Number.isFinite(saved) && saved >= 0 && saved < slides.length) { current = saved; resume.textContent = 'Resumed where you left off'; } } catch (e) { }
+          try { const saved = parseInt(localStorage.getItem(storageKey), 10); if (Number.isFinite(saved) && saved >= 0 && saved < slides.length) { current = saved; if (resume) resume.textContent = 'Resumed where you left off'; } } catch (e) { }
           function show(i, save = true) {
             current = Math.max(0, Math.min(slides.length - 1, i));
             slides.forEach((slide, index) => { slide.classList.toggle('active', index === current); slide.setAttribute('aria-hidden', index === current ? 'false' : 'true') });
@@ -1771,7 +1886,7 @@
               journeyStages[stageIndex].style.setProperty('--stage-progress', (position / stageSlides.length * 100) + '%');
               journeyStatus.textContent = session + ' · ' + position + ' of ' + stageSlides.length + ' · ' + (remaining ? remaining + ' slide' + (remaining === 1 ? '' : 's') + ' left' : 'stage complete');
             } else {
-              journeyStatus.textContent = session === 'Resources' ? 'Research journey complete' : 'Five stages ahead';
+              journeyStatus.textContent = session === 'Resources' ? 'Research journey complete' : 'Six stages ahead';
             }
             const matchingSession = [...jump.options].find(option => option.textContent === sessionLabel.textContent);
             if (matchingSession) jump.value = matchingSession.value;
