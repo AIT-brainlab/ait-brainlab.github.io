@@ -1,202 +1,51 @@
 {{ define "main" }}
-
-<!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex">
-  <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-    <div class="row justify-content-center">
-      <div class="col-xl-7 col-lg-9 text-center">
-        {{/*  <h1>The Future Lab</h1>  */}}
-        <h1>AIT Brain Lab</h1>
-        <p style="margin-top: 10px;" class="lead">The AIT Brain Lab at <a target="_blank" href="https://ait.ac.th">Asian Institute of Technology</a> is a research lab founded by <a target="_blank" href="http://www.chaklam.com">Dr. Chaklam</a> in the year 2019.</p>
-
-        <p class="lead">We study human–AI interaction, reliable language models, medical vision–language learning, and physiological computing. We develop useful technology and investigate what it teaches us about people and AI.</p>
-        {{/*  <p class="lead">To understand humans through the lens of research, i.e., through brain, language, voice, learning paradigms.</p>
-        <p class="lead">We called our area of research "<b>Human AI Interaction</b>".</p>  */}}
-        {{/*  <p style="margin-top: 10px;" class="lead">The <a target="_blank" href="https://ait.ac.th">Asian Institute of Technology (AIT)</a> and <a target="_blank" href="https://www.bupt.edu.cn/#">Beijing University of Posts and Telecommunications (BUPT)</a> are joining forces to establish a  joint-research lab, aptly named <b>The Future Lab, AIT x BUPT.</b></p>
-        <p class="lead text-muted">This initiative marks a significant milestone in the pursuit of cutting-edge research and development to solve world problems.  Key domains include Artificial Intelligence (AI), Digital Transformation, Accessibility, Sustainability, and beyond.</p>  */}}
-        {{/* <p class="lead text-muted">{{ .Params.hero3 }}</p> */}}
-      </div>
-    </div>
-    <div class="text-center ">
-      <a style="background-color: #f38733" href="/members" class="btn-get-started scrollto">Members</a>
-      <a style="background-color: #05220a" href="/projects" class="btn-get-started scrollto">Research Areas</a>
-      <a style="background-color: #087f8c" href="/getting-started/" class="btn-get-started">Getting Started</a>
-    </div>
-    {{/*  <div id="features">
-      <div class="row icon-boxes">
-        <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box">
-            <h4 class="title"><a href="">Data Science and Artificial Intelligence</a></h4>
-            <p class="description">Research and development on data analytics and text, speech, computer vision based models and applications.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
-          <div class="icon-box">
-            <h4 class="title"><a href="">Digital Transformation</a></h4>
-            <p class="description">Research and development on contemporary topics on digital transformation including digital transformation in tourisms, banking, insurance, agriculture, etc.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
-          <div class="icon-box">
-            <h4 class="title"><a href="">Assessibility and Healthcare</a></h4>
-            <p class="description">Research and development on accessibility that explores methods and tools to enhance inclusion and well-being for individuals with diverse needs including elderly, deaf people, visually-impaired people, locked-in patients, etc.</p>
-          </div>
-        </div>
-
-      </div>
-      <div class="row icon-boxes">
-        <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box">
-            <h4 class="title"><a href="">Sustainability</a></h4>
-            <p class="description"> Research and development on Advancing Sustainable Development Goals (SDGs) is essential for addressing global challenges and fostering a more sustainable future.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
-          <div class="icon-box">
-            <h4 class="title"><a href="">Education</a></h4>
-            <p class="description">Research and development in Human Capacity Building is crucial for fostering a knowledgeable, skilled, inclusive and empowered global population.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
-          <div class="icon-box">
-            <h4 class="title"><a href="">Smart Governance, Cities, Services</a></h4>
-            <p class="description">Research and Development in Smart Governance, Cities, and Services is vital for creating efficient, inclusive, and resilient urban environments. This research focuses on leveraging technology and data-driven approaches to enhance governance effectiveness, optimize urban infrastructure, and improve service delivery.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>  */}}
-  </div>
-</section><!-- End Hero -->
-
 <main id="main">
-
-  <section id="about" class="about" style="background-color: #E4EEF7;">
-  <div class="container" data-aos="fade-up">
-
-    <div class="section-title">
-      <h2>Highlight News</h2>
-    </div>
-
-    <div class="row content">
-      <div class="col-lg-12 pt-4 pt-lg-0 text-center">
-        <ul style="list-style: none; display: inline-block; text-align: left;">
-          <li class="mb-3">
-            <i class="ri-check-double-line"></i>
-            <strong>ACM Trans. Health 2026:</strong> Our work on a clinically validated spine X-ray VQA dataset was published in ACM Transactions on Computing for Healthcare.
-            <a href="https://dl.acm.org/doi/abs/10.1145/3820903">Read the paper</a>
-          </li>
-          <li class="mb-3">
-            <i class="ri-check-double-line"></i>
-            <strong>CHI 2026:</strong> Our paper on supporting human–AI negotiation received a Best Paper Award.
-            <a href="https://arxiv.org/abs/2603.22766">Paper Link</a>
-          </li>
-          <li class="mb-3">
-            <i class="ri-check-double-line"></i>
-            <strong>ACL 2026:</strong> Our paper investigates how personality affects sycophancy in role-playing language models.
-            <a href="https://arxiv.org/abs/2604.10733">Paper Link</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-  <!-- End About Section -->
-
-  <!-- ======= Partners Section ======= -->
-  <!-- <section id="clients" class="clients">
-      <div class="container">
-        <div class="section-title">
-          <h2>Partners</h2>
-          <p>Our sponsors.</p>
-        </div>
-        <div class="row">
-          <div class="col-sm-2 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-            <img src="/img/partners/scg.png" class="img-fluid" alt="SCG">
-          </div>
-
-          <div class="col-sm-2 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-            <img src="/img/partners/sriraj.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-sm-2 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-            <img src="/img/partners/ait.jpeg" class="img-fluid" alt="">
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-     -->
-  <!-- End Clients Section -->
-
-  <!-- ======= Portfolio Section ======= -->
-  {{/* <section id="portfolio" class="portfolio section-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>Selected prototypes and demonstrations. See <a href="/available-projects/">Available Projects</a> for current directions and <a href="/publications/">Publications</a> for research papers.</p>
-      </div>
-
-      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="300">
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="/img/aitgpt.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>University Chatbot</h4>
-              <p>Ask anything about the university and receive the answer right away.</p>
-              <div class="portfolio-links">
-                <a href="/img/language.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i
-                    class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+  <section id="hero" class="lab-hero">
+    <div class="container">
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <p class="lab-eyebrow">Research at AIT Brain Lab</p>
+          <h1>AI for<br>Better Humans</h1>
+          <p class="hero-description">We study how people and AI shape one another, and build technologies that strengthen human agency, capabilities, and well-being.</p>
+          <div class="hero-actions">
+            <a class="lab-button" href="{{ "projects/" | relURL }}">Explore our research <span aria-hidden="true">→</span></a>
+            <a class="lab-text-link" href="{{ "getting-started/" | relURL }}">For prospective students <span aria-hidden="true">→</span></a>
           </div>
         </div>
-
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="/img/formal.png" class="img-fluid" alt="Thai formal writing assistant">
-            <div class="portfolio-info">
-              <h4>Thai formal writing assistant</h4>
-              <p>Turn your informal text to formal text (ภาษาราชการ) and never again sweat your deadlines.</p>
-              <div class="portfolio-links">
-                <a href="/img/cv.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i
-                    class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="/img/mine.jpg" class="img-fluid" alt="CT Scans">
-              <div class="portfolio-info">
-                <h4>CT Scans</h4>
-                <p>Provide automatic segmentation of brain regions</p>
-                <div class="portfolio-links">
-                  <a href="/img/mine.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
+        <figure class="hero-research">
+          <img src="/img/demo2/speller.png" alt="A participant using an EEG-based brain–computer interface speller" width="640" height="360" fetchpriority="high">
+          <figcaption><span>From the lab</span> Brain–computer interfaces for communication</figcaption>
+        </figure>
       </div>
     </div>
+  </section>
 
+  <section class="research-overview">
+    <div class="container">
+      <div class="overview-layout">
+        <div>
+          <div class="lab-section-heading"><h2>Research directions</h2><a href="/projects/">All research <span aria-hidden="true">→</span></a></div>
+          <div class="research-grid">
+            <article><span class="research-number">01</span><h3><a href="/projects/#human-ai-interaction">Human–AI interaction</a></h3><p>Agency, cognition, simulated humans, and well-being.</p></article>
+            <article><span class="research-number">02</span><h3><a href="/projects/#language-models">Reliable and adaptive language models</a></h3><p>Structured knowledge, meaningful evaluation, and verifiable responses.</p></article>
+            <article><span class="research-number">03</span><h3><a href="/projects/#medical-vqa">Medical vision–language learning</a></h3><p>Grounding questions and answers in medical images.</p></article>
+            <article><span class="research-number">04</span><h3><a href="/projects/#physiological-computing">Physiological computing and sensing</a></h3><p>Brain-driven communication and biomedical measurement.</p></article>
+          </div>
+        </div>
+        <aside class="research-highlights" aria-labelledby="highlights-title">
+          <div class="lab-section-heading"><h2 id="highlights-title">Selected research</h2></div>
+          <article><p class="publication-label">CHI 2026 · Best Paper Award</p><h3><a href="https://arxiv.org/abs/2603.22766">Supporting multi-issue human–AI negotiation with Bayesian visualization</a></h3></article>
+          <article><p class="publication-label">ACL 2026</p><h3><a href="https://arxiv.org/abs/2604.10733">How agreeableness shapes sycophancy in role-playing language models</a></h3></article>
+          <article><p class="publication-label">ACM Transactions on Computing for Healthcare · 2026</p><h3><a href="https://dl.acm.org/doi/abs/10.1145/3820903">A clinically validated visual question answering dataset for spine X-rays</a></h3></article>
+          <a class="lab-text-link" href="/publications/">View publications <span aria-hidden="true">→</span></a>
+        </aside>
+      </div>
     </div>
-  </section><!-- End Portfolio Section --> */}}
+  </section>
+
+  <section class="student-entry">
+    <div class="container student-entry-layout"><div><p class="lab-eyebrow">Research and graduate education</p><h2>Start with one useful question.</h2><p>Bring your own idea or contribute to an ongoing project. We develop the question, the evidence, and your independence together.</p></div><div class="student-entry-links"><a class="lab-button" href="/available-projects/">Available projects <span aria-hidden="true">→</span></a><a class="lab-text-link" href="/getting-started/">Getting started <span aria-hidden="true">→</span></a></div></div>
+  </section>
 
   <section id="student-projects" class="about-video portfolio section-bg">
     <div class="container" data-aos="fade-up">
