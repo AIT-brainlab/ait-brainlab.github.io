@@ -1,0 +1,28 @@
+{{ define "main" }}
+<main id="main">
+  <section class="breadcrumbs"><div class="container"><h2>{{ .Title }}</h2></div></section>
+  <section class="portfolio-details"><div class="container lab-page">
+    <nav class="lab-page-links" aria-label="Research and student resources">
+      <a href="{{ "projects/" | relURL }}">Research Areas</a>
+      <a href="{{ "available-projects/" | relURL }}">Available Projects</a>
+      <a href="{{ "getting-started/" | relURL }}">Getting Started</a>
+      <a href="{{ "scorecards/" | relURL }}">Scorecards</a>
+      <a href="{{ "researchguide/" | relURL }}">Research Guide</a>
+    </nav>
+    {{ .Content }}
+  </div></section>
+</main>
+<style>
+.lab-page { max-width: 1080px; line-height: 1.7; }
+.lab-page-links { display: flex; flex-wrap: wrap; gap: .6rem 1.3rem; padding-bottom: 1.2rem; margin-bottom: 1.7rem; border-bottom: 1px solid #d7e2e7; }
+.lab-page h2 { font-size: 1.6rem; margin-top: 2rem; }
+.lab-page h3 { font-size: 1.2rem; margin-top: 1.4rem; }
+.lab-page li { margin-bottom: .5rem; }
+.lab-page blockquote { border-left: 4px solid #087f8c; padding: 1rem 1.3rem; background: #f0f7f8; }
+.lab-page blockquote p:last-child { margin-bottom: 0; }
+.lab-page table { width: 100%; margin: 1rem 0 1.5rem; border-collapse: collapse; }
+.lab-page th, .lab-page td { padding: .8rem; border: 1px solid #d7e2e7; vertical-align: top; }
+.lab-page th { background: #edf5f6; }
+@media(max-width: 600px) { .lab-page th, .lab-page td { padding: .45rem; font-size: .9rem; } }
+</style>
+{{ end }}
