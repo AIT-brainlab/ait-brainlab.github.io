@@ -1,38 +1,31 @@
-<!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center justify-content-between">
-
-    <h1 class="logo">
-      <a href="/">
-      <img style="padding-right: 20px; height: 60px" src="/img/ait.png">
-      <img style="padding-right: 20px; height: 60px" src="{{ .Site.Params.logo }}">
-      </a> 
-      AIT Brain Lab
-      {{/*  {{ .Site.Title }}  */}}
-    </h1>
-    <nav id="navbar" class="navbar -dark">
+    <div class="logo">
+      <a href="{{ "/" | relURL }}" aria-label="AIT Brain Lab home">
+        <img src="/img/ait.png" alt="Asian Institute of Technology">
+        <img src="{{ .Site.Params.logo }}" alt="">
+        <span>AIT Brain Lab</span>
+      </a>
+    </div>
+    <nav id="navbar" class="navbar" aria-label="Main navigation">
       <ul>
-        {{/* <li><a class="nav-link scrollto active" href="/#hero">Home</a></li>
-        <li><a href="/member"><span>Members</span></a>
-        <li><a href="/demo"><span>Demo</span></a>
-        <li><a class="nav-link scrollto" href="/#contact">Contact</a></li> */}}
         {{ $current := . }}
-        {{- range site.Menus.main }}
-          {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
-          {{ $active = or $active (eq .Name $current.Title) }}
-          {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
-          {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
-          <li><a 
-            class="{{ if $active }}active{{ end }}"
-            href="{{ .URL }} {{- with .Params.section }}{{ . }}{{- end }}">
-              {{ .Name }}
-          </a></li>
-        {{- end }}
+        {{ range site.Menus.main }}
+          {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+          <li{{ if .HasChildren }} class="dropdown"{{ end }}>
+            <a class="{{ if $active }}active{{ end }}" href="{{ .URL }}{{ with .Params.section }}{{ . }}{{ end }}"{{ if and $active (not .HasChildren) }} aria-current="page"{{ end }}>
+              <span>{{ .Name }}</span>{{ if .HasChildren }}<i class="bi bi-chevron-down" aria-hidden="true"></i>{{ end }}
+            </a>
+            {{ if .HasChildren }}<ul>
+              {{ range .Children }}
+                {{ $childActive := $current.IsMenuCurrent "main" . }}
+                <li><a href="{{ .URL }}"{{ if $childActive }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a></li>
+              {{ end }}
+            </ul>{{ end }}
+          </li>
+        {{ end }}
       </ul>
-
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-
+      <button class="bi bi-list mobile-nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"></button>
+    </nav>
   </div>
 </header>
-<!-- End Header -->

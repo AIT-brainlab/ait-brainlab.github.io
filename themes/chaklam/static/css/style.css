@@ -296,7 +296,7 @@ h6 {
   color: #fff;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .mobile-nav-toggle {
     display: block;
   }
@@ -1894,4 +1894,15 @@ section {
   background: #3194db;
   color: #fff;
   text-decoration: none;
+}
+/* Keep research and student resources reachable by keyboard and on small screens. */
+#header .logo a { display: flex; align-items: center; gap: 12px; }
+#header .logo img { height: 52px; width: auto; }
+#header .logo span { white-space: nowrap; }
+.navbar .dropdown:focus-within > ul { opacity: 1; top: 100%; visibility: visible; }
+button.mobile-nav-toggle { background: transparent; border: 0; padding: 4px; }
+@media (max-width: 575px) {
+  #header .logo { font-size: 20px; }
+  #header .logo a { gap: 8px; }
+  #header .logo img { height: 38px; }
 }

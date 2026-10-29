@@ -20,17 +20,40 @@ title = "AIT Brain Lab"
   pageRef = '/members'
   weight = 20
 [[menu.main]]
-  name = 'Research Areas'
+  identifier = 'research'
+  name = 'Research'
   pageRef = '/projects'
   weight = 30
 [[menu.main]]
+  name = 'Research Areas'
+  pageRef = '/projects'
+  parent = 'research'
+  weight = 1
+[[menu.main]]
   name = 'Available Projects'
   pageRef = '/available-projects'
-  weight = 35
+  parent = 'research'
+  weight = 2
 [[menu.main]]
+  identifier = 'students'
   name = 'For Students'
   pageRef = '/getting-started'
   weight = 40
+[[menu.main]]
+  name = 'Getting Started'
+  pageRef = '/getting-started'
+  parent = 'students'
+  weight = 1
+[[menu.main]]
+  name = 'Research Guide'
+  pageRef = '/researchguide'
+  parent = 'students'
+  weight = 2
+[[menu.main]]
+  name = 'Scorecards'
+  pageRef = '/scorecards'
+  parent = 'students'
+  weight = 3
 [[menu.main]]
   name = 'Publications'
   pageRef = '/publications'

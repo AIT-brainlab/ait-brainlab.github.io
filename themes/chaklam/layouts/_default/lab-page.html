@@ -9,12 +9,16 @@
       <a href="{{ "scorecards/" | relURL }}">Scorecards</a>
       <a href="{{ "researchguide/" | relURL }}">Research Guide</a>
     </nav>
+    {{ if .Params.toc }}<details class="page-toc"><summary>Find a section</summary>{{ .TableOfContents }}</details>{{ end }}
     {{ .Content }}
   </div></section>
 </main>
 <style>
 .lab-page { max-width: 1080px; line-height: 1.7; }
 .lab-page-links { display: flex; flex-wrap: wrap; gap: .6rem 1.3rem; padding-bottom: 1.2rem; margin-bottom: 1.7rem; border-bottom: 1px solid #d7e2e7; }
+.lab-page .page-toc { padding: .7rem 1rem; margin-bottom: 1.5rem; background: #f0f7f8; border-radius: 8px; }
+.lab-page summary { cursor: pointer; font-weight: 600; }
+.lab-page h2, .lab-page h3 { scroll-margin-top: 105px; }
 .lab-page h2 { font-size: 1.6rem; margin-top: 2rem; }
 .lab-page h3 { font-size: 1.2rem; margin-top: 1.4rem; }
 .lab-page li { margin-bottom: .5rem; }

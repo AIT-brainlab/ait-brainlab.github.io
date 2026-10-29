@@ -1,6 +1,7 @@
 ---
 title: "Research Scorecards"
 layout: "lab-page"
+toc: true
 draft: false
 ---
 These scorecards help students and supervisors identify what is ready, what needs support, and what to do next. They are discussion tools, not formal grades, rankings, or substitutes for programme assessment.
@@ -9,16 +10,16 @@ These scorecards help students and supervisors identify what is ready, what need
 
 Choose the scorecard that matches your current stage. Student and supervisor review the evidence together and agree on one or two priorities, the support needed, and the next review date.
 
-Use **Not yet discussed**, **Needs development**, **Ready for this stage**, or **Not applicable** for each criterion. Add a short evidence note and a next action. Do not add the ratings into a total: a serious gap in feasibility or validity cannot be offset by polished writing.
+Use **Not yet discussed**, **Needs development**, **Ready for this stage**, or **Not applicable** for each criterion. Add a short evidence note and a next action. Use only the relevant scorecard; there is no need to complete all four at every meeting. Do not add the ratings into a total: a serious gap in feasibility or validity cannot be offset by polished writing.
 
 ## Idea Readiness
 
 | Criterion | Evidence to discuss |
 | --- | --- |
 | Problem and significance | A specific problem, the people or tasks affected, and a clear reason it matters. |
-| Prior work and gap | The closest papers, what they establish, and what remains unanswered. |
+| Prior work and gap | A comparison of the closest verified papers, what they establish, and the important difference the project would test. |
 | Research question | A focused question that can be investigated within the available time. |
-| Contribution | A clear account of what the work could add; uncertainty about novelty is acknowledged. |
+| Contribution | What another researcher or practitioner could understand or do differently; a new model combination or domain alone is not enough. |
 | Evaluation | A plausible way to collect evidence, with suitable comparisons and measures. |
 | Feasibility | Access to necessary data, expertise, equipment, time, and any required permissions. |
 
@@ -29,8 +30,8 @@ Use **Not yet discussed**, **Needs development**, **Ready for this stage**, or *
 | Criterion | Evidence to discuss |
 | --- | --- |
 | Claim and method | The planned evidence can support the intended claim. |
-| Comparisons and measures | Appropriate baselines or comparison conditions; measures reflect the concepts being studied. |
-| Validity | Likely confounds, leakage, bias, and alternative explanations have been considered. |
+| Comparisons and measures | A credible simple baseline or suitable comparison, with comparable information and resources; measures reflect the intended concept. |
+| Validity | The strongest competing explanation, likely confounds or leakage, and evidence that could weaken the intended claim. |
 | Data and participants | Suitable sampling, data quality, access, and required ethics or data-use arrangements. |
 | Analysis and reproducibility | A documented procedure and analysis plan, with code, versions, and records where relevant. |
 | Pilot and scope | A small trial has exposed practical problems; the remaining work fits the timeline. |
@@ -62,6 +63,14 @@ Use **Not yet discussed**, **Needs development**, **Ready for this stage**, or *
 | Fit and completion | The work addresses degree requirements or the intended venue's scope and requirements. |
 
 **Decision:** Identify essential revisions and separate them from optional extensions. Submission readiness is a shared judgment; publication acceptance is not a score for student progress.
+
+## Example: What Counts as Ready?
+
+**Illustrative sales-agent project:** “The agent sounds more honest” does not yet show that customers make better decisions. A useful readiness discussion asks whether we have verified product facts, a fair comparison, and a measure of customer understanding that does not depend on the agent judging itself.
+
+If both agents are equally accurate and one receives clearer instructions, any improvement may come from those instructions. Agree on what stays the same before attributing a benefit to an adaptive mechanism. A scenario pilot can check the task and measures; it cannot establish real-world customer benefit.
+
+**Next action:** Test whether the two conditions differ in the intended way and whether customers can understand the task. Record what the pilot cannot establish. Use the [research decision note](/downloads/research-decision-note.md) to connect the claim, evidence, and next decision.
 
 ## Record the Next Step
 

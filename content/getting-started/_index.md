@@ -1,9 +1,12 @@
 ---
 title: "Getting Started"
 layout: "lab-page"
+toc: true
 draft: false
 ---
 You can propose your own idea or join an [available project](/available-projects/). You do not need to arrive with a polished or proven-novel topic. Bring a question you care about and be ready to develop it through reading, discussion, and a small first investigation.
+
+**New here?** Choose one project, prepare the one-page idea below, and bring it to a discussion. The Research Guide teaches methods; Scorecards help when a decision about readiness is needed. You do not need to complete every resource before meeting.
 
 ## 1. Choose a Starting Point
 
@@ -57,7 +60,9 @@ We agree together when to change the meeting frequency. If you become stuck, ask
 
 Read strong papers from leading venues such as **ACL, CHI, and NeurIPS**, choosing work relevant to your research question and contribution. Examine how the authors identify an important gap, formulate a strong question, design their study, and support their claims.
 
-Use this reading to identify and refine your own research questions. Explain what the closest work already answers, what remains unresolved, and why your question matters.
+**For your first reading discussion, bring a comparison of three close papers**, selected with the supervisor if needed. For each, record the question, main evidence, limitation, and what it changes about your idea. Trace their references backward and newer papers citing them forward. Search neighbouring terms and relevant specialist venues too; venue reputation alone does not establish that a claim is correct.
+
+Finish with one paragraph: “These studies establish …; they leave … unresolved; answering this matters because …; our first useful test would be ….” Three papers are a manageable starting exercise, not proof that a gap exists. Keep updating the comparison as you find closer work.
 
 Begin drafting the **first three chapters** early, following your programme's required structure. These will usually cover:
 
@@ -83,14 +88,32 @@ Present information together with your interpretation and a proposed action. You
 
 Our first approach is to **keep the same overall topic and adjust the project so it can continue**. We may narrow the question, change the method, use more suitable data, simplify the system, or revise the evaluation. Together, we choose a feasible next step that preserves a meaningful contribution and meets the degree requirements.
 
+Agree on a short review point and the evidence needed to choose the next step. If repeated attempts cannot answer the question, revisit the assumption or approach together. Staying with the topic should not mean repeating an uninformative experiment indefinitely.
+
 Raise bottlenecks early so we can make these adjustments before they threaten completion.
 
 ### Before Booking a Proposal or Defense
 
 **Send the report to the supervisor before booking your proposal presentation or final defense.** Allow time for final comments and any necessary revisions. Agree on the review timeline with the supervisor before making booking arrangements, and follow the programme's formal procedures and deadlines.
 
+### Keep a Small Research Record
+
+Use the [research decision note](/downloads/research-decision-note.md) as a plain-text starting template. It holds your closest-paper comparison, next test, claim–evidence table, and meeting update in one place. Use only the sections needed for the next decision; a short, current note is more useful than a large unfinished document.
+
+A reference manager such as [Zotero](https://www.zotero.org/support/quick_start_guide) can organise papers and citations. [Git](https://docs.github.com/en/get-started/start-your-journey/what-is-github) can track code and changes. Write in the programme's required format, using Word or [Overleaf](https://docs.overleaf.com/getting-started/your-first-project) as appropriate. Start with tools you can use reliably; a complicated setup is not a research contribution.
+
+For computational experiments, record data splits, model and code versions, settings, and failures. For human studies, keep the protocol, consent and ethics records, sampling decisions, and analysis notes. Keep protected data in approved storage.
+
 ### Shared Responsibilities
 
 Agree on communication, feedback expectations, responsibilities, access to resources, and milestones. Discuss individual contributions and authorship early and revisit them as the work develops.
 
 Use the relevant [Scorecard](/scorecards/) when it helps identify the next one or two priorities. Consult the [Research Guide](/researchguide/) for practical help with ideas, novelty, methodology, and writing.
+
+## Ideas Behind This Approach
+
+Chaklam's [How to choose a good topic](https://chaklam.com/articles/how-to-choose-a-good-topic/) argues for a narrow, feasible problem. [How to find related work efficiently](https://chaklam.com/articles/how-to-find-related-work-efficiently/) teaches citation tracing. [Essence of great research](https://chaklam.com/articles/essence-of-great-research/) connects novelty, significance, feasibility, validity, and clarity. Use these as questions to reason through, rather than numbers to maximise.
+
+Further perspectives: [Hamming](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html) asks whether a problem matters and has a plausible route forward; [Uri Alon](https://www.weizmann.ac.il/mcb/alon/sites/mcb.UriAlon/files/uploads/nurturing/howtochoosegoodproblem.pdf) connects problem choice to feasibility, interest, and student development; [Karpathy](https://karpathy.github.io/2016/09/07/phd/) emphasises a focused contribution and learning from research discussion. [DARPA's Heilmeier questions](https://www.darpa.mil/about/heilmeier-catechism) are useful for explaining a project's purpose, difference, risks, resources, and success checks in plain language.
+
+These are perspectives to adapt to your project. They do not guarantee acceptance or prescribe one method for every kind of research. Check the target venue's current guidance: for example, [CHI's contribution types](https://chi2026.acm.org/contributions-to-chi/) and [ACL Rolling Review's reviewer guidelines](https://aclrollingreview.org/reviewerguidelines).

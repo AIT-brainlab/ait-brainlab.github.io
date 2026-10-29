@@ -5,8 +5,6 @@
     <div class="container">
       <h2>{{ .Title }}</h2>
     </div>
-
-    </div>
   </section><!-- End Breadcrumbs -->
 
   <!-- ======= Members Section ======= -->
@@ -17,7 +15,7 @@
         {{ range .Pages }}
           <div class="col-lg-3">
             <div class="card flex-row" style="margin-top:10px;">
-              <img src="{{ .Params.image }}" height="80">
+              <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" height="80">
               <div class="card-body">
                 <div style="font-size: 14px;" class="card-text">{{ .Title }}</div>
                 <div style="font-size: 12px;" class="text-muted">{{ .Params.Project }}</div>
@@ -34,7 +32,7 @@
         {{ range .Pages }}
           <div class="col-lg-3">
             <div class="card flex-row">
-              <img src="{{ .Params.image }}" height="85">
+              <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" height="85">
               <div class="card-body">
                 <div style="font-size: 13px;" class="card-text">{{ .Title }}</div>
                 <div style="font-size: 11px;" class="text-muted">{{ .Params.Project }}</div>
@@ -50,7 +48,7 @@
         {{ range .Pages }}
           <div class="col-lg-3">
             <div class="card flex-row">
-              <img src="{{ .Params.image }}" height="85">
+              <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" height="85">
               <div class="card-body">
                 <div style="font-size: 13px;" class="card-text">{{ .Title }}</div>
                 <div style="font-size: 11px;" class="text-muted">{{ .Params.Project }}</div>
@@ -66,7 +64,7 @@
         {{ range .Pages }}
           <div class="col-lg-3">
             <div class="card flex-row" style="margin-top:10px;">
-              <img src="{{ .Params.image }}" height="85">
+              <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" height="85">
               <div class="card-body">
                 <div style="font-size: 13px;" class="card-text">{{ .Title }}</div>
                 <div style="font-size: 11px;" class="text-muted">{{ .Params.Project }}</div>
@@ -76,13 +74,13 @@
         {{ end }}
       {{ end }}
     </div>
-    <p style="margin-top: 20px;" class="lead">Master</p>
+    <p style="margin-top: 20px;" class="lead">Master’s</p>
     <div class="row">
       {{ with ($.Site.GetPage "master") }}
         {{ range .Pages }}
           <div class="col-lg-3">
             <div class="card flex-row" style="margin-top:10px;">
-              <img src="{{ .Params.image }}" height="85">
+              <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" height="85">
               <div class="card-body">
                 <div style="font-size: 13px;" class="card-text">{{ .Title }}</div>
                 <div style="font-size: 11px;" class="text-muted">{{ .Params.Project }}</div>
@@ -98,7 +96,7 @@
         {{ range .Pages }}
           <div class="col-lg-3">
             <div class="card flex-row" style="margin-top:10px;">
-              <img src="{{ .Params.image }}" height="85">
+              <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" height="85">
               <div class="card-body">
                 <div style="font-size: 13px;" class="card-text">{{ .Title }}</div>
                 <div style="font-size: 11px;" class="text-muted">{{ .Params.Project }}</div>
@@ -109,5 +107,6 @@
         {{ end }}
       {{ end }}
     </div>
+  </div>
 </main>
 {{ end }}
