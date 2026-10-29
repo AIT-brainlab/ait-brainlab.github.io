@@ -14,5 +14,4 @@ video_url: https://youtu.be/-qtflv7inAw
 image: /img/demo/aitgpt.png
 # demo_img: /img/demo/aitgpt-screenshot.png
 # iframe:
-# api: /js/demo/api.js
 ---

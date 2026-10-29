@@ -1,35 +1,41 @@
-# About this repository
+# AIT Brain Lab
 
-This repository is used for hosting the GitHub page of the AIT Brainlab website.
-This branch is version 2 of the site using `HUGO` https://gohugo.io
+Hugo source for [ait-brainlab.github.io](https://ait-brainlab.github.io/).
+The active theme is `themes/chaklam`. The deployment workflow uses Hugo Extended **0.141.0**.
 
-# For development
+## Run locally
 
-This project is built on `Docker`.
+With Hugo installed:
 
-All you need to do is cloned this repository and then build an image using `docker compose`
+```sh
+hugo server --disableFastRender --noHTTPCache
+```
 
-```shell
+Open http://localhost:1313/. `dev.sh` provides the container-friendly equivalent.
+
+Alternatively, use the existing Docker setup:
+
+```sh
 docker compose up --build -d
+docker compose exec dev hugo server --bind 0.0.0.0 --poll 700ms --disableFastRender --noHTTPCache
 ```
 
-To start a dev server, run
+## Where to edit
 
-```shell
-docker compose exec dev hugo server --bind 0.0.0.0 --poll 700ms --noHTTPCache
+- `content/`: student profiles and page content. Available Projects, Getting Started, and Scorecards use Markdown.
+- `themes/chaklam/layouts/`: home page, Research Areas, Research Guide presentation, members, publications, and shared navigation.
+- `themes/chaklam/static/css/ait-lab.css`: shared AIT styling.
+- `static/`: lab images, demos, and downloadable research notes.
+- `config.toml`: site configuration and menus.
+
+The five research/student pages share `layouts/partials/research-sidebar.html` inside the active theme.
+The Research Guide preserves exercise notes in the visitor's browser and supports exporting them.
+
+## Build and deployment
+
+```sh
+hugo --minify
 ```
 
-# To deploy
-
-With a new GitHub Action, the compile process is now done in GitHub.
-It no longer requires the user to manually build the site themselves.
-With this new action, all you have to do is commit a new change to the `main` branch.
-
-
-However, you can still run the compiling command for debugging purposes.
-
-```shell
-docker compose exec dev hugo
-```
-
-The compiled `/docs` folder is ignored anyway.
+Generated files go to `docs/`, which is ignored. Pushing to `main` runs the GitHub Pages workflow;
+building locally does not publish the site. Keep third-party license files with their assets.

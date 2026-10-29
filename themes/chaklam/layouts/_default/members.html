@@ -9,23 +9,7 @@
 
   <!-- ======= Members Section ======= -->
   <div style="margin-top: 20px; margin-bottom: 20px " class="container">
-    {{/*  <p class="lead">Advisory Boards</p>
-    <div class="row">
-      {{ with (.Site.GetPage "advisory") }}
-        {{ range .Pages }}
-          <div class="col-lg-3">
-            <div class="card flex-row" style="margin-top:10px;">
-              <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" height="80">
-              <div class="card-body">
-                <div style="font-size: 14px;" class="card-text">{{ .Title }}</div>
-                <div style="font-size: 12px;" class="text-muted">{{ .Params.Project }}</div>
-              </div>
-            </div>
-          </div>
-        {{ end }}
-      {{ end }}
-    </div>  */}}
-    
+
     <p style="margin-top: 20px;" class="lead">Faculty</p>
     <div class="row">
       {{ with ($.Site.GetPage "Faculty") }}
@@ -42,22 +26,7 @@
         {{ end }}
       {{ end }}
     </div>
-    {{/*  <p style="margin-top: 20px;" class="lead">Management</p>
-    <div class="row">
-      {{ with ($.Site.GetPage "Management") }}
-        {{ range .Pages }}
-          <div class="col-lg-3">
-            <div class="card flex-row">
-              <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" height="85">
-              <div class="card-body">
-                <div style="font-size: 13px;" class="card-text">{{ .Title }}</div>
-                <div style="font-size: 11px;" class="text-muted">{{ .Params.Project }}</div>
-              </div>
-            </div>
-          </div>
-        {{ end }}
-      {{ end }}
-    </div>  */}}
+
     <p style="margin-top: 20px;" class="lead">Ph.D.</p>
     <div class="row">
       {{ with (.Site.GetPage "phd") }}

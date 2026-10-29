@@ -17,7 +17,7 @@
           <img src="{{ .Params.image }}" class="card-img-top"/>
           <div class="card-body flex-fill">
             <span class="card-title">{{ .Title }}</span>
-            {{/*  <strong class="d-inline-block mb-2 text-primary">{{ .Params.field }}</strong>  */}}
+
             <div class="mb-1 text-muted" style="margin-top: 10px; font-size: 0.9em">
               {{- with .Params.paper }} <a href="{{ . }}" target="_blank"><span
                   class="badge bg-light text-dark rounded-pill">Paper</span></a>&nbsp;|&nbsp;{{- end }}
@@ -31,7 +31,7 @@
             <p>
               <div class="mb-1 text-muted" style="font-size: 0.7em">Authors: {{ .Params.authors }} ({{
                 .Params.publication_date }})</div>
-              {{/* <div class="mb-1 text-muted" style="font-size: 0.8em">Version: {{ .Params.version }} </div> */}}
+
               </p>
             <p class="card-text">
               {{ .Params.description }}

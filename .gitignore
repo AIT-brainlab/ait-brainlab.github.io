@@ -1,5 +1,11 @@
-AIT Brain Lab
-docs
-resources
+# Generated Hugo output and cache
+/docs/
+/resources/
+.hugo_build.lock
+
+# Local operating-system and editor files
+.DS_Store
 *.log
-!.keeps
+
+# Local scratch directory
+/AIT Brain Lab/

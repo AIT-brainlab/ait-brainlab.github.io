@@ -13,5 +13,4 @@ draft: false
 image: "/img/demo/hybrid.png"
 video_url: https://www.youtube.com/watch?v=fMaOqt8tdsg
 # iframe: "https://www.youtube.com/embed/fMaOqt8tdsg"
-# api: /js/demo/api.js
 ---
