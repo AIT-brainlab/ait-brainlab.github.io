@@ -19,3 +19,33 @@ body .research-guide .deck{border-radius:4px;box-shadow:none;border-color:var(--
 @media(max-width:767px){:root{--lab-header:105px}body{font-size:16px}.ait-institution{font-size:10px}.ait-institution .container{padding-top:7px;padding-bottom:7px}.ait-institution span{display:none}.lab-masthead{min-height:76px}#header .logo{font-size:24px}#header .logo img{height:42px}#header .logo .lab-wordmark-sub{font-size:10px}.breadcrumbs{padding:23px 0}.breadcrumbs h2{font-size:28px}section{padding:34px 0}#hero.lab-hero{padding:35px 0}.hero-layout,.overview-layout,.student-entry-layout{grid-template-columns:1fr;gap:30px}#hero.lab-hero h1{font-size:50px;line-height:1.04}.hero-description{font-size:17px}.hero-research img{height:220px}.overview-layout{padding-top:28px}.research-grid{gap:24px}.lab-section-heading h2{font-size:25px}.student-entry-links{justify-content:flex-start}.student-resource-layout{grid-template-columns:1fr;gap:24px}.student-resource-sidebar{position:static;border:0;border-bottom:1px solid var(--lab-line);padding:0 0 20px}.student-resource-sidebar .lab-eyebrow{display:none}body .lab-page .lab-page-links{flex-direction:row;flex-wrap:wrap;gap:10px 18px}.lab-footer{flex-direction:column;gap:15px}.lab-footer nav{justify-content:flex-start}.hero-actions{gap:18px}.research-highlights{margin-top:5px}body .research-guide .deck{scroll-margin-top:115px}}
 @media(max-width:390px){.research-grid{grid-template-columns:1fr}#hero.lab-hero h1{font-size:46px}#header .logo{font-size:22px}.hero-actions{align-items:flex-start;flex-direction:column}.hero-research img{height:185px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* One shared navigation rail for all five research and student pages. */
+.student-resource-layout{align-items:stretch}
+.student-resource-sidebar{position:relative;min-width:0}
+.student-resource-sidebar-inner{position:sticky;top:145px}
+.student-resource-sidebar .lab-page-links{display:flex;flex-direction:column;gap:6px;margin:0;padding:0;border:0;font-size:14px;line-height:1.5}
+.student-resource-sidebar .lab-page-links a{display:block;padding:7px 10px;border-left:2px solid transparent}
+.student-resource-sidebar .lab-page-links a.resource-current{border-left-color:var(--ait-green);background:var(--lab-soft);font-weight:700;color:var(--ait-green)}
+.research-resource-shell .student-resource-content{max-width:none}
+.resource-guide-shell{max-width:1460px}
+.resource-guide-shell .student-resource-layout{grid-template-columns:180px minmax(0,1fr);gap:30px}
+.resource-guide-shell .research-guide{min-width:0}
+.resource-guide-shell .deck-top{grid-template-columns:minmax(0,1fr) auto}
+.resource-guide-shell .deck-meta{grid-column:2;grid-row:1}
+.resource-guide-shell .top-actions{grid-column:1 / -1;justify-content:flex-end}
+@media(max-width:1199px){.resource-guide-shell .visual-layout,.resource-guide-shell .two-col{grid-template-columns:1fr}.resource-guide-shell .slide-visual img{max-height:280px}}
+@media(max-width:767px){
+  .student-resource-sidebar{position:static}
+  .student-resource-sidebar-inner{position:static}
+  .student-resource-sidebar .lab-page-links,body .lab-page .lab-page-links{flex-direction:row;gap:5px 9px}
+  .student-resource-sidebar .lab-page-links a{padding:5px 7px;border-left:0;border-bottom:2px solid transparent}
+  .student-resource-sidebar .lab-page-links a.resource-current{border-left:0;border-bottom-color:var(--ait-green)}
+  .resource-guide-shell .student-resource-layout{grid-template-columns:1fr;gap:24px}
+  .resource-guide-shell .deck-top{grid-template-columns:minmax(0,1fr)}
+  .resource-guide-shell .deck-meta{grid-column:auto;grid-row:auto}
+  .resource-guide-shell .top-actions{justify-content:flex-start}
+}
+/* Sticky navigation must use the page, not a clipped section, as its scroll container. */
+section.portfolio-details{overflow:visible}
+@media(max-width:767px){.student-resource-sidebar .lab-page-links{flex-wrap:wrap}}

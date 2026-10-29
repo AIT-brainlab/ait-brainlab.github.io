@@ -3,14 +3,7 @@
   <section class="breadcrumbs"><div class="container"><h2>{{ .Title }}</h2></div></section>
   <section class="portfolio-details"><div class="container lab-page">
     <div class="student-resource-layout">
-    <aside class="student-resource-sidebar"><p class="lab-eyebrow">Research &amp; study</p><nav class="lab-page-links" aria-label="Research and student resources">
-      <a href="{{ "projects/" | relURL }}">Research Areas</a>
-      <a href="{{ "available-projects/" | relURL }}">Available Projects</a>
-      <a href="{{ "getting-started/" | relURL }}">Getting Started</a>
-      <a href="{{ "scorecards/" | relURL }}">Scorecards</a>
-      <a href="{{ "researchguide/" | relURL }}">Research Guide</a>
-    </nav>
-    </aside>
+    {{ partial "research-sidebar.html" . }}
     <article class="student-resource-content">
     {{ if .Params.toc }}<details class="page-toc"><summary>Find a section</summary>{{ .TableOfContents }}</details>{{ end }}
     {{ .Content }}

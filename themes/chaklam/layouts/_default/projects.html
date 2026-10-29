@@ -8,12 +8,10 @@
   </section>
 
   <section id="portfolio-details" class="portfolio-details">
-    <div class="container lab-research">
-      <p>
-        Explore <a href="{{ "available-projects/" | relURL }}">Available Projects</a>,
-        <a href="{{ "getting-started/" | relURL }}">Getting Started</a>, and
-        <a href="{{ "scorecards/" | relURL }}">Research Scorecards</a>.
-      </p>
+    <div class="container research-resource-shell">
+      <div class="student-resource-layout">
+        {{ partial "research-sidebar.html" . }}
+        <article class="student-resource-content lab-research">
       <h3>Culture &amp; Research Philosophy</h3>
       <p>
         AIT Brain Lab studies humans, artificial intelligence, and technologies that improve human lives.
@@ -176,6 +174,8 @@
         See our <a href="{{ "researchguide/" | relURL }}">Research Guide</a> for practical help with developing questions,
         evaluating novelty, planning studies, and communicating results.
       </p>
+        </article>
+      </div>
     </div>
   </section>
 </main>

@@ -1,0 +1,12 @@
+<aside class="student-resource-sidebar">
+  <div class="student-resource-sidebar-inner">
+    <p class="lab-eyebrow">Research &amp; Study</p>
+    <nav class="lab-page-links" aria-label="Research and student resources">
+      {{ $current := . }}
+      {{ range slice (dict "path" "projects/" "label" "Research Areas") (dict "path" "available-projects/" "label" "Available Projects") (dict "path" "getting-started/" "label" "Getting Started") (dict "path" "scorecards/" "label" "Scorecards") (dict "path" "researchguide/" "label" "Research Guide") }}
+        {{ $url := .path | relURL }}
+        <a href="{{ $url }}"{{ if eq $current.RelPermalink $url }} class="resource-current" aria-current="page"{{ end }}>{{ .label }}</a>
+      {{ end }}
+    </nav>
+  </div>
+</aside>

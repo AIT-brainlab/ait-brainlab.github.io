@@ -8,7 +8,10 @@
   </section>
 
   <section class="portfolio-details" id="portfolio-details">
-    <div class="container research-guide">
+    <div class="container research-resource-shell resource-guide-shell">
+      <div class="student-resource-layout">
+        {{ partial "research-sidebar.html" . }}
+        <div class="student-resource-content research-guide">
       <style>
         .research-guide {
           --navy: #294528;
@@ -1080,10 +1083,6 @@
             </div>
           </section>
 
-          <section class="slide" data-session="Start"><div class="slide-inner"><h2>Choose a question worth answering</h2><p class="lead">A useful research question connects importance, an unresolved issue, and a feasible way to learn.</p><table class="mini-table"><thead><tr><th>Ask</th><th>Bring to the discussion</th></tr></thead><tbody><tr><td>Who needs the answer?</td><td>A person, decision, or scientific understanding that could change.</td></tr><tr><td>What is still unknown?</td><td>The closest papers and a precise difference that matters.</td></tr><tr><td>Can we learn it here?</td><td>Available data, expertise, time, and a small first investigation.</td></tr></tbody></table><p class="paper-example">Adapted from <a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.html" target="_blank" rel="noopener">Hamming</a> on important, tractable problems and <a href="https://www.weizmann.ac.il/mcb/alon/sites/mcb.UriAlon/files/uploads/nurturing/howtochoosegoodproblem.pdf" target="_blank" rel="noopener">Uri Alon</a> on interest and feasibility.</p></div></section>
-<section class="slide" data-session="Start"><div class="slide-inner"><h2>Example: Turn a project into a question</h2><p class="lead">Illustrative planning example — novelty and outcomes have not been established.</p><ol class="steps"><li><strong>Direction:</strong> Build an honest, adaptive sales agent.</li><li><strong>Question:</strong> Does explaining product limitations when they become relevant improve customer understanding?</li><li><strong>Competing explanation:</strong> Any improvement may come from more information or a longer conversation.</li><li><strong>Fair comparison:</strong> Compare adaptive and fixed explanations using the same verified facts and a comparable interaction budget.</li><li><strong>Useful outcome:</strong> Check understanding of exclusions and suitability against independently verified product facts; satisfaction alone is insufficient.</li></ol><p class="takeaway">The contribution would explain when adaptation helps, where it fails, and what evidence supports that conclusion.</p></div></section>
-<section class="slide" data-session="Start"><div class="slide-inner"><h2>Exercise</h2><p class="lead">The adaptive agent gives more correct answers. It also receives extra product information. Can we credit adaptation?</p><table class="exercise-table"><tbody><tr><th>Alternative explanation</th><td contenteditable="true" data-placeholder="What else could explain the improvement?"></td></tr><tr><th>One change to the test</th><td contenteditable="true" data-placeholder="What should both conditions receive?"></td></tr><tr><th>Result that weakens the claim</th><td contenteditable="true" data-placeholder="What if a fair comparison removes the advantage?"></td></tr></tbody></table><details><summary>Compare your reasoning</summary><p>Extra information could explain the advantage. Give both agents the same verified facts and comparable opportunities to use them. If the advantage disappears, this test does not support a benefit from adaptation itself. It does not prove that adaptation can never help.</p></details></div></section>
-<section class="slide" data-session="Start"><div class="slide-inner"><h2>Keep three small research records</h2><table class="mini-table"><thead><tr><th>Record</th><th>What it helps you decide</th></tr></thead><tbody><tr><td>Closest-work comparison</td><td>What is known, what is uncertain, and why your difference matters.</td></tr><tr><td>Next-test plan</td><td>Your explanation, the strongest alternative, a fair comparison, and a result that would change your mind.</td></tr><tr><td>Claim–evidence table</td><td>What you can claim now, the supporting evidence, and the next missing piece.</td></tr></tbody></table><p>Use the <a href="/downloads/research-decision-note.md">research decision note</a>. A shared document is enough. Choose tools to resolve a research uncertainty, rather than adding tools for their own sake.</p><p class="paper-example">For exploratory or design work, record the next observation or prototype comparison and what you hope to learn. A causal experiment is not required for every contribution.</p></div></section>
 
           <section class="slide" data-session="Start">
             <div class="slide-inner">
@@ -1734,7 +1733,7 @@
           const journeySessions = new Set(stageNames.slice(0, 5)), appendixSessions = new Set(stageNames.slice(5));
           const journeySlides = slides.filter(slide => journeySessions.has(slide.dataset.session));
           [...jump.options].forEach(option => { const target = slides.findIndex(slide => slide.dataset.session === option.textContent); if (target >= 0) option.value = String(target) });
-          const storageKey = 'ait-research-guide-slide-v3'; let current = 0;
+          const storageKey = 'ait-research-guide-slide-v4'; let current = 0;
           try { const saved = parseInt(localStorage.getItem(storageKey), 10); if (Number.isFinite(saved) && saved >= 0 && saved < slides.length) { current = saved; if (resume) resume.textContent = 'Resumed where you left off'; } } catch (e) { }
           function show(i, save = true) {
             current = Math.max(0, Math.min(slides.length - 1, i));
@@ -1768,7 +1767,8 @@
             if (save) { try { localStorage.setItem(storageKey, String(current)) } catch (e) { } }
             deck.scrollIntoView({ block: 'start' });
           }
-          const exerciseKey = 'ait-research-guide-exercises-v1';
+          const exerciseKey = 'ait-research-guide-exercises-v2';
+          try { if (!localStorage.getItem(exerciseKey)) { const oldNotes = JSON.parse(localStorage.getItem('ait-research-guide-exercises-v1') || '[]'); if (oldNotes.length) localStorage.setItem(exerciseKey, JSON.stringify(oldNotes.slice(3))); } } catch (e) { }
           const fields = [...deck.querySelectorAll('[contenteditable="true"]')];
           try { const values = JSON.parse(localStorage.getItem(exerciseKey) || '[]'); fields.forEach((field, i) => { if (typeof values[i] === 'string') field.textContent = values[i] }); } catch (e) { }
           fields.forEach(field => field.addEventListener('input', () => { try { localStorage.setItem(exerciseKey, JSON.stringify(fields.map(f => f.textContent))) } catch (e) { } }));
@@ -1788,6 +1788,8 @@
           full.addEventListener('click', toggleFull); document.addEventListener('fullscreenchange', syncFull); document.addEventListener('keydown', e => { if (e.target.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName) || e.altKey || e.ctrlKey || e.metaKey) return; if (e.key.toLowerCase() === 'f' && !e.repeat) { e.preventDefault(); toggleFull() } }); show(current, false);
         })();
       </script>
+        </div>
+      </div>
     </div>
   </section>
 </main>
