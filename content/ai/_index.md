@@ -12,7 +12,7 @@ Follow the five stages in our [Research Guide](/researchguide/). Copy the prompt
 
 ## Set Up a Research Team
 
-**Start with one assistant: ChatGPT or Claude.** All five prompts work with either. A second assistant, coordinator, or coding tool is optional; add one for a specific need.
+**Start with one assistant: ChatGPT or Claude.** The setup, five research stages, and save prompt work with either. A second assistant, coordinator, or coding tool is optional; add one for a specific need.
 
 | Role | Suggested tool | Responsibility |
 | --- | --- | --- |
@@ -23,18 +23,55 @@ Follow the five stages in our [Research Guide](/researchguide/). Copy the prompt
 
 Use supported integrations and authorised accounts, or pass outputs yourself. Features and access change.
 
+### Set Up the Project Once
+
+Use this before your first investigation. If the topic or venue is undecided, start with a working title and a simple paper outline; do not delay reading for a perfect setup. Thesis templates are in [Resources](/resources/).
+
+```text
+Set up a research workspace for: [working topic, degree, and project location].
+Paper format or target venue, if known: [specify or write undecided].
+
+1. Inspect any existing project first. Reuse its files and preserve existing work.
+2. Initialise Git locally. Create or connect a private GitHub repository using
+   my authorised account and chosen destination when available. If you cannot,
+   prepare the files locally and give me the exact remaining steps.
+3. Create only the folders we need:
+   paper/       manuscript, references, figures, and template
+   src/         implementation
+   experiments/ configurations, protocols, and run logs
+   results/     shareable outputs and analysis
+   notes/       research-note.md
+   Add a README with setup/run instructions and an appropriate .gitignore.
+   Record dependencies when known; exclude secrets, protected data, and caches.
+4. Obtain the current official paper template for the specified venue, or the
+   programme-required thesis template. Record its source and version/date.
+   If undecided or unavailable, create a simple manuscript outline and mark
+   the template choice pending. Do not invent requirements or claim a download.
+5. Create notes/research-note.md: a short handoff containing the current question,
+   closest verified papers, evidence, decisions and reasons, unresolved issues,
+   and next step. Link the paper, code, and logs rather than duplicating them.
+6. Start the paper with background, problem, related work, and planned methods.
+   Label unknowns and findings pending. Commit the initial setup when possible.
+
+Report what was created, saved, committed, or pushed, and what remains for me.
+Do not claim access, execution, or uploads that did not happen.
+```
+
 ### Keep One Shared Research Note
 
 **Use the paper as the project's source of truth.** Keep its research question, methods, evidence, and current claims up to date as you read, code, test, and revise. Ground claims in verified sources and actual results; clearly label plans and untested ideas.
 
 **Document every research action in GitHub:** what you changed or ran, why, the result, and the next decision. Use commits for code and paper changes, and issues or experiment logs for investigations, failed attempts, and decisions. After each work session, update the paper and link the relevant record. Use a private repository and keep protected data and secrets in approved storage.
 
-Keep a short note beside the paper and code: **question → closest verified work → evidence → unresolved issues → next decision**. It helps you resume work; the paper remains the main account. Use the [research decision note](/downloads/research-decision-note.md) if helpful.
+The **shared research note is `notes/research-note.md`**, a Markdown text file in your project repository—not a page on this website. It is a short handoff with the current question, closest verified papers, evidence, decisions and reasons, unresolved issues, and next step. “Shared” means you, your supervisor, and any assistant work from the same current record. Use this [starting template](/downloads/research-decision-note.md) if helpful.
+
+**The paper explains the research; GitHub records the work; the note helps you resume.**
 
 **Save progress:** use this short prompt at the end of a work session or before moving to a new conversation.
 
 ```text
-Update the paper and GitHub record from this session. Summarise:
+Update the paper, GitHub record, and notes/research-note.md from this session.
+The note is a short handoff, not a second manuscript. Summarise:
 - Current research question and closest verified papers, with links.
 - Actions taken, results, and supporting files or sources.
 - Decisions and reasons, unresolved issues, and the proposed next step.
@@ -44,17 +81,14 @@ Report what you actually saved and what I still need to do.
 Finish with a short handoff I can paste into my next conversation.
 ```
 
-### Discuss, Then Decide
-
-Ask your assistant to develop a proposal, then critically review it against verified evidence. A separate conversation can help, but a model reviewing itself is a self-check, not independent validation. If another assistant is available, give it the evidence and proposal for an independent critique.
-
-Each criticism should name the claim, supporting or missing evidence, consequence, and repair. Resolve disagreements through sources or experiments. **Model agreement is not proof of novelty. You and your supervisor decide.**
-
 ## 1. Idea Generation
 
 **Start with a domain, interest, or real problem.** Find promising questions by comparing the closest work.
 
 ```text
+Use notes/research-note.md (or the note I paste): the current question,
+verified papers, evidence, decisions, unresolved issues, and next step.
+
 My domain, interest, or observed problem is: [describe it].
 My degree, preparation, available resources, and timeline are: [describe them].
 
@@ -87,6 +121,9 @@ research note. Do not claim that an idea is novel before validation.
 **Turn the direction into a testable plan.** Use thinking tools to expose weaknesses. A pilot helps diagnose feasibility; it does not establish the contribution.
 
 ```text
+Use notes/research-note.md (or the note I paste): the current question,
+verified papers, evidence, decisions, unresolved issues, and next step.
+
 Our chosen direction is: [paste the idea or point to the research note].
 Use the verified papers, constraints, and unresolved issues already recorded.
 
@@ -114,6 +151,9 @@ Update the shared research note with the reasoning and any pilot evidence.
 **Check the distinction against the closest work.** Aim for a defensible judgment with clear uncertainty, not certainty that an idea is novel.
 
 ```text
+Use notes/research-note.md (or the note I paste): the current question,
+verified papers, evidence, decisions, unresolved issues, and next step.
+
 Validate this idea: [paste the refined plan or point to the research note].
 Target research community or venue: [specify, if known].
 
@@ -145,6 +185,9 @@ Update the shared note and the proposed gap statement in the paper.
 **Design evidence that can answer the question.** Learn from closely related studies and test competing explanations.
 
 ```text
+Use notes/research-note.md (or the note I paste): the current question,
+verified papers, evidence, decisions, unresolved issues, and next step.
+
 Develop and carry out a rigorous study for: [plan or research-note location].
 Use the validated gap, verified literature, intended claims, and constraints.
 
@@ -162,10 +205,8 @@ Use the validated gap, verified literature, intended claims, and constraints.
 4. Map each claim to a comparison, measure, analysis, competing explanation,
    and limitation. Choose ablations, robustness tests, error analysis, or human
    evaluation for a reason. Separate essential from optional work.
-5. Set up Git with paper/, src/, experiments/, results/, README, environment/
-   configuration, and the research note. Create a private GitHub repository
-   when authorised and available; otherwise prepare locally and explain setup.
-   Keep secrets and protected data outside the repository.
+5. Reuse the project repository and paper template from setup. Check the README,
+   dependencies, configurations, and run logs are sufficient to reproduce the work.
 6. Work iteratively: write the introduction, related work, and planned methodology;
    implement and pilot; inspect evidence; revise the paper and the next experiment.
    Keep planned, completed, and exploratory work distinct. Never fill results
@@ -190,6 +231,9 @@ Optimise for evidence that answers the question and tests the strongest alternat
 **Build the five-part story:** background → problem → methodology → findings → contribution/significance. Let writing expose gaps that need further testing.
 
 ```text
+Use notes/research-note.md (or the note I paste): the current question,
+verified papers, evidence, decisions, unresolved issues, and next step.
+
 Help communicate this research: [paper/research-note location and target venue].
 Use only verified literature, actual methods, and available results.
 
@@ -215,11 +259,6 @@ Use only verified literature, actual methods, and available results.
    an evidence gap with persuasive language.
 
 Deliver the story, revisions, evidence gaps, Figure 1, and my next decision.
-Update the manuscript and note. Never promise publication acceptance.
+Update the manuscript and note. Check authorship, AI disclosure, and the venue’s
+current AI policy before submission. Never promise publication acceptance.
 ```
-
-## Keep the Work Verifiable
-
-Keep the verified sources, code and data provenance, raw results, changes of direction, and important AI corrections. Use approved storage and access for protected material; do not place API keys, identifiable participant data, or confidential reviews in prompts or public repositories without authorisation. Check authorship, disclosure, and the target venue's current AI policy before submission.
-
-The [Research Guide](/researchguide/) teaches the reasoning behind these stages. [Resources](/resources/) provides templates and examples, and [Journals](/journals/) supports venue selection.

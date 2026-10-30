@@ -33,6 +33,8 @@ Include a working title, your name, degree, and proposed project area. Keep the 
 
 For example, “build an AI sales agent” is a starting direction. A more focused question could be: “Does explicitly stating product limitations improve customers’ understanding and decision quality compared with an agent that only describes benefits?” This is an illustrative question; its novelty and feasibility still need checking.
 
+**Example:** [Download a one-page sales-agent idea (PDF)](/downloads/sales-agent-one-page-idea.pdf). It illustrates the outline above; the study is proposed and its novelty still needs checking.
+
 ## 3. Discuss and Refine Together
 
 Bring your note and the closest papers to the first project discussion. We will consider the importance of the problem, overlap with prior work, fit with the lab, available resources, and an appropriate scope.

@@ -4,7 +4,11 @@
     const source = pre.querySelector('code') || pre;
     // Emphasise key instructions without adding Markdown to copied text.
     const priorities = [
-      'Update the paper and GitHub record', 'Separate evidence from assumptions',
+      'Inspect any existing project first', 'private GitHub repository',
+      'Create only the folders we need', 'current official paper template',
+      'Create notes/research-note.md', 'Label unknowns and findings pending',
+      'Update the paper, GitHub record, and notes/research-note.md',
+      'Separate evidence from assumptions',
       'Report what you actually saved', 'short handoff',
       'Leave the judgment of significance and the final choice to me',
       'verified peer-reviewed work', 'Read the closest papers beyond their abstracts',
