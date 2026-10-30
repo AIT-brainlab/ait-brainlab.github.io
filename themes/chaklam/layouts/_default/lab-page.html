@@ -11,6 +11,7 @@
     </div>
   </div></section>
 </main>
+{{ if .Params.copyPrompts }}<script src="{{ "js/prompt-copy.js" | relURL }}" defer></script>{{ end }}
 <style>
 .lab-page { max-width: 1080px; line-height: 1.7; }
 .lab-page-links { display: flex; flex-wrap: wrap; gap: .6rem 1.3rem; padding-bottom: 1.2rem; margin-bottom: 1.7rem; border-bottom: 1px solid #d7e2e7; }

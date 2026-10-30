@@ -114,7 +114,7 @@
 
         .research-guide .journey-progress {
           display: grid;
-          grid-template-columns: repeat(8, minmax(0, 1fr));
+          grid-template-columns: repeat(5, minmax(0, 1fr));
           gap: 1px;
           background: #c8d8df;
           border-bottom: 1px solid var(--line)
@@ -1038,9 +1038,14 @@
           }
 
         }
+        .research-guide .exercise-feedback { margin-top: 1.2rem; }
+        .research-guide .revision-example { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: .8rem 0; margin-bottom: 1.1rem; }
+        .research-guide details p { margin: .65rem 0; }
+        .research-guide details { max-width: 100%; }
+        @media(max-width:820px) { .research-guide .revision-example { grid-template-columns: 1fr; gap: .5rem; } }
       </style>
 
-      <p>New to the lab? Start with <a href="/getting-started/">Getting Started</a>. Exercise answers are stored in this browser when storage is available; use <strong>Save notes</strong> to keep a copy.</p><div class="deck" id="research-deck" tabindex="0" aria-label="Research guide presentation">
+      <p>New to the lab? Start with <a href="/getting-started/">Getting Started</a>. Supporting materials are now in <a href="/resources/">Resources</a>, <a href="/journals/">Journals</a>, and <a href="/ai/">AI</a>. Exercise answers are stored in this browser when storage is available; use <strong>Save notes</strong> to keep a copy.</p><div class="deck" id="research-deck" tabindex="0" aria-label="Research guide presentation">
         <header class="deck-top">
           <div>
             <div class="deck-title">Research Guide · AIT Brain Lab</div>
@@ -1055,9 +1060,6 @@
                 <option>Idea validation</option>
                 <option>Idea testing</option>
                 <option>Idea storytelling</option>
-                <option>AI</option>
-                <option>Journals</option>
-                <option>Resources</option>
               </select></label>
             <button id="export-exercises" type="button">Save notes</button><button id="fullscreen-slide" type="button" title="Fullscreen (F)">⛶ Fullscreen</button>
           </div>
@@ -1068,17 +1070,14 @@
           <div class="journey-stage" data-stage="Idea validation">Validation</div>
           <div class="journey-stage" data-stage="Idea testing">Testing</div>
           <div class="journey-stage" data-stage="Idea storytelling">Storytelling</div>
-          <div class="journey-stage appendix appendix-start" data-stage="AI">AI</div>
-          <div class="journey-stage appendix" data-stage="Journals">Journals</div>
-          <div class="journey-stage appendix" data-stage="Resources">Resources</div>
-          <div class="journey-status" aria-live="polite"><span id="journey-status-text">Five stages ahead · Appendix available</span><strong class="journey-percent" id="journey-percent">0% complete</strong></div>
+          <div class="journey-status" aria-live="polite"><span id="journey-status-text">Five stages of the research journey</span><strong class="journey-percent" id="journey-percent">0% complete</strong></div>
         </div>
 
         <div class="slides">
           <section class="slide" data-session="Start">
             <div class="slide-inner title-slide intro-slide">
               <h2>How to Develop a Research Contribution</h2>
-              <p class="lead">A self-paced tutorial and exercises covering idea generation, refinement, novelty validation, methodology testing, storytelling, and AI-assisted research</p>
+              <p class="lead">Develop one question through generation, refinement, validation, testing, and storytelling. Use the exercises to produce work for discussion and revision.</p>
               <p class="kbd">Use ← →, the buttons, or the session menu. Press F for fullscreen.</p>
             </div>
           </section>
@@ -1203,8 +1202,7 @@
                   <tr><th>How you could study it</th><td contenteditable="true" data-placeholder="What could you observe, compare, or build?"></td></tr>
                 </tbody>
               </table>
-            </div>
-          </section>
+            <details class="exercise-feedback"><summary>Check your answer</summary><p>Name a concrete person or situation and a repeated difficulty. Explain the consequence. “People need a better app” does not yet identify what is difficult or why it matters.</p><p><strong>Bring to discussion:</strong> your answer, one uncertainty, and a proposed next step.</p></details></div></section>
 
           <section class="slide" data-session="Idea generation">
             <div class="slide-inner visual-layout"><div class="visual-copy">
@@ -1268,8 +1266,7 @@
                   <tr><th>How you could study it</th><td contenteditable="true" data-placeholder="What could you observe, compare, or measure?"></td></tr>
                 </tbody>
               </table>
-            </div>
-          </section>
+            <details class="exercise-feedback"><summary>Check your answer</summary><p>State the expectation and observation separately. Consider a measurement or implementation error before treating a surprise as a new phenomenon. Propose an observation that could distinguish the explanations.</p><p><strong>Bring to discussion:</strong> your answer, one uncertainty, and a proposed next step.</p></details></div></section>
 
           <section class="slide" data-session="Idea generation">
             <div class="slide-inner visual-layout"><div class="visual-copy">
@@ -1306,8 +1303,7 @@
                   <tr><th>How you could study it</th><td contenteditable="true" data-placeholder="What could you compare or measure?"></td></tr>
                 </tbody>
               </table>
-            </div>
-          </section>
+            <details class="exercise-feedback"><summary>Check your answer</summary><p>Explain what the theory predicts or helps you observe. Naming a theory is insufficient. Your question and proposed evidence should change because of the theory.</p><p><strong>Bring to discussion:</strong> your answer, one uncertainty, and a proposed next step.</p></details></div></section>
 
           <section class="slide" data-session="Idea generation">
             <div class="slide-inner visual-layout"><div class="visual-copy">
@@ -1399,45 +1395,9 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
-          </section>
+            <details class="exercise-feedback"><summary>Check your answer</summary><p>Identify what the paper actually establishes, then a consequential unresolved question. Check newer citing papers before claiming that the question remains open.</p><p><strong>Bring to discussion:</strong> your answer, one uncertainty, and a proposed next step.</p></details></div></section>
 
-          <section class="slide" data-session="Idea generation">
-            <div class="slide-inner">
-              <h2>Summary: Idea generation</h2>
-
-              <table class="mini-table">
-                <thead>
-                  <tr>
-                    <th>Technique</th>
-                    <th>Where you start</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td><strong>Notice a problem</strong></td>
-                    <td>A difficulty that people repeatedly face</td>
-                  </tr>
-
-                  <tr>
-                    <td><strong>Notice a surprise</strong></td>
-                    <td>Something that happened differently from what you expected</td>
-                  </tr>
-
-                  <tr>
-                    <td><strong>Borrow a theory</strong></td>
-                    <td>An idea from another field, practice, or theory</td>
-                  </tr>
-
-                  <tr>
-                    <td><strong>Extend a recent paper</strong></td>
-                    <td>An important question that a paper did not answer</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
+          <section class="slide" data-session="Idea generation"><div class="slide-inner"><h2>Summary: Idea generation</h2><table class="mini-table"><thead><tr><th>Starting point</th><th>Question to explore</th></tr></thead><tbody><tr><td>A repeated problem</td><td>Who faces it, and what remains difficult?</td></tr><tr><td>A surprise</td><td>Which expectation failed, and why?</td></tr><tr><td>A useful theory</td><td>What does it explain or help us observe?</td></tr><tr><td>A recent paper</td><td>Which important question remains unanswered?</td></tr></tbody></table><p class="takeaway">Choose one idea. Explain why the answer matters, how you could begin, and the biggest uncertainty.</p><details><summary>How to choose between two promising ideas</summary><p>An ambitious chatbot may be interesting but require data or expertise you cannot access. A narrower question about when users misunderstand its advice may be feasible and reveal something useful. Compare importance, your curiosity, available support, and the first investigation. Difficulty alone is not a reason to choose a project.</p></details></div></section>
 
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner section-slide" style="--section-image:url('/img/researchguide/systems-thinking.jpg')"><div class="session-number">02</div><h2>Idea refinement</h2><p class="lead">How can we turn a broad idea into a strong research question?</p></div>
@@ -1469,8 +1429,7 @@
             <div class="slide-inner">
               <h2>Exercise</h2>
               <table class="exercise-table"><tbody><tr><th>Starting question</th><td contenteditable="true" data-placeholder="Write your current research question."></td></tr><tr><th>Hidden assumption</th><td contenteditable="true" data-placeholder="What must be true for your idea to work?"></td></tr><tr><th>Reason it may fail</th><td contenteditable="true" data-placeholder="Why might this assumption be wrong?"></td></tr><tr><th>Better question</th><td contenteditable="true" data-placeholder="Rewrite the question without assuming success."></td></tr><tr><th>Useful comparison</th><td contenteditable="true" data-placeholder="What conditions would reveal the limit?"></td></tr></tbody></table>
-            </div>
-          </section>
+            <details class="exercise-feedback"><summary>Check your answer</summary><p>Name an assumption your original question depends on. Explain when it might fail and how the revised question could reveal that failure. Adding an extra variable without a reason is insufficient.</p><p><strong>Bring to discussion:</strong> your answer, one uncertainty, and a proposed next step.</p></details></div></section>
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner visual-layout"><div class="visual-copy">
               <h2>2. Consider another explanation</h2>
@@ -1485,8 +1444,7 @@
             <div class="slide-inner">
               <h2>Exercise</h2>
               <table class="exercise-table"><tbody><tr><th>Expected result</th><td contenteditable="true" data-placeholder="What result do you expect?"></td></tr><tr><th>Your explanation</th><td contenteditable="true" data-placeholder="Why do you think it will happen?"></td></tr><tr><th>Alternative explanation</th><td contenteditable="true" data-placeholder="What else could cause the same result?"></td></tr><tr><th>Better question</th><td contenteditable="true" data-placeholder="Rewrite the question to compare both explanations."></td></tr><tr><th>Evidence needed</th><td contenteditable="true" data-placeholder="What result would separate them?"></td></tr></tbody></table>
-            </div>
-          </section>
+            <details class="exercise-feedback"><summary>Check your answer</summary><p>Your alternative should plausibly produce the same observation. Propose a comparison that separates the explanations; repeating the original comparison with more participants may not do so.</p><p><strong>Bring to discussion:</strong> your answer, one uncertainty, and a proposed next step.</p></details></div></section>
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner visual-layout"><div class="visual-copy">
               <h2>3. Use first principles</h2>
@@ -1501,8 +1459,7 @@
             <div class="slide-inner">
               <h2>Exercise</h2>
               <table class="exercise-table"><tbody><tr><th>Starting question</th><td contenteditable="true" data-placeholder="Write the question that mentions your chosen method."></td></tr><tr><th>Basic human goal</th><td contenteditable="true" data-placeholder="What is the person actually trying to achieve?"></td></tr><tr><th>Smallest parts</th><td contenteditable="true" data-placeholder="What information, decisions, and difficulties make up the problem?"></td></tr><tr><th>Necessary role of the method</th><td contenteditable="true" data-placeholder="Which part truly needs your method?"></td></tr><tr><th>Better question</th><td contenteditable="true" data-placeholder="Rewrite the question around the basic problem."></td></tr></tbody></table>
-            </div>
-          </section>
+            <details class="exercise-feedback"><summary>Check your answer</summary><p>Describe the human goal without mentioning your favourite method. Explain which part requires the method and which part a simpler approach could handle.</p><p><strong>Bring to discussion:</strong> your answer, one uncertainty, and a proposed next step.</p></details></div></section>
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner visual-layout"><div class="visual-copy">
               <h2>4. Think about the whole system</h2>
@@ -1517,8 +1474,7 @@
             <div class="slide-inner">
               <h2>Exercise</h2>
               <table class="exercise-table"><tbody><tr><th>People and components</th><td contenteditable="true" data-placeholder="Who and what are part of the system?"></td></tr><tr><th>Important connections</th><td contenteditable="true" data-placeholder="Which parts affect one another?"></td></tr><tr><th>Feedback loop</th><td contenteditable="true" data-placeholder="How can one change return and influence the starting point?"></td></tr><tr><th>Possible system behavior</th><td contenteditable="true" data-placeholder="What pattern may appear over time?"></td></tr><tr><th>Better question</th><td contenteditable="true" data-placeholder="Rewrite the question to include the interaction."></td></tr></tbody></table>
-            </div>
-          </section>
+            <details class="exercise-feedback"><summary>Check your answer</summary><p>Trace one complete feedback loop. Explain how one change affects another and eventually returns to influence the starting point. A list of components alone is not a systems explanation.</p><p><strong>Bring to discussion:</strong> your answer, one uncertainty, and a proposed next step.</p></details></div></section>
           <section class="slide" data-session="Idea refinement">
             <div class="slide-inner visual-layout"><div class="visual-copy">
               <h2>5. Consider second-order effects</h2>
@@ -1533,19 +1489,8 @@
             <div class="slide-inner">
               <h2>Exercise</h2>
               <table class="exercise-table"><tbody><tr><th>Expected benefit</th><td contenteditable="true" data-placeholder="What improves first?"></td></tr><tr><th>Behavior change</th><td contenteditable="true" data-placeholder="How may people adapt to that benefit?"></td></tr><tr><th>Second-order effect</th><td contenteditable="true" data-placeholder="What new problem or opportunity may appear?"></td></tr><tr><th>Better question</th><td contenteditable="true" data-placeholder="Rewrite the question as a possible trade-off."></td></tr><tr><th>Measures</th><td contenteditable="true" data-placeholder="What should you measure now and later?"></td></tr></tbody></table>
-            </div>
-          </section>
-          <section class="slide" data-session="Idea refinement">
-            <div class="slide-inner"><h2>Summary: Idea refinement</h2>
-              <table class="mini-table"><thead><tr><th>Technique</th><th>Ask</th></tr></thead><tbody>
-                <tr><td><strong>Challenge an assumption</strong></td><td>What am I taking for granted?</td></tr>
-                <tr><td><strong>Alternative explanation</strong></td><td>What else could cause the result?</td></tr>
-                <tr><td><strong>First principles</strong></td><td>What is the basic problem?</td></tr>
-                <tr><td><strong>Systems thinking</strong></td><td>How do the parts interact?</td></tr>
-                <tr><td><strong>Second-order effects</strong></td><td>What happens next?</td></tr>
-              </tbody></table>
-            </div>
-          </section>
+            <details class="exercise-feedback"><summary>Check your answer</summary><p>Link the immediate benefit to a later behaviour change. Identify evidence for both. Reduced effort does not automatically imply reduced independent judgment.</p><p><strong>Bring to discussion:</strong> your answer, one uncertainty, and a proposed next step.</p></details></div></section>
+          <section class="slide" data-session="Idea refinement"><div class="slide-inner"><h2>Summary: Idea refinement</h2><p class="lead">Use the technique that reveals a weakness in your current question. You do not need to apply all five every time.</p><table class="mini-table"><thead><tr><th>Question</th><th>What changes?</th></tr></thead><tbody><tr><td>Can we use Bayesian reasoning in negotiation?</td><td>A method and a topic; the knowledge we seek is unclear.</td></tr><tr><td>Does a Bayesian display improve negotiation outcomes?</td><td>A testable effect; a simpler visual summary may explain it.</td></tr><tr><td>Does uncertainty information improve outcomes beyond a matched visual summary?</td><td>A comparison that helps distinguish two explanations.</td></tr></tbody></table><p class="paper-example">Illustrative follow-up question, not an established gap or finding.</p><details><summary>Check the refinement</summary><p>Explain which assumption changed, what evidence the new question requires, and why the difference matters. A longer title or a more advanced method does not automatically create a stronger question. If a simpler explanation is sufficient, revise the mechanism you claim.</p></details></div></section>
           <section class="slide" data-session="Idea validation">
             <div class="slide-inner section-slide"><div class="session-number">03</div><h2>Idea validation</h2><p class="lead">Is the idea truly novel and worth studying?</p></div>
           </section>
@@ -1561,19 +1506,7 @@
             </div><div class="concept-visual" role="img" aria-label="Past work A, B, and C surround an important unanswered question"><div class="concept-row"><span>Past work A</span><span>Past work B</span><span>Past work C</span></div><div class="unknown">Important question<br>still unanswered</div><small>A research gap exists in the literature—not only in your reading.</small></div></div>
           </section>
 
-          <section class="slide" data-session="Idea validation">
-            <div class="slide-inner"><div class="eyebrow">Example · Establish the field's gap</div><h2>Build the gap from past work</h2>
-              <div class="paper-list"><div class="paper"><b>1</b><div><a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener">From Overload to Convergence</a> · Parmar &amp; Silpasuwanchai, CHI 2026
-                <ul class="paper-points">
-                  <li><strong>Past work A:</strong> Negotiation agents can search for agreements and recommend offers.</li>
-                  <li><strong>Past work B:</strong> Decision visualizations can help people compare complex options.</li>
-                  <li><strong>Past work C:</strong> Cognitive-load research shows that too many connected choices can overwhelm people.</li>
-                  <li><strong>However:</strong> These areas did not explain when issue complexity begins to hurt human negotiation, or how to support people at that point.</li>
-                  <li><strong>This paper:</strong> It investigates the effect of issue complexity and develops Bayesian visual support for human–AI negotiation.</li>
-                </ul>
-              </div></div></div>
-            </div>
-          </section>
+          <section class="slide" data-session="Idea validation"><div class="slide-inner"><h2>Build the gap from the closest work</h2><p class="lead">Separate what a paper demonstrates from the next question you infer.</p><table class="mini-table"><thead><tr><th>Evidence or interpretation</th><th>What we can say</th></tr></thead><tbody><tr><td>Verified starting paper</td><td><a href="https://arxiv.org/html/2603.22766v1" target="_blank" rel="noopener">Parmar &amp; Silpasuwanchai, CHI 2026</a> compares a decision-support interface with a baseline across negotiation complexities.</td></tr><tr><td>Our interpretation</td><td>A whole-interface comparison does not by itself isolate the value of uncertainty information from other interface differences.</td></tr><tr><td>Candidate next question</td><td>Does uncertainty information help beyond a matched visual summary?</td></tr><tr><td>Still to verify</td><td>Search component comparisons and neighbouring decision-support research. A question left open by one paper may already be answered elsewhere.</td></tr></tbody></table><details><summary>Compare weak and stronger gap statements</summary><p><strong>Weak:</strong> “Nobody has built our combination of widgets.”</p><p><strong>Stronger candidate:</strong> “We need to distinguish the benefit of uncertainty information from the benefit of a clear summary.” This states a meaningful difference, but it becomes a defensible field-level gap only after comparing the closest verified work.</p></details></div></section>
 
           <section class="slide" data-session="Idea validation" data-topic="Validate the research gap">
             <div class="slide-inner"><h2>Exercise</h2>
@@ -1584,8 +1517,7 @@
                 <tr><th>However</th><td contenteditable="true" data-placeholder="What remains unanswered, inconsistent, or unsupported across this literature?"></td></tr>
                 <tr><th>We investigate / propose / develop</th><td contenteditable="true" data-placeholder="What will your work do about this field-level gap?"></td></tr>
               </tbody></table>
-            </div>
-          </section>
+            <details class="exercise-feedback"><summary>Check your answer</summary><p>Use specific verified papers for the literature rows. State what each establishes and the meaningful distinction your work would test. “No paper uses our combination” is insufficient. Include your search boundary and the uncertainty that remains.</p><p><strong>Bring to discussion:</strong> your answer, one uncertainty, and a proposed next step.</p></details></div></section>
           <section class="slide" data-session="Idea testing"><div class="slide-inner section-slide" style="--section-image:url('/img/researchguide/attention-regulation.png')"><div class="session-number">04</div><h2>Idea testing</h2><p class="lead">What kind of contribution will the paper make?</p></div></section>
 
           <section class="slide" data-session="Idea testing"><div class="slide-inner"><div class="eyebrow">Choose the contribution first</div><h2>Different contributions need different methodologies</h2><ol class="steps"><li><strong>Experimental:</strong> evidence about an effect or causal relationship.</li><li><strong>Design research:</strong> design knowledge, principles, or rationale.</li><li><strong>Artifact or system:</strong> a working technical capability.</li><li><strong>Exploratory qualitative:</strong> understanding of a new situation.</li><li><strong>Model or dataset:</strong> measurable computational performance and limitations.</li></ol></div></section>
@@ -1601,9 +1533,9 @@
             <tr><th>Closest paper</th><td contenteditable="true" data-placeholder="Which strong CHI, ACL, or NeurIPS paper makes a similar contribution?"></td></tr>
             <tr><th>Method and procedure</th><td contenteditable="true" data-placeholder="Who or what will you study, what will happen, and what will you measure or collect?"></td></tr>
             <tr><th>Analysis and quality check</th><td contenteditable="true" data-placeholder="What analysis supports the claim? What confound, baseline, error, bias, or limitation must you check?"></td></tr>
-          </tbody></table></div></section>
+          </tbody></table><details class="exercise-feedback"><summary>Check your answer</summary><p>Connect each intended claim to a measure, observation, or analysis. Explain why the comparison is fair and what result would change your interpretation. Match the method to the contribution; an interview is not inherently weaker than an experiment.</p><p><strong>Bring to discussion:</strong> your answer, one uncertainty, and a proposed next step.</p></details></div></section>
 
-          <section class="slide" data-session="Idea testing"><div class="slide-inner"><h2>Summary: Idea testing</h2><p class="lead">Study a strong paper with a similar contribution. Explain why its task, sample, measures, and analysis fit your question before adapting them. Use a credible simple comparison and ask what alternative explanation remains. A published method is a starting point, not a guarantee of validity.</p></div></section>
+          <section class="slide" data-session="Idea testing"><div class="slide-inner"><h2>Summary: Idea testing</h2><p class="lead">Worked planning example: does uncertainty information add value beyond a clear summary?</p><table class="mini-table"><thead><tr><th>Design decision</th><th>Reasoning</th></tr></thead><tbody><tr><td>Competing explanations</td><td>Users benefit from uncertainty information; or any clear summary reduces effort.</td></tr><tr><td>Comparison</td><td>Compare an uncertainty display with a credible summary. Match task, underlying evidence, layout, training, and time as far as the question permits.</td></tr><tr><td>Evidence</td><td>Measure decision quality and understanding of uncertainty. Faster completion or satisfaction alone cannot establish better judgment.</td></tr><tr><td>What could weaken the claim?</td><td>If a sufficiently sensitive comparison shows no meaningful advantage, revise the claim that uncertainty information adds value in this setting.</td></tr></tbody></table><details><summary>Before running the main study</summary><p>Check that the summary is genuinely useful, the two interfaces differ as intended, and the measures reflect your concepts. Justify the sample and analysis for the question. If the comparison is too noisy or underpowered, a null result is inconclusive.</p><p>Agree a pilot budget and review point. A pilot checks feasibility and measurement; do not repeatedly alter the test until a preferred result appears. For exploratory work, specify the next observation and how interpretations will be challenged instead of inventing a causal hypothesis.</p></details></div></section>
           <section class="slide" data-session="Idea storytelling"><div class="slide-inner section-slide" style="--section-image:url('/img/researchguide/story-path.jpg')"><div class="session-number">05</div><h2>Idea storytelling</h2><p class="lead">How can readers follow one clear research story?</p></div></section>
 
           <section class="slide" data-session="Idea storytelling"><div class="slide-inner visual-layout"><div class="visual-copy"><h2>People remember stories</h2><p class="lead">A research paper is easier to understand and remember when five parts form one connected story. The problem is the turning point: it moves readers from what is known to what your study must do.</p><ol class="steps"><li><strong>Background:</strong> Establish the important topic and synthesize what is known.</li><li><strong>Problem:</strong> Turn the story with “However.”</li><li><strong>Methodology:</strong> Explain how the paper answers the problem.</li><li><strong>Findings:</strong> Reveal what the evidence shows.</li><li><strong>Contribution / significance:</strong> End with what changes because of the work.</li></ol><p class="optional"><strong>Tip—choose the verb carefully:</strong> investigates a relationship; explores a new situation; proposes an idea; develops an artifact; evaluates performance or usefulness.</p></div><figure class="slide-visual"><a href="https://unsplash.com/photos/1509266272358-7701da638078" target="_blank" rel="noopener"><img src="/img/researchguide/story-path.jpg" alt="A winding path made from open books" loading="lazy"></a><figcaption>Photo: Laura Kapfer · Unsplash</figcaption></figure></div></section>
@@ -1612,109 +1544,10 @@
 
           <section class="slide" data-session="Idea storytelling"><div class="slide-inner"><h2>Your title is the first line of the story</h2><div class="grid-2"><div class="card"><h3>Mediocre title</h3><p>“A Study of a Meditation Application”</p><p class="optional">Too broad. Readers cannot see the mechanism, contribution, or research area.</p></div><div class="card"><h3>Stronger title</h3><p>“Pause: Using Slow, Continuous Movement to Support Attention Regulation in Interactive Mindfulness Meditation”</p><p class="optional"><strong>Memorable hook:</strong> Pause. <strong>Strong keywords:</strong> movement, attention regulation, interactive mindfulness meditation.</p></div></div><p class="lead">Use clear research keywords so the right readers can find the paper. A short, meaningful hook can help them remember it.</p></div></section>
 
-          <section class="slide" data-session="Idea storytelling"><div class="slide-inner"><h2>Example: Attention regulation as one connected story</h2><div class="paper-list"><div class="paper paper-single"><div><a href="https://doi.org/10.1145/3025453.3025914" target="_blank" rel="noopener">A Framework for Interactive Mindfulness Meditation Using Attention-Regulation Process</a> · Niksirat et al., CHI 2017<ul class="paper-points"><li><strong>Background:</strong> Emotion regulation supports mental well-being, and mindfulness is widely used to train attention and regulate emotion.</li><li><strong>Problem:</strong> <em>However,</em> existing digital meditation tools mainly use spoken instructions or fixed content, giving users limited ways to regulate attention through their own action.</li><li><strong>Methodology:</strong> The paper proposes an attention-regulation framework, develops Pause, and evaluates the movement-based interaction with users.</li><li><strong>Findings:</strong> Slow, continuous interaction supported attention and produced positive affective and engagement outcomes.</li><li><strong>Contribution / significance:</strong> The paper contributes a framework and design approach for self-regulated mindfulness technologies.</li></ul></div></div></div></div></section>
+          <section class="slide" data-session="Idea storytelling"><div class="slide-inner"><h2>Example: Revise the reasoning, then the wording</h2><p class="lead">Illustrative follow-up proposal. The study has not been run.</p><div class="revision-example"><div><h3>Initial paragraph</h3><p>“AI negotiation is important. Our new Bayesian tool will make people better negotiators and preserve their agency.”</p></div><div><h3>Supervisor comments</h3><p>What does “better” mean? What is the closest comparison? How will you measure agency? You are predicting success before collecting evidence.</p></div></div><h3>Revised paragraph</h3><p>“We will test whether uncertainty information improves decision quality beyond a matched visual summary. Both conditions will use the same negotiation task and underlying evidence. We will measure decision quality and uncertainty understanding. Any claim about agency will require separate evidence of meaningful user control.”</p><p class="takeaway">The revision makes the comparison, evidence, and claim boundaries explicit. Findings remain pending.</p><details><summary>What improved?</summary><p>The paragraph now states an answerable question, names the strongest comparison, and connects measures to claims. It does not promise a positive result. After the study, replace the plan with what was done and what the evidence supports, including uncertainty and failures.</p></details></div></section>
 
-          <section class="slide" data-session="Idea storytelling" data-topic="Write the research story"><div class="slide-inner"><h2>Exercise</h2><table class="exercise-table"><tbody><tr><th>Background</th><td contenteditable="true" data-placeholder="Why is the topic important, and what does past work show? Add citations."></td></tr><tr><th>Problem</th><td contenteditable="true" data-placeholder="However, what remains unresolved or unsupported?"></td></tr><tr><th>Methodology</th><td contenteditable="true" data-placeholder="This paper investigates / explores / proposes / develops / evaluates …"></td></tr><tr><th>Findings</th><td contenteditable="true" data-placeholder="The key findings are …"></td></tr><tr><th>Contribution / significance</th><td contenteditable="true" data-placeholder="This paper contributes … This matters because …"></td></tr></tbody></table></div></section>
-          <section class="slide" data-session="AI"><div class="slide-inner section-slide"><div class="session-number">A</div><h2>Bonus: AI for research</h2><p class="lead">Use AI to challenge, express, visualize, and review your thinking.</p></div></section>
+          <section class="slide" data-session="Idea storytelling" data-topic="Write the research story"><div class="slide-inner"><h2>Exercise</h2><table class="exercise-table"><tbody><tr><th>Background</th><td contenteditable="true" data-placeholder="Why is the topic important, and what does past work show? Add citations."></td></tr><tr><th>Problem</th><td contenteditable="true" data-placeholder="However, what remains unresolved or unsupported?"></td></tr><tr><th>Methodology</th><td contenteditable="true" data-placeholder="This paper investigates / explores / proposes / develops / evaluates …"></td></tr><tr><th>Findings</th><td contenteditable="true" data-placeholder="State supported findings, or write: findings pending."></td></tr><tr><th>Contribution / significance</th><td contenteditable="true" data-placeholder="This paper contributes … This matters because …"></td></tr></tbody></table><details class="exercise-feedback"><summary>Check your answer</summary><p>Each sentence should prepare the next: the gap motivates the question, the method can answer it, and the finding supports the contribution. If evidence is not available, write “findings pending”. Do not fill the results row with a prediction presented as fact.</p><p><strong>Bring to discussion:</strong> your answer, one uncertainty, and a proposed next step.</p></details></div></section>
 
-          <section class="slide" data-session="AI"><div class="slide-inner"><h2>Four ways AI can help your research</h2><ol class="steps"><li><strong>Test and refine the novelty.</strong> Search, judge, improve the idea, and search again.</li><li><strong>Build the paper slowly.</strong> Start with five sentences, then develop one section at a time.</li><li><strong>Draw the research.</strong> Make the contribution and methodology easy to understand.</li><li><strong>Review the work.</strong> Check novelty, validity, and communication.</li></ol></div></section>
-
-          <section class="slide" data-session="AI"><div class="slide-inner"><h2>Put AI into the whole research loop</h2><ol class="steps compact"><li><strong>Write the question and study plan early.</strong> Draft the introduction, related work, and proposed methodology. Keep expected outcomes in a separate planning note. Leave result tables empty until real evidence is available.</li><li><strong>Build and run the study.</strong> For computational work, ask AI to help implement and run the experiments. For human studies, ask it to help prepare the apparatus, tasks, protocol, measures, and analysis plan.</li><li><strong>Connect claims to evidence.</strong> Add the real results to the paper. Revise the claims and discussion, and ask what additional experiments or analyses are needed.</li><li><strong>Loop between writing and experiments.</strong> Let weaknesses in the paper suggest the next experiment; let new evidence reshape the paper. Keep exploratory analyses separate from planned tests. Log changes and failures; do not keep changing the evaluation until a preferred result appears.</li><li><strong>Run the final checks.</strong> Check novelty; construct, internal, and external validity; coherence; terminology; overclaims; and writing quality. Fix the most serious problem first and repeat.</li><li><strong>Choose the venue and prepare submission.</strong> Identify a suitable journal or conference. Ask AI agents to prepare the files and submission information, but verify every claim, author detail, policy, and uploaded file before you authorize submission.</li></ol></div></section>
-
-          <section class="slide" data-session="AI"><div class="slide-inner two-col"><div><h2>1. Test and refine the novelty</h2><p class="lead">Search, judge the idea honestly, improve it, and repeat until the contribution is clear.</p><ul class="paper-points"><li><strong>Search widely:</strong> Check nearby terms, fields, theories, methods, and papers.</li><li><strong>Judge:</strong> Not novel, a distinction needing verification, or a supported distinction within the searched literature.</li><li><strong>Refine:</strong> Challenge assumptions and rethink the idea from several angles.</li></ul></div><div class="prompt"><strong>Prompt</strong><div class="ai-prompt">My research question or topic is: [your question or topic idea]. My target venue is [CHI / ACL / NeurIPS / other].<br><br>Work with me in a repeated novelty loop:<br>1. Find nearby terms, neighboring fields, related theories, and the closest papers. Give me searches I can run and links I can verify.<br>2. Compare my idea with the verified papers. Judge it as <strong>substantial overlap</strong>, <strong>a possible distinction needing verification</strong>, or <strong>a supported distinction within the searched literature</strong>. Explain the evidence and uncertainty behind the judgment.<br>3. Suggest several stronger versions of the idea. Use challenging assumptions, alternative explanations, first-principles thinking, systems thinking, and second-order effects.<br>4. For each version, explain what changed, why it may be more novel, and what new evidence would be needed.<br>5. Ask me which version to continue. Then repeat Steps 1–4 until the research gap and contribution are convincing.<br><br>Do not invent papers. Clearly mark anything I still need to verify.</div></div></div></section>
-
-          <section class="slide" data-session="AI"><div class="slide-inner"><h2>2. Build the paper slowly</h2><p class="lead">Begin with one connected story. Strengthen it before writing the full paper.</p><div class="process-flow"><div>Five sentences</div><div>Five paragraphs</div><div>Check + revise</div><div>Draft one section</div><div>Check again</div></div><div class="ai-prompt">Help me write this paper slowly for [target venue]. Use only my verified literature, study plan, and results.<br><br>1. Write five sentences: Background, Problem beginning with “However,” Methodology, Findings, and Contribution. If the study is not complete, write “findings pending” and keep any predictions in a separate planning note.<br>2. Expand the five sentences into five short paragraphs.<br>3. Check coherence, strength of argument, persuasiveness, and novelty. Identify weak links, revise them with me, and repeat this check until I approve the story.<br>4. Draft one section at a time in this order: Abstract → Introduction → Related Work → Methodology → Results → Conclusion. After each section, stop and wait for my approval before continuing.<br>5. When reviewing the methodology, check construct validity, internal validity, external validity, controls, baselines, confounds, measures, and whether each analysis supports a claim.<br>6. Challenge the mathematical, technical, and experimental rigor. Suggest several useful angles of analysis, explain what each reveals, and distinguish essential analyses from optional ones.<br><br>Never invent citations, data, results, equations, or implementation details. Mark missing information and ask me for it.<br><br>My materials: [paste verified notes, study plan, and available results]</div></div></section>
-
-          <section class="slide" data-session="AI"><div class="slide-inner two-col"><div><h2>3. Draw Figure 1</h2><p class="lead">Show the key idea, how it differs from existing practice, and why that difference matters.</p><div class="process-flow four"><div>Without our idea</div><div>Key insight</div><div>With our idea</div><div>What changes</div></div></div><div class="prompt"><strong>Prompt</strong><div class="ai-prompt">Help me design Figure 1 for this paper: [paste the five-part story]. Also study these verified Figure 1 examples from strong [CHI / ACL / other] papers: [paste figures or links].<br><br>The figure must:<br>1. make our proposed idea visually dominant;<br>2. compare how the work is done without our technique and with our technique;<br>3. show what our technique changes in the process, behavior, or outcome;<br>4. let a new reader understand the key contribution in a few seconds.<br><br>First, explain the visual patterns you learned from the example papers. Then propose three visual concepts and state what each makes easy to understand. Wait for my choice before drawing. After I choose, create an editable SVG with short labels and meaningful relationships. Do not copy the example figures or add unsupported claims.</div></div></div></section>
-
-          <section class="slide" data-session="AI"><div class="slide-inner two-col"><div><h2>3. Draw the methodology figure</h2><p class="lead">Explain the important research idea—not merely the order of the steps.</p><div class="process-flow"><div>Core idea</div><div>Components</div><div>Relationships</div><div>Evidence</div><div>Insight</div></div></div><div class="prompt"><strong>Prompt</strong><div class="ai-prompt">Help me design a methodology figure from this study: [paste protocol]. Study these verified methodology figures from strong [CHI / ACL / other] papers: [paste figures or links].<br><br>Do not draw a simple left-to-right pipeline. Identify the most important methodological idea and organize the components around it. Show the relationships, comparisons, feedback, or levels that help readers understand the general essence of the method and gain insight from the figure.<br><br>First, explain what the example papers do well and propose three possible visual structures. For each structure, explain what insight it reveals. Wait for my choice before drawing. Then create an editable SVG. Include only components supported by my protocol and clearly distinguish data, model or system components, experimental conditions, measures, and analyses.</div></div></div></section>
-
-          <section class="slide" data-session="AI"><div class="slide-inner"><h2>4. Ask AI to review the paper</h2><p class="lead">Run three focused checks. Fix the most serious concern, then check again.</p><div class="grid-3"><div class="card"><h3>Novelty check</h3><p>Is the gap real? Is the contribution clearly different from the closest verified work?</p></div><div class="card"><h3>Validity check</h3><p>Are construct, internal, and external validity strong enough for the claims?</p></div><div class="card"><h3>Communication check</h3><p>Is the story coherent, consistent, clear, and free from overclaiming?</p></div></div><div class="ai-prompt">Act as a critical reviewer for [target venue]. Review my paper in three separate passes.<br><br><strong>Novelty:</strong> Compare the claimed gap and contribution with the closest verified papers. Judge the novelty as substantial overlap, a possible distinction needing verification, or a supported distinction within the searched literature, and explain why.<br><strong>Validity:</strong> Check construct validity, internal validity, and external validity. Identify weak measures, confounds, unfair comparisons, unsupported generalization, and analyses that do not support the claims.<br><strong>Communication:</strong> Check coherence, conflicting statements, confusing or inconsistent terms, missing argument links, and overclaims.<br><br>For every concern, quote the exact evidence, label it Major or Minor, and propose a concrete fix. Rank the three concerns most likely to affect acceptance. Let me revise them one at a time; after each revision, check whether the concern is resolved.</div></div></section>
-
-          <section class="slide" data-session="AI"><div class="slide-inner"><h2>Keep yourself responsible</h2><div class="grid-2"><div class="card"><h3>AI may assist</h3><p>Search planning, outlining, language revision, diagrams, code explanation, alternative explanations, and reviewer simulation.</p></div><div class="card"><h3>You must verify</h3><p>Citations, novelty, data, analysis, figures, interpretations, authorship, disclosure, and the target venue's current AI policy.</p></div></div><ul class="paper-points"><li><strong>Never upload:</strong> identifiable participant data, confidential reviews, or protected project material without authorization.</li><li><strong>Never accept:</strong> invented papers, fabricated results, silent changes to numbers, or claims unsupported by your evidence.</li><li><strong>Keep a record:</strong> save important prompts, outputs, decisions, and human corrections when reproducibility or disclosure matters.</li></ul></div></section>
-
-          <section class="slide" data-session="AI"><div class="slide-inner"><h2>Summary: AI for research</h2><table class="mini-table"><thead><tr><th>Use AI to</th><th>Your responsibility</th></tr></thead><tbody><tr><td>Test and refine the novelty</td><td>Verify the papers and decide which idea is worth pursuing</td></tr><tr><td>Build the paper slowly</td><td>Supply real evidence and approve each stage</td></tr><tr><td>Design clear research figures</td><td>Check that the visual teaches the real contribution and method</td></tr><tr><td>Review novelty, validity, and communication</td><td>Fix the strongest concern and repeat the check</td></tr></tbody></table></div></section>
-
-          <section class="slide" data-session="Journals"><div class="slide-inner"><h2>Which journal should I submit to?</h2><ol class="steps"><li><strong>Match the journal's scope.</strong> Read recent papers. Choose a journal that already publishes your topic, contribution, and methodology.</li><li><strong>Decide between open access and free publication.</strong> Check publication fees, institutional agreements, and whether readers can access the paper.</li><li><strong>Choose the audience for your contribution.</strong> Read recent papers and check the journal’s scope, review criteria, and author guidance.</li><li><strong>Consider a leading conference first.</strong> In HCI, NLP, and machine learning, CHI, ACL, NeurIPS, and ICML are often stronger first targets for timely original work.</li></ol><p class="optional">Venue reputation does not establish the validity of a paper. Scope, contribution, and evidence come first.</p></div></section>
-
-          <section class="slide" data-session="Journals"><div class="slide-inner"><h2>Leading conferences</h2><table class="mini-table"><thead><tr><th>Conference</th><th>Good fit when…</th></tr></thead><tbody><tr><td><a href="https://chi.acm.org/" target="_blank" rel="noopener"><strong>CHI</strong></a> · Human–computer interaction</td><td>The main contribution concerns people, interaction, design, or human–AI systems.</td></tr><tr><td><a href="https://www.aclweb.org/portal/" target="_blank" rel="noopener"><strong>ACL</strong></a> · Natural language processing</td><td>The work advances language models, NLP methods, resources, evaluation, or understanding.</td></tr><tr><td><a href="https://neurips.cc/" target="_blank" rel="noopener"><strong>NeurIPS</strong></a> · Machine learning and AI</td><td>The paper offers strong technical or scientific insight with rigorous evaluation.</td></tr><tr><td><a href="https://icml.cc/" target="_blank" rel="noopener"><strong>ICML</strong></a> · Machine learning</td><td>The central contribution is a machine-learning method, theory, analysis, or substantial empirical result.</td></tr></tbody></table><p class="lead">Read recent accepted papers before choosing. The contribution—not merely the topic—should resemble work the conference values.</p></div></section>
-
-          <section class="slide" data-session="Journals"><div class="slide-inner"><h2>HCI journals: Core and interactive systems</h2><table class="mini-table journal-table"><thead><tr><th>Journal</th><th>Good fit when…</th></tr></thead><tbody><tr><td><a href="https://dl.acm.org/journal/tochi" target="_blank" rel="noopener">ACM TOCHI</a></td><td>The paper makes a strong, general HCI contribution.</td></tr><tr><td><a href="https://dl.acm.org/journal/tiis" target="_blank" rel="noopener">ACM TiiS</a></td><td>Interaction with intelligent systems is central.</td></tr><tr><td><a href="https://www.sciencedirect.com/journal/international-journal-of-human-computer-studies" target="_blank" rel="noopener">IJHCS</a></td><td>The work connects interaction with cognition or human factors.</td></tr><tr><td><a href="https://www.tandfonline.com/journals/hihc20" target="_blank" rel="noopener">IJHCI</a></td><td>The paper offers broad or applied HCI evidence.</td></tr><tr><td><a href="https://www.tandfonline.com/journals/tbit20" target="_blank" rel="noopener">Behaviour &amp; Information Technology</a></td><td>Technology use, work, behavior, or social context is central.</td></tr></tbody></table><p class="optional">Check current publication fees, access options, and institutional agreements in the journal’s author instructions.</p></div></section>
-
-          <section class="slide" data-session="Journals"><div class="slide-inner"><h2>Applied HCI journals: Health, behavior, and education</h2><table class="mini-table journal-table"><thead><tr><th>Journal</th><th>Good fit when…</th></tr></thead><tbody><tr><td><a href="https://dl.acm.org/journal/health" target="_blank" rel="noopener">ACM Transactions on Computing for Healthcare</a></td><td>The work makes a computing contribution that improves healthcare, such as digital health, clinical AI, sensing, or health interaction.</td></tr><tr><td><a href="https://www.sciencedirect.com/journal/computers-in-human-behavior" target="_blank" rel="noopener">Computers in Human Behavior</a></td><td>The contribution explains behavior, well-being, or social effects of technology.</td></tr><tr><td><a href="https://www.sciencedirect.com/journal/computers-and-education" target="_blank" rel="noopener">Computers &amp; Education</a></td><td>The paper makes a strong learning-science or educational-technology contribution.</td></tr><tr><td><a href="https://dl.acm.org/journal/toce" target="_blank" rel="noopener">ACM TOCE</a></td><td>The research advances computing education.</td></tr><tr><td><a href="https://link.springer.com/journal/10639" target="_blank" rel="noopener">Education and Information Technologies</a></td><td>The work studies educational technology in authentic contexts.</td></tr></tbody></table></div></section>
-
-          <section class="slide" data-session="Journals"><div class="slide-inner"><h2>NLP and machine-learning journals</h2><table class="mini-table journal-table"><thead><tr><th>Journal</th><th>Good fit when…</th></tr></thead><tbody><tr><td><a href="https://direct.mit.edu/tacl" target="_blank" rel="noopener">Transactions of the ACL</a></td><td>The paper presents substantial, original NLP work with strong evidence.</td></tr><tr><td><a href="https://direct.mit.edu/coli" target="_blank" rel="noopener">Computational Linguistics</a></td><td>The work offers deep computational-linguistic insight or comprehensive analysis.</td></tr><tr><td><a href="https://jmlr.org" target="_blank" rel="noopener">Journal of Machine Learning Research</a></td><td>The contribution is a mature ML method, theory, resource, or extensive study.</td></tr><tr><td><a href="https://jmlr.org/tmlr/" target="_blank" rel="noopener">Transactions on Machine Learning Research</a></td><td>The original ML contribution is technically sound and benefits from open review.</td></tr></tbody></table><p class="optional">Check current author instructions and publication charges directly with the journal before submission.</p></div></section>
-
-          <section class="slide" data-session="Resources">
-            <div class="slide-inner">
-              <div class="eyebrow">Lab resources</div>
-              <h2>Templates, examples, and tools</h2><p>Start with <a href="/getting-started/">Getting Started</a>, use the <a href="/scorecards/">relevant scorecard</a>, or copy the <a href="/downloads/research-decision-note.md">research decision note</a>.</p>
-              <div class="resource-columns">
-                <div class="resource-group">
-                  <h3>Templates</h3>
-                  <p><a
-                      href="https://docs.google.com/presentation/d/1SXN2LABIBYnTblk1nbCE1KA83xmR4tt-vUE26Lnl0-E/edit?usp=sharing"
-                      target="_blank" rel="noopener">Thesis presentation template</a></p>
-                  <p><a href="https://www.overleaf.com/read/zptzbhxkbvbn#3d83d4" target="_blank" rel="noopener">Thesis
-                      LaTeX template</a></p>
-                  <p><a href="https://languages.ait.ac.th/thesis-format-template/" target="_blank" rel="noopener">AIT
-                      Language Center format</a></p>
-                </div>
-                <div class="resource-group">
-                  <h3>Proposal examples</h3>
-                  <p>Master’s: <a
-                      href="https://drive.google.com/file/d/1wTPXliTlkLRDIGVBgnxrgg4UUXvyyoCf/view?usp=sharing"
-                      target="_blank" rel="noopener">slides</a> · <a
-                      href="https://drive.google.com/file/d/19J4Zs12gfBOiCo-Bsn7vS4qhDoxubS1s/view?usp=sharing"
-                      target="_blank" rel="noopener">report</a></p>
-                  <p>PhD: <a href="https://drive.google.com/file/d/1yrMHck1oMszKw_3QfqqtwqvZ8RC05n9P/view?usp=sharing"
-                      target="_blank" rel="noopener">slides</a> · <a
-                      href="https://drive.google.com/file/d/1Zqek9XC2Xeooz788K_mwIFxaGqZxdMec/view?usp=sharing"
-                      target="_blank" rel="noopener">report</a></p>
-                </div>
-                <div class="resource-group">
-                  <h3>Completed work</h3>
-                  <p>Research study: <a
-                      href="https://drive.google.com/file/d/1RHcmHshJDh_9PQnEUcUoEGM-mENOsIF0/view?usp=sharing"
-                      target="_blank" rel="noopener">Master</a> · <a
-                      href="https://drive.google.com/file/d/1Rcbs5qKUJ9CR3W_1Dwgh_u9-NQCOy6z4/view?usp=sharing"
-                      target="_blank" rel="noopener">PhD</a></p>
-                  <p>Final thesis: <a
-                      href="https://drive.google.com/file/d/1VSD0-DZHAhDnvD1PSEtpyTjyZynaJqiY/view?usp=sharing"
-                      target="_blank" rel="noopener">slides</a> · <a
-                      href="https://drive.google.com/file/d/1Vt5qVQEqEhEn1IoVgXw2QOLnii6Rb9yU/view?usp=sharing"
-                      target="_blank" rel="noopener">report</a></p>
-                  <p><a href="https://drive.google.com/file/d/1QV0olPsGYPoYN7EyqoCU6WqFdGhzzWJS/view?usp=sharing"
-                      target="_blank" rel="noopener">Internship report</a> · <a
-                      href="https://drive.google.com/drive/folders/10XQngfTQx8fJdnhVwRpTy8s-Rxov3JWa?usp=sharing"
-                      target="_blank" rel="noopener">Thesis repository</a></p>
-                </div>
-                <div class="resource-group">
-                  <h3>Lab tools and guides</h3>
-                  <p><a href="https://github.com/AIT-brainlab/python-project-starter" target="_blank"
-                      rel="noopener">Python project starter</a></p>
-                  <p><a href="https://github.com/orgs/AIT-brainlab/projects/3" target="_blank" rel="noopener">Project
-                      board</a></p>
-                  <p><a href="https://chaklam.com/articles/how-to-write-paper/" target="_blank" rel="noopener">How to
-                      write a paper</a></p>
-                  <p><a href="https://chaklam.com/articles/how-to-choose-a-good-topic/" target="_blank"
-                      rel="noopener">How to choose a good topic</a></p>
-                  <p><a href="https://chaklam.com/articles/research-process/" target="_blank" rel="noopener">Research
-                      process</a></p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="slide" data-session="Resources">
-            <div class="slide-inner visual-layout"><div class="visual-copy"><h2>Progress through evidence and revision</h2><p class="lead">A novice tries to avoid failure. An expert has learned through many more attempts, criticism, and revisions.</p><ul class="paper-points">
-              <li><strong>Start with something you are curious about.</strong></li>
-              <li><strong>Read top-tier papers, especially from CHI, ACL, and NeurIPS.</strong></li>
-              <li><strong>Use feedback and failures to revise.</strong> Ask which assumption changed and what you should test next. You may disagree with feedback when you can explain why.</li>
-              <li><strong>Prioritize the next important step.</strong> Do not try to solve everything at once.</li>
-              <li><strong>Think before meeting your professor.</strong> Bring your interpretation, proposed decision, and next step—not only information.</li>
-            </ul><p class="paper-example">A useful meeting ends with an evidence-based decision, a feasible next action, and the support needed to take it.</p></div><figure class="slide-visual"><a href="https://www.starwars.com/databank/yoda" target="_blank" rel="noopener"><img src="/img/researchguide/yoda.jpg" alt="Yoda standing with a walking stick" loading="lazy"></a><figcaption>Yoda · StarWars.com</figcaption></figure></div>
-          </section>
         </div>
 
         <nav class="controls" aria-label="Presentation navigation">
@@ -1729,10 +1562,10 @@
           const deck = document.getElementById('research-deck'); if (!deck) return;
           const slides = [...deck.querySelectorAll('.slide')], prev = deck.querySelector('#prev-slide'), next = deck.querySelector('#next-slide'), count = deck.querySelector('#slide-count'), dots = deck.querySelector('#slide-dots'), sessionLabel = deck.querySelector('#session-label'), jump = deck.querySelector('#session-jump'), full = deck.querySelector('#fullscreen-slide'), resume = deck.querySelector('#resume-note'), journeyStages = [...deck.querySelectorAll('.journey-stage')], journeyStatusText = deck.querySelector('#journey-status-text'), journeyPercent = deck.querySelector('#journey-percent');
           const stageNames = journeyStages.map(stage => stage.dataset.stage);
-          const journeySessions = new Set(stageNames.slice(0, 5)), appendixSessions = new Set(stageNames.slice(5));
+          const journeySessions = new Set(stageNames), appendixSessions = new Set();
           const journeySlides = slides.filter(slide => journeySessions.has(slide.dataset.session));
           [...jump.options].forEach(option => { const target = slides.findIndex(slide => slide.dataset.session === option.textContent); if (target >= 0) option.value = String(target) });
-          const storageKey = 'ait-research-guide-slide-v4'; let current = 0;
+          const storageKey = 'ait-research-guide-slide-v5'; let current = 0;
           try { const saved = parseInt(localStorage.getItem(storageKey), 10); if (Number.isFinite(saved) && saved >= 0 && saved < slides.length) { current = saved; if (resume) resume.textContent = 'Resumed where you left off'; } } catch (e) { }
           function show(i, save = true) {
             current = Math.max(0, Math.min(slides.length - 1, i));
@@ -1759,7 +1592,7 @@
               journeyStages[stageIndex].style.setProperty('--stage-progress', (position / stageSlides.length * 100) + '%');
               journeyStatusText.textContent = (appendixSessions.has(session) ? 'Appendix · ' : '') + session + ' · ' + position + ' of ' + stageSlides.length + ' · ' + (remaining ? remaining + ' slide' + (remaining === 1 ? '' : 's') + ' left' : (appendixSessions.has(session) ? 'section complete' : 'stage complete'));
             } else {
-              journeyStatusText.textContent = 'Five stages ahead · Appendix available';
+              journeyStatusText.textContent = 'Five stages of the research journey';
             }
             const matchingSession = [...jump.options].find(option => option.textContent === sessionLabel.textContent);
             if (matchingSession) jump.value = matchingSession.value;
