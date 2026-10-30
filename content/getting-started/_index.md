@@ -13,8 +13,6 @@ Propose an idea or join an [available project](/available-projects/). Prepare th
 
 Review our [Research Areas](/projects/) and note the skills you already have, what you need to learn, your degree, and the time available.
 
-Before drafting, use [Research Tips](/research-tips/) to sharpen your question. If your plan mainly lists features to build, read [Industry Development and Research](/research-tips/industry-and-research/).
-
 ## 2. Prepare a One-Page Idea
 
 Use this **AIT Brain Lab discussion outline** for your initial note. For formal proposals, follow your programme’s requirements; see [Resources](/resources/) for templates.
@@ -111,6 +109,26 @@ AI can synthesise papers and organise evidence. You must judge what is missing, 
 Agree on communication, feedback expectations, responsibilities, access to resources, and milestones. Discuss individual contributions and authorship early and revisit them as the work develops.
 
 Use the relevant [Scorecard](/scorecards/) when it helps identify the next one or two priorities. Consult the [Research Guide](/researchguide/) for practical help with ideas, novelty, methodology, and writing.
+
+## Research Mindset
+
+1. **Treat research as an iterative process. Progress over perfection.** Read, think, build, test, write, and repeat. Each round should improve your understanding; you do not need to get everything right the first time.
+
+2. **Keep writing, or you will get lost.** Write your question, reasoning, evidence, and next step as the work develops. Writing helps you see what you understand and what is still missing.
+
+3. **Put novelty and validity first.** What is new compared with the closest work? Does your evidence support what you claim? A complicated system cannot compensate for a weak answer to either question.
+
+4. **Read top-tier papers first, especially peer-reviewed work.** Learn how strong researchers frame questions, design studies, and support their conclusions. Then follow the relevant specialist work and recent preprints; a venue name alone does not make a claim correct.
+
+5. **Do what you are really curious about.** Choose a question you want to understand, not just a fashionable tool you want to use. Curiosity gives you a reason to keep digging when the easy answers run out.
+
+6. **Your first question is usually not your best question.** Challenge yourself: Why does this matter? Has someone already answered it? Is there a simpler explanation? Keep refining the question as you learn.
+
+7. **Keep thinking about factors and outcomes: IVs and DVs.** What exactly do you want to study or change? What outcome will you measure? What is your hypothesis, and what result would challenge it? Define success before looking at the results.
+
+8. **Learn how strong papers frame their argument.** Study their structure and logic, then write in your own words. Every paper has limitations; persuasive writing makes the contribution and its boundaries clear. It does not hide weak evidence.
+
+9. **Put your soul into it.** Research needs curiosity, focus, and care. If you work randomly without thinking deeply about the question, you are unlikely to get there. Work consistently, reflect honestly, and let what you learn guide your next step.
 
 ## Ideas Behind This Approach
 

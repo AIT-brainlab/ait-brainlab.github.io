@@ -70,11 +70,6 @@ title = "AIT Brain Lab"
   parent = 'students'
   weight = 6
 [[menu.main]]
-  name = 'Research Tips'
-  pageRef = '/research-tips'
-  parent = 'students'
-  weight = 7
-[[menu.main]]
   name = 'Publications'
   pageRef = '/publications'
   weight = 50
