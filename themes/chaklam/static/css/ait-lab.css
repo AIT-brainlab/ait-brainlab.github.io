@@ -68,3 +68,6 @@ body .student-resource-content pre code span{background:transparent!important;co
 .prompt-copy-status{margin-left:auto;font-size:12px}
 .prompt-block .highlight{margin:0}
 body .prompt-block pre{margin:0;border:0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}
+
+/* Keep the journal planning comparison readable on narrow screens. */
+.journal-comparison{max-width:100%;overflow-x:auto}.journal-comparison table{min-width:900px}.journal-comparison th:first-child{min-width:145px}

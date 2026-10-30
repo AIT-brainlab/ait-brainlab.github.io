@@ -72,19 +72,20 @@
 
       <h3>Research Areas</h3>
       <p>
-        PhD projects develop original contributions within the following four areas.
-        Master’s projects usually address a focused part of these broader efforts. Projects may connect more than one area.
+        Our two primary pillars connect understanding human behaviour with building reliable, adaptive AI agents.
+        PhD students develop original contributions; master’s students usually own a focused part of a larger effort.
       </p>
+      <h3>Primary Research Pillars</h3>
       <ol class="project-list">
         <li class="project-item-text">
-          <h4 id="human-ai-interaction">Human–AI Interaction</h4>
+          <h4 id="human-ai-interaction">Human Behaviour and Human–AI Interaction</h4>
           <p>
-            How can we understand people through their interactions with AI, and design tools that strengthen
-            human agency, judgment, and capabilities?
+            How do people behave, how accurately can agents model them, and how can AI strengthen
+            human understanding, agency, and capabilities?
           </p>
           <ul>
-            <li><strong>Simulated humans:</strong> Model personalities, cognitive biases, memory, cognitive load,
-              and other human characteristics; examine when simulations reflect real human behaviour and where they fail.</li>
+            <li><strong>Human behaviour simulation:</strong> Model preferences, personalities, biases, memory, and cognitive load.
+              Validate simulations against real human behaviour, beyond whether they appear believable.</li>
             <li><strong>Human biases and AI behaviour:</strong> Study how people and AI influence one another,
               including sycophancy, trust, negotiation, and decision-making.</li>
             <li><strong>Tools for human agency and well-being:</strong> Develop and evaluate interactions that support
@@ -92,32 +93,46 @@
           </ul>
           <p class="project-examples">
             Related work:
+            <a href="https://aclanthology.org/2026.acl-long.2034/" target="_blank" rel="noopener noreferrer">Multi-turn human behaviour simulation (ACL 2026)</a> ·
+            <a href="https://arxiv.org/abs/2605.22855" target="_blank" rel="noopener noreferrer">Hidden-preference negotiation (preprint)</a> ·
             <a href="https://arxiv.org/abs/2603.22766" target="_blank" rel="noopener noreferrer">Human–AI negotiation</a> ·
             <a href="https://arxiv.org/abs/2604.10733" target="_blank" rel="noopener noreferrer">Personality and sycophancy</a> ·
             <a href="https://dl.acm.org/doi/abs/10.1145/3025453.3025914" target="_blank" rel="noopener noreferrer">Attention regulation</a>
           </p>
         </li>
         <li class="project-item-text">
-          <h4 id="language-models">Reliable and Adaptive Language Models</h4>
+          <h4 id="language-models">Reliable, Adaptive, and Accountable AI Agents</h4>
           <p>
-            How can language-model systems produce more verifiable, constrained, and context-appropriate responses,
-            especially in settings where errors have serious consequences?
+            How can agents use knowledge, memory, and uncertainty to act effectively, remain truthful,
+            and make their decisions open to scrutiny?
           </p>
           <ul>
-            <li><strong>Ontologies and symbolic constraints:</strong> Combine LLMs with structured knowledge,
-              rules, and validation to make outputs more predictable and checkable. Evaluate the remaining failure modes.</li>
-            <li><strong>Benchmarks and evaluation:</strong> Develop tasks and datasets that reveal meaningful capabilities,
-              reliability limits, and failures that existing evaluations miss.</li>
-            <li><strong>Adaptive responses:</strong> Investigate when a system should adjust its explanation,
-              ask for clarification, retrieve evidence, or abstain, based on the task, user needs, and uncertainty.</li>
+            <li><strong>Grounded reasoning:</strong> Combine language models with knowledge graphs, ontologies,
+              rules, tools, and verification. Measure remaining errors; structure alone does not guarantee correctness.</li>
+            <li><strong>Memory and adaptation:</strong> Learn what to remember, retrieve, clarify, explain, or defer,
+              based on user needs, preferences, and uncertainty.</li>
+            <li><strong>Honesty and accountability:</strong> Study behaviour under conflicting incentives and build
+              benchmarks that separate factual knowledge, reported beliefs, and actual decisions.</li>
           </ul>
           <p class="project-examples">
             Related work:
+            <a href="https://aclanthology.org/2025.acl-long.468/" target="_blank" rel="noopener noreferrer">KG-Agent (ACL 2025)</a> ·
+            <a href="https://aclanthology.org/2025.emnlp-industry.126/" target="_blank" rel="noopener noreferrer">Memory and prompt optimisation (EMNLP Industry 2025)</a> ·
+            <a href="https://arxiv.org/abs/2608.26372" target="_blank" rel="noopener noreferrer">Knowledge-verified deception (preprint)</a> ·
+            <a href="https://arxiv.org/abs/2605.04507" target="_blank" rel="noopener noreferrer">Auditable negotiation beliefs (preprint)</a> ·
             <a href="https://arxiv.org/abs/2608.09028" target="_blank" rel="noopener noreferrer">PolicyKG: institutional policies and SHACL knowledge graphs</a>
           </p>
         </li>
+      </ol>
+      <p class="research-note"><strong>Connecting the pillars:</strong> Our <a href="/available-projects/#honest-and-adaptive-sales-agents">sales-agent project</a>
+        asks how an agent can understand and adapt to a customer while remaining truthful and preserving informed choice.
+        We evaluate customer understanding, suitability, and control alongside agent performance.</p>
+
+      <h3>Additional Research Directions</h3>
+      <p>Medical AI and biomedical sensing retain their own scientific questions, methods, and evaluation needs.</p>
+      <ol class="project-list">
         <li class="project-item-text">
-          <h4 id="medical-vqa">Medical Vision–Language Learning</h4>
+          <h4 id="medical-vqa">Medical Vision–Language AI</h4>
           <p>
             Our current deep-learning interest is medical visual question answering (VQA): answering questions
             about medical images using both visual and language information.
