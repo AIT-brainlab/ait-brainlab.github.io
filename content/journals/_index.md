@@ -17,11 +17,7 @@ The same topic can produce different contributions. Choose the readers who need 
 | A new language-model method or evaluation | NLP methods, resources, or language-model behaviour. |
 | A general learning method with broad evidence | Machine-learning methods, theory, or substantial empirical insight. |
 
-Read recent papers and current author guidance. Match the contribution, methods, and audience; then check format, timing, access options, and fees.
-
-Before selecting a venue
-
-Find two recent papers with a contribution and evidence pattern similar to yours. Explain why their readership would need your result. Neither an AI topic nor a prestigious venue name establishes fit. A specialist journal may be the right home for a focused contribution.
+**Before selecting a venue:** Find two recent papers with a contribution and evidence pattern similar to yours. Explain why their readership would need your result. Neither an AI topic nor a prestigious venue name establishes fit. A specialist journal may be the right home for a focused contribution.
 
 ## Leading conferences
 
@@ -32,8 +28,6 @@ Find two recent papers with a contribution and evidence pattern similar to yours
 | [NeurIPS](https://neurips.cc/) · Machine learning and AI | The paper offers strong technical or scientific insight with rigorous evaluation. |
 | [ICML](https://icml.cc/) · Machine learning | The central contribution is a machine-learning method, theory, analysis, or substantial empirical result. |
 
-Read recent accepted papers before choosing. The contribution—not merely the topic—should resemble work the conference values.
-
 ## HCI journals: Core and interactive systems
 
 | Journal | Good fit when… |
@@ -43,8 +37,6 @@ Read recent accepted papers before choosing. The contribution—not merely the t
 | [IJHCS](https://www.sciencedirect.com/journal/international-journal-of-human-computer-studies) | The work connects interaction with cognition or human factors. |
 | [IJHCI](https://www.tandfonline.com/journals/hihc20) | The paper offers broad or applied HCI evidence. |
 | [Behaviour & Information Technology](https://www.tandfonline.com/journals/tbit20) | Technology use, work, behavior, or social context is central. |
-
-Check current publication fees, access options, and institutional agreements in the journal’s author instructions.
 
 ## Applied HCI journals: Health, behavior, and education
 
@@ -64,5 +56,3 @@ Check current publication fees, access options, and institutional agreements in 
 | [Computational Linguistics](https://direct.mit.edu/coli) | The work offers deep computational-linguistic insight or comprehensive analysis. |
 | [Journal of Machine Learning Research](https://jmlr.org) | The contribution is a mature ML method, theory, resource, or extensive study. |
 | [Transactions on Machine Learning Research](https://jmlr.org/tmlr/) | The original ML contribution is technically sound and benefits from open review. |
-
-Check current author instructions and publication charges directly with the journal before submission.

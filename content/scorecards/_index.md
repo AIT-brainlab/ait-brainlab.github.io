@@ -4,13 +4,13 @@ layout: "lab-page"
 toc: true
 draft: false
 ---
-These scorecards help students and supervisors identify what is ready, what needs support, and what to do next. They are discussion tools, not formal grades, rankings, or substitutes for programme assessment.
+Use these discussion tools to decide what is ready and what needs support. They do not replace formal programme assessment.
 
 ## How to Use Them
 
-Choose the scorecard that matches your current stage. Student and supervisor review the evidence together and agree on one or two priorities, the support needed, and the next review date.
+Choose your current stage. Review the evidence together and agree on one or two priorities, support, and a review date.
 
-Use **Not yet discussed**, **Needs development**, **Ready for this stage**, or **Not applicable** for each criterion. Add a short evidence note and a next action. Use only the relevant scorecard; there is no need to complete all four at every meeting. Do not add the ratings into a total: a serious gap in feasibility or validity cannot be offset by polished writing.
+For each criterion, mark **Not yet discussed**, **Needs development**, **Ready for this stage**, or **Not applicable**. Add evidence and a next action. Use one relevant scorecard, without a total score: polished writing cannot offset a validity or feasibility gap.
 
 ## Idea Readiness
 
@@ -43,7 +43,7 @@ Use **Not yet discussed**, **Needs development**, **Ready for this stage**, or *
 | Criterion | Evidence to discuss |
 | --- | --- |
 | Understanding | The student can explain the question, methods, evidence, and limitations in their own words. |
-| Judgment | Decisions are justified; feedback and alternative explanations are considered. |
+| Judgment | The student judges gaps, novelty, and significance using verified evidence; feedback and alternatives inform decisions. |
 | Execution | Agreed work is documented, obstacles are raised, and plans are revised when needed. |
 | Ownership and collaboration | Individual responsibilities and contributions are clear; credit reflects the work. |
 | Communication | Updates connect evidence to an interpretation and a proposed next step. |

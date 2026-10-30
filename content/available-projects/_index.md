@@ -3,7 +3,7 @@ title: "Available Projects"
 layout: "lab-page"
 draft: false
 ---
-These are our current project directions. Students can discuss a focused role within one of these efforts or propose a related idea. The final scope depends on the student's interests, preparation, degree requirements, and the team's resources.
+Join a focused part of a current project or propose a related idea. Agree the scope around your interests, preparation, degree requirements, and available resources.
 
 Support acknowledgements below describe project support; they do not imply that a funded student position or scholarship is available. Discuss current opportunities with the supervisor.
 

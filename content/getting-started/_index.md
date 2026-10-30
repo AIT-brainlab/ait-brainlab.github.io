@@ -4,9 +4,7 @@ layout: "lab-page"
 toc: true
 draft: false
 ---
-You can propose your own idea or join an [available project](/available-projects/). You do not need to arrive with a polished or proven-novel topic. Bring a question you care about and be ready to develop it through reading, discussion, and a small first investigation.
-
-**New here?** Choose one project, prepare the one-page idea below, and bring it to a discussion. The Research Guide teaches methods; Scorecards help when a decision about readiness is needed. You do not need to complete every resource before meeting.
+Propose an idea or join an [available project](/available-projects/). Prepare the one-page note below and bring it to a discussion. Your topic does not need to be polished or proven novel; reading and a small investigation will help shape it.
 
 ## 1. Choose a Starting Point
 
@@ -17,7 +15,7 @@ Review our [Research Areas](/projects/) and note the skills you already have, wh
 
 ## 2. Prepare a One-Page Idea
 
-Use the following **AIT Brain Lab discussion outline** for an initial one-page note. This is a starting outline for lab discussion, not an official AIT thesis-proposal form. Formal proposal documents should follow your programme's requirements and the templates in our [Research Guide](/researchguide/).
+Use this **AIT Brain Lab discussion outline** for your initial note. For formal proposals, follow your programme’s requirements; see [Resources](/resources/) for templates.
 
 Include a working title, your name, degree, and proposed project area. Keep the main note to about one page; list references separately if needed.
 
@@ -48,17 +46,15 @@ The outcome may be a revised question, a short literature review, a baseline rep
 
 ### Meeting Frequency
 
-We meet more frequently while the research direction is taking shape, then adjust as the project develops and the student becomes more independent.
-
 - **Early stage: weekly.** Use frequent discussions to refine the question, assess prior work, and plan a feasible study.
 - **Once the direction and plan are established: every two weeks.** Review evidence, resolve bottlenecks, and agree on the next steps.
 - **Later, when the work is progressing independently: on demand.** Request a meeting when a decision, difficulty, or important milestone needs discussion.
 
-We agree together when to change the meeting frequency. If you become stuck, ask for help promptly rather than waiting for the next scheduled meeting.
+Agree changes in meeting frequency together. Ask for help promptly when stuck.
 
 ### Read, Question, and Write Early
 
-Read strong papers from leading venues such as **ACL, CHI, and NeurIPS**, choosing work relevant to your research question and contribution. Examine how the authors identify an important gap, formulate a strong question, design their study, and support their claims.
+Read strong, relevant papers from **ACL, CHI, NeurIPS**, and specialist venues. Examine the question, study design, and evidence supporting each claim.
 
 **For your first reading discussion, bring a comparison of three close papers**, selected with the supervisor if needed. For each, record the question, main evidence, limitation, and what it changes about your idea. Trace their references backward and newer papers citing them forward. Search neighbouring terms and relevant specialist venues too; venue reputation alone does not establish that a claim is correct.
 
@@ -70,11 +66,11 @@ Begin drafting the **first three chapters** early, following your programme's re
 2. **Literature review:** A critical synthesis of the closest work and the gap your project addresses.
 3. **Methodology:** The proposed approach, study or system design, evaluation, analysis, and feasibility.
 
-Treat these chapters as working documents. Revise them as your reading, discussions, and early experiments change your understanding. Planned methods and expected contributions should be clearly distinguished from completed work and actual findings.
+Revise these chapters as you learn. Distinguish planned methods and expected contributions from completed work and findings.
 
 ### Bring Your Thinking to Meetings
 
-A progress discussion should help us make decisions and move the project forward. Before a meeting, prepare:
+Before each meeting, prepare:
 
 - **Progress and evidence:** What did you try, and what did you find?
 - **Interpretation:** What do you think the evidence means? What remains uncertain?
@@ -82,7 +78,7 @@ A progress discussion should help us make decisions and move the project forward
 - **Proposed next steps:** What do you recommend doing next, and why? Bring alternatives when useful.
 - **Support needed:** What decision, feedback, or resource do you need from the supervisor or team?
 
-Present information together with your interpretation and a proposed action. You do not need to have the answer already; identifying the difficulty clearly is a useful contribution to the discussion.
+Bring your interpretation and proposed action, even when the answer is uncertain.
 
 ### When the Project Gets Stuck
 
@@ -90,19 +86,21 @@ Our first approach is to **keep the same overall topic and adjust the project so
 
 Agree on a short review point and the evidence needed to choose the next step. If repeated attempts cannot answer the question, revisit the assumption or approach together. Staying with the topic should not mean repeating an uninformative experiment indefinitely.
 
-Raise bottlenecks early so we can make these adjustments before they threaten completion.
-
 ### Before Booking a Proposal or Defense
 
 **Send the report to the supervisor before booking your proposal presentation or final defense.** Allow time for final comments and any necessary revisions. Agree on the review timeline with the supervisor before making booking arrangements, and follow the programme's formal procedures and deadlines.
 
 ### Keep a Small Research Record
 
-Use the [research decision note](/downloads/research-decision-note.md) as a plain-text starting template. It holds your closest-paper comparison, next test, claim–evidence table, and meeting update in one place. Use only the sections needed for the next decision; a short, current note is more useful than a large unfinished document.
+Keep papers, claim–evidence comparisons, and meeting decisions in one [research decision note](/downloads/research-decision-note.md). Use only the sections needed now.
 
 A reference manager such as [Zotero](https://www.zotero.org/support/quick_start_guide) can organise papers and citations. [Git](https://docs.github.com/en/get-started/start-your-journey/what-is-github) can track code and changes. Write in the programme's required format, using Word or [Overleaf](https://docs.overleaf.com/getting-started/your-first-project) as appropriate. Start with tools you can use reliably; a complicated setup is not a research contribution.
 
 For computational experiments, record data splits, model and code versions, settings, and failures. For human studies, keep the protocol, consent and ethics records, sampling decisions, and analysis notes. Keep protected data in approved storage.
+
+### Use AI With Judgment
+
+AI can synthesise papers and organise evidence. You must judge what is missing, what may be novel, and why the question matters. Verify sources and explain your decisions in your own words. See [AI for Research](/ai/).
 
 ### Shared Responsibilities
 
