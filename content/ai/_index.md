@@ -262,3 +262,52 @@ Deliver the story, revisions, evidence gaps, Figure 1, and my next decision.
 Update the manuscript and note. Check authorship, AI disclosure, and the venue’s
 current AI policy before submission. Never promise publication acceptance.
 ```
+
+> ### Optional: Accelerate with Grok Bot
+>
+> **Once your workflow is clear, automate the routine work.** Grok Bot has a persistent cloud computer with a browser, files, and terminal; it can continue working while your laptop is closed. [Official documentation](https://docs.x.ai/grok-bot/overview).
+>
+> **Suggested roles:** Grok Bot coordinates; ChatGPT challenges; Claude implements; OpenRouter provides model access for testing. Configure authorised access, or pass the handoffs yourself. OpenRouter is the testing route, not a separate research judge.
+>
+> **Start with one bounded task:** specify the inputs, time or compute budget, what “done” means, and when to return for your decision. Review the evidence before expanding the automation.
+>
+> **You remain the researcher.** Check sources and results; judge the gap, novelty, significance, and next direction. Faster execution is useful only when the work answers a worthwhile question.
+>
+> **Give Grok Bot this coordinator prompt:**
+>
+> ```text
+> Coordinate this research project: [repository and task].
+> Read the paper and notes/research-note.md first. The note holds the question,
+> verified papers, evidence, decisions, unresolved issues, and next step.
+> My time/compute budget is: [specify]. Bring research decisions back to me.
+>
+> 1. Check access to GitHub, ChatGPT, Claude, and OpenRouter. Use configured,
+>    authorised connections or browser sessions. If unavailable, prepare the
+>    exact handoff for me. Never claim a tool was used when it was not.
+> 2. ChatGPT is the challenger. Give it the question, closest verified work,
+>    intended claims, study plan, and constraints. Ask for the three strongest
+>    objections to novelty, significance, or validity, with evidence and repairs.
+>    Request counterexamples and tests that could disprove the claim.
+> 3. Bring me the objections and recommended changes before changing the question,
+>    study design, or scope. Record the decision and reasons in GitHub and the note.
+> 4. Claude is the implementer. Give it the agreed plan, acceptance checks,
+>    repository, baselines, and constraints. Ask it to implement the smallest
+>    useful change, run checks, and report changed files, actual runs, failures,
+>    and limitations. Keep the paper's methods aligned with the implementation.
+> 5. Use OpenRouter for the agreed model comparison. Fix a versioned test set,
+>    scoring rules, prompts, tool access, and fair resource budgets before testing.
+>    Keep development examples separate from held-out evaluation. Record actual
+>    model IDs, provider/routing, settings, date, raw outputs, errors, latency,
+>    and cost. Analyse repeated runs and uncertainty where relevant; never pick
+>    only favourable outputs. Keep API keys outside commits and handoff messages.
+> 6. Return results and implementation details to ChatGPT for critique. Check
+>    its objections against sources, code, and logs. Send necessary fixes to
+>    Claude within the agreed plan; escalate changes to claims or design to me.
+>    Neither assistant's approval establishes novelty or correctness.
+> 7. After each cycle, update the paper, GitHub log, and research note. Distinguish
+>    planned, completed, and exploratory work. Report evidence, biggest remaining
+>    gap, next proposed action, and the decision needed from me.
+>
+> Run one cycle, then report. Continue only within the agreed task and budget;
+> stop when blocked, over budget, or when a research decision is needed.
+> ```

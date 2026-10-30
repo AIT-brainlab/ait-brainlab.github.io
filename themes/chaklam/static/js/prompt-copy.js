@@ -28,7 +28,11 @@
       'five connected sentences', 'findings pending',
       'Revise weak reasoning before polishing the English', 'Figure 1',
       'three most consequential concerns', 'return to Idea Testing',
-      'Never promise publication acceptance'
+      'Never promise publication acceptance', 'ChatGPT is the challenger',
+      'Claude is the implementer', 'Use OpenRouter for the agreed model comparison',
+      'Bring me the objections and recommended changes',
+      'Return results and implementation details to ChatGPT',
+      'update the paper, GitHub log, and research note', 'Run one cycle, then report'
     ];
     const escapePattern = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
     const emphasis = new RegExp(priorities.map(escapePattern).join('|'), 'gi');
