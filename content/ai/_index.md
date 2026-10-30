@@ -25,7 +25,11 @@ Use supported integrations and authorised accounts, or pass outputs yourself. Wi
 
 ### Keep One Shared Research Note
 
-Keep **question → closest verified work → evidence → unresolved issues → next decision** beside the paper and code. Update it after each stage so your supervisor or another assistant can continue. Use the [research decision note](/downloads/research-decision-note.md) if helpful.
+**Use the paper as the project's source of truth.** Keep its research question, methods, evidence, and current claims up to date as you read, code, test, and revise. Ground claims in verified sources and actual results; clearly label plans and untested ideas.
+
+**Document every research action in GitHub:** what you changed or ran, why, the result, and the next decision. Use commits for code and paper changes, and issues or experiment logs for investigations, failed attempts, and decisions. After each work session, update the paper and link the relevant record. Use a private repository and keep protected data and secrets in approved storage.
+
+Keep a short note beside the paper and code: **question → closest verified work → evidence → unresolved issues → next decision**. It helps you resume work; the paper remains the main account. Use the [research decision note](/downloads/research-decision-note.md) if helpful.
 
 ### Discuss, Then Decide
 
