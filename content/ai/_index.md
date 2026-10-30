@@ -12,16 +12,16 @@ Follow the five stages in our [Research Guide](/researchguide/). Copy the prompt
 
 ## Set Up a Research Team
 
-Start with tools you already have. Add one only when it solves a specific need.
+**Start with one assistant: ChatGPT or Claude.** All five prompts work with either. A second assistant, coordinator, or coding tool is optional; add one for a specific need.
 
 | Role | Suggested tool | Responsibility |
 | --- | --- | --- |
 | Coordinator | **Grok Bot**, when available | Keep tasks and files current, arrange handoffs, and bring decisions back to you. It has a persistent cloud computer, beyond ordinary Grok chat. [Documentation](https://docs.x.ai/grok-bot/overview). |
-| Research partners | **ChatGPT and Claude** | Independently synthesise literature, propose ideas, and challenge each other's reasoning. [ChatGPT search](https://learn.chatgpt.com/docs/web-search) · [Claude research](https://support.claude.com/en/articles/11088861-use-research-on-claude). |
+| Research assistant | **ChatGPT or Claude** | Synthesise literature, propose ideas, and critically review the reasoning. Use a second assistant for an optional independent critique. [ChatGPT search](https://learn.chatgpt.com/docs/web-search) · [Claude research](https://support.claude.com/en/articles/11088861-use-research-on-claude). |
 | Experiment access | **OpenRouter**, if needed | Access models through an API. Record model, provider, routing, and settings. [Routing guidance](https://openrouter.ai/docs/guides/routing/provider-selection). |
 | Implementation | An AI coding assistant | Implement and check experiments; update the paper alongside the code. Verify what actually ran. |
 
-Use supported integrations and authorised accounts, or pass outputs yourself. With one assistant, use separate proposer and critic conversations; this is a self-check, not independent review. Features and access change.
+Use supported integrations and authorised accounts, or pass outputs yourself. Features and access change.
 
 ### Keep One Shared Research Note
 
@@ -31,9 +31,24 @@ Use supported integrations and authorised accounts, or pass outputs yourself. Wi
 
 Keep a short note beside the paper and code: **question → closest verified work → evidence → unresolved issues → next decision**. It helps you resume work; the paper remains the main account. Use the [research decision note](/downloads/research-decision-note.md) if helpful.
 
+**Save progress:** use this short prompt at the end of a work session or before moving to a new conversation.
+
+```text
+Update the paper and GitHub record from this session. Summarise:
+- Current research question and closest verified papers, with links.
+- Actions taken, results, and supporting files or sources.
+- Decisions and reasons, unresolved issues, and the proposed next step.
+Separate evidence from assumptions, and plans from completed work.
+If you cannot edit or save directly, give me the exact updates to save.
+Report what you actually saved and what I still need to do.
+Finish with a short handoff I can paste into my next conversation.
+```
+
 ### Discuss, Then Decide
 
-Ask assistants to work independently before comparing arguments. Each criticism should identify a claim, evidence or missing evidence, why it matters, and a possible repair. Resolve disagreements through sources or experiments. **Agreement between models is not evidence of novelty. You and your supervisor decide.**
+Ask your assistant to develop a proposal, then critically review it against verified evidence. A separate conversation can help, but a model reviewing itself is a self-check, not independent validation. If another assistant is available, give it the evidence and proposal for an independent critique.
+
+Each criticism should name the claim, supporting or missing evidence, consequence, and repair. Resolve disagreements through sources or experiments. **Model agreement is not proof of novelty. You and your supervisor decide.**
 
 ## 1. Idea Generation
 
@@ -52,9 +67,9 @@ Leave the judgment of significance and the final choice to me.
 2. Read the closest papers beyond their abstracts. Record the question,
    contribution, evidence, limitations, and verified link for each.
    Distinguish an author's finding from your own interpretation.
-3. Ask ChatGPT and Claude to propose directions independently. Use authorised
-   integrations or provide a handoff I can pass myself. Report who actually
-   participated; never pretend another model was consulted.
+3. Propose directions, then critically review them against verified evidence.
+   If a second assistant is available, prepare a handoff for an independent
+   critique. Report who participated; never pretend another model was consulted.
 4. Compare proposals: overlap with prior work, important unanswered question,
    strongest objection, and smallest useful investigation.
 5. Revise through up to three discussion rounds, stopping earlier if another
@@ -85,7 +100,8 @@ Use the verified papers, constraints, and unresolved issues already recorded.
    make the project too broad, identify the core question and a smaller scope.
 4. Plan a first investigation: reproduce a baseline, inspect data, or pilot code
    if useful. Report what ran, what it showed, and what it cannot establish.
-5. Have the partners challenge the plan. Resolve the main disagreement through
+5. Critically review the plan; optionally seek a second assistant’s critique.
+   Resolve the main disagreement through
    a source, diagnostic test, or supervisor discussion. Avoid needless components.
 
 Deliver the revised question-objective-contribution-method table, the strongest
@@ -106,8 +122,9 @@ Target research community or venue: [specify, if known].
    Prioritise peer-reviewed evidence but include relevant preprints and resources.
 2. Verify sources and compare their actual claims, methods, and findings with
    ours. Maintain a closest-work table with links and a search date.
-3. Ask a fresh critic to find the strongest counterexample: work that already
-   answers the question or makes our claimed difference unimportant.
+3. Take a critic’s perspective and find the strongest counterexample: work that
+   already answers the question or makes our difference unimportant. Optionally
+   ask another assistant to check independently; label a self-review honestly.
 4. Judge the idea as substantial overlap, a possible distinction needing more
    evidence, or a supported distinction within the searched literature.
    Explain both novelty and significance; a new combination alone is insufficient.
@@ -189,7 +206,8 @@ Use only verified literature, actual methods, and available results.
    difference from existing practice, and what changes. Learn from verified
    examples; offer three concepts for me to choose. Make it editable, original,
    and faithful to demonstrated evidence.
-5. Ask a fresh critic to review novelty, validity, and communication separately.
+5. Review novelty, validity, and communication separately from drafting.
+   Optionally seek another assistant’s independent critique; label self-review.
    For each concern, quote the relevant evidence, explain the consequence,
    and suggest a concrete repair. Rank the three most consequential concerns.
 6. Revise one concern at a time and recheck it. If a claim needs more evidence,
