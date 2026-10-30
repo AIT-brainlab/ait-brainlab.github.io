@@ -52,6 +52,7 @@ Final thesis: [slides](https://drive.google.com/file/d/1VSD0-DZHAhDnvD1PSEtpyTjy
 
 ## Related Guides
 
+- [Research Tips](/research-tips/): choose a question, move beyond building, and write a clear argument.
 - [Research Guide](/researchguide/): develop and test a research contribution.
 - [Journals](/journals/): choose an audience and publication venue.
 - [AI for Research](/ai/): prompts, verification, and responsible use.

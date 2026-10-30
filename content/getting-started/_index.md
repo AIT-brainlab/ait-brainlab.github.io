@@ -13,6 +13,8 @@ Propose an idea or join an [available project](/available-projects/). Prepare th
 
 Review our [Research Areas](/projects/) and note the skills you already have, what you need to learn, your degree, and the time available.
 
+Before drafting, use [Research Tips](/research-tips/) to sharpen your question. If your plan mainly lists features to build, read [Industry Development and Research](/research-tips/industry-and-research/).
+
 ## 2. Prepare a One-Page Idea
 
 Use this **AIT Brain Lab discussion outline** for your initial note. For formal proposals, follow your programme’s requirements; see [Resources](/resources/) for templates.

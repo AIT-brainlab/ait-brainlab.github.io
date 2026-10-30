@@ -28,7 +28,7 @@ docker compose exec dev hugo server --bind 0.0.0.0 --poll 700ms --disableFastRen
 - `static/`: lab images, demos, and downloadable research notes.
 - `config.toml`: site configuration and menus.
 
-The eight research/student pages share `layouts/partials/research-sidebar.html` inside the active theme.
+The research/student pages share `layouts/partials/research-sidebar.html` inside the active theme.
 The Research Guide preserves exercise notes in the visitor's browser and supports exporting them.
 
 ## Build and deployment
