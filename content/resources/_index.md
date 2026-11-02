@@ -18,7 +18,7 @@ Templates, proposal examples, completed work, and lab tools in one place. Open t
 
 ### Templates
 
-[Thesis presentation template](https://docs.google.com/presentation/d/1SXN2LABIBYnTblk1nbCE1KA83xmR4tt-vUE26Lnl0-E/edit?usp=sharing)
+[Thesis presentation template](https://docs.google.com/presentation/d/1cs_L6fUhohWj27M9whfixH5wMQdeeBoPCrm-mZo8vcg/edit?usp=sharing)
 
 [Thesis LaTeX template](https://www.overleaf.com/read/zptzbhxkbvbn#3d83d4)
 
