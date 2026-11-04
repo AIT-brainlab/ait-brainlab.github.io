@@ -6,7 +6,7 @@
     const priorities = [
       'Inspect any existing project first', 'private GitHub repository',
       'Create only the folders we need', 'current official paper template',
-      'Create notes/research-note.md', 'Label unknowns and findings pending',
+      'AI_getting_started.md', 'terms.md', 'research_review_skill.md', 'experimental_design.md', 'current_status.md', 'Label unknowns and findings pending',
       'Update the paper, GitHub record, and notes/research-note.md',
       'Separate evidence from assumptions',
       'Report what you actually saved', 'short handoff',

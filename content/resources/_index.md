@@ -7,15 +7,6 @@ draft: false
 
 Templates, proposal examples, completed work, and lab tools in one place. Open the resource needed for your next decision; you do not need to work through every link.
 
-## Choose the Resource for Your Next Step
-
-| What you are doing | Start here |
-| --- | --- |
-| Finding a question | [Getting Started](/getting-started/) and the [research decision note](/downloads/research-decision-note.md). |
-| Preparing a proposal | The relevant degree example and required template below. |
-| Reviewing progress | Use the [relevant scorecard](/scorecards/) to agree on the next one or two priorities. |
-| Writing or implementing | Compare one completed thesis; use the paper-writing guide or project starter when needed. |
-
 ### Templates
 
 [Thesis presentation template](https://docs.google.com/presentation/d/1cs_L6fUhohWj27M9whfixH5wMQdeeBoPCrm-mZo8vcg/edit?usp=sharing)

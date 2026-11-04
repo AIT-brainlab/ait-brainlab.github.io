@@ -25,69 +25,111 @@ Use supported integrations and authorised accounts, or pass outputs yourself. Fe
 
 ### Set Up the Project Once
 
-Use this before your first investigation. If the topic or venue is undecided, start with a working title and a simple paper outline; do not delay reading for a perfect setup. Thesis templates are in [Resources](/resources/).
+**Keep the paper current and give every record one job.** The files below live in the student's project repository. They are short working documents, not extra assignments: start unknown fields as pending and update them when the work changes.
+
+Use `research_review_skill.md` for the three [Research Checks](/scorecards/): novelty, validity, and writing. The skill files describe your research workflow in plain Markdown; tell the assistant to read them rather than assuming it loads them automatically.
 
 ```text
-Set up a research workspace for: [working topic, degree, and project location].
-Paper format or target venue, if known: [specify or write undecided].
+Set up a research workspace for: [topic, degree, and project location].
+Paper format or venue: [specify, or write undecided].
 
-1. Inspect any existing project first. Reuse its files and preserve existing work.
-2. Initialise Git locally. Create or connect a private GitHub repository using
-   my authorised account and chosen destination when available. If you cannot,
-   prepare the files locally and give me the exact remaining steps.
-3. Create only the folders we need:
-   paper/       manuscript, references, figures, and template
+1. Inspect existing files first. Preserve useful work and adapt this structure.
+   Initialise Git and create/connect a private GitHub repository when authorised.
+   If access is unavailable, prepare locally and give me the remaining steps.
+2. Create these folders with a short README and an appropriate .gitignore:
+   paper/       manuscript, references, figures, official template
+   research/    the working documents below
    src/         implementation
-   experiments/ configurations, protocols, and run logs
-   results/     shareable outputs and analysis
-   notes/       research-note.md
-   Add a README with setup/run instructions and an appropriate .gitignore.
-   Record dependencies when known; exclude secrets, protected data, and caches.
-4. Obtain the current official paper template for the specified venue, or the
-   programme-required thesis template. Record its source and version/date.
-   If undecided or unavailable, create a simple manuscript outline and mark
-   the template choice pending. Do not invent requirements or claim a download.
-5. Create notes/research-note.md: a short handoff containing the current question,
-   closest verified papers, evidence, decisions and reasons, unresolved issues,
-   and next step. Link the paper, code, and logs rather than duplicating them.
-6. Start the paper with background, problem, related work, and planned methods.
-   Label unknowns and findings pending. Commit the initial setup when possible.
+   prompts/     versioned research and model-evaluation prompts
+   scripts/     preparation, experiment, analysis, and paper-build commands
+   data/        data documentation, sources, versions, and split definitions
+   tests/       checks of code, scoring, and data integrity
+   runs_log/    one record per run: configuration, outputs, failures, and cost
+   results/     analysis and figures linked to their source run IDs
+   Keep secrets, protected data, caches, and large generated files out of Git.
+3. Create these Markdown files, each with the following purpose:
+   research/terms.md
+     Preferred terms, definitions, abbreviations, and deprecated synonyms.
+     Use the same terms in the paper, code, prompts, and figures.
+   research/research_process_skill.md
+     How we iterate: question, literature, design, implementation, evidence,
+     writing, and revision; include budgets, review points, and stop/pivot rules.
+   research/research_review_skill.md
+     Separate novelty, validity, and writing checks. For each concern, record
+     evidence, consequence, and repair. Never treat AI agreement as validation.
+   research/experimental_design.md
+     Questions, hypotheses, IVs, DVs, measures, baselines, confounds, controls,
+     sampling, analysis, uncertainty, data splits, and protocol changes.
+     For non-experimental work, document the appropriate design and rationale.
+   research/implementation.md
+     Components and tasks: planned, implemented, tested, blocked, or dropped.
+     Link code, tests, and run evidence; implemented does not mean validated.
+   research/decisions.md
+     Dated research decisions: options, evidence, rationale, consequences,
+     and what would make us revisit the decision.
+   research/related_work.md
+     Verified citations, closest-work comparisons, methods, limitations,
+     novelty counterexamples, and search dates.
+   research/research_questions.md
+     Three to five related key questions, why each matters, intended evidence,
+     and status. Mark one core question; do not invent questions to fill a quota.
+   research/current_status.md
+     A short roadmap: done, in progress, blocked, and next; evidence links,
+     unresolved concerns, and the next decision needed from me.
+   AI_getting_started.md
+     Entry point for a fresh AI: project purpose, file map, exact setup/run
+     commands, constraints, and update rules. Read the current status, terms,
+     research questions, and paper, then the records relevant to the task.
+4. Obtain the current official venue or programme template; record its source
+   and version/date. If undecided, create a simple paper outline and mark the
+   template pending. Never invent a download or a requirement.
+5. Start the paper with background, problem, related work, and planned methods.
+   Label findings pending. If notes/research-note.md already exists, transfer
+   useful content into the relevant records; preserve it until reviewed.
+6. Add this rule to AI_getting_started.md: after meaningful work, update the
+   paper and affected records, log actual runs, and update current_status.md.
+   Mark work done only when the stated check has evidence. Ask me to resolve
+   changes to the research question, claims, or agreed experimental design.
 
-Report what was created, saved, committed, or pushed, and what remains for me.
-Do not claim access, execution, or uploads that did not happen.
+Report what you created, changed, committed, or pushed, and what remains.
+Never claim execution, access, or results that did not happen.
 ```
 
-### Keep One Shared Research Note
+### Keep the Paper and Records in Sync
 
-**Use the paper as the project's source of truth.** Keep its research question, methods, evidence, and current claims up to date as you read, code, test, and revise. Ground claims in verified sources and actual results; clearly label plans and untested ideas.
+**The paper is the project's source of truth for its research argument.** Ground claims in verified literature and actual results; keep plans and findings distinct. GitHub holds the versioned evidence and work history.
 
-**Document every research action in GitHub:** what you changed or ran, why, the result, and the next decision. Use commits for code and paper changes, and issues or experiment logs for investigations, failed attempts, and decisions. After each work session, update the paper and link the relevant record. Use a private repository and keep protected data and secrets in approved storage.
+`research/current_status.md` replaces the single shared research note. Keep it short and link to the detailed records. Record implementation progress in `implementation.md`, reasoning in `decisions.md`, and the closest papers in `related_work.md`.
 
-The **shared research note is `notes/research-note.md`**, a Markdown text file in your project repository—not a page on this website. It is a short handoff with the current question, closest verified papers, evidence, decisions and reasons, unresolved issues, and next step. “Shared” means you, your supervisor, and any assistant work from the same current record. Use this [starting template](/downloads/research-decision-note.md) if helpful.
-
-**The paper explains the research; GitHub records the work; the note helps you resume.**
-
-**Save progress:** use this short prompt at the end of a work session or before moving to a new conversation.
+**Save progress** at the end of a work session or before changing conversations:
 
 ```text
-Update the paper, GitHub record, and notes/research-note.md from this session.
-The note is a short handoff, not a second manuscript. Summarise:
-- Current research question and closest verified papers, with links.
-- Actions taken, results, and supporting files or sources.
-- Decisions and reasons, unresolved issues, and the proposed next step.
-Separate evidence from assumptions, and plans from completed work.
-If you cannot edit or save directly, give me the exact updates to save.
-Report what you actually saved and what I still need to do.
-Finish with a short handoff I can paste into my next conversation.
+Read AI_getting_started.md and save this session's progress.
+Update the paper and only the research/ records affected by this work.
+Log each actual run in runs_log/ with its run ID, configuration, code/data/model
+versions, outputs, failures, and cost. Link results back to that run.
+Keep terms.md consistent with the manuscript and figures.
+Record research choices and reasons in decisions.md, task states and evidence
+in implementation.md, and the roadmap and next decision in current_status.md.
+Separate evidence from assumptions, and planned from completed work.
+If you cannot save directly, give me the exact updates to save.
+Report what you actually saved and what remains. Finish with a short handoff
+that tells a fresh AI to read AI_getting_started.md and current_status.md.
 ```
+
+### Two Useful Additions
+
+- **Give every experiment a stable run ID.** Link the configuration, code commit, data split, model/provider version, raw output, and paper result so a number can be traced back to what ran.
+- **Freeze evaluation cases before comparison.** Keep development and held-out data separate, record the baseline budget, and log protocol changes. Code tests check implementation; research evaluation checks the claim.
 
 ## 1. Idea Generation
 
 **Start with a domain, interest, or real problem.** Find promising questions by comparing the closest work.
 
 ```text
-Use notes/research-note.md (or the note I paste): the current question,
-verified papers, evidence, decisions, unresolved issues, and next step.
+Read AI_getting_started.md and research/current_status.md first.
+Use research/terms.md, research/research_questions.md, and the paper.
+Open other research/ records as needed; if unavailable, ask me to paste them.
 
 My domain, interest, or observed problem is: [describe it].
 My degree, preparation, available resources, and timeline are: [describe them].
@@ -112,8 +154,8 @@ Leave the judgment of significance and the final choice to me.
    potential distinction, why the answer matters, feasibility, and biggest risk.
    Recommend one with trade-offs. Ask me what seems missing and worth pursuing.
 
-Keep the verified-paper comparison and the chosen direction in the shared
-research note. Do not claim that an idea is novel before validation.
+Keep the verified-paper comparison and the chosen direction in the project
+records. Do not claim that an idea is novel before validation.
 ```
 
 ## 2. Idea Refinement
@@ -121,19 +163,20 @@ research note. Do not claim that an idea is novel before validation.
 **Turn the direction into a testable plan.** Use thinking tools to expose weaknesses. A pilot helps diagnose feasibility; it does not establish the contribution.
 
 ```text
-Use notes/research-note.md (or the note I paste): the current question,
-verified papers, evidence, decisions, unresolved issues, and next step.
+Read AI_getting_started.md and research/current_status.md first.
+Use research/terms.md, research/research_questions.md, and the paper.
+Open other research/ records as needed; if unavailable, ask me to paste them.
 
-Our chosen direction is: [paste the idea or point to the research note].
-Use the verified papers, constraints, and unresolved issues already recorded.
+Our chosen direction is: [paste the idea or point to research/current_status.md].
+Use research/related_work.md, constraints, and unresolved issues already recorded.
 
 1. Use first principles: define the problem, concepts, and observable measures.
 2. Challenge assumptions and simpler explanations. Use systems thinking to trace
    feedback loops and second-order effects. Explain what changes the idea.
-3. Develop three related research questions, three corresponding objectives,
-   and three anticipated contributions as one coherent project.
+3. Refine three to five related key research questions and their objectives.
+   Identify the anticipated contributions as one coherent project.
    Align them in a table with example methodology and evidence for each.
-   Label contributions as intended, not demonstrated. If the three questions
+   Label contributions as intended, not demonstrated. If the questions
    make the project too broad, identify the core question and a smaller scope.
 4. Plan a first investigation: reproduce a baseline, inspect data, or pilot code
    if useful. Report what ran, what it showed, and what it cannot establish.
@@ -143,7 +186,7 @@ Use the verified papers, constraints, and unresolved issues already recorded.
 
 Deliver the revised question-objective-contribution-method table, the strongest
 alternative explanation, feasibility limits, and the proposed next step.
-Update the shared research note with the reasoning and any pilot evidence.
+Update the project records with decisions and any pilot evidence.
 ```
 
 ## 3. Idea Validation
@@ -151,10 +194,11 @@ Update the shared research note with the reasoning and any pilot evidence.
 **Check the distinction against the closest work.** Aim for a defensible judgment with clear uncertainty, not certainty that an idea is novel.
 
 ```text
-Use notes/research-note.md (or the note I paste): the current question,
-verified papers, evidence, decisions, unresolved issues, and next step.
+Read AI_getting_started.md and research/current_status.md first.
+Use research/terms.md, research/research_questions.md, and the paper.
+Open other research/ records as needed; if unavailable, ask me to paste them.
 
-Validate this idea: [paste the refined plan or point to the research note].
+Validate this idea: [paste the refined plan or point to research/current_status.md].
 Target research community or venue: [specify, if known].
 
 1. Search the closest terms, alternative terminology, neighbouring fields,
@@ -177,7 +221,7 @@ Target research community or venue: [specify, if known].
 
 Do not say “definitely novel” or keep looping until models agree.
 If the evidence is insufficient, say so and name the next source or test needed.
-Update the shared note and the proposed gap statement in the paper.
+Update the project records and the proposed gap statement in the paper.
 ```
 
 ## 4. Idea Testing
@@ -185,10 +229,11 @@ Update the shared note and the proposed gap statement in the paper.
 **Design evidence that can answer the question.** Learn from closely related studies and test competing explanations.
 
 ```text
-Use notes/research-note.md (or the note I paste): the current question,
-verified papers, evidence, decisions, unresolved issues, and next step.
+Read AI_getting_started.md and research/current_status.md first.
+Use research/terms.md, research/research_questions.md, and the paper.
+Open other research/ records as needed; if unavailable, ask me to paste them.
 
-Develop and carry out a rigorous study for: [plan or research-note location].
+Develop and carry out a rigorous study for: [plan or project location].
 Use the validated gap, verified literature, intended claims, and constraints.
 
 1. Compare methods in strong related papers: frameworks, models, tools, tasks,
@@ -218,8 +263,8 @@ Use the validated gap, verified literature, intended claims, and constraints.
 8. Design the methodology figure: learn from good examples, propose three
    structures, and let me choose. Show the core idea, conditions, components,
    relationships, and evidence in an editable figure. Include only supported claims.
-9. After each meaningful iteration, update the paper, evidence table, and shared
-   note. Report the biggest unresolved threat, the next decisive investigation,
+9. After each meaningful iteration, update the paper, evidence table, and project
+   records. Report the biggest unresolved threat, the next decisive investigation,
    and when to narrow, stop, or change the approach with me.
 
 Do not optimise for the number of experiments or for positive findings.
@@ -231,10 +276,11 @@ Optimise for evidence that answers the question and tests the strongest alternat
 **Build the five-part story:** background → problem → methodology → findings → contribution/significance. Let writing expose gaps that need further testing.
 
 ```text
-Use notes/research-note.md (or the note I paste): the current question,
-verified papers, evidence, decisions, unresolved issues, and next step.
+Read AI_getting_started.md and research/current_status.md first.
+Use research/terms.md, research/research_questions.md, and the paper.
+Open other research/ records as needed; if unavailable, ask me to paste them.
 
-Help communicate this research: [paper/research-note location and target venue].
+Help communicate this research: [paper/project location and target venue].
 Use only verified literature, actual methods, and available results.
 
 1. Write five connected sentences: background, problem, methodology, findings,
@@ -259,7 +305,7 @@ Use only verified literature, actual methods, and available results.
    an evidence gap with persuasive language.
 
 Deliver the story, revisions, evidence gaps, Figure 1, and my next decision.
-Update the manuscript and note. Check authorship, AI disclosure, and the venue’s
+Update the manuscript and affected research/ records. Check authorship, AI disclosure, and the venue’s
 current AI policy before submission. Never promise publication acceptance.
 ```
 
@@ -277,8 +323,8 @@ current AI policy before submission. Never promise publication acceptance.
 >
 > ```text
 > Coordinate this research project: [repository and task].
-> Read the paper and notes/research-note.md first. The note holds the question,
-> verified papers, evidence, decisions, unresolved issues, and next step.
+> Read AI_getting_started.md, the paper, and research/current_status.md first.
+> Use the research/ records for terms, questions, literature, design, and decisions.
 > My time/compute budget is: [specify]. Bring research decisions back to me.
 >
 > 1. Check access to GitHub, ChatGPT, Claude, and OpenRouter. Use configured,
@@ -289,7 +335,7 @@ current AI policy before submission. Never promise publication acceptance.
 >    objections to novelty, significance, or validity, with evidence and repairs.
 >    Request counterexamples and tests that could disprove the claim.
 > 3. Bring me the objections and recommended changes before changing the question,
->    study design, or scope. Record the decision and reasons in GitHub and the note.
+>    study design, or scope. Record decisions and reasons in research/decisions.md.
 > 4. Claude is the implementer. Give it the agreed plan, acceptance checks,
 >    repository, baselines, and constraints. Ask it to implement the smallest
 >    useful change, run checks, and report changed files, actual runs, failures,
@@ -304,8 +350,9 @@ current AI policy before submission. Never promise publication acceptance.
 >    its objections against sources, code, and logs. Send necessary fixes to
 >    Claude within the agreed plan; escalate changes to claims or design to me.
 >    Neither assistant's approval establishes novelty or correctness.
-> 7. After each cycle, update the paper, GitHub log, and research note. Distinguish
->    planned, completed, and exploratory work. Report evidence, biggest remaining
+> 7. After each cycle, update the paper and affected research/ records, including
+>    current_status.md. Distinguish planned, completed, and exploratory work.
+>    Report evidence, biggest remaining
 >    gap, next proposed action, and the decision needed from me.
 >
 > Run one cycle, then report. Continue only within the agreed task and budget;
