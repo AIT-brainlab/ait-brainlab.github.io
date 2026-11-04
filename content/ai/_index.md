@@ -10,20 +10,7 @@ draft: false
 
 Follow the five stages in our [Research Guide](/researchguide/). Copy the prompt for your current stage and return to earlier stages when evidence changes.
 
-## Set Up a Research Team
-
-**Start with one assistant: ChatGPT or Claude.** The setup, five research stages, and save prompt work with either. A second assistant, coordinator, or coding tool is optional; add one for a specific need.
-
-| Role | Suggested tool | Responsibility |
-| --- | --- | --- |
-| Coordinator | **Grok Bot**, when available | Keep tasks and files current, arrange handoffs, and bring decisions back to you. It has a persistent cloud computer, beyond ordinary Grok chat. [Documentation](https://docs.x.ai/grok-bot/overview). |
-| Research assistant | **ChatGPT or Claude** | Synthesise literature, propose ideas, and critically review the reasoning. Use a second assistant for an optional independent critique. [ChatGPT search](https://learn.chatgpt.com/docs/web-search) · [Claude research](https://support.claude.com/en/articles/11088861-use-research-on-claude). |
-| Experiment access | **OpenRouter**, if needed | Access models through an API. Record model, provider, routing, and settings. [Routing guidance](https://openrouter.ai/docs/guides/routing/provider-selection). |
-| Implementation | An AI coding assistant | Implement and check experiments; update the paper alongside the code. Verify what actually ran. |
-
-Use supported integrations and authorised accounts, or pass outputs yourself. Features and access change.
-
-### Set Up the Project Once
+## Set Up the Project Once
 
 **Keep the paper current and give every record one job.** The files below live in the student's project repository. They are short working documents, not extra assignments: start unknown fields as pending and update them when the work changes.
 
