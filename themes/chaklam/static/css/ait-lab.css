@@ -73,3 +73,8 @@ body .prompt-block pre{margin:0;border:0;font-family:ui-monospace,SFMono-Regular
 
 /* The lab's philosophical foundation stays alongside its main message. */
 .hero-foundation{border-left:3px solid var(--ait-lime);padding-left:16px;margin:0 0 26px;max-width:620px}.hero-foundation .lab-eyebrow{margin-bottom:7px}.hero-foundation>p:last-child{font-size:14px;line-height:1.65;color:var(--lab-muted);margin-bottom:0}.hero-foundation a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+.student-resource-content figure img {
+  max-width: 100%;
+  height: auto;
+}
