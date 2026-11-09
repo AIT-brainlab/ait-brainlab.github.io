@@ -14,15 +14,15 @@ I’m building a Claude skill called **Ask Chaky** to share what I’ve learned 
 - **Starting from scratch?** My recommendation is to start with an empty GitHub repository. Clone it, open Claude Code in that folder, and ask Chaky to set up the project folders, paper, and research board.
 - **Already reviewing literature?** Tell Chaky your question and which papers you’ve read. Ask what it can help with next. It might suggest comparing the closest papers to see whether your proposed gap still holds.
 
-You can use Ask Chaky throughout the research process. Start with the stage that matches your current question, and revisit earlier stages when you learn something new.
+Use the five questions from the [Research Guide](/researchguide/) to decide what to ask Chaky. Return to an earlier question when you learn something that changes the idea.
 
-| Stage | What to ask Chaky |
-| --- | --- |
-| **Idea generation** | “Given what I’m curious about, what questions could I explore? Which papers should I read first?” |
-| **Idea refinement** | “Help me turn this idea into a focused research question and suggest what evidence could answer it.” |
-| **Idea validation** | “Which published work comes closest to my idea? What would I need to show for my contribution to matter?” |
-| **Idea testing** | “Help me design a small pilot. What should I measure, what should I compare against, and what could explain the result?” |
-| **Idea storytelling** | “Help me explain the question, what we found, and which claims the evidence supports.” |
+| Stage | Main question | What to ask Chaky |
+| --- | --- | --- |
+| **Idea generation** | Where could a good idea come from? | “Here’s a problem I keep noticing. Who faces it, what remains difficult, and which papers should I read first?” |
+| **Idea refinement** | How can we sharpen the idea? | “What am I taking for granted? What else could explain what I’m seeing? Help me turn that into a sharper question.” |
+| **Idea validation** | Is the idea new and important? | “Compare my idea with the closest papers. What have they already shown? What important question is still unanswered?” |
+| **Idea testing** | How can we test the idea convincingly? | “What kind of contribution am I making? What evidence would support it, and what result would change my interpretation?” |
+| **Idea storytelling** | How can readers follow one clear research story? | “Help me connect the background, problem, solution, evaluation, and contribution. Where does the story lose the reader?” |
 
 ## Get started
 
