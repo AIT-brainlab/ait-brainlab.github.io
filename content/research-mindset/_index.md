@@ -17,11 +17,17 @@ draft: false
 
 6. **Your first question is usually not your best question.** Challenge yourself: Why does this matter? Has someone already answered it? Is there a simpler explanation? Keep refining the question as you learn.
 
-7. **Keep thinking about factors and outcomes: IVs and DVs.** What exactly do you want to study or change? What outcome will you measure? What is your hypothesis, and what result would challenge it? Define success before looking at the results.
+7. **Choose a question you can answer in the time you have.** If the project depends on getting a new dataset, inventing a method, and figuring out how to evaluate it, each unknown can delay the whole study. Keep the question you care about and narrow it until you can run a first test with the time, data, and tools you have.
 
-8. **Learn how strong papers frame their argument.** Study their structure and logic, then write in your own words. Every paper has limitations; persuasive writing makes the contribution and its boundaries clear. It does not hide weak evidence.
+8. **Check whether the gap is in the literature or in your reading.** Read the closest papers and write down what they already answer and what important question they leave open. If they already answer your question, use what you learned to ask a better one.
 
-9. **Put your soul into it.** Research needs curiosity, focus, and care. If you work randomly without thinking deeply about the question, you are unlikely to get there. Work consistently, reflect honestly, and let what you learn guide your next step.
+9. **Go deep on one question.** An application can give you a setting for your research. Pick one question inside it and study it carefully. For example, in a sales assistant, ask whether explaining why a plan is unsuitable helps customers make a more informed decision. Build what you need to test that question, then examine when the explanation helps, when it fails, and why.
+
+10. **Keep thinking about factors and outcomes: IVs and DVs.** What exactly do you want to study or change? What outcome will you measure? What is your hypothesis, and what result would challenge it? Define success before looking at the results.
+
+11. **Learn how strong papers frame their argument.** Study their structure and logic, then write in your own words. Every paper has limitations; persuasive writing makes the contribution and its boundaries clear. It does not hide weak evidence.
+
+12. **Put your soul into it.** Research needs curiosity, focus, and care. If you work randomly without thinking deeply about the question, you are unlikely to get there. Work consistently, reflect honestly, and let what you learn guide your next step.
 
 ## Further Reading
 
