@@ -21,7 +21,12 @@ draft: false
 
 8. **Your knowledge gap may not be a research gap.** Read the closest papers and write down what they already answer and what important question they leave open. If they already answer your question, use what you learned to ask a better one.
 
-9. **Go deep on one question, not broad.** An application can give you a setting for your research. Pick one question inside it and study it carefully. For example, in a sales assistant, ask whether explaining why a plan is unsuitable helps customers make a more informed decision. Build what you need to test that question, then examine when the explanation helps, when it fails, and why.
+9. **Go deep on one question, not broad.** Building a complete application can take months and still leave your research contribution unclear. Pick **one narrow question**, build only what you need to answer it, and spend the rest of your effort understanding the result.
+
+   - **Too broad:** “I will build an AI insurance sales assistant that recommends plans, answers questions, and handles purchases.” This describes features. What will we learn from the study?
+   - **Narrow and deep:** “When an insurance plan is unsuitable, does explaining why help customers correctly decide to reject it?” Compare a warning alone with the same warning plus an explanation. Measure whether customers make the right decision, then examine the cases where the explanation helps or fails and look for evidence of why.
+
+   **Before you build, finish this sentence:** “My study will answer ___ by comparing ___ and measuring ___.” Then ask what the result would teach someone who never uses your app. Cut features that do not help answer the question.
 
 10. **Search GitHub before building from scratch.** Look for code from the closest papers, existing baselines, and evaluation scripts. Check the license and reproduce a small result before building on the code.
 
