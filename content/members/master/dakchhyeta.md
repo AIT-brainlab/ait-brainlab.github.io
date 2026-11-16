@@ -1,7 +1,7 @@
 ---
 title: Dakchhyeta Bade Shrestha
 roles: Master
-image: /img/members/default.jpg
+image: /img/members/dakchhyeta.jpg
 project: TBA
 draft: false
 ---
