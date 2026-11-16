@@ -13,7 +13,7 @@
     <p style="margin-top: 20px;" class="lead">Faculty</p>
     <div class="row">
       {{ with ($.Site.GetPage "Faculty") }}
-        {{ range .Pages }}
+        {{ range .Pages.ByTitle }}
           <div class="col-lg-3">
             <div class="card flex-row">
               <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" height="85">
@@ -30,7 +30,7 @@
     <p style="margin-top: 20px;" class="lead">Ph.D.</p>
     <div class="row">
       {{ with (.Site.GetPage "phd") }}
-        {{ range .Pages }}
+        {{ range .Pages.ByTitle }}
           <div class="col-lg-3">
             <div class="card flex-row" style="margin-top:10px;">
               <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" height="85">
@@ -46,7 +46,7 @@
     <p style="margin-top: 20px;" class="lead">Master’s</p>
     <div class="row">
       {{ with ($.Site.GetPage "master") }}
-        {{ range .Pages }}
+        {{ range .Pages.ByTitle }}
           <div class="col-lg-3">
             <div class="card flex-row" style="margin-top:10px;">
               <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" height="85">
@@ -62,7 +62,7 @@
     <p style="margin-top: 20px;" class="lead">Alumni</p>
     <div class="row">
       {{ with ($.Site.GetPage "alumni") }}
-        {{ range .Pages }}
+        {{ range .Pages.ByTitle }}
           <div class="col-lg-3">
             <div class="card flex-row" style="margin-top:10px;">
               <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" height="85">
