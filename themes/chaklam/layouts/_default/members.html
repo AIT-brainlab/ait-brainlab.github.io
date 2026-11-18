@@ -59,9 +59,10 @@
         {{ end }}
       {{ end }}
     </div>
-    <p style="margin-top: 20px;" class="lead">Alumni</p>
+    {{ range slice (dict "path" "/members/phd-alumni" "title" "Ph.D. Alumni") (dict "path" "/members/alumni" "title" "Alumni") }}
+    <p style="margin-top: 20px;" class="lead">{{ .title }}</p>
     <div class="row">
-      {{ with ($.Site.GetPage "alumni") }}
+      {{ with ($.Site.GetPage .path) }}
         {{ range .Pages.ByTitle }}
           <div class="col-lg-3">
             <div class="card flex-row" style="margin-top:10px;">
@@ -76,6 +77,7 @@
         {{ end }}
       {{ end }}
     </div>
+    {{ end }}
   </div>
 </main>
 {{ end }}
