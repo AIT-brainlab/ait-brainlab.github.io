@@ -59,7 +59,7 @@
         {{ end }}
       {{ end }}
     </div>
-    {{ range slice (dict "path" "/members/phd-alumni" "title" "Ph.D. Alumni") (dict "path" "/members/alumni" "title" "Alumni") }}
+    {{ range slice (dict "path" "/roles/phd-alumni" "title" "Ph.D. Alumni") (dict "path" "/roles/alumni" "title" "Alumni") }}
     <p style="margin-top: 20px;" class="lead">{{ .title }}</p>
     <div class="row">
       {{ with ($.Site.GetPage .path) }}
