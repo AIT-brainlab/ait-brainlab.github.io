@@ -10,7 +10,7 @@
   <!-- ======= Members Section ======= -->
   <div style="margin-top: 20px; margin-bottom: 20px " class="container">
 
-    <p style="margin-top: 20px;" class="lead">Faculty</p>
+    <p style="margin-top: 20px;" class="lead">Faculty ({{ with $.Site.GetPage "Faculty" }}{{ len .Pages }}{{ else }}0{{ end }})</p>
     <div class="row">
       {{ with ($.Site.GetPage "Faculty") }}
         {{ range .Pages.ByTitle }}
@@ -27,7 +27,7 @@
       {{ end }}
     </div>
 
-    <p style="margin-top: 20px;" class="lead">PostDoc</p>
+    <p style="margin-top: 20px;" class="lead">PostDoc ({{ with $.Site.GetPage "/roles/postdoc" }}{{ len .Pages }}{{ else }}0{{ end }})</p>
     <div class="row">
       {{ with (.Site.GetPage "/roles/postdoc") }}
         {{ range .Pages.ByTitle }}
@@ -43,7 +43,7 @@
         {{ end }}
       {{ end }}
     </div>
-    <p style="margin-top: 20px;" class="lead">Ph.D.</p>
+    <p style="margin-top: 20px;" class="lead">Ph.D. ({{ with $.Site.GetPage "phd" }}{{ len .Pages }}{{ else }}0{{ end }})</p>
     <div class="row">
       {{ with (.Site.GetPage "phd") }}
         {{ range .Pages.ByTitle }}
@@ -59,7 +59,7 @@
         {{ end }}
       {{ end }}
     </div>
-    <p style="margin-top: 20px;" class="lead">Master’s</p>
+    <p style="margin-top: 20px;" class="lead">Master’s ({{ with $.Site.GetPage "master" }}{{ len .Pages }}{{ else }}0{{ end }})</p>
     <div class="row">
       {{ with ($.Site.GetPage "master") }}
         {{ range .Pages.ByTitle }}
@@ -76,7 +76,7 @@
       {{ end }}
     </div>
     {{ range slice (dict "path" "/roles/phd-alumni" "title" "Ph.D. Alumni") (dict "path" "/roles/alumni" "title" "Master’s Alumni") }}
-    <p style="margin-top: 20px;" class="lead">{{ .title }}</p>
+    <p style="margin-top: 20px;" class="lead">{{ .title }} ({{ with $.Site.GetPage .path }}{{ len .Pages }}{{ else }}0{{ end }})</p>
     <div class="row">
       {{ with ($.Site.GetPage .path) }}
         {{ range .Pages.ByTitle }}
