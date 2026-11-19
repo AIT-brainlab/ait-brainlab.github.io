@@ -3,7 +3,7 @@ title: Deepali Mishra
 date: 2023-06-14T04:02:03+07:00
 roles: PostDoc
 image: /img/members/deepali.png
-project: Med VQA
+project: AI agents
 draft: false
 ---
 
