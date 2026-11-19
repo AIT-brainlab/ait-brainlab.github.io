@@ -65,7 +65,7 @@ title = "AIT Brain Lab"
   parent = 'students'
   weight = 5
 [[menu.main]]
-  name = 'AI'
+  name = 'Claude Skills'
   pageRef = '/ai'
   parent = 'students'
   weight = 6
