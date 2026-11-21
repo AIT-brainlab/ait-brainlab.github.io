@@ -6,7 +6,7 @@ copyPrompts: true
 draft: false
 ---
 
-I’m building a Claude Code plugin called **Chaky** to share what I’ve learned about doing good research. I developed these skills through trial and error in my own work, and I hope they help you move faster through yours. This guide follows version 0.21.1 of the plugin. [Research skill on GitHub](https://github.com/chaklam-silpasuwanchai/research_skill)
+I’m building a Claude Code plugin called **Chaky** to share what I’ve learned about doing good research. I developed these skills through trial and error in my own work, and I hope they help you move faster through yours. This guide follows version 0.41.1 of the plugin. [Research skill on GitHub](https://github.com/chaklam-silpasuwanchai/research_skill)
 
 ## The skill mindset
 
@@ -22,7 +22,7 @@ Install Claude Code and Git, and make sure you can sign in to Claude Code. The r
 
    ```text
    /plugin marketplace add chaklam-silpasuwanchai/research_skill
-   /plugin install chaky@ask-chaky
+   /plugin install chaky@research_skill
    ```
 
 2. Restart Claude Code from your research folder. If you’re starting from scratch, I recommend cloning an empty GitHub repository and opening Claude Code there. If you already have a draft or notes, point Claude to them.
@@ -33,6 +33,7 @@ Install Claude Code and Git, and make sure you can sign in to Claude Code. The r
 | When you… | Use | What it helps with |
 | --- | --- | --- |
 | Feel lost | `/guide-me` | See where you are and decide what to do next. |
+| Returning after a break | `/status` | Get a read-only catch-up on what changed, what’s in progress, what needs your attention, and which skill to try next. |
 | Need to see or reprioritise your tasks | `/update-board` | Update the ticket board and review what is ready or blocked. |
 | Find an answer hard to follow | `/clarify` | Get a plain-English explanation with context and an example. |
 | Need to learn a topic or its related work | `/teach-me <topic>` | Learn the background, key concepts, and papers you need to read. |
