@@ -85,6 +85,11 @@ title = "AIT Brain Lab"
   parent = 'students'
   weight = 9
 [[menu.main]]
+  name = 'Open Access Publishing'
+  pageRef = '/open-access/'
+  parent = 'students'
+  weight = 10
+[[menu.main]]
   name = 'Publications'
   pageRef = '/publications'
   weight = 50

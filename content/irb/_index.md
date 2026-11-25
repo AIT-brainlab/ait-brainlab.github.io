@@ -14,7 +14,13 @@ This includes interviews, surveys, user studies, and experiments with people. Di
 1. **Get the ethics form.** Download the Word example below and prepare your application with your supervisor.
 2. **Send your completed application** to [research.ethics@ait.asia](mailto:research.ethics@ait.asia).
 
-**Wait for approval before starting data collection.**
+### Start date and data collection
+
+Section 17 (Duration of Project) of the ethics application states:
+
+> The start date should not be within the 2 months after the submission of this application, to allow for clearance to be processed.
+
+When you submit your application, confirm that data collection has not yet begun and will begin only after you obtain clearance from the AIT Research Ethics Review Committee (RERC).
 
 ## Example application
 
