@@ -3,7 +3,7 @@
     <p class="lab-eyebrow">Research &amp; Study</p>
     <nav class="lab-page-links" aria-label="Research and student resources">
       {{ $current := . }}
-      {{ range slice (dict "path" "projects/" "label" "Research Areas") (dict "path" "available-projects/" "label" "Available Projects") (dict "path" "getting-started/" "label" "Getting Started") (dict "path" "research-mindset/" "label" "Research Mindset") (dict "path" "scorecards/" "label" "Scorecards") (dict "path" "researchguide/" "label" "Research Guide") (dict "path" "irb/" "label" "IRB") (dict "path" "reimbursements/" "label" "Reimbursements") (dict "path" "resources/" "label" "Resources") (dict "path" "journals/" "label" "Journals") (dict "path" "open-access/" "label" "Open Access Publishing") (dict "path" "ai/" "label" "Claude Skills") }}
+      {{ range slice (dict "path" "projects/" "label" "Research Areas") (dict "path" "available-projects/" "label" "Available Projects") (dict "path" "getting-started/" "label" "Getting Started") (dict "path" "research-mindset/" "label" "Research Mindset") (dict "path" "scorecards/" "label" "Scorecards") (dict "path" "researchguide/" "label" "Research Guide") (dict "path" "irb/" "label" "IRB") (dict "path" "reimbursements/" "label" "Reimbursements") (dict "path" "resources/" "label" "Resources") (dict "path" "journals/" "label" "Journals") (dict "path" "top-tier-research/" "label" "Top-tier research?") (dict "path" "open-access/" "label" "Open Access Publishing") (dict "path" "ai/" "label" "Claude Skills") }}
         {{ $url := .path | relURL }}
         <a href="{{ $url }}"{{ if hasPrefix $current.RelPermalink $url }} class="resource-current" aria-current="page"{{ end }}>{{ .label }}</a>
       {{ end }}
