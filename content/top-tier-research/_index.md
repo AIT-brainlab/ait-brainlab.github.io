@@ -18,3 +18,5 @@ Aiming for a top-tier conference can put your graduation timeline at risk. Rejec
 ## How to grow over time
 
 You can start by publishing in other venues that fit your work. Use each paper to ask a sharper question, improve your methods, and learn how peers respond to your ideas. As your work gets stronger, aim for the leading venues in your field. Over time, the research you contribute and the care you take with your evidence are what earn your colleagues’ respect.
+
+If you finish your PhD without a top-tier publication, don’t worry. You can keep developing your research and aim for a top-tier venue during your postdoc. Give yourself time to grow and keep that goal in sight.
